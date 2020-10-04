@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(103, 103, 235);
+    font: normal 17pt Arial;
+}
+
+h1 {
+    color: lightgray;
+    text-align: center;
+}
+
+header {
+    text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.493);
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.918);
+    text-align: center;
+}
+
+#msg {
+    margin-bottom: 20px;
+}
+
+footer {
+    color: lightgray;
+    text-align: center;
+    font-style: italic;
+}

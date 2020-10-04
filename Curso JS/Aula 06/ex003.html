@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Português do Brasil -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mais um programa</title>
+    <style>
+    body {
+        background-color: rgb(40, 241, 46);
+        color: rgb(255, 254, 248);
+        font: normal 19pt Arial;
+    }
+    h1 {
+        color: gold; /* Cor do título: dourado */
+    }
+    h2 {
+        color: blue;
+    }
+    p {
+       color: red;
+    }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Escrevi o "Olá, mundo!", agora tô safe ;-)</p>
+    <script>
+    var nome = window.prompt("Qual é o seu nome?") // Definir uma variável a partir do nome (que é uma String) digitado
+    var idade = window.prompt("Qual a sua idade?") // Digitar e definir idade (também definida como "String")
+    var nota = window.prompt("Qual a sua nota?") // Digitar e definir nota
+    window.alert("Olá " + nome + "!") // Concatenação (+) usada em Strings
+    window.document.write(`O aluno ${nome} de ${idade} anos de idade tirou a nota ${nota}.`) // Se for usado o "${}" então usa-se a crase (` `)
+    window.document.write("<h2>Com o método <code> write() </code> dá para:</h2> escrever usando marcação HTML em uma String<p/>");
+    window.document.write(`${nome} disse olá ao mundo.<p/>`)
+    window.document.write("<p>É muito top isso!!!</p>") // Escrever mesmo com marcação HTML dentro de uma String
+    </script>
+</body>
+</html>

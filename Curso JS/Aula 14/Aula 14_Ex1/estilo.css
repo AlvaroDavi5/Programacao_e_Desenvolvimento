@@ -1,0 +1,50 @@
+body {
+    background-color: #4ba70e;
+    font: normal 17pt Arial;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+header {
+    text-shadow: 5px 5px 1px #0000007e;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #000000ea;
+    text-align: center;
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+input {
+    height: 20px;
+    width: 95px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #9bec598c;
+}
+
+button#btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: black;
+    background-color: #326805a2;
+    box-shadow: black 4px 4px 1px;
+}
+
+#res {
+    text-align: left;
+}
