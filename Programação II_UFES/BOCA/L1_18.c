@@ -17,39 +17,39 @@ int main()
 
 	/* QUADRANTES: 1 = (++), 2 = (-+), 3 = (--), 4 = (+-) */
 
-	if (x > 0) // eixoX: +
+	if(x > 0) // eixoX: +
 	{
-		if (y > 0) // eixoY: +
+		if(y > 0) // eixoY: +
 		{
 			quad = 1;
 		}
-		if (y < 0) // eixoY: -
+		if(y < 0) // eixoY: -
 		{
 			quad = 4;
 		}
-		if (y == 0) // eixoY: 0
+		if(y == 0) // eixoY: 0
 		{
 			quad = 0;
 		}
 	}
 
-	if (x < 0) // eixoX: -
+	if(x < 0) // eixoX: -
 	{
-		if (y > 0) // eixoY: +
+		if(y > 0) // eixoY: +
 		{
 			quad = 2;
 		}
-		if (y < 0) // eixoY: -
+		if(y < 0) // eixoY: -
 		{
 			quad = 3;
 		}
-		if (y == 0) // eixoY: 0
+		if(y == 0) // eixoY: 0
 		{
 			quad = 0;
 		}
 	}
 
-	if (x == 0) // eixoX: 0
+	if(x == 0) // eixoX: 0
 	{
 		quad = 0;
 	}
@@ -58,7 +58,7 @@ int main()
 	{
 		printf("%i", quad);
 	}
-	if (quad == 0)
+	if(quad == 0)
 	{
 		printf("ORIGEM");
 	}

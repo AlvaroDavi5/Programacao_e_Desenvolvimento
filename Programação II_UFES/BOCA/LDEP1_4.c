@@ -17,9 +17,9 @@ int main()
 
   for(i = 2; i <= qtd; i++)
   {
-    while (den <= i)
+    while(den <= i)
     {
-      if ((cont == 2) || (cont == 3) || (cont == 5) || (cont == 7))
+      if((cont == 2) || (cont == 3) || (cont == 5) || (cont == 7))
       {
         printf("%d ", cont);
       }
@@ -28,7 +28,7 @@ int main()
       den++;
     }
 
-    if ((i % 2 != 0) && (i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0))
+    if((i % 2 != 0) && (i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0))
     {
       printf("%d ", i);
     }
