@@ -48,19 +48,19 @@ int main()
 
   scanf("%d", &qtd);
 
-  for(i = 2; i < qtd; i++)
+  for (i = 2; i < qtd; i++)
   {
     den += 2;
     while(den < i)
     {
-      if((i % den) == 0)
+      if ((i % den) == 0)
       {
         cont++;
         break;
       }
     }
 
-    if((cont % 2) == 0)
+    if ((cont % 2) == 0)
     {
       printf("%d", i);
     }
