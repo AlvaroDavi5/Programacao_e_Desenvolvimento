@@ -194,3 +194,26 @@ int main()
 
 	return 0;
 }
+
+/*
+
+Descrição
+Faça um programa que receba como entrada um número inteiro N e um identificador de posição ID e retorne como saída os algarismos de N em ordem crescente sem o valor da posição ID. Caso a posição ID não exista em N, retorne a ordenação usando os valores existentes. Se N possui apenas um algarismo e ID=0, você deve retornar a string "VOID".
+
+
+Exemplos explicados
+1) Se N=4421 e ID=0, remover o algarismo da posição 0, ou seja, 4, e ordenar os demais. Resultado: 1, 2, 4
+
+
+Padrão de entrada e saída
+A entrada sempre será N seguido de ID
+A saída sempre será os valores ordenados seguidos de vírgula (exceto o último)
+
+Exemplos
+Entradas - Saídas
+5248 2   - 2, 5, 8
+120 3    - 0, 1, 2
+0000 1   - 0, 0, 0
+4 0      - VOID
+
+*/
