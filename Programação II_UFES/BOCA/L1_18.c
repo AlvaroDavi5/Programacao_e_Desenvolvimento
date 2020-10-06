@@ -15,11 +15,11 @@ int main()
 
 	scanf("%f %f", &x, &y);
 
-	/* QUADRANTES: 1 = (++), 2 = (-+), 3 = (--), 4 = (+-) */
+	/* QUADRANTES: 1 = (++), 2 = (-+), 3 = (--), 4 = (+-), ORIGEM (0,0) */
 
 	if (x > 0) // eixoX: +
 	{
-		if (y > 0) // eixoY: +
+		if (y >= 0) // eixoY: + ou 0
 		{
 			quad = 1;
 		}
@@ -27,13 +27,21 @@ int main()
 		{
 			quad = 4;
 		}
-		if (y == 0) // eixoY: 0
-		{
-			quad = 0;
-		}
 	}
 
 	if (x < 0) // eixoX: -
+	{
+		if (y >= 0) // eixoY: + ou 0
+		{
+			quad = 2;
+		}
+		if (y < 0) // eixoY: -
+		{
+			quad = 3;
+		}
+	}
+
+	if (x == 0) // eixoX: 0
 	{
 		if (y > 0) // eixoY: +
 		{
@@ -47,11 +55,6 @@ int main()
 		{
 			quad = 0;
 		}
-	}
-
-	if (x == 0) // eixoX: 0
-	{
-		quad = 0;
 	}
 
 	if (quad != 0)
