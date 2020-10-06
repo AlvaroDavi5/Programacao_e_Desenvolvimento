@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"functional": "c",
-		"ratio": "c"
+		"ratio": "c",
+		"random": "c"
 	}
 }
