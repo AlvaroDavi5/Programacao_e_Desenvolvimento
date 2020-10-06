@@ -24,11 +24,11 @@ int main()
 	switch (mes)
 	{
 	case 1:
-		printf("janeiro ");
+		printf("janeiro");
 		diasMes = 31;
 		break;
 	case 2:
-		printf("fevereiro ");
+		printf("fevereiro");
 		if (biSex == 1)
 		{
 			diasMes = 29;
@@ -39,43 +39,43 @@ int main()
 		}
 		break;
 	case 3:
-		printf("marco ");
+		printf("marco");
 		diasMes = 31;
 		break;
 	case 4:
-		printf("abril ");
+		printf("abril");
 		diasMes = 30;
 		break;
 	case 5:
-		printf("maio ");
+		printf("maio");
 		diasMes = 31;
 		break;
 	case 6:
-		printf("junho ");
+		printf("junho");
 		diasMes = 30;
 		break;
 	case 7:
-		printf("julho ");
+		printf("julho");
 		diasMes = 31;
 		break;
 	case 8:
-		printf("agosto ");
+		printf("agosto");
 		diasMes = 31;
 		break;
 	case 9:
-		printf("setembro ");
+		printf("setembro");
 		diasMes = 30;
 		break;
 	case 10:
-		printf("outubro ");
+		printf("outubro");
 		diasMes = 31;
 		break;
 	case 11:
-		printf("novembro ");
+		printf("novembro");
 		diasMes = 30;
 		break;
 	case 12:
-		printf("dezembro ");
+		printf("dezembro");
 		diasMes = 31;
 		break;
 	default:
@@ -88,13 +88,13 @@ int main()
 	if (anular != 1)
 	{
 		// DIAS DO MES
-		printf("%i ", diasMes);
+		printf(" %i ", diasMes);
 
 		// ANO
-		printf("%i", ano);
+		printf("%i ", ano);
 		if (biSex == 1)
 		{
-			printf(" bissexto");
+			printf("bissexto\n");
 		}
 	}
 
