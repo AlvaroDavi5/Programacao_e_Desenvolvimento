@@ -5,11 +5,23 @@
 
 int main()
 {
-	int num, potDez, resPot, result, cont;
-	int *numCas[10];
+	int num, id;
+	int potDez, resPot, result, zero;
+	// int *numCas[10];
 
-	scanf("%i %i", &num, &cont);
+	scanf("%d %i", &num, &id);
 
+	for (int i = 1; 1; i *= 10)
+	{
+		if (num % i == 0)
+		{
+			zero++;
+		}
+	}
+
+	return 0;
+}
+/*
 	for(int i=0; 1 ;i++)
 	{
 		while (1) // POTENCIA DE DEZ
@@ -48,3 +60,4 @@ int main()
 
 	return 0;
 }
+*/
