@@ -3,5 +3,6 @@
 		"functional": "c",
 		"ratio": "c",
 		"random": "c"
-	}
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }

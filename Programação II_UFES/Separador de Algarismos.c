@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(void) {
+int main(void)
+{
 
-int n, id, n1, n2, n3, n4;
+	int n, id, n1, n2, n3, n4;
     
-    scanf("%d %d", &n, &id); /* CASO DOS 0000 NAO FUNCIONA, POIS O scanf LÊ APENAS ATÉ 00 */
+    scanf("%d %d", &n, &id); // CASO DOS 0000 NAO FUNCIONA, POIS O scanf LÊ APENAS ATÉ 00
     
     if (n >= 0 && n <= 9)
     {
@@ -229,7 +230,7 @@ int n, id, n1, n2, n3, n4;
 
 /*
 
-				SEGUNDO CODIGO, o separador está na ordem inversa da pedida pelo repl.it
+// SEGUNDO CODIGO, o separador está na ordem inversa da pedida pelo repl.it
 
 #include <stdio.h>
 #include <math.h>
@@ -239,7 +240,7 @@ int main()
 	int num, id;
 	int algU, algD, algC, algM;
 
-	scanf("%i %i", &num, &id);  /* CASO DOS 0000 NAO FUNCIONA, POIS O scanf LÊ APENAS ATÉ 00 * /
+	scanf("%i %i", &num, &id);  // CASO DOS 0000 NAO FUNCIONA, POIS O scanf LÊ APENAS ATÉ 00
 	algU = (num % 10);
 	algD = (num % 100)/10;
 	algC = (num % 1000)/100;
