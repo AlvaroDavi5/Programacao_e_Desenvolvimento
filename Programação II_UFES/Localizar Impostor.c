@@ -20,14 +20,19 @@ int main()
 
 	scanf("%i", &num);
 
-	for (int i = 0; i <= 10000; i++)
+	for (int i = 0; i <= 1000; i++)
 	{
 		algU = (num % 10);
 		algD = (num % 100)/10;
 		algC = (num % 1000)/100;
 		algM = (num % 10000)/1000;
 
-		if (num >= 0 && num < 10)
+		if (num == 1)
+		{
+			break;
+		}
+
+		else if (num >= 0 && num < 10)
 		{
 			n1 = algU;
 
