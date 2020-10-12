@@ -6,7 +6,7 @@ Alvaro Davi, Eng Comp UFES, 2020
 
 */
 
-//				~~~~~~ CREWMANTE ~~~~~~
+//				~~~~~~ CREWMATE ~~~~~~
 //			There is 1 impostor amon9 us 
 
 #include <stdio.h>
