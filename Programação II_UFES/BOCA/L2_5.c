@@ -13,14 +13,14 @@ int main()
 {
 	int n, k;
 	float soma = 0, op;
-	
+
 	scanf("%d", &n);
-	soma=0;
+	soma = 0;
 
 	for (k = 1; k <= n; k++)
 	{
 		op = 6.00/(k*k);
-		soma = soma + op;
+		soma += op;
 	}
 
 	printf("%.6f", sqrt(soma));
