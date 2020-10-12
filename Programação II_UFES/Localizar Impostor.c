@@ -20,7 +20,7 @@ int main()
 
 	scanf("%i", &num);
 
-	for (int i = 0; i <= 1000; i++)
+	for (int i = 0; i <= 100; i++)
 	{
 		algU = (num % 10);
 		algD = (num % 100)/10;
