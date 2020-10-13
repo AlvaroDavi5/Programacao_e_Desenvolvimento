@@ -20,7 +20,7 @@ int main()
 	switch (sit)
 	{
 	case 1:
-		while (k < 51)
+		while (k <= 50)
 		{
 			result += (i / k);
 			k++;
