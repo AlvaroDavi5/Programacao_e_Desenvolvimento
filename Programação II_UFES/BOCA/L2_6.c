@@ -47,7 +47,7 @@ int main()
 			{
 				result += (i / k);
 				i += 1.00;
-				k += pow(i, 2);
+				k = pow(i, 2);
 			}
 			break;
 		default:
