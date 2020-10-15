@@ -12,29 +12,46 @@ Alvaro Davi, Eng Comp UFES, 2020
 int main()
 {
 	int sit, expo;
-	int i = 1, k = 1;
-	float result;
+	double i, k, pot, result;
 
 	scanf("%d", &sit);
 
 	switch (sit)
 	{
-	case 1:
-		while (k <= 50)
-		{
-			result += (i / k);
-			k++;
-			i += 2;
-		}
-		break;
-	case 2:
-		//
-		break;
-	case 3:
-		//
-		break;
-	default:
-		break;
+		case 1:
+			i = 1.00;
+			k = 1.00;
+			while (k <= 50)
+			{
+				result += (i / k);
+				i += 2.00;
+				k += 1.00;
+			}
+			break;
+		case 2:
+			i = 2.00;
+			expo = 1;
+			k = 50.00;
+			while (k >= 1)
+			{
+				pot = pow(i, expo);
+				result += (pot / k);
+				expo++;
+				k--;
+			}
+			break;
+		case 3:
+			i = 1.00;
+			k = 1.00;
+			while (k <= 100)
+			{
+				result += (i / k);
+				i += 1.00;
+				k += pow(i, 2);
+			}
+			break;
+		default:
+			break;
 	}
 
 	printf("%.6f", result);
