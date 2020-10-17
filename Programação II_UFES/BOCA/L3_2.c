@@ -8,12 +8,31 @@ Alvaro Davi, Eng Comp UFES, 2020
 
 #include <stdio.h>
 
-// ------------------ PROTOTIPOS ------------------
+// ------------------------------------ FUNCOES ------------------------------------
 
-float Soma(float num1, float num2);
-float Subtracao(float num1, float num2);
-float Divisao(float num1, float num2);
-float Multiplicacao(float num1, float num2);
+float Soma(float num1, float num2)
+{
+	float res = (num1 + num2);
+	return res;
+}
+
+float Subtracao(float num1, float num2)
+{
+	float res = (num1 - num2);
+	return res;
+}
+
+float Divisao(float num1, float num2)
+{
+	float res = (num1 / num2);
+	return res;
+}
+
+float Multiplicacao(float num1, float num2)
+{
+	float res = (num1 * num2);
+	return res;
+}
 
 // ------------------ PRINCIPAL ------------------
 
@@ -66,30 +85,4 @@ int main()
 	}
 
 	return 0;
-}
-
-// ------------------------------------ FUNCOES ------------------------------------
-
-float Soma(float num1, float num2)
-{
-	float res = (num1 + num2);
-	return res;
-}
-
-float Subtracao(float num1, float num2)
-{
-	float res = (num1 - num2);
-	return res;
-}
-
-float Divisao(float num1, float num2)
-{
-	float res = (num1 / num2);
-	return res;
-}
-
-float Multiplicacao(float num1, float num2)
-{
-	float res = (num1 * num2);
-	return res;
 }
