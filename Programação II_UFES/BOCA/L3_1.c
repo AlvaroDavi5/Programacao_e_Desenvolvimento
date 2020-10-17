@@ -1,3 +1,11 @@
+/*
+
+Realizar as 4 operções aritméticas
+
+Alvaro Davi, Eng Comp UFES, 2020
+
+*/
+
 #include <stdio.h>
 
 float Soma(float num1, float num2);
