@@ -30,7 +30,7 @@
 int algoGrego(int dia, int mes, int ano, int contD);
 int algoDia(int cod_ano, int cod_mes, int cod_sec, int dia_mes, int ano, int mes, int cnt);
 int dias_Sem(int dia_sem, int cont);
-int ehBissexto(int mes, int ano);
+int ehBissexto(int ano);
 
 int main()
 {
@@ -102,42 +102,33 @@ int algoGrego(int dia, int mes, int ano, int contD)
 
 	// cod_sec
 	int cod_sec;
-	if (ano >= 1601 && ano < 1701)
+	if (ano >= 1700 && ano < 1800)
 	{
 		cod_sec = 4;
 	}
-	if (ano >= 1701 && ano < 1801)
+	if (ano >= 1800 && ano < 1900)
 	{
 		cod_sec = 2;
 	}
-	if (ano >= 1801 && ano < 1901)
+	if (ano >= 1900 && ano < 2000)
 	{
 		cod_sec = 0;
 	}
-	if (ano >= 1901 && ano < 2001)
+	if (ano >= 2000 && ano < 2100)
 	{
 		cod_sec = 6;
 	}
-	if (ano >= 2001 && ano < 2101)
+	if (ano >= 2100 && ano < 2200)
 	{
 		cod_sec = 4;
 	}
-	if (ano >= 2101 && ano < 2201)
+	if (ano >= 2200 && ano < 2300)
 	{
 		cod_sec = 2;
 	}
-	if (ano >= 2201 && ano < 2301)
+	if (ano >= 2300 && ano < 2400)
 	{
 		cod_sec = 0;
-	}
-
-	// bissexto
-	if (ehBissexto == 1)
-	{
-		if (mes == 1 || mes == 2)
-		{
-			cod_ano--;
-		}
 	}
 
 	algoDia(cod_ano, cod_mes, cod_sec, dia, ano, mes, cnt);
@@ -153,7 +144,7 @@ int algoDia(int cod_ano, int cod_mes, int cod_sec, int dia_mes, int ano, int mes
 	dia_aux = cod_ano + cod_mes + cod_sec + dia_mes;
 
 	// bissexto
-	if (ehBissexto == 1)
+	if (ehBissexto(ano) && (mes == 1 || mes == 2))
 	{
 		dia_aux--;
 	}
@@ -204,14 +195,7 @@ int dias_Sem(int dia_sem, int cont)
 	return 0;
 }
 
-int ehBissexto(int mes, int ano)
+int ehBissexto(int ano)
 {
-	if (((ano % 4) == 0 && (ano % 100) != 0) || (ano % 400) == 0)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+	return (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0));
 }
