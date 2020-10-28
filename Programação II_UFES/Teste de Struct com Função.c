@@ -12,11 +12,7 @@ void imprime(tEstudante aluno);
 
 int main()
 {
-  tEstudante aluno; // define o tipo da variável 'aluno' como o struct 'tEstudante'
-
-  aluno.idade = 18; // acessa a variável idade da variável aluno, definida no struct
-  aluno.nota = 9.5;
-  aluno.matricula = 20201010;
+  tEstudante aluno = {18, 9.5, 20201010};; // atribuir valores às variáveis da variável aluno, definida no struct
 
   imprime(aluno);
 
