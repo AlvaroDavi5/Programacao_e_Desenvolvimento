@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contagem de letras do nome</title>
+    <style>
+        body {
+            font: 50pt Arial;
+            background-color: rgb(221, 164, 20);
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt("Qual é o seu nome?")
+
+        // (nome.length == 1) ?var letra = "letras" :var letra = "letras"
+        
+        if (nome.length == 1) {
+           var letra = "letra"
+        }
+        else {
+           var letra = "letras"
+        }
+       document.write(`Seu nome tem ${nome.length} ${letra}. <br/>`)
+       document.write(`Seu nome em maiúsculo é: ${nome.toUpperCase()}. <br/>`)
+       document.write(`Seu nome em minúsculo é: ${nome.toLowerCase()}.`)
+    </script>
+</body>
+</html>

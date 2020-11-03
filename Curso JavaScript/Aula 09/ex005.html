@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background: rgb(255, 0, 0);
+            color:rgb(133, 133, 133);
+            font:oblique 20pt Arial;
+        }
+        div {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Eis aqui o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> no JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div class="click">Clique aqui para continuar</div>
+    <div name="cont">Continuando</div>
+    <script>
+        var P = window.document.getElementsByTagName('p')[0] // Pegar elementos de Tags existentes
+        window.document.write("Foi dito: " + P.innerText) // Escrever o conteúdo da variável
+        window.document.write("</br> </br>" + window.document.URL + "</br>" + window.navigator.appName) // Escrever o URL e o nome do app utilizado como browser
+        P.style.color = 'gold'
+        P.style.background = 'white'
+        window.document.body.style.background = 'black'
+        D = window.document.getElementById('msg') // Pegar elemento por ID atribuído
+        D.style.backgroundColor = 'green'
+        D.innerText = "Carregando..."
+        D.style.color = 'black'
+        window.document.getElementsByClassName('click')[0].innerText = 'Clicado' // Os comandos podem ser mesclados, inserindo um HTML na 'class'
+        window.document.getElementsByName('cont')[0].style.color = 'blue' // Pegar elementos por nomes (mais de um) atribuídos
+        S = window.document.querySelector('div.click').style.color = 'lightgreen' // Pegar elemento por seletor atribuído com especificação, para modificar as propriedades de estilo
+    </script>
+</body>
+</html>

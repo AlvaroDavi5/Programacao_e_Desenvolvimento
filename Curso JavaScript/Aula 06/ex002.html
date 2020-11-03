@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Outro programa</title>
+    <style>
+    body {
+        background-color: rgb(40, 241, 46);
+        color: rgb(255, 254, 248);
+        font: normal 19pt Arial;
+    }
+    h1 {
+        color: gold;
+    }
+    h2 {
+        color: blue;
+    }
+    p {
+       color: red;
+    }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Escrevi o "Olá, mundo!", agora tô safe ;-)</p>
+    <script>
+    var nome = window.prompt("Qual é o seu nome?") // Digitar nome
+    window.alert(`Olá ${nome}!`)
+    window.document.write("<h2>Com o método <code> write() </code> dá para:</h2> Escrever usando marcação HTML em uma String<p/>");
+    window.document.write(`${nome} disse olá ao mundo.<p/>`)
+    window.document.write(nome + " se livrou da maldição!")
+    window.document.write("<p>É muito top isso!!!</p>") // Escrever mesmo com marcação HTML dentro de uma String
+    </script>
+</body>
+</html>
