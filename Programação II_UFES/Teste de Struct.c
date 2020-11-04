@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-typedef struct /* tipo composto */
+typedef struct /* tipo complexo, o struct é um tipo que sozinho não pode ser usado como tipificador de variáveis, para fazê-lo se utiliza o typedef */
 {
   int idade;
   float nota; // tipos primitivos compondo o struct
   int matricula;
-} tEstudante; // atribui o nome 'tEstudante' para o tipo composto struct (em escopo global) ao mesmo tempo em que serve de identificador ao struct referido
+} tEstudante; // atribui o nome 'tEstudante' para o tipo complexo struct (em escopo global) ao mesmo tempo em que serve de identificador ao struct referido
 
 int main()
 {

@@ -11,16 +11,39 @@ Múltiplas Linhas
 */
 
 
+Caracteres Especiais:
+\n		(nova linha)
+\t		(tabulação)
+\b		(backspace)
+\r		(retorno de linha)
+\a		(Beep)
+\7		(Beep)
+\"		(aspas)
+\'		(apóstrofo)
+\\		(contrabarra)
+
+
+
+Formatação:
+%04d	para mostrar 4 casas deicimais (geralmente zeros) à esquerda do número
+%.2f	para mostrar 2 casas deicimais após o ponto flutuante
+%6i		para mostrar o número após 6 espaços em branco
+
+
+
 Tipos primitivos em C:
 char, int, float, double, void
 
+Tipos compostos em C:
+struct, pointer, array
 
-Definir Constantes:
-#define Pi =  3.141593
+
+Definir Constantes Simbólicas em escopo global:
+#define Pi = 3.141593
 
 
 Incluir bibliotecas:
-#include <stdio.h>
+#include <stdio.h>	(standart input/output)
 
 
 Função Principal:
@@ -28,7 +51,7 @@ Função Principal:
 int main()
 {
 	printf("Oiiiii");
-	return 0;
+	return 0;			retorna 0 ao sistema operacional, indicando o fim do programa (POR CONVENÇÃO: retorna 0 caso tudo ocorra bem, retorna um número diferente de 0 caso ocorra um erro)
 }
 
 
@@ -44,6 +67,7 @@ Para executar o arquivo compilado se usa o comando
 Para mandar um arquivo como input de um programa e salvar o output se usa o comando
 
 	./arquivoexecutavel <caminho/arquivoinput> caminho/arquivooutput					<> só no input
+
 
 
 

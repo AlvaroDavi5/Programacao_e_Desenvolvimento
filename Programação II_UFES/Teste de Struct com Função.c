@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-typedef struct /* tipo composto */
+typedef struct /* tipo complexo */
 {
   int idade;
   float nota; // tipos primitivos compondo o struct
   int matricula;
-} tEstudante; // atribui o nome 'tEstudante' para o tipo composto struct (em escopo global) ao mesmo tempo em que serve de identificador ao struct referido
+} tEstudante; // atribui o nome 'tEstudante' para o tipo complexo struct (em escopo global) ao mesmo tempo em que serve de identificador ao struct referido
 
 void imprime(tEstudante aluno);
 
