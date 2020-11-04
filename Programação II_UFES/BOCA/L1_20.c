@@ -13,9 +13,11 @@ int main()
 	int mes, diasMes, ano, biSex, anular;
 
 	scanf("%i %i", &mes, &ano);
+	biSex = 0;
+	anular = 0;
 
 	// SE ANO BISSEXTO
-	if (!(ano % 4) && !(ano % 100 == 0))
+	if ((ano % 4 == 0) && (ano % 100 != 0) || (ano % 400 == 0))
 	{
 		biSex = 1;
 	}
@@ -91,10 +93,10 @@ int main()
 		printf(" %i ", diasMes);
 
 		// ANO
-		printf("%i ", ano);
+		printf("%i", ano);
 		if (biSex == 1)
 		{
-			printf("bissexto\n");
+			printf(" bissexto");
 		}
 	}
 

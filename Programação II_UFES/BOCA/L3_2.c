@@ -7,30 +7,35 @@ Alvaro Davi, Eng Comp UFES, 2020
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 // ------------------------------------ FUNCOES ------------------------------------
 
 float Soma(float num1, float num2)
 {
-	float res = (num1 + num2);
+	float res;
+	res = (num1 + num2);
 	return res;
 }
 
 float Subtracao(float num1, float num2)
 {
-	float res = (num1 - num2);
+	float res;
+	res = (num1 - num2);
 	return res;
 }
 
 float Divisao(float num1, float num2)
 {
-	float res = (num1 / num2);
+	float res;
+	res = (num1 / num2);
 	return res;
 }
 
 float Multiplicacao(float num1, float num2)
 {
-	float res = (num1 * num2);
+	float res;
+	res = (num1 * num2);
 	return res;
 }
 
@@ -80,9 +85,9 @@ int main()
 			default:
 				break;
 		}
-
-		printf("%.2f", result);
 	}
+
+	printf("%.2f", result);
 
 	return 0;
 }
