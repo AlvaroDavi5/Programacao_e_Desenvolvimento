@@ -1,0 +1,52 @@
+Comentários em C:
+
+// Comentário em Uma Linha
+
+/*
+
+    Comentário
+	em
+Múltiplas Linhas
+
+*/
+
+
+Tipos primitivos em C:
+char, int, float, double, void
+
+
+Definir Constantes:
+#define Pi =  3.141593
+
+
+Incluir bibliotecas:
+#include <stdio.h>
+
+
+Função Principal:
+
+int main()
+{
+	printf("Oiiiii");
+	return 0;
+}
+
+
+
+Para compilar um arquivo se usa o programa gcc (clang)
+
+	gcc caminho/codigofonte.c -o caminho/arquivoexecutavel
+
+Para executar o arquivo compilado se usa o comando
+
+	./caminho/arquivoexecutavel
+
+Para mandar um arquivo como input de um programa e salvar o output se usa o comando
+
+	./arquivoexecutavel <caminho/arquivoinput> caminho/arquivooutput					<> só no input
+
+
+
+Para ver a diverença entre dois arquivos se usa o programa diff
+
+	diff arquivo1 arquivo2
