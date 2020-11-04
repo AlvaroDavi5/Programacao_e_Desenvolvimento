@@ -30,7 +30,7 @@ int main()
 			else
 			{
 				fputc(letra, arq); // inserir caractere ao arquivo
-				// c = fgetc(arq);		ler o que foi inserido no arquivo [desativado pois a função fgetc() usa ponteiros]
+				// c = fgetc(arq);		ler o que foi inserido no arquivo [DESATIVADO pois a função fgetc() usa ponteiros, dando erro nos caracteres]
 			}
 		}
 	}
@@ -44,6 +44,17 @@ int main()
 
 	printf("\n");
 
+/*
+
+	EOF sinaliza um valor inteiro inexiste em ASCII, o valor '-1' (também usado em vetores), para não confuindir com um caractere de 0 a 255 e sinalizar o fim do arquivo
+[DESATIVADO pois o conteúdo do arquivo não está sendo lido, apenas escrito]
+
+	if (arq == EOF)
+	{
+		printf("Fim do arquivo. \n");
+	}
+
+*/
 
 	fclose(arq); // fechar arquivo e enviar tudo o que foi armazenado no buffer para o arquivo
 
