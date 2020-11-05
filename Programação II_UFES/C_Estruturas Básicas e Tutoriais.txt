@@ -44,7 +44,7 @@ Definir Constantes Simbólicas em escopo global:
 
 Incluir bibliotecas:
 #include <stdio.h>		Standart Input/Output, para funções como getchar(), putchar(), scanf(), printf(), fopen() e tipos como FILE e EOF
-#include <stdlib.h>		Standart Library, para Emulação de Terminal (Shell, DOS, etc) e para funções como rand(), srand()
+#include <stdlib.h>		Standart Library, para Emulação de Terminal (Shell, DOS, etc) e para funções como rand(), srand(), stdin() e stdout()
 #include <stdbool.h>	Standart Boolean, para tipos Booleanos (0 e 1, false e true)
 #include <stddef.h>		Padrões de Definições de Tipos
 #include <stdint.h>		Padrões de Definição de Tipos de Dados Inteiros

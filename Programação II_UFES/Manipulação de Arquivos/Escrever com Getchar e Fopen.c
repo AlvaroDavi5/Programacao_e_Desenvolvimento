@@ -54,6 +54,13 @@ int main()
 		printf("Fim do arquivo. \n");
 	}
 
+	ou
+
+	if (feof(arq))		função para saber se o arquivo chegou ao fim
+	{
+		printf("Fim do arquivo. \n");
+	}
+
 */
 
 	fclose(arq); // fechar arquivo e enviar tudo o que foi armazenado no buffer para o arquivo
