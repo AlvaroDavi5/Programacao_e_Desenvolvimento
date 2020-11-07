@@ -15,55 +15,44 @@ int main()
 
 	scanf("%f %f", &x, &y);
 
-	/* QUADRANTES: 1 = (++), 2 = (-+), 3 = (--), 4 = (+-), ORIGEM (0,0) */
+	/*
+	QUADRANTES: 1 = (++), 2 = (-+), 3 = (--), 4 = (+-)
+	EIXOS: (0,+), (0,-), (+,0), (-,0)
+	ORIGEM: (0,0)
+	*/
 
-	if (x > 0) // eixoX: +
+	if (x != 0 && y == 0)
 	{
-		if (y >= 0) // eixoY: + ou 0
-		{
-			quad = 1;
-		}
-		if (y < 0) // eixoY: -
-		{
-			quad = 4;
-		}
+		printf("X");
+	}
+	else if (x == 0 && y != 0)
+	{
+		printf("Y");
 	}
 
-	if (x < 0) // eixoX: -
-	{
-		if (y >= 0) // eixoY: + ou 0
-		{
-			quad = 2;
-		}
-		if (y < 0) // eixoY: -
-		{
-			quad = 3;
-		}
-	}
-
-	if (x == 0) // eixoX: 0
-	{
-		if (y > 0) // eixoY: +
-		{
-			quad = 2;
-		}
-		if (y < 0) // eixoY: -
-		{
-			quad = 3;
-		}
-		if (y == 0) // eixoY: 0
-		{
-			quad = 0;
-		}
-	}
-
-	if (quad != 0)
-	{
-		printf("%i", quad);
-	}
-	if (quad == 0)
+	else if (x == 0 && y == 0)
 	{
 		printf("ORIGEM");
+	}
+
+	else
+	{
+		if (x > 0 && y > 0)
+		{
+			printf("1");
+		}
+		else if (x < 0 && y > 0)
+		{
+			printf("2");
+		}
+		else if (x < 0 && y < 0)
+		{
+			printf("3");
+		}
+		else if (x > 0 && y < 0)
+		{
+			printf("4");
+		}
 	}
 
 	return 0;
