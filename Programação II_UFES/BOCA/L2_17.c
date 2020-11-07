@@ -14,13 +14,13 @@ char Decode(char word, int key);
 
 int main()
 {
-	int option, keyword;
+	int option, key;
 	char word;
 
 	scanf("%d ", &option);
 	if (option == 1 || option == 2)
 	{
-		scanf("%d ", &keyword);
+		scanf("%d ", &key);
 
 		while (1)
 		{
