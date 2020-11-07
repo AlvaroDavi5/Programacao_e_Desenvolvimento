@@ -11,8 +11,6 @@ Alvaro Davi, Eng Comp UFES, 2020
 
 char Code(char word, int key);
 char Decode(char word, int key);
-int entreascii(char word);
-int entreASCII(char word);
 
 int main()
 {
@@ -37,12 +35,91 @@ int main()
 			{
 				if (option == 1)
 				{
-					word = Code(word, keyword);
+					if (key > 0)
+					{
+						if (word >= 'a' && word <= 'z')
+						{
+							for (int i = 0; i < key; i++)
+							{
+								if (word >= 'a' && word <= 'z')
+								{
+									word++;
+								}
+								if (! (word >= 'a' && word <= 'z'))
+								{
+									word = ('a' - 1);
+									word++;
+								}
+							}
+						}
+					}
+					if (key < 0)
+					{
+						if (word >= 'a' && word <= 'z')
+						{
+							for (int i = 0; i > key; i--)
+							{
+								if (word >= 'a' && word <= 'z')
+								{
+									word--;
+								}
+								if (! (word >= 'a' && word <= 'z'))
+								{
+									word = ('z' + 1);
+									word--;
+								}
+							}
+						}
+					}
+					else /* key == 0 */
+					{
+						word = word;
+					}
 				}
 				if (option == 2)
 				{
-					word = Decode(word, keyword);
+					if (key > 0)
+					{
+						if (word >= 'a' && word <= 'z')
+						{
+							for (int i = 0; i < key; i++)
+							{
+								if (word >= 'a' && word <= 'z')
+								{
+									word--;
+								}
+								if (! (word >= 'a' && word <= 'z'))
+								{
+									word = ('z' + 1);
+									word--;
+								}
+							}
+						}
+					}
+					if (key < 0)
+					{
+						if (word >= 'a' && word <= 'z')
+						{
+							for (int i = 0; i > key; i--)
+							{
+								if (word >= 'a' && word <= 'z')
+								{
+									word++;
+								}
+								if (! (word >= 'a' && word <= 'z'))
+								{
+									word = ('a' - 1);
+									word++;
+								}
+							}
+						}
+					}
+					else /* key == 0 */
+					{
+						word = word;
+					}
 				}
+
 				printf("%c", word);
 			}
 		}
@@ -53,62 +130,4 @@ int main()
 	}
 
 	return 0;
-}
-
-char Code(char word, int key)
-{
-	int wordTemp;
-
-	if (entreascii(word))
-	{
-		wordTemp = word;
-
-		key = key;
-		word += key;
-
-		if (! entreascii(word))
-		{
-			word = word - wordTemp;
-		}
-	}
-	else
-	{
-		word = word;
-	}
-
-	return word;
-}
-
-char Decode(char word, int key)
-{
-	int wordTemp;
-
-	if (entreascii(word))
-	{
-		wordTemp = word;
-
-		key = key;
-		word -= key;
-
-		if (! entreascii(word))
-		{
-			word = word - wordTemp;
-		}
-	}
-	else
-	{
-		word = word;
-	}
-
-	return word;
-}
-
-int entreascii(char word)
-{
-	return (word >= 'a' && word <= 'z');
-}
-
-int entreASCII(char word)
-{
-	return (word >= 'A' && word <= 'Z');
 }

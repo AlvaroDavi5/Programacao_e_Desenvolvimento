@@ -11,9 +11,9 @@ Alvaro Davi, Eng Comp UFES, 2020
 
 char Code(char word, int key);
 char Decode(char word, int key);
+int inasciiLower(char word);
+int inasciiUpper(char word);
 char convertWord(char word);
-int entreascii(char word);
-int entreASCII(char word);
 
 int main()
 {
@@ -56,40 +56,62 @@ int main()
 	return 0;
 }
 
+
+
 char Code(char word, int key)
 {
-	// word = convertWord(word);
-	int wordTemp;
+	int wordTemp = word;
 
-	if (entreascii(word))
+	if (inasciiUpper(wordTemp))
 	{
-		wordTemp = word;
-
-		key = key;
-		word += key;
-
-		if (! entreascii(word))
-		{
-			word = word - wordTemp;
-		}
-	}
-
-	if (entreASCII(word))
-	{
-		wordTemp = word;
-
 		key = 2 * key;
-		word += key;
-
-		if (! entreASCII(word))
-		{
-			word = word - wordTemp;
-		}
+		word = convertWord(word); // convert to lower
 	}
 
-	else
+	if (key > 0)
+	{
+		if (inasciiLower(word))
+		{
+			for (int i = 0; i < key; i++)
+			{
+				if (inasciiLower(word))
+				{
+					word++;
+				}
+				if (! inasciiLower(word))
+				{
+					word = ('a' - 1);
+					word++;
+				}
+			}
+		}
+	}
+	if (key < 0)
+	{
+		if (inasciiLower(word))
+		{
+			for (int i = 0; i > key; i--)
+			{
+				if (inasciiLower(word))
+				{
+					word--;
+				}
+				if (! inasciiLower(word))
+				{
+					word = ('z' + 1);
+					word--;
+				}
+			}
+		}
+	}
+	else /* key == 0 */
 	{
 		word = word;
+	}
+
+	if (inasciiUpper(wordTemp))
+	{
+		word = convertWord(word); // convert to upper
 	}
 
 	return word;
@@ -97,41 +119,71 @@ char Code(char word, int key)
 
 char Decode(char word, int key)
 {
-	// word = convertWord(word);
-	int wordTemp;
+	int wordTemp = word;
 
-	if (entreascii(word))
+	if (inasciiUpper(wordTemp))
 	{
-		wordTemp = word;
-
-		key = key;
-		word -= key;
-
-		if (! entreascii(word))
-		{
-			word = word - wordTemp;
-		}
-	}
-
-	if (entreASCII(word))
-	{
-		wordTemp = word;
-
 		key = 2 * key;
-		word -= key;
-
-		if (! entreASCII(word))
-		{
-			word = word - wordTemp;
-		}
+		word = convertWord(word); // convert to lower
 	}
 
-	else
+	if (key > 0)
+	{
+		if (inasciiLower(word))
+		{
+			for (int i = 0; i < key; i++)
+			{
+				if (inasciiLower(word))
+				{
+					word--;
+				}
+				if (! inasciiLower(word))
+				{
+					word = ('z' + 1);
+					word--;
+				}
+			}
+		}
+	}
+	if (key < 0)
+	{
+		if (inasciiLower(word))
+		{
+			for (int i = 0; i > key; i--)
+			{
+				if (inasciiLower(word))
+				{
+					word++;
+				}
+				if (! inasciiLower(word))
+				{
+					word = ('a' - 1);
+					word++;
+				}
+			}
+		}
+	}
+	else /* key == 0 */
 	{
 		word = word;
 	}
 
+	if (inasciiUpper(wordTemp))
+	{
+		word = convertWord(word); // convert to upper
+	}
+
 	return word;
+}
+
+int inasciiLower(char word)
+{
+	return (word >= 'a' && word <= 'z');
+}
+
+int inasciiUpper(char word)
+{
+	return (word >= 'A' && word <= 'Z');
 }
 
 char convertWord(char word)
@@ -142,7 +194,7 @@ char convertWord(char word)
 	}
 	else if (word >= 'a' && word <= 'z')
 	{
-		word = word;
+		word += ('A' - 'a');
 	}
 	else
 	{
@@ -150,14 +202,4 @@ char convertWord(char word)
 	}
 
 	return word;
-}
-
-int entreascii(char word)
-{
-	return (word >= 'a' && word <= 'z');
-}
-
-int entreASCII(char word)
-{
-	return (word >= 'A' && word <= 'Z');
 }
