@@ -32,7 +32,7 @@ Formatação:
 
 
 Tipos primitivos em C:
-char, int, float, double, void
+char, int, float, double, void (e long, como complemento)
 
 Tipos compostos em C:
 struct, pointer, array
@@ -81,10 +81,21 @@ Para executar o arquivo compilado se usa o comando
 
 	./caminho/arquivoexecutavel
 
+
+
+Para apenas mandar um arquivo como input de um programa se usa o comando
+
+	./arquivoexecutavel < caminho/arquivoinput					< para o input
+
+
+Para apenas salvar um arquivo como output de um programa se usa o comando
+
+	./arquivoexecutavel > caminho/arquivooutput					> para o output
+
+
 Para mandar um arquivo como input de um programa e salvar o output se usa o comando
 
-	./arquivoexecutavel <caminho/arquivoinput> caminho/arquivooutput					<> só no input
-
+	./arquivoexecutavel < caminho/arquivoinput > caminho/arquivooutput					< > para o input e output
 
 
 
