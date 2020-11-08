@@ -3,9 +3,9 @@
 
 int main()
 {
-	char letra[];
+	char string[100]  = "Hello World! \n"; // array com 100 espaços
 
-	//
+	fputs(string, stdout);
 
 	return 0;
 }

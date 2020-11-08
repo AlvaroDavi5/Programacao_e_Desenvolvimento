@@ -70,7 +70,24 @@ int main()
 
 /*
 
-	---------------- MODOS DE ABERTURA DE ARQUIVO ----------------
+	----------------------------------------------------------------------------------------------------------------------------------------------------
+
+	fgetc(char) e fputc(char, *archive) servem para ler/escrever um UNICO CARACTERE.
+	fgets(string, int, *archive) e fputs(string, *archive) servem para ler/escrever uma STRING.
+	fscanf(*archive, "%t ", &var) e fprintf(*archive, "%t ", var) funcionam como scanf("%t ", &var) e printf("%t ", var) mas seu input/output é em um arquivo e não no terminal/console.
+	Tais funções são para arquivos de texto.
+
+	fread(*void, int, int, *archive) e fwrite(*void, int, int, *archive) servem para ler/escrever blocos de dados.
+	Ambas são para arquivos binários;
+
+
+	fseek(*archive, int, int) serve para fazer buscas e acessos randômicos em arquivos, suas chaves de busca são definidas por SEEK_SET, SEEK_CUR ou SEEK_END (respectivamente: início, posição corrente, fim).
+	rewind(*archive) retorna para o início do arquivo a ser lido/escrito.
+	Ambas são para arquivos de texto ou binários;
+
+	remove(*archive) apaga o arquivo do disco.
+
+	---------------------- MODOS DE ABERTURA DE ARQUIVO ----------------------
 
 	MODO		TIPO_DE_ARQUIVO			FUNCIONALIDADE
 
@@ -87,5 +104,25 @@ int main()
 	"r+b"		binário					Leitura/Escrita. O arquivo deve existir e pode ser modificado
 	"w+b"		binário					Leitura/Escrita. Cria arquivo se não houver. Apaga o anterior se ele existir
 	"a+b"		binário					Leitura/Escrita. Os dados serão adicionados no fim do arquivo
+
+
+	------------------------- ARQUIVOS PRÉ-DEFINIDOS -------------------------
+
+	stdin
+		dispositivo de entrada padrão (geralmente o teclado)
+
+	stdout
+		dispositivo de saída padrão (geralmente o vídeo)
+
+	stderr
+		dispositivo de saída de erro padrão (geralmente o vídeo)
+
+	stdaux
+		dispositivo de saída auxiliar (em muitos sistemas, associado à porta serial)
+
+	stdprn
+		dispositivo de impressão padrão (em muitos sistemas, associado à porta paralela)
+
+	----------------------------------------------------------------------------------------------------------------------------------------------------
 
 */
