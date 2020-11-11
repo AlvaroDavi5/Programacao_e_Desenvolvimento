@@ -32,7 +32,7 @@ int EhPrimo(int num)
 		if (num % i == 0) // se o resto da divisao inteira de num por i for 0, entao nao e primo
 		{
 			verif++;
-			break;
+			break; // contrario de 'continue'
 		}
 	}
 

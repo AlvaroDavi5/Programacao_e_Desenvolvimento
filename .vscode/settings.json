@@ -1,9 +1,0 @@
-{
-	"files.associations": {
-		"functional": "c",
-		"ratio": "c",
-		"random": "c",
-		"string": "c"
-	},
-	"C_Cpp.errorSquiggles": "Disabled"
-}
