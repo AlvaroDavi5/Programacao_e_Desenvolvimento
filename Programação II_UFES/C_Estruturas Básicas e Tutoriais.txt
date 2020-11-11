@@ -14,7 +14,7 @@ Múltiplas Linhas
 Tipos primitivos em C:
 pointer, char, int, float, double, void (e long, como complemento)
 
-Tipos compostos em C:
+Tipos complexos em C:
 struct, array
 
 
