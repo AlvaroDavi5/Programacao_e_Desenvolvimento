@@ -1,9 +1,15 @@
-#ifndef TRABFUNC_H
+#ifndef TRABFUNC_H // se o header (cabecalho) nao esta definido,
 
-	#define TRABFUNC_H 
+	#define TRABFUNC_H // definir header.
 
-	// typedef struct {} tData;			definição do tipo complexo
+	// definicao de tipos complexos
+	typedef struct {
+		int c1;
+		float c2;
+		char c3;
+	} tExemplo;
 
-	// void imprimeData();			prototipos de funcoes
+	// prototipos de funcoes
+	void imprimeZero();
 
 #endif

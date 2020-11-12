@@ -3,9 +3,9 @@
 #include <math.h>
 #include "trabfunc.h"
 
-// todas as funções
-
-/* void imprimeData()
+// todas as funcoes
+void imprimeZero()
 {
+	printf("0");
 	return;
-} */
+}

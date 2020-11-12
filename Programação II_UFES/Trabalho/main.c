@@ -5,7 +5,7 @@
 
 int main()
 {
-	//
+	imprimeZero();
 
 	return 0;
 }
