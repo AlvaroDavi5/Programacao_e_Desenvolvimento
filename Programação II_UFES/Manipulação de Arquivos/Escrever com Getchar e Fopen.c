@@ -7,7 +7,7 @@ int main()
 
 	printf("Digite um texto para ser salvo, finalize com '.' e depois do ponto digite apenas 1 caractere \n");
 
-	FILE *arq; //	ponteiro de arquivo, armazena o endereço das posições do arquivo
+	FILE *arq; // ponteiro de arquivo, armazena o endereço das posições do arquivo
 	arq = fopen("./arquivo.txt", "a+"); // abrir arquivo (endereço_arquivo, MODO_abertura), função passando por referência
 
 	if (arq == NULL) // caso o arquivo não exista, a função retorna um ponteiro nulo (NULL)
