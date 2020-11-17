@@ -1,31 +1,12 @@
 /*
 
-SAIDA (eleicao valida):
-  FIM DA ELEICAO
-  - PRESIDENTE ELEITO: <nome_presidente> (<partido>), <total_de_votos>, <porcentagem_de_votos_validos>%
-  - PRIMEIRO MINISTRO ELEITO: <nome_pm> (<partido>), <total_de_votos>, <porcentagem_de_votos_validos>%
-  - COMPARECIMENTO: <porcentagem_de_pessoas_que_votaram>%
-  - NULOS E BRANCOS: <total_nulos_brancos_presidente>, <total_nulos_brancos_pministro>
-
-SAIDA (eleicao empatada pres OU min):
-  FIM DA ELEICAO
-  - PRESIDENTE ELEITO: EMPATE
-  - PRIMEIRO MINISTRO ELEITO: EMPATE
-  - COMPARECIMENTO: <porcentagem_de_pessoas_que_votaram>%
-  - NULOS E BRANCOS: <total_nulos_brancos_presidente>, <total_nulos_brancos_pministro>
-
-SAIDA (eleicao poucos votos validos pres OU min):
-  FIM DA ELEICAO
-  - PRESIDENTE ELEITO: SEM DECISAO
-  - PRIMEIRO MINISTRO ELEITO: SEM DECISAO
-  - COMPARECIMENTO: <porcentagem_de_pessoas_que_votaram>%
-  - NULOS E BRANCOS: <total_nulos_brancos_presidente>, <total_nulos_brancos_pministro>
-
-Saídas que são string devem ser maiúsculas e saídas float devem ter precisão de 2 casas decimais.
+	Exercicio Avaliativo
+	Alvaro Davi, Eng Comp, 2020.1
 
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct
 {
@@ -40,23 +21,21 @@ typedef struct
 {
 	int nulo;
 	int branco;
-	int berners_lee;
+	int tim;
 	int torvalds;
 	int lovelace;
 } tCandMin;
 
 
-tCandPres contabilizadorPres(int num_pres, tCandPres candidatosP);
-tCandMin contabilizadorMin(int num_min, tCandMin candidatosM);
-int excessoDeVotos(int qtd_control, int qtd_eleitores);
-float percentValid(int votos_validos, int total_votos);
-float percentComp(int qtd_control, int qtd_eleitores);
+void mostrarVencedorP(tCandPres candidatosP, int votos_validos);
+void mostrarVencedorM(tCandMin candidatosM, int votos_validos);
+int verifGanhadorP(int dijkstra, int turing, int shaw);
+int verifGanhadorM(int tim, int torvalds, int lovelace);
+int empatou(int qtd1, int qtd2, int qtd3);
+double percentCalcule(int num, int total);
 void anulaEleicao();
-void imprimeEleValida(tCandPres candidatosP, tCandMin candidatosM, int qtd_control, int qtd_eleitores, int votos_validosP, int votos_invalidosP, int votos_validosM, int votos_invalidosM);
-int EleSemDecisao(int invalidos, int validos);
-void verifGanhadorP(tCandPres candidatosP);
-void verifGanhadorM(tCandMin candidatosM);
-void mostrarVencedor(int vencedor);
+void imprimeEleValida(tCandPres candidatosP, tCandMin candidatosM, int qtd_eleitores, int votos_validos, int votos_invalidosP, int votos_invalidosM);
+
 
 
 int main()
@@ -64,268 +43,134 @@ int main()
 	tCandPres candidatosP;
 	tCandMin candidatosM;
 
-	int qtd_eleitores, qtd_control = 0;
-	int id_eleitor, id_temp = 0, num_pres, num_min;
-
-	int votos_validosP = 0, votos_invalidosP = 0;
-	int votos_validosM = 0, votos_invalidosM = 0;
+	int qtd_eleitores, cont = 0;
+	int id_eleitor, id_temp, num_pres, num_min;
+	int votos_validos = 0, votos_invalidosP = 0, votos_invalidosM = 0;
 	int verificador = 0;
+
+	candidatosP.dijkstra = 0, candidatosP.turing = 0, candidatosP.shaw = 0, candidatosP.branco = 0, candidatosP.nulo = 0;
+	candidatosM.tim = 0, candidatosM.torvalds = 0, candidatosM.lovelace = 0, candidatosM.branco = 0, candidatosM.nulo = 0;
+
 
 	scanf("%d", &qtd_eleitores);
 
 	while (scanf("%d %d %d", &id_eleitor, &num_pres, &num_min) == 3)
 	{
-		if (id_temp == 0)
+		cont++;
+		if (cont == 1)
 		{
 			id_temp = id_eleitor;
 		}
-		else
-		{
-			if (id_temp == id_eleitor)
-			{
-				anulaEleicao();
-			}
-			else
-			{
-				id_temp = id_eleitor;
-			}
-		}
-
-		qtd_control++;
-
-		if (excessoDeVotos(qtd_control, qtd_eleitores))
+		if (cont != 1 && (cont > qtd_eleitores || id_temp == id_eleitor))
 		{
 			anulaEleicao();
 		}
+	
+		if (num_pres == 0 && num_min == 0)
+			votos_validos++;
+
+		if (num_pres != 10 && num_pres != 42 && num_pres != 26)
+			votos_invalidosP++;
+		if (num_min != 36 && num_min != 64 && num_min != 18)
+			votos_invalidosM++;
+
 		else
 		{
-			candidatosP = contabilizadorPres(num_pres, candidatosP);
-			candidatosM = contabilizadorMin(num_min, candidatosM);
+			votos_validos++;
+      		if (num_pres == 10)
+        		candidatosP.dijkstra++;
+      		if (num_pres == 42)
+        		candidatosP.turing++;
+      		if (num_pres == 26)
+        		candidatosP.shaw++;
 
-
-			votos_validosP = candidatosP.dijkstra + candidatosP.turing + candidatosP.shaw;
-			votos_invalidosP = candidatosP.branco + candidatosP.nulo;
-
-			votos_validosM = candidatosM.berners_lee + candidatosM.torvalds + candidatosM.lovelace;
-			votos_invalidosM = candidatosM.branco + candidatosM.nulo;
-
-			verificador = 1;
+      		if (num_min == 36)
+        		candidatosM.tim++;
+      		if (num_min == 64)
+        		candidatosM.torvalds++;
+      		if (num_min == 18)
+        		candidatosM.lovelace++;
 		}
 	}
 
-	if (verificador == 1)
-	{
-		imprimeEleValida(candidatosP, candidatosM, qtd_control, qtd_eleitores, votos_validosP, votos_invalidosP, votos_validosM, votos_invalidosM);
-	}
+	imprimeEleValida(candidatosP, candidatosM, qtd_eleitores, votos_validos, votos_invalidosP, votos_invalidosM);
 
 	return 0;
 }
 
 
-tCandPres contabilizadorPres(int num_pres, tCandPres candidatosP)
+
+void mostrarVencedorP(tCandPres candidatosP, int votos_validos)
 {
-	tCandPres candidato = candidatosP;
-
-	switch (num_pres)
-	{
-	case 0:
-		candidato.branco++;
-		break;
-	case 10:
-		candidato.dijkstra++;
-		break;
-	case 42:
-		candidato.turing++;
-		break;
-	case 26:
-		candidato.shaw++;
-		break;
-	default:
-		candidato.nulo++;
-		break;
-	}
-
-	return candidato;
-}
-
-tCandMin contabilizadorMin(int num_min, tCandMin candidatosM)
-{
-	tCandMin candidato = candidatosM;
-
-	switch (num_min)
-	{
-	case 0:
-		candidato.branco++;
-		break;
-	case 36:
-		candidato.berners_lee++;
-		break;
-	case 64:
-		candidato.torvalds++;
-		break;
-	case 18:
-		candidato.lovelace++;
-		break;
-	default:
-		candidato.nulo++;
-		break;
-	}
-
-	return candidato;
-}
-
-void verifGanhadorP(tCandPres candidatosP)
-{
-	int nulo = candidatosP.nulo;
-	int branco = candidatosP.branco;
-	int Dijkstra = candidatosP.dijkstra;
-	int Turing = candidatosP.turing;
-	int Shaw = candidatosP.shaw;
-
-	int maior;
-	int vencedor;
-
-	if (Dijkstra >= Turing)
-	{
-		if (Dijkstra == Turing)
-		{
-			maior = Dijkstra;
-			vencedor = 0;
-		}
-		else
-		{
-			maior = Dijkstra;
-			vencedor = 10;
-		}
-	}
-	else
-	{
-		maior = Turing;
-		vencedor = 42;
-	}
-
-	if (Shaw > maior)
-	{
-		maior = Shaw;
-		vencedor = 26;
-	}
-	if (Shaw == maior)
-	{
-		vencedor = 0;
-	}
-
-	mostrarVencedor(vencedor);
-}
-
-void verifGanhadorM(tCandMin candidatosM)
-{
-	int nulo = candidatosM.nulo;
-	int branco = candidatosM.branco;
-	int Tim = candidatosM.berners_lee;
-	int Torvalds = candidatosM.torvalds;
-	int Lovelace = candidatosM.lovelace;
-
-	int maior;
-	int vencedor;
-
-	if (Tim >= Torvalds)
-	{
-		if (Tim == Torvalds)
-		{
-			maior = Tim;
-			vencedor = 0;
-		}
-		else
-		{
-			maior = Tim;
-			vencedor = 36;
-		}
-	}
-	else
-	{
-		maior = Torvalds;
-		vencedor = 64;
-	}
-
-	if (Lovelace > maior)
-	{
-		maior = Lovelace;
-		vencedor = 18;
-	}
-	if (Lovelace == maior)
-	{
-		vencedor = 0;
-	}
-
-	mostrarVencedor(vencedor);
-}
-
-void mostrarVencedor(int vencedor)
-{
-	switch (vencedor)
+	switch (verifGanhadorP(candidatosP.dijkstra, candidatosP.turing, candidatosP.shaw))
 	{
 	case 10:
-		printf("Edsger Dijkstra (Partido do Melhor Caminho (PMC))");
+		printf("Edsger Dijkstra (Partido do Melhor Caminho (PMC)), %d, %.2f%%\n", candidatosP.dijkstra, percentCalcule(candidatosP.dijkstra, votos_validos));
 		break;
 	case 42:
-		printf("Alan Turing (Partido dos Avanço Intelectual (PAI))");
+		printf("Alan Turing (Partido dos Avanço Intelectual (PAI)), %d, %.2f%%\n", candidatosP.turing, percentCalcule(candidatosP.turing, votos_validos));
 		break;
 	case 26:
-		printf("Carol Shaw (Gamers Unidos (GU))");
-		break;
-	case 36:
-		printf("Tim Berners-Lee (World Wide Web (WWW))");
-		break;
-	case 64:
-		printf("Linus Torvalds (Linux (Linux))");
-		break;
-	case 18:
-		printf("Ada Lovelace (Mulheres Programadoras Unidas (MPU))");
+		printf("Carol Shaw (Gamers Unidos (GU)), %d, %.2f%%\n", candidatosP.shaw, percentCalcule(candidatosP.shaw, votos_validos));
 		break;
 	default:
-		printf("EMPATE");
 		break;
 	}
 }
 
-int excessoDeVotos(int qtd_control, int qtd_eleitores)
+void mostrarVencedorM(tCandMin candidatosM, int votos_validos)
 {
-	if (qtd_control > qtd_eleitores)
+	switch (verifGanhadorM(candidatosM.tim, candidatosM.torvalds, candidatosM.lovelace))
 	{
-		return 1;
-	}
-	else
-	{
-		return 0;
+	case 36:
+		printf("Tim Berners-Lee (World Wide Web (WWW)), %d, %.2f%%\n", candidatosM.tim, percentCalcule(candidatosM.tim, votos_validos));
+		break;
+	case 64:
+		printf("Linus Torvalds (Linux (Linux)), %d, %.2f%%\n", candidatosM.torvalds, percentCalcule(candidatosM.torvalds, votos_validos));
+		break;
+	case 18:
+		printf("Ada Lovelace (Mulheres Programadoras Unidas (MPU)), %d, %.2f%%\n", candidatosM.lovelace, percentCalcule(candidatosM.lovelace, votos_validos));
+		break;
+	default:
+		break;
 	}
 }
 
-float percentValid(int votos_validos, int total_votos)
+int verifGanhadorP(int dijkstra, int turing, int shaw)
 {
-	float percent;
-	percent = (100.0 * votos_validos) / total_votos;
-
-	return percent;
+  if (dijkstra > turing && dijkstra > shaw)
+    return 10;
+  else if (turing > shaw)
+    return 42;
+  else
+    return 26;
 }
 
-float percentComp(int qtd_control, int qtd_eleitores)
+int verifGanhadorM(int tim, int torvalds, int lovelace)
 {
-	float percent;
-	percent = (100.0 * qtd_control) / qtd_eleitores;
-
-	return percent;
+  if (tim > torvalds && tim > lovelace)
+    return 36;
+  else if (torvalds > lovelace)
+    return 64;
+  else
+    return 18;
 }
 
-int EleSemDecisao(int invalidos, int validos)
+int empatou(int qtd1, int qtd2, int qtd3)
 {
-	if (validos < invalidos)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+  if (qtd1 == 0 || qtd2 == 0 || qtd3 == 0)
+    return 0;
+  else if (qtd1 == qtd2 || qtd1 == qtd3)
+    return 1;
+  else if (qtd2 == qtd3)
+    return 1;
+  else
+    return 0;
+}
+
+double percentCalcule(int num, int total)
+{
+	return (100.0 * num) / total;
 }
 
 void anulaEleicao()
@@ -334,41 +179,34 @@ void anulaEleicao()
 	exit(0);
 }
 
-void imprimeEleValida(tCandPres candidatosP, tCandMin candidatosM, int qtd_control, int qtd_eleitores, int votos_validosP, int votos_invalidosP, int votos_validosM, int votos_invalidosM)
+void imprimeEleValida(tCandPres candidatosP, tCandMin candidatosM, int qtd_eleitores, int votos_validos, int votos_invalidosP, int votos_invalidosM)
 {
 	printf("FIM DA ELEICAO\n");
-	printf("- PRESIDENTE ELEITO: ");
-	if (EleSemDecisao(votos_invalidosP, votos_validosP))
+
+	if (empatou(candidatosP.dijkstra, candidatosP.turing, candidatosP.shaw))
 	{
-		printf("SEM DECISAO");
+		printf("- PRESIDENTE ELEITO: ");
+		printf("EMPATE\n");
+		printf("- PRIMEIRO MINISTRO ELEITO: ");
+		mostrarVencedorM(candidatosM, votos_validos);
 	}
+
+	else if (votos_validos <= (votos_invalidosP + votos_invalidosM))
+	{
+		printf("- PRESIDENTE ELEITO: ");
+		printf("SEM DECISAO\n");
+		printf("- PRIMEIRO MINISTRO ELEITO: ");
+		mostrarVencedorM(candidatosM, votos_validos);
+	}
+	
 	else
 	{
-		verifGanhadorP(candidatosP);
-		printf(", %d", qtd_control);
-		float percentVVP = percentValid(votos_validosP, qtd_eleitores);
-		printf(", %.2f%%", percentVVP);
+		printf("- PRESIDENTE ELEITO: ");
+		mostrarVencedorP(candidatosP, votos_validos);
+		printf("- PRIMEIRO MINISTRO ELEITO: ");
+		mostrarVencedorM(candidatosM, votos_validos);
 	}
-	printf("\n");
 
-
-	printf("- PRIMEIRO MINISTRO ELEITO: ");
-	if (EleSemDecisao(votos_invalidosM, votos_validosM))
-	{
-		printf("SEM DECISAO");
-	}
-	else
-	{
-		verifGanhadorM(candidatosM);
-		printf(", %d", qtd_control);
-		float percentVVM = percentValid(votos_validosM, qtd_eleitores);
-		printf(", %.2f%%", percentVVM);
-	}
-	printf("\n");
-
-
-	float percent = percentComp(qtd_control, qtd_eleitores);
-	printf("- COMPARECIMENTO: %.2f%%\n", percent);
-
+	printf("- COMPARECIMENTO: %.2f%%\n", percentCalcule(votos_validos, qtd_eleitores));
 	printf("- NULOS E BRANCOS: %d, %d", votos_invalidosP, votos_invalidosM);
 }
