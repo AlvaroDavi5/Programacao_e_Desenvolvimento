@@ -1,5 +1,5 @@
-index = 15
+index = 0
 
-while index >= 0:
-	print(index-1)
-	pass
+while index <= 15:
+	print(index)
+	index+1
