@@ -77,7 +77,7 @@ int main()
 	fscanf(*archive, "%t ", &var) e fprintf(*archive, "%t ", var) funcionam como scanf("%t ", &var) e printf("%t ", var) mas seu input/output é em um arquivo e não no terminal/console.
 	Tais funções são para arquivos de texto.
 
-	fread(*void, int, int, *archive) e fwrite(*void, int, int, *archive) servem para ler/escrever blocos de dados.
+	fread(*void, int, int, *archive) e fwrite(*void, int, int, *archive) servem para ler/escrever blocos de dados em arquivos binarios.
 	Ambas são para arquivos binários;
 
 
