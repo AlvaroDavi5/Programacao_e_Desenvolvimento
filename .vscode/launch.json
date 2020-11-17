@@ -24,6 +24,13 @@
 			],
 			"preLaunchTask": "C/C++: gcc-7 build active file",
 			"miDebuggerPath": "/usr/bin/gdb"
+		},
+		{
+			"name": "Python: Executar Arquivo Atual",
+			"type": "python",
+			"request": "launch",
+			"program": "${file}",
+			"console": "integratedTerminal"
 		}
 	]
 }
