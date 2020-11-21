@@ -1,6 +1,6 @@
 
 	// bubblesortOrdenation
-	// insertionOrdenation
+	// insertionsortOrdenation
 	// quicksortOrdenation
 
 #include <stdio.h>
