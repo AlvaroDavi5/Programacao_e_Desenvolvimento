@@ -38,6 +38,7 @@ Formatação de Saída:
 
 %c		char
 %s		string
+%[]		string, sem ignorar qualquer caractere (se usado [^,] o programa para de ler ao encontrar uma ',';	se usado [a-z] o programa lê de 'a' até 'z' e para quando um caractere não se encontra no intervalo)
 %d		número na base decimal
 %o		número na base octal
 %x		número na base hexadecimal
@@ -51,6 +52,7 @@ Formatação de Saída:
 %04d	4 casas deicimais de zeros à esquerda do número
 %6i		número com 6 casas deicimais, se o número possuim menos de 6 casas são imprimidos espaços em branco
 %.2f	2 casas deicimais após o ponto flutuante
+%d*c%d	ignora um caractere entre os dois números
 %%		sinal de %
 
 
