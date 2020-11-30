@@ -1,5 +1,5 @@
-# Falta:
-	·corrigir bug ao listar cidades top n de mais casos em ordem decrescente (item 5)
+## Pode ser otimizado:   
+·usar metodo quicksort para ordenação [por nomes e por casos]
 
 ---------------------------------------------------------------------------------------------
 
