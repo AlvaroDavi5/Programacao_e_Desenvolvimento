@@ -1,12 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <math.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-#include "trabfunc.h"
+// inclusao de bibliotecas para funcoes ja existentes
+#include <stdio.h> // Standart Input-Output, biblioteca padrao de entradas e saidas, para funcoes como scanf e printf
+#include <stdlib.h> // Standart Library, para alocacao de memoria, conversoes de tipos e outras funcionalidades
+#include <math.h> // para operacoes e funcoes matematicas
+#include <ctype.h> // para manipulacoes de caracteres
+#include <string.h> // para trabalhar com strings
+
+// detectar se o SO foi definido como sendo baseado em Unix
+#ifdef __unix__
+	#include <unistd.h> // para comandos e manipulacoes envolvendo SO's da familia UNIX (Linux, GNU, BSD...)
+// se nao e se o SO foi definido como sendo Windows
+#elif defined(_WIN32) || defined(WIN32)
+	#define OS_Windows // definir nome para o sistema, caso seja Windows
+	#include <windows.h> // para comandos e manipulacoes especificas do SO Windows
+#endif // fim do desvio condicional
+
+#include "trabfunc.h" // biblioteca local para funcoes criadas
 
 
 
@@ -132,10 +140,16 @@ void lerEntrada()
 	confMortD2 = filtrarDatas();
 	confMortD2.dia++; // para incluir o ultimo dia da data2 no while (pois ele le de D1 a D2 e para quando D1 == D2, excluindo o ultimo caso)
 
-	// para criar diretorio [Linux]
-	strcpy(comando,"mkdir ");
-	strcat(comando, dir);
-	system(comando); // copiado comando 'mkdir' para a variavel comando e concatenado ao diretorio do input
+	// verificar SO para criar diretorio (a criada vale para ambos, mas essa verificacao torna o programa mais adaptado)
+	#ifdef OS_Windows // se o sistema operacional foi definido como Windows
+		strcpy(comando,"mkdir ");
+		strcat(comando, dir);
+		system(comando); // copiado comando 'mkdir' para a variavel comando e concatenado ao diretorio do input
+	#else // se nao e Windows
+		strcpy(comando,"mkdir ");
+		strcat(comando, dir);
+		system(comando); // copiado comando 'mkdir' para a variavel comando e concatenado ao diretorio do input
+	#endif
 
 	//executar funcoes dos items
 	cidadesMaisNCasosOrdemAlfab(dir, Ncasos);

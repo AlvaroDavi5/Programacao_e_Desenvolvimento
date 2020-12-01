@@ -90,14 +90,14 @@ Incluir bibliotecas:
 
 #include <stdio.h>		Standart Input/Output, para funções como getchar(), putchar(), scanf(), printf(), fopen() e tipos como FILE e EOF
 #include <stdlib.h>		Standart Library, para Emulação de Terminal (Shell, DOS, etc) e para funções como rand(), srand(), sizeof(), malloc(), stdin() e stdout()
-#include <stdbool.h>		Standart Boolean, para tipos Booleanos (0 e 1, false e true)
+#include <stdbool.h>	Standart Boolean, para tipos Booleanos (0 e 1, false e true)
 #include <stddef.h>		Padrões de Definições de Tipos
 #include <stdint.h>		Padrões de Definição de Tipos de Dados Inteiros
 #include <float.h>		Define Limites e Precisão de Variáveis Reais (com Ponto Flutuante)
 #include <time.h>		Para Medir o Tempo Dentro de um Programa e para funções como time() e clock()
 #include <math.h>		Para Operações Matemáticas e para funções como sqrt(), pow(), log() e sin()
 #include <tgmath.h>		Para Implementar Facilidades para Utilização de Funções Matemáticas
-#include <complex.h>		Para Manipulação de Números Complexos
+#include <complex.h>	Para Manipulação de Números Complexos
 #include <string.h>		Para Manipulação de Strings e para funções como strlen(), strcpy(), strcat() e strcmp()
 #include <locale.h>		Para Localização de Programas, Unidades de Medidas/Monetárias e Acentuação de Acordo com o Idioma e a Região e para funções como setlocale()
 #include <ctype.h>		Para Classificar Caracteres ASCII e para funções como isdigit(), islower() e isalnum()
@@ -105,9 +105,8 @@ Incluir bibliotecas:
 #include <assert.h>		Implementa Ajuda na Detecção de Erros em Versões de Depuração
 #include <errno.h>		Teste de Códigos de Erro Reportados pelas Funções de Bibliotecas
 #include <signal.h>		Implementa Definições para Receber e Tratar de Sinais
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <unistd.h>		Fornece acesso à API da Interface para Sistema Operacionais POSIX. Logo, está disponível para/em qualquer Sistema Operacional e Compilador compatível com POSIX, ou seja, para qualquer SO da família Unix (Linux, GNU, BSD...)
+#include <windows.h>	Contém declarações para todas as funções na API do Sistema Operacional Windows, todas as macros comuns usadas pelos programadores do Windows e todos os tipos de dados usados ​​pelas várias funções e subsistemas
 ...
 
 
