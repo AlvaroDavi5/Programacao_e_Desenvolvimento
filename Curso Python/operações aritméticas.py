@@ -16,3 +16,12 @@ print("O produto entre os números é:", res)
 
 res = float(num1) / float(num2)
 print("O quociente entre os números é:", res)
+
+res = float(num1) // float(num2)
+print("O quociente inteiro entre os números é:", res)
+
+res = float(num1) % float(num2)
+print("O resto do quociente inteiro entre os números é:", res)
+
+res = float(num1) ** 2
+print("A potencia de grau 2 é:", res)

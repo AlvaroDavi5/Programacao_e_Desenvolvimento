@@ -2,6 +2,7 @@ nome = "Alvaro" # string
 idade = 18 # int
 altura = 1.74 # float
 tiposang = 'O' # caractere (string de índice 1)
+cor_branca = False
 
 #operações
 print (1 + 2) # adição (printa soma)
@@ -16,11 +17,14 @@ print (type(nome))
 print (type(idade))
 print (type(altura))
 print (type(tiposang))
+print (type(cor_branca))
 
 
 # conversões
 print (int(134.567))
 print (float(2))
+print (str(15))
+print (bool(0)); print (bool(1))
 
 # operações
 print (abs(-15)) # módulo
