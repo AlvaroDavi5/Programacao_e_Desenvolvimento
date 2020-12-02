@@ -1,8 +1,9 @@
 nome = "Alvaro" # string
 idade = 18 # int
 altura = 1.74 # float
-tiposang = 'O' # caractere (string de índice 1)
-cor_branca = False
+tiposang = 'O' # caractere
+cor_branca = False # valor booleano
+cores_preferidas = ["Preto", "verde", "Cinza"] # lista
 
 #operações
 print (1 + 2) # adição (printa soma)
@@ -18,6 +19,7 @@ print (type(idade))
 print (type(altura))
 print (type(tiposang))
 print (type(cor_branca))
+print (type(cores_preferidas))
 
 
 # conversões

@@ -1,4 +1,4 @@
-# isso é uma string, mas em Python uma string é um vetor de caracteres
+# isso é uma string, mas em Python uma string é um vetor de caracteres (mas é imutável)
 texto = "Meu nome é Álvaro"
 
 # logo, podemos separar as strings por índices
