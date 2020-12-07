@@ -2,7 +2,12 @@
 	"files.associations": {
 		"functional": "c",
 		"ratio": "c",
-		"random": "c"
+		"random": "c",
+		"hash_map": "c",
+		"hash_set": "c",
+		"bitset": "c",
+		"chrono": "c",
+		"algorithm": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

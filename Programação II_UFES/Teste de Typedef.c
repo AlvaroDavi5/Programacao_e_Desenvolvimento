@@ -5,10 +5,10 @@ typedef float real; // atribui o nome 'real' para o tipo float (em escopo global
 
 int main()
 {
-  real num;
+	real num;
 
-  scanf("%f", &num);
-  printf("%.4f", num);
+	scanf("%f", &num);
+	printf("%.4f", num);
 
 	return 0;
 }
