@@ -10,12 +10,14 @@
 #define FALSE 0
 #define ARRAYSIZE 15
 
+
 void bubbleSort(int array[]);
 void insertionSort(int array[]);
 void quickSort(int array[], int begin, int end);
 int partitions(int array[], int begin, int end);
 void randomValues(int array[]);
 void printArray(int array[]);
+
 
 int main()
 {
