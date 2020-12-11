@@ -1,6 +1,6 @@
 // bubblesortOrdenation (correto)
 // insertionsortOrdenation (repetindo valores)
-// quicksortOrdenation (adcionando 0 e removendo ultimo valor)
+// quicksortOrdenation (adcionando 0 e excluindo ultima posicao)
 
 #include <stdio.h>
 #include <stdlib.h>
