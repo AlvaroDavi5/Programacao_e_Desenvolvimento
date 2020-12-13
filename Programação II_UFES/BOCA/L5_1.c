@@ -94,7 +94,7 @@ float desvioPadrao(int n, float media, int notasAlunos[])
 
 	for (int i = 0; i < n; i++)
 	{
-		somQuadDiffM += pow((notasAlunos[i] - media), 2);
+		somQuadDiffM += (notasAlunos[i] - media)*(notasAlunos[i] - media);
 	}
 
 	DP = sqrt(somQuadDiffM / (n - 0.00)); // sem o -1.00 pois eh desvio padrao populacional (nao amostral)
