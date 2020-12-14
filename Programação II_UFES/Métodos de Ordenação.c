@@ -70,7 +70,7 @@ void bubbleSort(int array[])
 	for (j = (ARRAYSIZE - 1); (j >= 1) && (shift); j--)
 	{
 		shift = FALSE; // se o valor continuar 'false' na proxima iteracao entao nao houve troca e a funcao termina
-		
+
 		for (i = 0; i < j; i++)
 		{
 			if (array[i] > array[i+1]) // se o valor da posicao i for maior que o valor da posicao i+1
@@ -83,6 +83,26 @@ void bubbleSort(int array[])
 		}
 	}
 }
+
+/*
+	#define TAM 10
+
+	int count, i, aux, vetor[TAM];
+
+	for (count = 1; count < TAM;; count++)  vai da posicao 1 a 9
+	{
+		for (i = 0;; i < TAM - 1;; i++)  vai da posicao 0 a 9
+		{
+			if (vetor[i] > vetor[i+1])
+			{
+				aux = vetor[i];
+				vetor[i] = vetor[i+1];
+				vetor[i+1] = aux;
+			}
+		}
+	}
+
+*/
 
 
 
