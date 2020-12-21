@@ -15,8 +15,15 @@ int main()
 
 	for (int i = 0; i < 9; i++) // gerando 9 valores pseudo-aleatórios [pois em computação nada é totalmente aleatório]
 	{
-		// gerando valores entre 0 e 50
-		const random = rand() % 50;
+		// gerando valores entre 1 e 50
+		int aleat = (rand() % 49) + 1;
+		printf("%d \n", aleat); // a função rand() só trabalha com números naturais, ou seja, inteiros positivos
+	}
+
+	for (int i = 0; i < 3; i++) // gerando 3 valores pseudo-aleatórios [pois em computação nada é totalmente aleatório]
+	{
+		// gerando valores entre 0 e RAND_MAX
+		const random = rand() % RAND_MAX;
 		printf("%d \n", random); // a função rand() só trabalha com números naturais, ou seja, inteiros positivos
 	}
 
