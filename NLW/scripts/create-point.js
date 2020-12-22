@@ -36,7 +36,7 @@ function getCities(event) {
     .then( cities => {
 
         for(const city of cities) /* Para cada cidade do conjunto de cidades... */ {
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>` /* (...)serão concatenados novos 'select' com o nome e o "value" iguais às propriedades {nome e id} de cada objeto do vetor */
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>` /* (...)serão concatenados novos 'select' com o nome e o "value" iguais às propriedades {nome e id} de cada objeto do vetor */
         }
 
         citySelect.disabled = false
@@ -46,4 +46,16 @@ function getCities(event) {
 document
     .querySelector("select[name=uf]")
     // Ouvidor de eventos, aguardando ser escolhida uma UF para mostrar os municípios
-    .addEventListener("change", getCities /* Não se usa os parênteses, para executar a função apenas quando o evento ocorrer */ )
+	.addEventListener("change", getCities /* Não se usa os parênteses, para executar a função apenas quando o evento ocorrer */ )
+
+
+// itens de coleta
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+
+for (const item of itemsToCollect){
+	item.addEventListener("click", handleSelectedItem)
+}
+
+function handleSelectedItem(){
+	const itemId = event.target.dataset.id
+}

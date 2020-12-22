@@ -14,10 +14,12 @@ for x in range(12): # gerar lista com valores de 0 a 12
 		continue # sai da iteração do loop temporarioamente
 	if x % 2 == 0:
 		print(x)
+	else:
+		pass # continua no loop
 
 print ('\n')
 
-for x in range(15, 50): # gerar lista com valores de 15 a 20
+for x in range(15, 100, 3): # gerar lista com valores de 15 a 100 pulando de 3 em 3
 	print(x)
-	if x == 25:
+	if x == 55:
 		break # sai completamente do loop
