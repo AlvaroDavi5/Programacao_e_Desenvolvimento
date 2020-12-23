@@ -11,5 +11,8 @@ Programa em Python para criar arquivos PDF usando a biblioteca 'reportlab' e a f
 
 
 
+usar o comando 'pip3 install reportlab virtualenv'
+
+
 usar comando 'source ./bin/activate' para ativar ambiente virtual e comando 'deactivate' para desativar.
 
