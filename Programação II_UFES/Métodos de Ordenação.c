@@ -1,6 +1,6 @@
-// bubblesortOrdenation (correto)
-// insertionsortOrdenation (repetindo valores)
-// quicksortOrdenation (adcionando 0 a primeira posicao e excluindo ultima posicao)
+// BubbleSort Ordenation Method
+// InsertionSort Ordenation Method
+// QuickSort Ordenation Method
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,21 +15,24 @@ void bubbleSort(int array[]);
 void insertionSort(int array[]);
 void quickSort(int array[], int begin, int end);
 int partitions(int array[], int begin, int end);
-void randomValues(int array[]);
+void randomValues(int seed, int array[]);
 void printArray(int array[]);
 
 
 int main()
 {
-	int array1[ARRAYSIZE], array2[ARRAYSIZE], array3[ARRAYSIZE];
+	int array1[ARRAYSIZE], array2[ARRAYSIZE], array3[ARRAYSIZE], seed;
 
 	// preencher aleatoriamente vetores
 	printf("VETOR 1: ");
-	randomValues(array1);
+	seed = 0;
+	randomValues(seed, array1);
 	printf("VETOR 2: ");
-	randomValues(array2);
+	seed = 5;
+	randomValues(seed, array2);
 	printf("VETOR 3: ");
-	randomValues(array3);
+	seed = 7;
+	randomValues(seed, array3);
 
 	printf("\n");
 
@@ -49,9 +52,9 @@ int main()
 
 
 
-void randomValues(int array[])
+void randomValues(int seed, int array[])
 {
-	srand(time(NULL));
+	srand(seed);
 	for (int i = 0; i < ARRAYSIZE; i++)
 	{
 		const random = rand() % 50;
@@ -84,53 +87,21 @@ void bubbleSort(int array[])
 	}
 }
 
-/*
-	#define TAM 10
-
-	int count, i, aux, vetor[TAM];
-
-	for (count = 1; count < TAM;; count++)  vai da posicao 1 a 9
-	{
-		for (i = 0;; i < TAM - 1;; i++)  vai da posicao 0 a 9
-		{
-			if (vetor[i] > vetor[i+1])
-			{
-				aux = vetor[i];
-				vetor[i] = vetor[i+1];
-				vetor[i+1] = aux;
-			}
-		}
-	}
-
-*/
-
 
 
 void insertionSort(int array[])
 {
-	int i, count, memory, mark;
+	int i, j, count, memory, mark;
 
 	for (i = 1; i < ARRAYSIZE; i++)
 	{
 		memory = array[i];
-		count = i-1;
-
-		do
+		for (j = i; (j > 0) && (memory < array[j-1]); j--)
 		{
-			mark = FALSE;
-			if (array[count] > memory)
-			{
-				array[count+1] = array[count];
-				count--;
-				mark = TRUE;
-			}
-			if (count < 0)
-			{
-				mark = FALSE;
-			}
-		} while (mark);
+			array[j] = array[j-1];
+		}
+		array[j] = memory;
 	}
-	array[count+1] = memory;
 }
 
 
