@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Contador</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Início: <input type="number" id="begin" min="0"></p>
+            <p>Fim: <input type="number" id="end" min="0"></p>
+            <p>Passo: <input type="number" id="pass" min="0"></p>
+            
+            <p>
+                <button value="" onclick="verify()" id="btn">Verificar</button>
+            </p>
+        </div>
+
+        <div id="res">
+            Preencha os dados acima e clique em verificar <br>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; AlphaWeb</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
