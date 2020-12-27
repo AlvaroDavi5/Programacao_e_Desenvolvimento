@@ -30,3 +30,22 @@ def generatePDF():
 
 
 generatePDF()
+
+'''
+
+arq = open('./LOTR_poem.txt', 'r')
+pdfF = canvas.Canvas('test.pdf')
+pdfF.setTitle('test')
+pdfF.setFont('Helvetica-Bold', 16)
+contentTXT = arq.read()
+lines = contentTXT.split('\n')
+lines = str(lines)
+lines = lines.replace("', '", '\n')
+lines = lines.replace("'", '\n')
+lines = lines.replace("[", '\n')
+lines = lines.replace("]", '\n')
+pdfF.drawString(100, 500, lines)
+pdfF.save()
+arq.close()
+
+'''
