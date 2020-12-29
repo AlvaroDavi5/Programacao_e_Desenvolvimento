@@ -9,7 +9,6 @@ http://servicodados.ibge.gov.br/api/v1/publicacoes/{produto}
 import requests # make requests of web pages
 import fileinput # manipule file inputs
 import unicodedata # unicode convert data
-from fpdf import FPDF # generate pdf fine
 import json # to manipule json files
 
 produto = str(input("Digite uma palavra chave para buscar uma publicação: \n"))
