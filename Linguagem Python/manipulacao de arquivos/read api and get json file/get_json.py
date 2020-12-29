@@ -16,15 +16,12 @@ produto = str(input("Digite uma palavra chave para buscar uma publicação: \n")
 try:
 	filename = produto + "_pubs_ibge.json"
 
-	file = open(filename, "w")
-
 	request = requests.get("http://servicodados.ibge.gov.br/api/v1/publicacoes/{}".format(produto)) # request data from IBGE Publications API
+	content = request.json()
 
-	content = json.dumps(request.json())
-	content = str(content.encode('utf-8').decode('ascii', 'ignore'))
-	file.write(content)
+	with open(filename, "w", encoding='utf8') as file:
+		json.dump(content, file, ensure_ascii=False, sort_keys=True, indent=4, separators=(',', ':'))
 
-	file.close()
 	print("Dados obtidos e arquivo criado!")
 
 except:
