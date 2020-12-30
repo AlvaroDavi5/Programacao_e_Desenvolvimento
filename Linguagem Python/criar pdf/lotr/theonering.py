@@ -1,4 +1,4 @@
-from reportlab.pdfgen import canvas # import canvas library from reportlab package
+from reportlab.pdfgen import canvas # import canvas library from reportlab package (pdfgen module)
 
 
 def insertContentOnPDF(pdf, filename):

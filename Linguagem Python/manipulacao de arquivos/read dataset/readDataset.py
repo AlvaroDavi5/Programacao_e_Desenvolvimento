@@ -6,6 +6,8 @@ https://data.cityofchicago.org/Education/Chicago-Public-Schools-Progress-Report-
 
 """
 
+import pandas as pd # pandas library imported with alias 'pd'
+
 data = open("./Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012_.csv", "r") # openned .csv file in only-read mode
 file = open("./public_high_schools_of_chicago.txt", "w") # created new file in write mode
 
@@ -16,7 +18,7 @@ full_data = []
 scholl = 0
 
 for row in rows:
-	split_row = row.split(',')
+	split_row = row.split(',') # content separated by columns
 	full_data.append(split_row)
 
 file.write("School ID, Name of School, ZIP Code")
@@ -32,3 +34,9 @@ for scholl in range(len(full_data)-1):
 
 file.close()
 data.close()
+
+filename = "./Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012_.csv"
+
+datafile = pd.read_csv(filename)
+
+print(datafile.head()) # printed header of file data with pandas library
