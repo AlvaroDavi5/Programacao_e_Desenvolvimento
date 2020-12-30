@@ -47,17 +47,21 @@ regiao = dados["regiao"]["nome"]
 pdf = FPDF() # classe para gerar pdf
 
 def layoutPagina(arqPDF):
-	arqPDF.image("./IBGE.png",  link='', type='', w=1586/80, h=1920/80) # adiciona imagem
+	arqPDF.set_xy(170, 3.5)
+	arqPDF.image("./IBGE.png",  link='', type='', w=42, h=25) # adiciona imagem
 
 def defineTitulo(arqPDF):
-	arqPDF.set_font("Helvetica", 'B', 18) # seleciona fonte do titulo
+	arqPDF.set_xy(90, 13)
+	arqPDF.set_font("Times", 'B', 18) # seleciona fonte do titulo
 	arqPDF.set_text_color(178, 34, 34)
 	arqPDF.cell(50, 10, "Relatorio")
 
 def inserirTexto(arqPDF):
-	arqPDF.set_font("Arial", 'B', 16) # seleciona fonte do texto
+	arqPDF.set_font("Arial", '', 16) # seleciona fonte do texto
 	arqPDF.set_text_color(0, 0, 0)
-	arqPDF.cell(70, 67, ("Região: %s" %(regiao)))
+	arqPDF.set_xy(35, 40)
+	arqPDF.cell(70, 69, ("Região: %s" %(regiao)))
+	arqPDF.set_xy(35, 48)
 	arqPDF.cell(70 , 69, ("Estado: %s" %(estado)))
 
 
