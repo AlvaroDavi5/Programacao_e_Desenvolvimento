@@ -17,6 +17,8 @@ import wget # para dowload de arquivos web
 from fpdf import FPDF # biblioteca para gerar e tratar arquivos PDF
 import json
 
+''' --------------------------------- OBTER DADOS DA API E GERAR ARQUIVO JSON --------------------------------- '''
+
 unidade_federativa = input("Digite apenas a sigla da Unidade Federativa a qual se deseja obter os dados: ")
 if len(unidade_federativa) != 2:
 	print("UF inválida!")
@@ -42,7 +44,7 @@ regiao = dados["regiao"]["nome"]
 #url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{}".format(unidade_federativa)
 #downloaded = wget.download(url)
 
-
+''' --------------------------------- GERAR PDF --------------------------------- '''
 
 pdf = FPDF() # classe para gerar pdf
 

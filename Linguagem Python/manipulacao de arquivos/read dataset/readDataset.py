@@ -7,8 +7,11 @@ https://data.cityofchicago.org/Education/Chicago-Public-Schools-Progress-Report-
 """
 
 import pandas as pd # pandas library imported with alias 'pd'
+import os # to manipulate operating systems
 
-data = open("./Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012_.csv", "r") # openned .csv file in only-read mode
+filename = "./Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012_.csv"
+
+data = open(os.path.join(filename), "r") # openned .csv file (finded by system) in only-read mode
 file = open("./public_high_schools_of_chicago.txt", "w") # created new file in write mode
 
 content = data.read()
@@ -35,8 +38,6 @@ for scholl in range(len(full_data)-1):
 file.close()
 data.close()
 
-filename = "./Chicago_Public_Schools_-_Progress_Report_Cards__2011-2012_.csv"
 
 datafile = pd.read_csv(filename)
-
 print(datafile.head()) # printed header of file data with pandas library
