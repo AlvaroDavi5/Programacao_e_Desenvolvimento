@@ -114,6 +114,8 @@ Incluir bibliotecas:
 Para compilar um arquivo se usa o programa gcc (clang)
 
 	gcc caminho/codigofonte.c -o caminho/arquivoexecutavel
+				ou
+	gcc caminho/main.c funcoes.c -o caminho/arquivoexecutavel	(para módulos separados em arquivos e com cabeçalho)
 
 Para executar o arquivo compilado se usa o comando
 
@@ -123,12 +125,12 @@ Para executar o arquivo compilado se usa o comando
 
 Para apenas mandar um arquivo como input de um programa se usa o comando
 
-	./arquivoexecutavel < caminho/arquivoinput					< para o input
+	./arquivoexecutavel < caminho/arquivoinput				< para o input
 
 
 Para apenas salvar um arquivo como output de um programa se usa o comando
 
-	./arquivoexecutavel > caminho/arquivooutput					> para o output
+	./arquivoexecutavel > caminho/arquivooutput				> para o output
 
 
 Para mandar um arquivo como input de um programa e salvar o output se usa o comando

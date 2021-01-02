@@ -1,4 +1,4 @@
-from reportlab.pdfgen import canvas # import canvas library from reportlab package (pdfgen module)
+from reportlab.pdfgen import canvas
 
 
 def insertContentOnPDF(pdf, filename):
@@ -21,7 +21,7 @@ def insertContentOnPDF(pdf, filename):
 def generatePDF():
 	try:
 		filename = input("Enter the name of the file: ") # input filename
-		pdf = canvas.Canvas('{}.pdf'.format(filename)) # define a file extention and placeholder to filename
+		pdf = canvas.Canvas('{}.pdf'.format(filename))
 		insertContentOnPDF(pdf, filename)
 		pdf.save()
 		print("Sucessfully to generate {}.pdf".format(filename))

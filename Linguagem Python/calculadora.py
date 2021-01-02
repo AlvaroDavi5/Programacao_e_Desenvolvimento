@@ -1,6 +1,7 @@
 # Calculadora em Python
 
 import math
+""" dir(math)	para ver todas as operacoes possiveis com a biblioteca math """
 
 
 def adicao():

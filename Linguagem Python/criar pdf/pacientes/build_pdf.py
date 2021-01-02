@@ -1,4 +1,4 @@
-from reportlab.pdfgen import canvas
+from reportlab.pdfgen import canvas # import canvas library from reportlab package (pdfgen module)
 
 def generatePDF(lista):
     try:
@@ -14,7 +14,7 @@ def generatePDF(lista):
         pdf.setFont("Helvetica-Bold", 12)
         pdf.drawString(245,724, 'Nome e idade')
         pdf.save()
-        print('{}.pdf criado com sucesso!'.format(nome_pdf))
+        print('{}.pdf criado com sucesso!'.format(nome_pdf)) # define a file extention and placeholder to filename
     except:
         print('Erro ao gerar {}.pdf'.format(nome_pdf))
 

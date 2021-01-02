@@ -1,4 +1,4 @@
-import math # funcao pronta da biblioteca math
+from math import sqrt # funcao sqrt() importada da biblioteca math
 
 def potenciacao(num, expo): # definição de função
 	i = 0
@@ -23,6 +23,6 @@ result = potenciacao(numero, potencia)
 print("Resultado: %s \n" %(result))
 
 quadrado = int(input("Digite o quadrado de um número: "))
-raiz = math.sqrt(quadrado)
+raiz = sqrt(quadrado)
 num = lambda root: root**2 # função lambda
 print("Raiz quadrada de %s é: %s. \nPois %s² = %s\n" %(quadrado, raiz, raiz, num(raiz)))
