@@ -2,7 +2,7 @@
 nomes_idades = ["Alvaro", 18, "Davi", 17, "Hanna", 15] # elementos e chaves com indices automaticos ordenados
 
 """ isso e um dicionario """
-estudantes = {"Matheus":12, "João":37} # elementos e chaves com indices escolhidos
+estudantesIdades = {"Matheus":12, "João":37} # elementos com chaves escolhidas (indices se mantem de forma implicita)
 
 """ isso e uma tupla """
-estudantes = ("Segunda", "Terca", "Quarta") # elementos imutaveis
+diasSem = ("Segunda", "Terca", "Quarta") # elementos imutaveis
