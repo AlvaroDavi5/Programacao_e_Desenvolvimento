@@ -50,7 +50,7 @@ pdf = FPDF() # classe para gerar pdf
 
 def layoutPagina(arqPDF):
 	arqPDF.set_xy(170, 3.5)
-	arqPDF.image("./IBGE.png",  link='', type='', w=42, h=25) # adiciona imagem
+	arqPDF.image("./IBGE.png",  link='', type='', w=42, h=25) # adiciona imagem e define valores (argumentos) para os parametros
 
 def defineTitulo(arqPDF):
 	arqPDF.set_xy(90, 13)
