@@ -1,5 +1,5 @@
 import os
-import sqlite3
+import sqlite3 # import SQLite library
 
 # remove file if it exists
 if os.path.exists("./escola.db"):
@@ -18,7 +18,7 @@ sql_create_table = "create table cursos "\
 "(id integer primary key, "\
 "titulo varchar(100), "\
 "nota_mec integer, "\
-"centro_ensino varchar(140))" # unnecessary parse to upper
+"centro_ensino varchar(140))" # unnecessary parse to uppercase
 
 cur.execute(sql_create_table) # the cursos navigate in the SQL instruction and execute it
 
@@ -29,12 +29,12 @@ recset = [
 	(1045, "Engenharia da Computacao", 5, "Centro Tecnologico"), 
 	(1018, "Direito", 5, "Centro de Ciencias Juridicas e Economicas"), 
 	(1024, "Matematica", 4, "Centro de Ciencias Exatas")
-]
+] # to register an list of 3 tuples with 4 elements each
 
 for rec in recset:
 	cur.execute(sql_insert_data, rec) # registering
 
-# make commit on connection to record data transation
+# make commit on connection to record data transaction
 con.commit()
 
 # verify if data are recorded
