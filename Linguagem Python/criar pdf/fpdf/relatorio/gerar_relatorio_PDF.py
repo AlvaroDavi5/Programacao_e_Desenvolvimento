@@ -28,7 +28,7 @@ datalist = requests.get("https://servicodados.ibge.gov.br/api/v1/localidades/est
 datalist = datalist.json()
 
 def escrever_json(dados):
-    with open("./distritos{}.json".format(unidade_federativa), "w", encoding='utf8') as arq:
+    with open("./data/distritos{}.json".format(unidade_federativa), "w", encoding='utf8') as arq:
         json.dump(dados, arq, ensure_ascii=False, sort_keys=True, indent=4, separators=(',', ':'))
 
 def ler_json(arq_json):
@@ -36,7 +36,7 @@ def ler_json(arq_json):
         return json.load(arq)
 
 escrever_json(datalist)
-dados = ler_json("./distritos{}.json".format(unidade_federativa))
+dados = ler_json("./data/distritos{}.json".format(unidade_federativa))
 
 estado = dados["nome"]
 regiao = dados["regiao"]["nome"]
@@ -50,7 +50,7 @@ pdf = FPDF() # classe para gerar pdf
 
 def layoutPagina(arqPDF):
 	arqPDF.set_xy(170, 3.5)
-	arqPDF.image("./IBGE.png",  link='', type='', w=42, h=25) # adiciona imagem e define valores (argumentos) para os parametros
+	arqPDF.image("./data/IBGE.png",  link='', type='', w=42, h=25) # adiciona imagem e define valores (argumentos) para os parametros
 
 def defineTitulo(arqPDF):
 	arqPDF.set_xy(90, 13)
@@ -71,4 +71,4 @@ pdf.add_page() # adiciona pagina
 layoutPagina(pdf)
 defineTitulo(pdf)
 inserirTexto(pdf)
-pdf.output('relatorio.pdf', 'F') # cria arquivo com o que foi definido previamente
+pdf.output("./gen/relatorio.pdf", 'F') # cria arquivo com o que foi definido previamente
