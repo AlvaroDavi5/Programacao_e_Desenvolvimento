@@ -54,10 +54,12 @@ int main()
 
 void randomValues(int seed, int array[])
 {
+	int random;
+
 	srand(seed);
 	for (int i = 0; i < ARRAYSIZE; i++)
 	{
-		const random = rand() % 50;
+		random = rand() % 50;
 		array[i] = random;
 	}
 
