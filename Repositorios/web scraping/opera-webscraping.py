@@ -3,8 +3,8 @@ import requests # make requests of HTML file to server
 import pandas as pd # to databases and data manipulation functions
 from bs4 import BeautifulSoup # extract data from HTML file
 from selenium import webdriver # do autotests on browser
-from selenium.webdriver.chrome.options import Options # chrome webdriver options
-from webdriver_manager.chrome import ChromeDriverManager # chrome webdriver manager
+from selenium.webdriver.opera.options import Options # opera webdriver options
+from webdriver_manager.opera import OperaDriverManager # opera webdriver manager
 import json # manipulate JSON files
 from xhtml2pdf import pisa # to build PDF with HTML
 
@@ -18,13 +18,11 @@ option = Options()
 option.headless = True
 
 driver = webdriver.Opera(options=option) # call the webdriver to open the browser and get the URL
-##driver = webdriver.Opera(OperaDriverManager().install(), options=option) # call the webdriver - and install driver manager - to open the browser and get the URL
+##driver = webdriver.Opera(OperaDriverManager().install()) # call the webdriver - and install driver manager - to open the browser and get the URL
 driver.get(url)
 time.sleep(10) # delay do get data
 
-driver.find_element_by_xpath("//div[@class='nba-stat-table']//table//thead//tr//th[@data-field='PTS']").click() # to emulate click
-##driver.find_element_by_xpath("//button[@id='onetrust-accept-btn-handler']//table//thead//tr//th[@data-field='PTS']").click()
-#<div class="banner-actions-container"> <button id="onetrust-accept-btn-handler">I Accept</button></div>
+driver.find_element_by_xpath("//div[@class='nba-stat-table']//table//thead//tr//th[@data-field='PTS']").click() # emulate click to sort by poits
 element = driver.find_element_by_xpath("//div[@class='nba-stat-table']//table")
 
 html_content = element.get_attribute("outerHTML") # html table content
@@ -68,7 +66,9 @@ fp.close()
 
 """ export PDF """
 
-source = df.to_html()
+source = "<link rel='stylesheet' href='./pdf_style.css'>"
+source += "<h1>Top 10 Ranking</h1>" + "<br>"
+source += df.to_html()
 
 pdf_file = open("table-players.pdf", "w+b")
 

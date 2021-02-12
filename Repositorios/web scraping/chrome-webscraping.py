@@ -22,9 +22,7 @@ driver = webdriver.Chrome() # call the webdriver to open the browser and get the
 driver.get(url)
 time.sleep(10) # delay do get data
 
-driver.find_element_by_xpath("//div[@class='nba-stat-table']//table//thead//tr//th[@data-field='PTS']").click() # to emulate click
-##driver.find_element_by_xpath("//button[@id='onetrust-accept-btn-handler']//table//thead//tr//th[@data-field='PTS']").click()
-#<div class="banner-actions-container"> <button id="onetrust-accept-btn-handler">I Accept</button></div>
+driver.find_element_by_xpath("//div[@class='nba-stat-table']//table//thead//tr//th[@data-field='PTS']").click() # emulate click to sort by poits
 element = driver.find_element_by_xpath("//div[@class='nba-stat-table']//table")
 
 html_content = element.get_attribute("outerHTML") # html table content
@@ -68,7 +66,9 @@ fp.close()
 
 """ export PDF """
 
-source = df.to_html()
+source = "<link rel='stylesheet' href='./pdf_style.css'>"
+source += "<h1>Top 10 Ranking</h1>" + "<br>"
+source += df.to_html()
 
 pdf_file = open("table-players.pdf", "w+b")
 
