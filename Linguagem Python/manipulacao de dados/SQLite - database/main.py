@@ -12,7 +12,7 @@ c = conn.cursor()
 def createTable():
 	c.execute(
 		"CREATE TABLE IF NOT EXISTS produtos" \
-		"(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, date TEXT, prod_name TEXT, valor REAL)"
+		"(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, date TEXT, prod_name TEXT, value REAL)"
 	)
 
 def dataInsert():
@@ -22,14 +22,42 @@ def dataInsert():
 def data_insert_var():
 	new_date = datetime.now()
 	new_prod_name = 'Placa de Vídeo'
-	new_valor = random.randrange(300, 900)
-	c.execute("INSERT INTO produtos (date, prod_name, valor) VALUES (?, ?, ?)", (new_date, new_prod_name, new_valor))
+	new_value = random.randrange(300, 900)
+	c.execute("INSERT INTO produtos (date, prod_name, value) VALUES (?, ?, ?)", (new_date, new_prod_name, new_value))
 	conn.commit()
 
-# finalizacao
-createTable()
-dataInsert()
-for i in range(5):
-	data_insert_var()
-c.close()
-conn.close()
+def read_all_data():
+	c.execute("SELECT * FROM produtos")
+	for row in c.fetchall():
+		print(row)
+
+def read_specific_data():
+	c.execute("SELECT * FROM produtos WHERE value > 400.00")
+	for row in c.fetchall():
+		print(row)
+
+def read_specific_column(col_num):
+	c.execute("SELECT * FROM produtos")
+	for row in c.fetchall():
+		print(row[col_num])
+
+def main():
+	createTable()
+
+	dataInsert()
+	for i in range(5):
+		data_insert_var()
+
+	print("\nTodos os Produtos:\n")
+	read_all_data()
+	print("\nProdutos Acima de R$ 400,00:\n")
+	read_specific_data()
+	print("\nTipos de Produtos:\n")
+	read_specific_column(2)
+
+	c.close()
+	conn.close()
+
+
+if __name__ == '__main__':
+	main()

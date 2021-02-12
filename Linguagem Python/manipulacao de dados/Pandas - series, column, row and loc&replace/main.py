@@ -16,6 +16,11 @@ def main():
 	print("\n Level: \n")
 	print(dataframe["Elementary, Middle, or High School"])
 
+	print("\n About First School: \n")
+	print(dataframe.iloc[0]) # list of dataframe
+	print("\n First School Index: \n")
+	print(dataframe.iloc[[0]]) # dataframe row is a series
+
 
 # executar o programa		
 if __name__ == "__main__":
