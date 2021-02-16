@@ -23,7 +23,7 @@ long lerDistanciaUltrassonica(int pinoAcionador, int pinoEco)
 
 void setup()
 {
-	Serial.begin(9600); // iniciar troca de dados com o monitor serial a 9600 baunds
+	Serial.begin(9600); // iniciar troca de dados com o monitor serial a 9600 bauds
 	// definir pinos dos leds como saida
 	pinMode(RED, OUTPUT);
 	pinMode(GREEN, OUTPUT);

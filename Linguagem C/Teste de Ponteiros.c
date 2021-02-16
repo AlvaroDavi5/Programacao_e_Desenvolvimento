@@ -20,7 +20,8 @@ int main()
 	//	O valor decimal de 'ano' referenciado pelo seu próprio endereço
 
 
-	printf("%u \n", &ano);
+
+	printf("%p \n", &ano);
 	//	O endereço de 'ano'
 
 
@@ -28,15 +29,9 @@ int main()
 	//	O valor decimal de 'ano' referenciado pelo seu endereço armazenado em 'pAno'
 
 
-	printf("%u \n", pAno);
-	//	O endereço de 'ano' armazenado em 'pAno'
 
 	printf("%p \n", pAno);
 	//	O endereço de 'ano' armazenado pelo ponteiro 'pAno'
-
-
-	printf("%u \n", &pAno);
-	//	O endereço de 'pAno'
 
 	printf("%p \n", &pAno);
 	//	O endereço do ponteiro 'pAno'
