@@ -3,6 +3,7 @@ from datetime import datetime
 import time
 import random
 import sqlite3
+import matplotlib.pyplot as plt
 
 os.remove("dsa.db") if os.path.exists("dsa.db") else None
 
@@ -45,6 +46,17 @@ def update_value():
 	c.execute("UPDATE produtos SET value = 500.50 WHERE value < 400.00")
 	conn.commit()
 
+def graphic_plot():
+	c.execute("SELECT id, value FROM produtos")
+	ids = []
+	values = []
+	data = c.fetchall()
+	for row in data:
+		ids.append(row[0])
+		values.append(row[1])
+	plt.bar(ids, values)
+	plt.show()
+
 def main():
 	createTable()
 
@@ -60,6 +72,7 @@ def main():
 	read_specific_column(2)
 	update_value()
 	read_specific_data()
+	graphic_plot()
 
 	c.close()
 	conn.close()
