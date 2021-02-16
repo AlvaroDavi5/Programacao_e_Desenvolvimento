@@ -41,6 +41,10 @@ def read_specific_column(col_num):
 	for row in c.fetchall():
 		print(row[col_num])
 
+def update_value():
+	c.execute("UPDATE produtos SET value = 500.50 WHERE value < 400.00")
+	conn.commit()
+
 def main():
 	createTable()
 
@@ -54,6 +58,8 @@ def main():
 	read_specific_data()
 	print("\nTipos de Produtos:\n")
 	read_specific_column(2)
+	update_value()
+	read_specific_data()
 
 	c.close()
 	conn.close()
