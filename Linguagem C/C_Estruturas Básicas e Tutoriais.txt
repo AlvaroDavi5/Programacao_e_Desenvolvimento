@@ -12,6 +12,7 @@ Múltiplas Linhas
 
 
 Tipos primitivos em C:
+
 pointer, char, int, float, double, void (e long, como complemento)
 
 	int num = 1
@@ -20,16 +21,19 @@ pointer, char, int, float, double, void (e long, como complemento)
 	double num = 1.567812
 	long double num = 1.56781219801
 	char letra = 'a'
-	*ponteiro = &letra
+	*ponteiro = &letra = 0x564f6cb
 	void vazio = 
 	
 
 Tipos complexos em C:
-struct, array, string
 
-	int array[3] = {1, 2, 3}				(posição 0 recebe valor 1 e posição 3 recebe lixo de memória)
-	char string[6] = "Fala"				(aspas duplas para string, posição 0 recebe 'F', posição 4 recebe caractere nulo '\0' e as posições seguintes recebem lixo de memória)
-	char vetordecaracteres[6] = {'F', 'a', 'l', 'a'}	(não é uma string, pois armazena caractere por caractere sem o caractere nulo, apenas lixo de memória)
+struct, array, matrix, string
+
+	struct tEstudante { int idade; float nota; int matricula; };		(tipo composto por outros tipos)
+	int array[3] = {1, 2, 3}						(posição 0 recebe valor 1 e posição 3 recebe lixo de memória)
+	int matrix[3][3] = {'Oi', 'Hii, 'Hola'}				(vetor de vetores)
+	char string[6] = "Fala"						(aspas duplas para string, posição 0 recebe 'F', posição 4 recebe caractere nulo '\0' e as posições seguintes recebem lixo de memória)
+	char vetordecaracteres[6] = {'F', 'a', 'l', 'a'}			(não é uma string, pois armazena caractere por caractere sem o caractere nulo, apenas lixo de memória apos as posições definidas)
 
 
 
@@ -89,7 +93,7 @@ Caracteres Especiais:  [CARACTERES IGNORADOS, FUNÇÕES ATIVADAS]
 Incluir bibliotecas:
 
 #include <stdio.h>		Standart Input/Output, para funções como getchar(), putchar(), scanf(), printf(), fopen() e tipos como FILE e EOF
-#include <stdlib.h>		Standart Library, para Emulação de Terminal (Shell, DOS, etc) e para funções como rand(), srand(), sizeof(), malloc(), stdin() e stdout()
+#include <stdlib.h>		Standart Library, para Emulação de Terminal (Shell, DOS, etc), para funções como rand(), srand(), sizeof(), malloc(), stdin() e stdout() e tipos como NULL
 #include <stdbool.h>		Standart Boolean, para tipos Booleanos (0 e 1, false e true)
 #include <stddef.h>		Padrões de Definições de Tipos
 #include <stdint.h>		Padrões de Definição de Tipos de Dados Inteiros

@@ -15,7 +15,7 @@ from xhtml2pdf import pisa # to build PDF with HTML
 url = "https://www.nba.com/stats/players/traditional/?sort=PLAYER_NAME&dir=-1" # NBA tabledata URL
 
 option = Options()
-option.headless = True
+option.headless = True # executa sem interface grafica
 
 driver = webdriver.Chrome() # call the webdriver to open the browser and get the URL
 ##driver = webdriver.Chrome(ChromeDriverManager().install()) # call the webdriver - and install driver manager - to open the browser and get the URL
