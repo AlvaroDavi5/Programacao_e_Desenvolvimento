@@ -13,7 +13,7 @@ Múltiplas Linhas
 
 Tipos primitivos em C:
 
-pointer, char, int, float, double, void (e long, como complemento)
+pointer, char, int, float, double, size_t, void (e long, como complemento)
 
 	int num = 1
 	float num = 1.569
@@ -22,6 +22,7 @@ pointer, char, int, float, double, void (e long, como complemento)
 	long double num = 1.56781219801
 	char letra = 'a'
 	*ponteiro = &letra = 0x564f6cb
+	size_t bytes = 8
 	void vazio = 
 	
 

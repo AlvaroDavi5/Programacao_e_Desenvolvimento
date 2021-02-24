@@ -15,9 +15,13 @@ Heap: contem blocos de memoria alocadas dinamicamente, a pedido do processo, dur
 
 Alocacao Estatica: ocorre quando sao declaradas variaveis globais ou estaticas; geralmente alocadas em Data.
 
-Alocacao Automatica: ocorre quando sao declaradas variaveis locais e parametros de funcoes. O espaco para a alocacao dessas variaveis e reservado quando a funcao e invocada, e liberado quando a funcao termina. Geralmente e usada a pilha (stack).
+Alocacao Automatica: ocorre quando sao declaradas variaveis locais e parametros de funcoes. O espaco para a alocacao dessas variaveis e reservado quando a funcao e invocada, e liberado quando a funcao termina. Geralmente e usada a pilha (stack);
 
-Alocacao Dinamica: ocorre quando o processo requisita explicitamente um bloco de memoria para armazenar dados; o controle das areas alocadas dinamicamente e manual ou semi-automatico: o programador e responsavel por liber
+Alocacao Dinamica: ocorre quando o processo requisita explicitamente um bloco de memoria para armazenar dados, esse bloco precisa ser liberado após o uso;
+
+	Alocacao Semiautomatica: a memoria e alocada dinamicamente, mas sem precisar ser liberada a memoria - pois a liberacao e automatica;
+
+	Alocacao com Alinhamento de Memóra: aloca blocos de memoria em enderecos multiplos de 8 bytes, logo, os enderecos alocados dessa forma possuem endereco 2^n.
 
 */
 
@@ -77,7 +81,7 @@ void imprimeBytes(void)
 
 void alocaVetor(void)
 {
-	float *vect, *p;
+	float *vect = 0, *p = 0;
 
 	vect = calloc(15, sizeof(float)); // alocar 15 espacos de float [4 bytes] para o vetor preenchendo-os com zeros, aloc. dinamica com contador (gravada em Heap)
 
@@ -94,6 +98,6 @@ void alocaVetor(void)
 	free(vect);
 	vect = NULL;
 
-	p = alloca(1); // alocar 1 byte sem precisar liberar a memoria - pois a liberacao e automatica, aloc. dinamica semiautomatica (gravada em Heap)
+	p = alloca(1); // alocar 1 byte, aloc. dinamica semiautomatica (gravada em Heap)
 	printf("\n%p \n", p);
 }
