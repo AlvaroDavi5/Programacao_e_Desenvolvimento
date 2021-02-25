@@ -50,5 +50,5 @@ echo -e " \033[47;1;37m Fundo Cinza    \033[0m     --> 47;?;? "
 echo -e " \033[4;30m Sublinhado  \033[0m        --> 4;? "
 echo -e " \033[5;30m Piscando    \033[0m        --> 5;? "
 echo -e " \033[7;30m Invertido   \033[0m        --> 7;? "
-echo -e " \033[8;30m Concealed   \033[0m        --> 8;? " 
+echo -e " \033[8;30m Oculto      \033[0m        --> 8;? " 
 
