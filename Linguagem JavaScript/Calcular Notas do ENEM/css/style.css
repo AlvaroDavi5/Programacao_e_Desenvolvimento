@@ -1,0 +1,21 @@
+
+body {
+    background-color: rgb(180, 114, 27);
+    font: italic Arial;
+    font-size: 20pt;
+}
+
+button {
+    color: white;
+    height: 100px;
+    width: 100px;
+    border-width: 5px;
+}
+
+button#btn1 {
+    background-color: blue;
+}
+
+button#btn2 {
+    background-color: rgb(60, 255, 0);
+}

@@ -27,7 +27,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int algoGrego(int dia, int mes, int ano, int contD);
+int algoGrego(int dia, int mes, int ano, int contD); // algoritmo Gregoriano
 int algoDia(int cod_ano, int cod_mes, int cod_sec, int dia_mes, int ano, int mes, int cnt);
 int dias_Sem(int dia_sem, int cont);
 int ehBissexto(int ano);

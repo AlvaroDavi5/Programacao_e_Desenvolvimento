@@ -117,9 +117,11 @@ Incluir bibliotecas:
 
 
 
-Para compilar um arquivo se usa o programa gcc (clang)
+Para compilar um arquivo se usa o programa gcc (ou clang)
 
 	gcc caminho/codigofonte.c -o caminho/arquivoexecutavel
+				ou
+	gcc caminho/codigofonte.c -o caminho/arquivoexecutavel -lm	(flag para uso de bibliotecas matemáticas)
 				ou
 	gcc caminho/main.c funcoes.c -o caminho/arquivoexecutavel	(para módulos separados em arquivos e com cabeçalho)
 
