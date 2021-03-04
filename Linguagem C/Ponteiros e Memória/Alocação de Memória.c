@@ -84,10 +84,11 @@ void alocaVetor(void)
 	float *vect = 0, *p = 0;
 
 	vect = calloc(15, sizeof(float)); // alocar 15 espacos de float [4 bytes] para o vetor preenchendo-os com zeros, aloc. dinamica com contador (gravada em Heap)
+	//vect = malloc(15 * sizeof(float))
 
 	for (int i = 0; i < 10; ++i)
 	{
-		vect[i] = 1.0 / (i + 1);
+		vect[i] = 1.0 / (i + 1); // preenchendo vetor ate a posicao 10, mesmo ele tendo 15 posicoes
 	}
 
 	for (int j = 0; j < 15; j++)

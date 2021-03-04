@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "helloWorld.h"
 
 // funcao helloWorld
 void helloWorld(void)
 {
-	printf("Hello Word! \n");
+	if (TRUE)
+	{
+		printf("Hello Word! \n");
+	}
 
 	return;
 }
-

@@ -25,7 +25,7 @@ CPL_FLAGS=-c   \
 # usado Space no lugar de Tab para evitar erros
 
 
-# o target 'all' tem como pre-requisito a variavel 'BIN_NAME', que se torna um target
+# o target 'all' tem como pre-requisito a variavel 'BIN_NAME' e a variavel 'objectFolder', que se tornam targets
 all: objectFolder ${BIN_NAME}
 	@ echo " \033[1;32m  Tudo feito!  \033[0m "
 	@ echo ''

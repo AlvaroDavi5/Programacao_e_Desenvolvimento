@@ -13,7 +13,7 @@ Múltiplas Linhas
 
 Tipos primitivos em C:
 
-pointer, char, int, float, double, size_t, void (e long, como complemento)
+int, float (e long, como complemento), double, char, pointer, size_t [unsigned], intptr_t [signed], uintptr_t [unsigned], void
 
 	int num = 1
 	float num = 1.569
@@ -21,20 +21,22 @@ pointer, char, int, float, double, size_t, void (e long, como complemento)
 	double num = 1.567812
 	long double num = 1.56781219801
 	char letra = 'a'
-	*ponteiro = &letra = 0x564f6cb
+	int *ponteiro = &num = 0x564f6cb
 	size_t bytes = 8
+	intptr_t *pi = &num = -1892185312
+	uintptr_t *pu = &num = 2402781984
 	void vazio = 
-	
+
 
 Tipos complexos em C:
 
-struct, array, matrix, string
+array, matrix, string, struct
 
-	struct tEstudante { int idade; float nota; int matricula; };		(tipo composto por outros tipos)
 	int array[3] = {1, 2, 3}						(posição 0 recebe valor 1 e posição 3 recebe lixo de memória)
 	int matrix[3][3] = {'Oi', 'Hii, 'Hola'}				(vetor de vetores)
 	char string[6] = "Fala"						(aspas duplas para string, posição 0 recebe 'F', posição 4 recebe caractere nulo '\0' e as posições seguintes recebem lixo de memória)
 	char vetordecaracteres[6] = {'F', 'a', 'l', 'a'}			(não é uma string, pois armazena caractere por caractere sem o caractere nulo, apenas lixo de memória apos as posições definidas)
+	struct tEstudante { int idade; float nota; int matricula; };		(tipo composto por outros tipos)
 
 
 
