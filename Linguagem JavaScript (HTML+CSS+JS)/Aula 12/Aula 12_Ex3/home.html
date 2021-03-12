@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verificar idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" id="inpnumb" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="male" checked>
+                <label for="male">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verify()" id="btn">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados acima para ver o resultado...
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; AlphaWeb</p>
+    </footer>
+
+    <script>
+        function verify() {
+
+            var data = new Date()
+            var ano = data.getFullYear()
+            var fano = document.getElementById('inpnumb')
+            var res = document.querySelector('div#res')
+
+            if (fano.value.length == 0 || Number(fano.value) > ano) {
+                window.alert('[ERRO]: Verifique os dados e tente novamente!')
+            }
+
+            else {
+                var sexo = document.getElementsByName('radsex')
+                var idade = ano - Number(fano.value)
+                var genero = ''
+
+                // var genero = sexo[0].checked ?'um homem' :'uma mulher'
+
+                if (sexo[0].checked) {
+                    genero = 'um homem'
+                }
+
+                else if (sexo[1].checked) {
+                    genero = 'uma mulher'
+                }
+
+                res.innerHTML = `Detectamos que você é ${genero} com ${idade} anos de idade.`
+            }
+
+        }
+    </script>
+</body>
+</html>

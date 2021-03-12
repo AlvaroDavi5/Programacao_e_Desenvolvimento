@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mover div</title>
+    <style>
+        body{
+            background-color: hsl(240, 100%, 50%);
+        }
+        #div {
+            position: relative;
+            background-color: #80ff00;
+            color: rgb(0, 0, 0);
+            font-size: 100pt;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(0, 0, 0, 0.999);
+            box-shadow: black 15px 15px 5px 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">°_°</div>
+
+    <script>
+        var div= window.document.getElementById('div')
+
+        var topPosition = 0
+        var leftPosition = 0
+
+        function move(e) {
+
+            //up (W)
+            if (e.keyCode == 87) {
+                topPosition -= 2
+                div.style.top = (parseInt(topPosition) + topPosition) + 'px'
+            }
+
+            //down (S)
+            if (e.keyCode == 83) {
+                topPosition += 2
+                div.style.top = (parseInt(topPosition) + topPosition) + 'px'
+            }
+
+            //left (A)
+            if (e.keyCode == 65) {
+                leftPosition -= 2
+                div.style.left = (parseInt(leftPosition) + leftPosition) + 'px'
+            }
+
+            //right (D)
+            if (e.keyCode == 68) {
+                leftPosition += 2
+                div.style.left = (parseInt(leftPosition) + leftPosition) + 'px'
+            }
+
+        }
+
+        document.onkeydown = move
+
+        /*
+
+        PARA ACHAR O NÚMERO DA TECLA
+
+        console.log("Violet".charCodeAt(0));
+        // → 86
+        console.log("1".charCodeAt(0));
+        // → 49
+
+        */
+    </script>
+</body>
+</html>

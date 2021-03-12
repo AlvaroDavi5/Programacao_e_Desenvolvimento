@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Comentário para HTML em várias linhas -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Teste de comentários e Refências a Script</title>
+        <style>
+            body {
+                background-color: rgb(48, 163, 52);
+                color: rgb(255, 254, 248);
+                font: normal 19pt Arial;
+            }
+            h1 {
+                color: gold; /* Comentário para CSS em várias linhas */
+            }
+            p {
+                color: rgb(141, 20, 20);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>É só um teste!</h1>
+    
+        <p>Um teste de comentários no <b>HTML, CSS e JS</b></p>
+        <p>Escrevendo <code>comentários</code> você não se perde em um código.</p>
+
+        <script>
+            var script = ' < script >   < /script > '
+            var type_script = ' < script type="text/javascript" > '
+            var src_externo = ' < script src="diretório/arquivo.js" > '
+
+            window.document.write(`Para adicionar um script a uma página você deve usar as tags <code>${script}</code>. </br> Você também pode especificar o tipo de script com <code>${type_script}</code> </br> Ou usar um arquivo externo como: <code>${src_externo}</code>`)
+        
+            // Comentário para JS em uma linha
+
+            /*
+
+            Comentário
+            para JS
+            em várias linhas
+
+            */
+
+            /*
+                Em versões anteriores, o HTML e JS aceitavam a criação de comentários para script escritos em:
+                <!-- 'comentário'
+            */
+
+        </script>
+    </body>
+</html>

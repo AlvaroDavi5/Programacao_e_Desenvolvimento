@@ -1,4 +1,7 @@
 /*
+ Projeto Semáforo para Carros e Pedestres
+ Álvaro Davi S. Alves - 2020101874
+ Engenharia de Computação - UFES
 
 Iniciar programa com:
 
@@ -7,7 +10,7 @@ Iniciar programa com:
 
 Ao pressionar o botão:
 
-	verificar se greenTime, transcorreu com o semáforo para carros no verde e:
+	verificar se, greenTime transcorreu com o semáforo para carros no verde e:
 		se sim:
 			o semáforo para carros vai de verde para amarelo e depois para vermelho
 			em seguida, o semáforo para pedestres vai para verde
@@ -25,26 +28,29 @@ Ao final de um intervalo de tempo definido em crossTime:
 
 
 // pins
-#define BUTTON 4
+#define BUTTON 2
 #define RED_Car 12
 #define YELLOW_Car 11
 #define GREEN_Car 10
 #define RED_Ped 9
 #define GREEN_Ped 8
 
+
 // timeset
 unsigned long startTime = millis(); // time after start (in miliseconds)
-
+// button event
+int clicked = 0;
 // time to cars (in miliseconds, to use like seconds)
-const float greenTime = 1000.00; // 6000.00
-const float yellowTime = 100.00; // 1000.00
+const float greenTime = 1800.00; // 6000.00 (to real Arduino)
+const float yellowTime = 600.00; // 1000.00 (to real Arduino)
 // time to pedestrians (in miliseconds, to use like seconds)
-const float crossTime = 500.00; // 3000.00
+const float crossTime = 1400.00; // 3000.00 (to real Arduino)
 
 
 // functions prototype
-int init(int clk);
 int comparePassedTime(float compareTime);
+void blink(float delayTime);
+void changeButtonState();
 
 
 void setup()
@@ -57,54 +63,46 @@ void setup()
 	pinMode(RED_Ped, OUTPUT);
 	pinMode(GREEN_Ped, OUTPUT);
 
+	// button event-listenner
+	attachInterrupt(digitalPinToInterrupt(BUTTON), changeButtonState, RISING);
+
 	// serial connection
-	Serial.begin(9600); // start serial con. in 9600 baunds
+	Serial.begin(9600); // start serial con. with 9600 baunds
 }
 
 void loop()
 {
-	int clicked = 0;
+	digitalWrite(RED_Ped, HIGH);
+	digitalWrite(GREEN_Car, HIGH);
 
-	while (! clicked)
+	if (clicked && comparePassedTime(greenTime))
 	{
-		digitalWrite(GREEN_Car, HIGH);
-		digitalWrite(RED_Ped, HIGH);
-
-		clicked = digitalRead(BUTTON);
-		if (clicked)
-			clicked = init(clicked);
+		digitalWrite(GREEN_Car, LOW);
+		digitalWrite(YELLOW_Car, HIGH);
+		delay(yellowTime);
+		digitalWrite(YELLOW_Car, LOW);
+		digitalWrite(RED_Car, HIGH);
+		digitalWrite(RED_Ped, LOW);
+		digitalWrite(GREEN_Ped, HIGH);
+		delay(0.84 * crossTime);
+		blink(0.16 * crossTime);
+		startTime = millis();
+		digitalWrite(GREEN_Ped, LOW);
+		digitalWrite(RED_Car, LOW);
+		clicked = 0;
 	}
-}
-
-int init(int clk)
-{
-	while (clk)
-	{
-		if (comparePassedTime(greenTime))
-		{
-			digitalWrite(GREEN_Car, LOW);
-			digitalWrite(YELLOW_Car, HIGH);
-
-			if (comparePassedTime(yellowTime))
-			{
-				digitalWrite(YELLOW_Car, LOW);
-				digitalWrite(RED_Car, HIGH);
-				digitalWrite(RED_Ped, LOW);
-				digitalWrite(GREEN_Ped, HIGH);
-				delay(crossTime);
-				clk = 0;
-			}
-		}
-	}
-
-	return clk;
 }
 
 int comparePassedTime(float compareTime)
 {
+	Serial.print(millis()); Serial.print(" - "); Serial.print(startTime);
+	Serial.print(" = "); Serial.print(millis()-startTime);
+	Serial.print('\n');
+	if ((millis() - startTime) > compareTime)
+		Serial.print("Tempo alcancado! \n");
+
 	if ((millis() - startTime) < compareTime)
 	{
-		startTime = millis();
 		return 0;
 	}
 	else // if the time goes passed
@@ -112,4 +110,25 @@ int comparePassedTime(float compareTime)
 		startTime = millis();
 		return 1;
 	}
+}
+
+void blink(float delayTime)
+{
+	digitalWrite(GREEN_Ped, LOW);
+	delay(delayTime);
+	digitalWrite(GREEN_Ped, HIGH);
+	delay(delayTime);
+	digitalWrite(GREEN_Ped, LOW);
+	delay(delayTime);
+	digitalWrite(GREEN_Ped, HIGH);
+	delay(delayTime);
+	digitalWrite(GREEN_Ped, LOW);
+	delay(delayTime);
+	digitalWrite(GREEN_Ped, HIGH);
+	delay(delayTime);
+}
+
+void changeButtonState()
+{
+	clicked = 1;
 }

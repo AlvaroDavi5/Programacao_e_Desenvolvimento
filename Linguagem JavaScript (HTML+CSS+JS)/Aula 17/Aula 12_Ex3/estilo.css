@@ -1,0 +1,54 @@
+body {
+	background-color: #51e97f;
+	font: normal 17pt Arial;
+	margin-top: 10vh;
+}
+
+h1 {
+	color: #b1afaf;
+	text-align: center;
+}
+
+header {
+	text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.493);
+}
+
+section {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	width: 550px;
+	margin: auto;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.918);
+	text-align: center;
+}
+
+footer {
+	color: #504e4e;
+	text-align: center;
+	font-style: italic;
+}
+
+#inpnumb {
+	height: 20px;
+	width: 150px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: #5de75d77;
+}
+
+input.btn {
+	background-color: #ced3cf;
+	width: 100px;
+	height: 30px;
+	border-radius: 20px;
+	box-shadow: black 4px 4px 1px;
+	color: black;
+}
+
+select {
+	border-radius: 5px;
+	width: 155px;
+	background-color: #5de75d77;
+	text-align: center;
+}

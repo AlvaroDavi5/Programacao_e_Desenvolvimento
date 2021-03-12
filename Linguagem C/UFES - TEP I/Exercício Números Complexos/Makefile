@@ -1,13 +1,13 @@
 
 # variavel 'BIN_NAME' recebe o nome do programa em arquivo binario
-BIN_NAME=finalprogram
+BIN_NAME=complex_program
 
 
 # macro 'C_SOURCE' usa funcao wildcard para obter os nomes de todos os arquivos de codigo-fonte com extensao .c
 C_SOURCE=$(wildcard ./source/*.c)
 
 # macro 'H_SOURCE' usa funcao wildcard para obter os nomes de todos os arquivos de codigo-fonte com extensao .h
-H_SOURCE=$(wildcard ./source/*.h)
+H_SOURCE=$(wildcard ./include/*.h)
 
 
 # macro 'OBJ' utiliza todos os nomes dos arquivos de 'C_SOURCE', entretanto substitui .c por .o e 'source' por 'objects'
@@ -47,7 +47,7 @@ ${BIN_NAME}: ${OBJ}
 
 
 # o target '%.o' pega o stem (tronco do nome, sem extensao) e o utiliza como referencia no pre-requisito
-./objects/%.o: ./source/%.c ./source/%.h
+./objects/%.o: ./source/%.c ./include/%.h
 	${CPL} $< ${CPL_FLAGS} -o $@
 	@ echo " \033[0;35m  Gerando objeto de compilacao \033[45;1;37m$@\033[0m\033[0;35m  \033[0m "
 	@ echo ''

@@ -3,6 +3,16 @@
 all: printy
 
 
+# target 'run' feito para executar o programa
+run: printy
+	@ ./printy
+
+
+# target 'valgrind' feito para verificar vazamentos de memoria no programa
+valgrind: printy
+	@ valgrind ./printy
+
+
 # o target 'printy' tem como pre-requisito os arquivos 'main.o' e 'helloWorld.o'
 printy: main.o helloWorld.o
 	gcc -o printy main.o helloWorld.o

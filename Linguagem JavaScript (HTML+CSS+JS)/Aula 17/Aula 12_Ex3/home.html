@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Analisar Números</title>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Analisador de Números</h1>
+	</header>
+
+	<section>
+		<div>
+			Insira um número (1 a 100):
+			<input type="number" id="inpnumb" min="1" max="100">
+			<br><br>
+			<input type="button" value="Armazenar" onclick="getNum()" class="btn">
+			<br><br>
+		</div>
+		<div id="out">
+			<select name="list" id="selectList" size="6">
+				<option value=""></option>
+			</select>
+			<input type="button" value="Finalizar" onclick="setValue()" class="btn">
+		</div>
+		<div id="res"></div>
+	</section>
+
+	<footer>
+		<p>&copy; AlphaWeb</p>
+	</footer>
+
+	<script src="./script.js"></script>
+</body>
+</html>

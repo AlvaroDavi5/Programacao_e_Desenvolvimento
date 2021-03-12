@@ -33,7 +33,7 @@ int main()
 	printf("\n");
 
 	ptr1 = array+2;
-	ptr2 = array+3;
+	ptr2 = array+3; // atribute another pointer value
 	printf("Difference of array positions: %ld \n", (ptr1 - ptr2));
 	printf("\n");
 

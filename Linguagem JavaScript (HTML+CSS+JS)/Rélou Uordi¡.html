@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Português do Brasil-->
+<head>
+    <meta charset="UTF-8"> <!-- seletor de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- adaptação a vários tipos de telas -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rélou Uordi¡</title>
+
+    <!--
+        style é child de head
+        head é parent de style
+    -->
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 19pt Arial;
+        }
+        h1 {
+            color: red; /*Cor do título:
+                             vermelho*/
+        }
+        h2 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Escrevi o "Olá, mundo!", agora tô safe.</p>
+    
+    <script>
+        window.alert("Essa é minha primeira mensagem!") //alerta na tela
+        window.confirm("Está gostando de JavaScript?") /*pergunta com "OK" e "Cancela"*/
+        window.prompt("Qual é o seu nome?")//digitar nome
+        window.document.write("<h2>Com o método <code> write() </code> dá para:</h2> escrever usando marcação HTML em uma String");
+        window.document.write("<p>É muito top isso!!!</p>"); //escrever mesmo com marcação HTML dentro de uma String
+    </script>
+</body>
+</html>
