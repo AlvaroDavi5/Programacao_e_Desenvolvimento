@@ -36,6 +36,30 @@ int main()
 	return 0;
 }
 
+
+void fillArray(int *arr, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		*(arr + i) = rand() % 50; // arr[+i] → *(arr + i), pois vai passando para o proximo endereco alocado
+	}
+
+	printArray(arr, size);
+}
+
+void printArray(int arr[], int size)
+{
+	for (int i = 0; i < size; ++i)
+	{
+		printf("%d", arr[i]);
+
+		if (i < (size - 1))
+			printf(", ");
+	}
+	printf("\n");
+}
+
+
 void allocMatrix3D(int rows, int columns, int layers)
 {
 	int ***matrix = (int ***)malloc(rows * sizeof(int **));
@@ -61,29 +85,6 @@ void allocMatrix3D(int rows, int columns, int layers)
 		free(matrix[i]);
 	}
 	free(matrix);
-}
-
-
-void fillArray(int *arr, int size)
-{
-	for (int i = 0; i < size; i++)
-	{
-		*(arr + i) = rand() % 50; // arr[+i] → *(arr + i), pois vai passando para o proximo endereco alocado
-	}
-
-	printArray(arr, size);
-}
-
-void printArray(int arr[], int size)
-{
-	for (int i = 0; i < size; ++i)
-	{
-		printf("%d", arr[i]);
-
-		if (i < (size - 1))
-			printf(", ");
-	}
-	printf("\n");
 }
 
 void fillMatrix(int ***matrix, int rows, int columns, int layers)
@@ -121,3 +122,4 @@ void printMatrix(int ***matrix, int rows, int columns, int layers)
 	printf("\n");
 	}
 }
+

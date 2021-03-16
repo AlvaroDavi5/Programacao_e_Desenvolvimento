@@ -26,7 +26,7 @@ int main()
 	pi_pointer = &pi; // atribuited reference to pi variable adress
 
 	printf("Pi memory adress: %p \n", pi_pointer); // reference to adress and pass it
-	printf("Pi value: %f \n", *pi_pointer); // derreference to adress and pass the value
+	printf("Pi value: %f \n", *pi_pointer); // derreference to adress and pass the value, & and * make refference/derreference alternating under value and adress
 	printf("\n");
 	printf("Someone value: %f \n", *(pi_pointer + 1)); // increment to access the next adress value
 	printf("Someone memory adress: %p \n", (pi_pointer - 1)); // decrement to access the next adress
@@ -53,7 +53,7 @@ int main()
 	printf("\n");
 
 
-	int n = 0, *p = NULL; // integer and pointer
+	int n = 0, *p = NULL; // integer and pointer to a integer
 	const int *pci = NULL; // pointer to a constant int
 	int * const cpi = NULL; // constant pointer to a int
 	const int * const cpci = NULL; // constant pointer to a constant int

@@ -7,7 +7,7 @@ float (*fgIrF)(int);
 typedef int (*fgIrI)(int, int);
 
 
-// decaracao de funcoes com mesmos tipos de parametro e retorno
+// decaracao de funcoes com mesmos tipos de parametros e retorno
 float parseToFloat(int num)
 {
 	return (float)num;
