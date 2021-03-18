@@ -70,9 +70,9 @@ Formatação de Saída:
 %l		long int
 %f		float
 &lf		long float (double)
-%04d		4 casas deicimais de zeros à esquerda do número
-%6i		número com 6 casas deicimais, se o número possuim menos de 6 casas são imprimidos espaços em branco
-%.2f		2 casas deicimais após o ponto flutuante
+%04d		4 casas decimais de zeros à esquerda do número
+%6i		número com 6 casas decimais, se o número possuim menos de 6 casas são imprimidos espaços em branco
+%.2f		2 casas decimais após o ponto flutuante
 %d*c%d		ignora qualquer caractere entre os dois números
 %%		sinal de %
 

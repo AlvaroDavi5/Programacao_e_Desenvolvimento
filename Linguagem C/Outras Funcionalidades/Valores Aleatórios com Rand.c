@@ -2,6 +2,7 @@
 #include <stdlib.h> /* para as funções rand() e srand() */
 #include <time.h> /* para a fução time() */
 
+
 int main()
 {
 	srand(time(NULL));
