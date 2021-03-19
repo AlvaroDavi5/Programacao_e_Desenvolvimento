@@ -1,15 +1,17 @@
 /*
 
-Text | Data | Heap | area nao-alocada | Stack | max
+Text | Data | String Literal Pool | Heap | area nao-alocada | Stack | max
 
 
 Text: contem o codigo do programa e suas constantes. Este segmento e alocado durante a criacao do processo (''exec'') e permanece do mesmo tamanho durante toda a vida do processo.
 
-Data: este segmento e a memoria de trabalho do processo, aonde ficam alocadas as variaveis globais e estaticas. Tem tamanho fixo ao longo da execucao do processo.
+Data: este segmento e a memoria de trabalho do processo, onde ficam alocadas as variaveis globais e estaticas. Tem tamanho fixo ao longo da execucao do processo.
 
-Stack: contem a pilha de execucao, onde sao armazenadas os parametros, enderecos de retorno e variaveis locais de funcoes. Pode variar de tamanho durante a execucao do processo.
+String Literal Pool: contem os dados das strings armazenados separadamente. Tem tamanho dinamico ao longo da execucao do processo.
 
 Heap: contem blocos de memoria alocadas dinamicamente, a pedido do processo, durante sua execucao. Varia de tamanho durante a vida do processo.
+
+Stack: contem a pilha de execucao, onde sao armazenadas os parametros, enderecos de retorno e variaveis locais de funcoes. Pode variar de tamanho durante a execucao do processo.
 
 ----------------------------------------------------------------------------------------------------------
 

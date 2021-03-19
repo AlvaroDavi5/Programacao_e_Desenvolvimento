@@ -43,7 +43,7 @@ D_Complexo_pt somarComplexo(D_Complexo_pt pt_val1, D_Complexo_pt pt_val2)
 
 double raiz(double numero)
 {
-	double b = numero, a=1, precisao=0.000001;
+	double b=numero, a=1, precisao=0.000001;
 	while ((b-a) >= precisao)
 	{
 		b = (a+b)/2;

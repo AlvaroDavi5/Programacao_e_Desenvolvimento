@@ -4,7 +4,7 @@
 // ------------------------------------- Função de Soma Sobre Multiplicação de 2 Termos -------------------------------------
 
 // Criada antecipadamente a função para calcular
-float somMult(float n1, float n2) // Parametros da função, inseridas variáveis a serem lidas
+float somMult(float n1, float n2) // Parametros da função, espaços para variáveis a serem lidas
 {
     float res = (n1 + n2) / (n1 * n2);
 
@@ -17,7 +17,7 @@ void potSqr(float n1, float n2); // Protótipo da função 'potSqr()', para busc
 
 // ################################# Função Principal, OBRIGATÓRIA #################################
 
-int main()
+int main(void) // Retorna um número inteiro ao sistema, para relatar se houve erros ou não e recebe void (nada) como parâmetro
 {
     float n1, n2, num1, num2, res;
 
@@ -30,7 +30,7 @@ int main()
 
     printf("(%.3f + %.3f) / (%.3f * %.3f) = %.2f \n", n1, n2, n1, n2, res);
 
-    potSqr(n1, n2);
+    potSqr(n1, n2); // Argumentos da função, passadas as variáveis a serem usadas
 
     return 0;
 }

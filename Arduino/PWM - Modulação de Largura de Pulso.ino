@@ -1,6 +1,11 @@
 #define LEDazul 7 // porta digital
 #define LEDverde A2 // porta analogica
 
+/*
+	portas Digitais PWM fornecem valores de tensao entre 0 e 225
+	portas Analogicas fornecem valores de tensao entre 0 e 1023
+*/
+
 void setup()
 {
 	pinMode(LEDazul, OUTPUT);
