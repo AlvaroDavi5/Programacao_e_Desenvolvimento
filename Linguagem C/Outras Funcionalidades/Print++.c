@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+// alem do printf e do fprintf
 
 void demonstrarSNprintf()
 { 
