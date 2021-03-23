@@ -42,7 +42,8 @@ TMP36 myTMP36(sensorTemp, 5.0);  define o pino analógico utilizado pelo sensor 
 #define pinVermelho 7
 #define sensorTemp A0
 
-void serCor(float temp);
+void readTemp(float temp);
+void serCor(int r, int g, int b);
 
 void setup()
 {
@@ -57,6 +58,8 @@ void setup()
 
 void loop()
 {
+	serCor(0, 0, 0); // inicia o led apagado
+
 	//float celsius = myTMP36.getTempC(); //OBTIDA ATRAVÉS DA FUNÇÃO myTMP36.getTempC() da biblioteca
 
 	/*
@@ -73,7 +76,7 @@ void loop()
 	*/
 	float celsius = (voltagem - 0.5) * 100.0;
 
-	serCor(celsius);
+	readTemp(celsius);
 
 	/*
 	A função map permite fazer o mapeamento direto entre faixas de valores
@@ -89,30 +92,29 @@ void loop()
 	delay(1000); // INTERVALO DE 1 SEGUNDO
 }
 
-void serCor(float temp)
+void readTemp(float temp)
 {
-	if (temp < 10) // AZUL
+	if (temp < 10)
 	{
-		digitalWrite(pinAzul, HIGH);
-		digitalWrite(pinVerde, LOW);
-		digitalWrite(pinVermelho, LOW);
+		serCor(0, 0, 1); // AZUL
 	}
-	else if (temp >= 10 && temp < 20) // VERDE
+	else if (temp >= 10 && temp < 20)
 	{
-		digitalWrite(pinAzul, LOW);
-		digitalWrite(pinVerde, HIGH);
-		digitalWrite(pinVermelho, LOW);
+		serCor(0, 1, 0); // VERDE
 	}
-	else if (temp >= 20 && temp < 30) // AMARELO
+	else if (temp >= 20 && temp < 30)
 	{
-		digitalWrite(pinAzul, LOW);
-		digitalWrite(pinVerde, HIGH);
-		digitalWrite(pinVermelho, HIGH);
+		serCor(1, 1, 0); // AMARELO
 	}
-	else // VERMELHO
+	else /* temp > 30 */
 	{
-		digitalWrite(pinAzul, LOW);
-		digitalWrite(pinVerde, LOW);
-		digitalWrite(pinVermelho, HIGH);
+		serCor(1, 0, 0); // VERMELHO
 	}
+}
+
+void serCor(int r, int g, int b)
+{
+	digitalWrite(pinVermelho, r);
+	digitalWrite(pinVerde, g);
+	digitalWrite(pinAzul, b);
 }

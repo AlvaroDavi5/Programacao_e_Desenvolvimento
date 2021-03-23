@@ -35,7 +35,7 @@ ${BIN_NAME}: ${OBJ}
 	@ echo ''
 
 
-./%.o: ./source/%.c ./%.h
+./%.o: ./%.c ./%.h
 	${CPL} $< ${CPL_FLAGS} -o $@
 	@ echo " \033[0;35m  Gerando objeto de compilacao \033[45;1;37m$@\033[0m\033[0;35m  \033[0m "
 	@ echo ''
