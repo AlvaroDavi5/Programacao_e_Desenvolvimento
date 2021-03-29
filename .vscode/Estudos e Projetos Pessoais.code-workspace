@@ -5,7 +5,16 @@
 			"path": ".."
 		},
 		{
-			"path": "../../../Downloads/Atividades/TEP/TEP-Assignment"
+			"path": "../../../Downloads/Atividades/TEP-Assignment"
 		}
-	]
+	],
+	"settings": {
+		"files.associations": {
+			"complex": "c",
+			"array": "c",
+			"vectors-double.h": "c",
+			"vector": "c",
+			"complex-int.h": "c"
+		}
+	}
 }

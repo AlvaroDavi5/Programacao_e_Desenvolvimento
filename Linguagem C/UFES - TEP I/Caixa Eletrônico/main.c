@@ -8,12 +8,12 @@ int main()
 {
 	srand(time(NULL));
 
-	Usuario *user1 = criarUsuario();
-	Conta *account_user1 = gerarConta(user1);
+	int qtdContas = 0;
+	Conta **contas = (Conta **) malloc(sizeof(Conta *));
 
-	operacao(account_user1);
+	operacao(contas, qtdContas);
 
-	deletarConta(account_user1);
+	deletarTodasContas(contas, qtdContas);
 
 	return 0;
 }

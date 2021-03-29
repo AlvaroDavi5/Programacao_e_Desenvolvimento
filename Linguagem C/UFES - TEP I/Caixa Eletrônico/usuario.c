@@ -11,23 +11,14 @@ struct usr
 };
 
 
-Usuario * criarUsuario()
+Usuario * criarUsuario(char *nome, long int cpf)
 {
-	char *nome = NULL;
-	long int cpf = 0;
 	Usuario *user = NULL;
 
 	user =  (Usuario *) malloc(sizeof(Usuario));
-	nome = (char *) malloc(35 * sizeof(char));
-
-	printf("Digite NOME e CPF: ");
-	scanf("%[A-Z, a-z] %ld", nome, &cpf);
 
 	user->nome = strdup(nome);
 	user->cpf = cpf;
-
-	free(nome);
-	nome = NULL;
 
 	return user;
 }
@@ -47,10 +38,12 @@ void deletarUsuario(Usuario *user)
 	if (user != NULL)
 	{
 		if (user->nome != NULL)
+		{
 			free(user->nome);
+			user->nome = NULL;
+		}
 
 		free(user);
 		user = NULL;
 	}
 }
-
