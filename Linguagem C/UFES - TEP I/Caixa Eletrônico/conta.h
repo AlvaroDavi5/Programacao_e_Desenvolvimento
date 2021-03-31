@@ -6,19 +6,19 @@
 
 	typedef struct acc Conta;
 
-	Conta * gerarConta(Usuario *user);
+	Conta * gerarConta(Usuario *user, int numAcc);
 	void deletarConta(Conta *account);
 	void operacao(Conta **accounts, int qtdAcc);
-	void depositar(Conta *account, float valor);
-	int sacar(Conta *account, float valor);
+	void depositar(Conta *account, float valor, int transfer);
+	int sacar(Conta *account, float valor, int transfer);
 	int transferir(Conta *contaOrig, Conta *contaDest, float valor);
 	Conta * buscarConta(Conta **accounts, int qtdAcc, int nConta);
 	Usuario * obterUsuario(Conta *account);
 	int obterAgencia(Conta *account);
-	int obterConta(Conta *account);
 	float obterSaldo(Conta *account);
-	void infoConta(Conta *account);
-	void infoTodasContas(Conta** contas, int qtdAcc);
-	void deletarTodasContas(Conta** contas, int qtdAcc);
+	void imprimeRelatorio(Conta **contas, int qtdAcc);
+	void infoConta(FILE *file, Conta *account, int transactions, int extract);
+	void imprimeTransacoes(FILE *file, Conta *account, int transactions);
+	void deletarTodasContas(Conta **contas, int qtdAcc);
 
 #endif

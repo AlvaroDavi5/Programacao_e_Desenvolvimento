@@ -22,6 +22,12 @@ CPL_FLAGS=-c   \
 # usado Space no lugar de Tab para evitar erros
 
 
+VALGRIND_FLAGS=--leak-check=full \
+               --show-leak-kinds=all \
+               --track-origins=yes \
+               --verbose
+
+
 
 # target 'run' feito para executar o programa
 run: all
@@ -32,7 +38,7 @@ run: all
 # target 'valgrind' feito para verificar vazamentos de memoria no programa
 valgrind: all
 	@ clear
-	@ valgrind ./bin/${BIN_NAME}
+	@ valgrind ${VALGRIND_FLAGS} ./bin/${BIN_NAME}
 
 
 # o target 'all' tem como pre-requisito a variavel 'BIN_NAME' e a variavel 'objectFolder', que se tornam targets

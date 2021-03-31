@@ -7,18 +7,21 @@
 struct usr
 {
 	char *nome;
-	long int cpf;
+	int cpf;
+	int numConta;
 };
 
 
-Usuario * criarUsuario(char *nome, long int cpf)
+Usuario * criarUsuario(char *nome, int cpf, int numConta)
 {
 	Usuario *user = NULL;
 
-	user =  (Usuario *) malloc(sizeof(Usuario));
+	user = (Usuario *) malloc(sizeof(Usuario));
+	//user->nome = (char *) malloc(strlen(nome) * sizeof(char));
 
 	user->nome = strdup(nome);
 	user->cpf = cpf;
+	user->numConta = numConta;
 
 	return user;
 }
@@ -28,9 +31,14 @@ char * obterNomeUsuario(Usuario *user)
 	return user->nome;
 }
 
-long int obterCpfUsuario(Usuario *user)
+int obterCpfUsuario(Usuario *user)
 {
 	return user->cpf;
+}
+
+int obterContaUsuario(Usuario *user)
+{
+	return user->numConta;
 }
 
 void deletarUsuario(Usuario *user)

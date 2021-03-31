@@ -4,9 +4,10 @@
 
 	typedef struct usr Usuario;
 
-	Usuario * criarUsuario(char *nome, long int cpf);
+	Usuario * criarUsuario(char *nome, int cpf, int numConta);
 	char * obterNomeUsuario(Usuario *user);
-	long int obterCpfUsuario(Usuario *user);
+	int obterCpfUsuario(Usuario *user);
+	int obterContaUsuario(Usuario *user);
 	void deletarUsuario(Usuario *user);
 
 #endif
