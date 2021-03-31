@@ -14,7 +14,8 @@
 			"array": "c",
 			"vectors-double.h": "c",
 			"vector": "c",
-			"complex-int.h": "c"
+			"complex-int.h": "c",
+			"random": "c"
 		}
 	}
 }

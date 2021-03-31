@@ -42,12 +42,5 @@ int Propriedade(int num)
 	ab = (num - cd) / 100;
 	ef = ab + cd;
 
-	if ((ef * ef) == num)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+	return ((ef * ef) == num) ? 1 : 0; // operador ternario
 }

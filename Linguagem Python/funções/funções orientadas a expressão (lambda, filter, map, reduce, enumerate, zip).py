@@ -37,7 +37,7 @@ valoresPares = filter(ehPar, valores)
 
 
 # função list comprehension
-listaS = [c.upper() for c in "Ola mundo"]
+listaM = [c.upper() for c in "Ola mundo"]
 
 
 # função zip
@@ -58,7 +58,7 @@ print(listaF)
 print(valorGeral)
 pares = list(valoresPares)
 print(pares)
-print(listaS)
+print(listaM)
 agrupaElementos = tuple(agrupaElementos)
 print(agrupaElementos)
 print(list(indiceValor))

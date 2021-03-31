@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// RAII macro que sera transformada no pre-processamento
+// RAII macro que sera transformada no pre-processamento (# transforma argumento em string, ## concatena dois argumentos)
 #define RAII_VARIABLE(vartype,varname,initval,dtor) \
 	void _dtor_ ## varname (vartype * v) { dtor(*v); } \
 	vartype varname __attribute__((cleanup(_dtor_ ## varname))) = (initval)
