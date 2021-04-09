@@ -16,8 +16,9 @@ Bases de Dados Não-Relacionais: armazenam os dados sem uma relação e não nec
 
 ----------------------------------------------------------------------------
 
-		SQL = Structure Query Language
+	SQL = Structured Query Language
 			↓
+* RDBMS
 	· DDL = Data Definition Language
 - CREATE
 - ALTER
@@ -30,5 +31,16 @@ Bases de Dados Não-Relacionais: armazenam os dados sem uma relação e não nec
 	· DCL = Data Control Language
 - GRANT
 - REVOKE
+
+* OLAP
+
+----------------------------------------------------------------------------
+
+	NoSQL = Non-Structured Query Language
+			↓
+* Graph
+* Document
+* Key-Value
+* Column
 
 ----------------------------------------------------------------------------
