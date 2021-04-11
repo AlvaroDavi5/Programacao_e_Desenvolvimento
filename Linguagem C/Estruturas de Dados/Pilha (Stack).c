@@ -6,100 +6,132 @@
 struct stack
 {
 	int top;
-	unsigned size;
-	int* array;
+	unsigned int size;
+	int *array;
 };
-typedef struct stack Stack;
+typedef struct stack Stack; // Stack is a LIFO data structure
 
 
-Stack * create(unsigned size);
-int isFull(Stack *stackk);
-int isEmpty(Stack *stackk);
-void push(Stack *stackk, int item);
-int pop(Stack *stackk);
-int peek(Stack *stackk);
+Stack * createStack(unsigned int capacity);
+void freeStack(Stack *stack);
+void push(Stack *stack, int item);
+int pop(Stack *stack);
+int peek(Stack *stack);
+int isFull(Stack *stack);
+int isEmpty(Stack *stack);
 
 
 int main()
 { 
-	int val,n;
-	Stack *stackk = create(100);
+	int op = 999, value = 0;
+	Stack *my_stack = createStack(100);
 
 	do
 	{
-		printf("\n************************* MENU ************************");
-		printf("\n1.PUSH");
-		printf("\n2.POP");
-		printf("\n3.PEEK");
-		printf("\n4 IS EMPTY");
-		printf("\n5.EXIT");
-		printf("\n enter ur choice : ");
-		scanf("%d",&n);
+		printf("\n------------- SELECT A OPTION -------------\n");
+		printf("0. Exit\n");
+		printf("1. Push\n");
+		printf("2. Pop\n");
+		printf("3. Peek\n");
+		printf("4. Is Empty\n");
 
-		switch(n)
+		printf("\nType a number: ");
+		scanf("%d", &op);
+
+		switch(op)
 		{
-			case 1: 
-				printf("\nenter the value ");
-				scanf("%d",&val);
-				push(stackk , val);
-				break;
-			case 2: 
-				printf("\n popped element : %d",pop(stackk));
-				break;
-			case 3: 
-				printf("\n top element : %d",peek(stackk));
-				break;
-			case 4:
-				printf("\n is empty : %d",isEmpty(stackk));
-				break;
-			case 5:
+			case 0:
+				freeStack(my_stack);
 				exit(0);
 				break;
+			case 1:
+				printf("\nType a value: ");
+				scanf("%d",&value);
+				push(my_stack, value);
+				printf("\n %d pushed to stack\n", value);
+				break;
+			case 2:
+				printf("\nPopped element: %d from stack\n", pop(my_stack));
+				break;
+			case 3:
+				printf("\nTop element: %d\n", peek(my_stack));
+				break;
+			case 4:
+				printf("\nIs empty: ");
+					if (isEmpty(my_stack))
+						printf("TRUE\n");
+					else
+						printf("FALSE\n");
+				break;
 			default:
-				printf("\n Wrong Choice!");
+				printf("\nInvalid option!\n");
 				break;
 		}
-		printf("\n do u want to cont... ");
-	}while('y'==getchar());
+	} while(op != 0);
 }
 
-Stack * create(unsigned size)
-{ 
-	Stack *stackk = (Stack *) malloc(sizeof(Stack));
-	stackk->size = size;
-	stackk->top = -1;
-	stackk->array = (int *) malloc(stackk->size * sizeof(int));
-	return stackk;
+
+Stack * createStack(unsigned int capacity)
+{
+	Stack *stack = (Stack *) malloc(sizeof(Stack));
+
+	stack->size = capacity;
+	stack->top = -1;
+
+	stack->array = (int *) malloc(stack->size * sizeof(int));
+
+	return stack;
 }
 
-int isFull(Stack *stackk)
-{ 
-	return stackk->top == stackk->size - 1;
-}
-
-int isEmpty(Stack *stackk)
-{ 
-	return stackk->top == -1;
-}
-
-void push(Stack *stackk, int item)
-{ 
-	if (isFull(stackk))
+void push(Stack *stack, int item)
+{
+	if (isFull(stack))
 		return;
-	stackk->array[++stackk->top] = item;
+
+	stack->array[++stack->top] = item; // Last In...
 }
 
-
-int pop(Stack *stackk)
-{ 
-	if (isEmpty(stackk))
-		return -1;
-	return stackk->array[stackk->top--];
-}
-
-int peek(Stack *stackk)
-{ 
-	if (isEmpty(stackk))
+int pop(Stack *stack)
+{
+	if (isEmpty(stack))
 		return INT_MIN;
-	return stackk->array[stackk->top];
+	else
+	{
+		return stack->array[stack->top--]; // [...] First Out
+	}
+}
+
+int peek(Stack *stack)
+{
+	if (isEmpty(stack))
+		return INT_MIN;
+	else
+	{
+		return stack->array[stack->top];
+	}
+}
+
+int isFull(Stack *stack)
+{
+	return stack->top == stack->size - 1;
+}
+
+int isEmpty(Stack *stack)
+{
+	return stack->top == -1;
+}
+
+void freeStack(Stack *stack)
+{
+	if (stack != NULL)
+	{
+		if (stack->array != NULL)
+		{
+			free(stack->array);
+			stack->array = NULL;
+		}
+
+		free(stack);
+		stack = NULL;
+	}
 }

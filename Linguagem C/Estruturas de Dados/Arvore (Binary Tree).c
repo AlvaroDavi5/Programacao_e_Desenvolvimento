@@ -1,98 +1,123 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 
 
-struct bst
+struct node
 {
 	int data;
-	struct bst *left;
-	struct bst *right;
+	struct node *left;
+	struct node *right;
 };
-typedef struct bst BinTree;
+typedef struct node Node;
 
 
-BinTree * insert(BinTree *,int);
-void inorder(BinTree *);
-void preorder(BinTree *);
-void postorder(BinTree *);
- 
+Node * insert(Node *node, int value);
+void inOrder(Node *node);
+void preOrder(Node *node);
+void postOrder(Node *node);
+void FreeNode(Node *node);
+
+
 int main ()
 {
-	BinTree *r = NULL;
+	srand(time(NULL));
 
-	r = insert(r,30);
-	r = insert(r,15);
-	r = insert(r,10);
-	r = insert(r,20);
-	r = insert(r,40);
-	r = insert(r,5);
-	r = insert(r,45);
-	r = insert(r,35);
+	int ins_num = 5;
+	Node *root = NULL;
 
-	printf("\n display element in inorder:-");
-	inorder(r);
-	printf("\n display element in preorder:-");
-	preorder(r);
-	printf("\n display element in postorder:-");
-	postorder(r);
+	printf("Type insertions number: ");
+	scanf("%d", &ins_num);
 
-	return 1;
+	for(int count = 0; count < ins_num; count++)
+		root = insert(root, (rand() % 99));
+
+	printf("\nElements in inorder: ");
+	inOrder(root);
+	printf("\nElements in preorder: ");
+	preOrder(root);
+	printf("\nElements in postorder: ");
+	postOrder(root);
+
+	FreeNode(root);
+
+	return 0;
 }
 
-BinTree * insert(BinTree *q, int val)
+Node * insert(Node *node, int value)
 {
-	BinTree *tmp;
-	tmp = (BinTree *) malloc(sizeof(BinTree));
+	Node *tmp;
+	tmp = (Node *) malloc(sizeof(Node));
 
-	if(q == NULL)
+	if(node == NULL)
 	{
-		tmp->data = val;
-		tmp->left = tmp->right = NULL;
+		tmp->data = value;
+		tmp->left = NULL;
+		tmp->right = NULL;
+
 		return tmp;
 	}
 	else
 	{
-		if(val<(tmp->data))
+		if(value < (tmp->data))
 		{
-			q->left = insert(q->left,val);
+			node->left = insert(node->left, value);
 		}
 		else
 		{
-			q->right = insert(q->right,val);
+			node->right = insert(node->right, value);
 		}
 	}
 
-	return q;
+	return node;
 }
 
-void inorder(BinTree *q)
+void inOrder(Node *node)
 {
-	if(q == NULL)
+	if(node == NULL)
 	{
 		return;
 	}
+	else
+	{
+		inOrder(node->left);
+		printf(" %d ", node->data);
+		inOrder(node->right);
+	}
 
-	inorder(q->left);
-	printf(" %d ",q->data);
-	inorder(q->right);	
 }
 
-void preorder(BinTree *q)
+void preOrder(Node *node)
 {
-	if(q!=NULL)
+	if(node != NULL)
 	{
-		printf(" %d ",q->data);
-		preorder(q->left);
-		preorder(q->right);
+		printf(" %d ", node->data);
+		preOrder(node->left);
+		preOrder(node->right);
 	}
 }
 
-void postorder(BinTree *q)
+void postOrder(Node *node)
 {
-	if(q != NULL)
+	if(node != NULL)
 	{
-		postorder(q->left);
-		postorder(q->right);
-		printf(" %d ",q->data);
+		postOrder(node->left);
+		postOrder(node->right);
+		printf(" %d ", node->data);
+	}
+}
+
+void FreeNode(Node *node)
+{
+	if(node == NULL)
+		return;
+	else
+	{
+		FreeNode(node->left);
+		FreeNode(node->right); // recursion to free all nodes
+		node->data = 0;
+
+		free(node);
+		node = NULL;
 	}
 }

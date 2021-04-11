@@ -7,14 +7,14 @@ typedef int (* fptrCompare)(int, int);
 struct node
 {
 	int data;
-	struct node *next;
+	struct node *next; // only next Node pointer...
 };
 typedef struct node Node;
 
 struct list
 {
 	Node *head;
-	Node *current;
+	Node *current; // [...] makes one-way List
 	Node *tail;
 };
 typedef struct list LinkedList;
@@ -39,7 +39,7 @@ int main()
 
 	do
 	{
-		printf("------------- SELECT A OPTION -------------\n");
+		printf("\n------------- SELECT A OPTION -------------\n");
 		printf("0. Exit\n");
 		printf("1. Add New Head\n");
 		printf("2. Add New Tail\n");
@@ -82,10 +82,11 @@ int main()
 				printf("\nInvalid option!\n");
 				break;
 		}
-	} while (op != 6);
+	} while (op != 0);
 
 	return 0;
 }
+
 
 void initLinkedList(LinkedList *list)
 {
