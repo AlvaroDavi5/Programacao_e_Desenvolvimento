@@ -4,7 +4,7 @@
 
 	#include "usuario.h"
 
-	typedef struct acc Conta;
+	typedef struct acc Conta; // estrutura opaca
 
 	Conta * gerarConta(Usuario *user, int numAcc);
 	void deletarConta(Conta *account);

@@ -22,7 +22,8 @@ CPL_FLAGS=-c   \
 # usado Space no lugar de Tab para evitar erros
 
 
-VALGRIND_FLAGS=--leak-check=full \
+VALGRIND_FLAGS=-s \
+               --leak-check=full \
                --show-leak-kinds=all \
                --track-origins=yes \
                --verbose

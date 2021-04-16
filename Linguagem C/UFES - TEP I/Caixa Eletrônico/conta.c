@@ -6,7 +6,7 @@
 #define TRUE 1
 #define FALSE 0
 
-struct acc
+struct acc // implementacao da estrutura
 {
 	Usuario *usuario;
 	int agencia; // optei por manter a agência
@@ -19,7 +19,7 @@ struct acc
 
 Conta * gerarConta(Usuario *user, int numAcc)
 {
-	Conta *account = (Conta *) malloc(sizeof(Conta));
+	Conta *account = (Conta *) malloc(sizeof(Conta)); // ponteiro para estrutura opaca (ponteiro opaco)
 
 	account->usuario = user;
 	account->agencia = (rand() % 9989) + 10;
