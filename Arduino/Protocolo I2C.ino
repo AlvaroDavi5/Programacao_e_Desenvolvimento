@@ -4,6 +4,12 @@ Link do projeto no Tinkercad:
 
 https://www.tinkercad.com/things/8rBDHDXxgxN
 
+
+
+Em casos de dispositivos com endereco de 7 bits, o oitavo bit vai indicar leitura/escrita em um mesmo endereco de 7 bits.
+Para dispositivos com endereco de 8 bits ha 2 enderecos (leitura e escrita) de 8 bits especificados pelo fabricante no datasheet.
+Para obter o endereco comum de 7 bits entre ambos de 8 bits basta realizar um shift-right do bit da primeira posicao.
+
 */
 
 
@@ -16,7 +22,7 @@ https://www.tinkercad.com/things/8rBDHDXxgxN
 
 
 #define pinBtn 3
-const int16_t I2C_master = 0x42;
+const int16_t I2C_master = 0x42; // enderecos hexadecimais
 const int16_t I2C_slave = 0x08;
 int state = 1;
 
