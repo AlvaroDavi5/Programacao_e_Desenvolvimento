@@ -93,7 +93,7 @@ void bubbleSort(int array[])
 
 void insertionSort(int array[])
 {
-	int i, j, count, memory, mark;
+	int i, j, memory;
 
 	for (i = 1; i < ARRAYSIZE; i++)
 	{
