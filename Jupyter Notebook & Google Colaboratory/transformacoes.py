@@ -341,42 +341,48 @@ sen(\theta) & cos(\theta) & 0  & 0\\
 
 from math import pi,cos,sin
 
-# Function for building the Rotation Matrix around the Z-axes
+# Function for building the Rotation Matrix around the axes
+
+def x_rotation(angle):
+    rotation_matrix=np.array([[1,0,0,0],[0, cos(angle),-sin(angle),0],[0, sin(angle),cos(angle),0],[0,0,0,1]])
+    return rotation_matrix
+
+def y_rotation(angle):
+    rotation_matrix=np.array([[cos(angle),0,sin(angle),0],[0,1,0,0],[-sin(angle),0,cos(angle),0],[0,0,0,1]])
+    return rotation_matrix
+
 def z_rotation(angle):
     rotation_matrix=np.array([[cos(angle),-sin(angle),0,0],[sin(angle),cos(angle),0,0],[0,0,1,0],[0,0,0,1]])
     return rotation_matrix
-################################
-# Create here the functions for Rotation around the X and Y axis, and for translation
 
-
-
-
+def translade(dx, dy, dz):
+    translation = np.array([dx,dy,dz,1])
+    T_matrix = np.eye(4)
+    T_matrix[:,-1]=translation.T
+    return T_matrix
 
 #################################
     
 rotation_angle = pi/2 #in radians
+Rx = x_rotation(rotation_angle)
+print('Rx:\n', Rx,'\n')
+Ry = y_rotation(rotation_angle)
+print('Ry:\n', Ry,'\n')
 Rz = z_rotation(rotation_angle)
-print('Rz:\n',Rz,'\n')
-
+print('Rz:\n', Rz,'\n')
+T = translade(2,1,3)
+print('T:\n', T,'\n')
 
 #original point 
 axis = set_plots(lim=[-5,5])
 axis = draw_arrows(origin_point,base,axis)
 
 
-########################
-# After you create the function for translation, substitute this code with a function call
-translation = np.array([3,3,3,1])
-T = np.eye(4)
-T[:,-1]=translation.T
-#########################
-
-
 
 print('Translation matrix:')
 print(T,'\n')
 
-R = Rz
+R = Ry
 
 rotated_point_mult = np.dot(R,origin_point)
 
