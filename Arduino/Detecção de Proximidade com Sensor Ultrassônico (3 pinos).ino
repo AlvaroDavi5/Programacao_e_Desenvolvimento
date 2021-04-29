@@ -1,9 +1,11 @@
-#define SIGNAL A0
-#define RED 6
-#define GREEN 5
-#define BLUE 3 // constantes com os identificadores dos pinos
 
+// constantes com os identificadores dos pinos e variaives
+#define SIGNAL_PIN A0 // pino do sensor
+#define RED 6
+#define GREEN 5 // pinos dos leds
+#define BLUE 3
 int distancia = 0;
+
 
 long lerDistanciaUltrassonica(int pinoAcionador, int pinoEco)
 {
@@ -32,14 +34,14 @@ void setup()
 
 void loop()
 {
-	distancia = 0.01723 * lerDistanciaUltrassonica(SIGNAL, SIGNAL); // conversao de tempo de viagem em microsegundos recebido do eco para 'cm'
+	distancia = 0.01723 * lerDistanciaUltrassonica(SIGNAL_PIN, SIGNAL_PIN); // conversao de tempo de viagem em microsegundos recebido do eco para 'cm'
 
 	// imprimir leituras no Monitor Serial
 	Serial.print("Proximidade: ");
 	Serial.print(distancia);
 	Serial.println("cm");
 
-	// Acender LEDs de aviso
+	// acender LEDs de aviso
 	if (distancia <= 85)
 	{
 		digitalWrite(GREEN, LOW);
@@ -59,6 +61,6 @@ void loop()
 		digitalWrite(BLUE, HIGH);
 	}
 
-	delay(10); // Delay para evitar queda de desempenho
+	delay(500); // delay para evitar queda de desempenho
 }
 

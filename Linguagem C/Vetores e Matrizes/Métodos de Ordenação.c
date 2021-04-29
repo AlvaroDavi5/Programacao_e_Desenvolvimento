@@ -95,14 +95,15 @@ void insertionSort(int array[])
 {
 	int i, j, memory;
 
-	for (i = 1; i < ARRAYSIZE; i++)
+	for (i = 1; i < ARRAYSIZE; i++) // percorre todo o vetor a partir da segunda posicao
 	{
-		memory = array[i];
-		for (j = i; (j > 0) && (memory < array[j-1]); j--)
+		memory = array[i]; // fixa a posicao 'i' na variavel 'memory'
+
+		for (j = i; (j > 0) && (memory < array[j-1]); j--) // enquanto a posicao atual da 'memory' for menor que as posicoes anteriores a ela...
 		{
-			array[j] = array[j-1];
+			array[j] = array[j-1]; // ordena a partir da posicao 'j' ate as posicoes anteriores
 		}
-		array[j] = memory;
+		array[j] = memory; // insere a posicao fixada no ultimo ponto da ordenacao a partir de 'j', fixando a proxima posicao 'i' e repetindo o processo
 	}
 }
 
