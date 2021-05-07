@@ -1,12 +1,12 @@
-# H1
+# formato H1
 
-## H2
+## formato H2
 
-### H3
+### formato H3
 
-#### H4
+#### formato H4
 
-##### H5
+##### formato H5
 
 separação
 ------------------------------------------------------------------------------------------
@@ -21,7 +21,8 @@ _italico_
 __negrito__  
 **negrito**
 
-`caixa de texto`
+`caixa de texto`  
+```caixa de texto```
 
 ```
 # caixa de código
@@ -29,20 +30,27 @@ __negrito__
 print("Oi")
 ```
 
-    caixa de código ou texto
+	caixa de código ou texto
 
 
 
 * tópico 1
-* tópico 2
-- subtópico 1
-- subtópico 2
+- tópico 2
+	* subtópico 1
+	- subtópico 2
+		* sub-subtópico 1
+			> conteudo
+		- sub-subtópico 2
+			> conteudo
+
 
 - [x] checkbox marcado
 - [ ] checkbox desmarcado
 
 
-[link](google.com)  
+[link da web](google.com)  
+[link do conteudo](#inserir-imagens)
+
 
 quebra de </br> linha (do HTML)
 
@@ -57,7 +65,7 @@ Div a direita (do HTML)
 </div>
 
 
-Imagem de Código no Terminal
+### inserir-imagens
 
 ![imagem do Markdown](https://img.icons8.com/pastel-glyph/2x/code--v1.png)  
 
