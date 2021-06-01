@@ -1,8 +1,18 @@
+
+# ignore (personal projects and university assignments)
+/AlvaroDavi5
+
 /Arduino
 /Flutter-Dart
 /HTML-CSS-JS
+/Linguagem_Markdown
 /Linguagem_C
 /Linguagem_Python
 /SQL-NoSQL
 /Shell_Script-Make-Makefile
+
+/Matrix_Transformation_Animation
+/PIC-Sign-Language-Project
+/trabalho_progII
+/trabalho_tepI
 
