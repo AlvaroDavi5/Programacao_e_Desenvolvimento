@@ -1,8 +1,0 @@
-
-time
-requests
-pandas
-bs4
-selenium
-json
-xhtml2pdf
