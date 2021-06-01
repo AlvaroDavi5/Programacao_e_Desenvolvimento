@@ -1,8 +1,12 @@
 
-time
-requests
-pandas
-bs4
-selenium
-json
-xhtml2pdf
+beautifulsoup4==4.9.3
+#json==3.0.2
+pandas==1.2.1
+requests==2.25.1
+selenium==3.141.0
+xhtml2pdf==0.2.5
+#time>=0.1.0
+DateTime==4.3
+
+
+
