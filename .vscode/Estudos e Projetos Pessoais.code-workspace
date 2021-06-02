@@ -1,8 +1,10 @@
 {
 	"folders": [
 		{
-			"name": "Programação",
 			"path": ".."
+		},
+		{
+			"path": "../React-first_webapp"
 		}
 	],
 	"settings": {
