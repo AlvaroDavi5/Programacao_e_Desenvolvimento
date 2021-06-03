@@ -4,7 +4,10 @@
 			"path": ".."
 		},
 		{
-			"path": "../React-first_webapp"
+			"path": "../../../Downloads/Atividades/NextJS-first_webapp"
+		},
+		{
+			"path": "../../../Downloads/Atividades/ReactJS-first_webapp"
 		}
 	],
 	"settings": {
