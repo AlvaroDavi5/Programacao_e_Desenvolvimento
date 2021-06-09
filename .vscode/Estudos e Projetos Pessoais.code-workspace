@@ -1,12 +1,15 @@
 {
 	"folders": [
 		{
+			"name": "Programacao",
 			"path": ".."
 		},
 		{
+			"name": "NextJS-first_webapp",
 			"path": "../../../Downloads/Atividades/NextJS-first_webapp"
 		},
 		{
+			"name": "ReactJS-first_webapp",
 			"path": "../../../Downloads/Atividades/ReactJS-first_webapp"
 		}
 	],
