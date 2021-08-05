@@ -25,7 +25,7 @@ option = Options()
 option.headless = True # execute without graphical interface
 
 driver = webdriver.Opera(options=option) # call the webdriver to open the browser and get the URL
-##driver = webdriver.Opera(OperaDriverManager().install()) # call the webdriver - and install driver manager - to open the browser and get the URL
+#driver = webdriver.Opera(OperaDriverManager().install(), options=option) # call the webdriver - installed on cache by driver manager - to open the browser and get the URL
 driver.get(url)
 time.sleep(10) # delay do get data
 
