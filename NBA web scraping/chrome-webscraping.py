@@ -21,7 +21,7 @@ from xhtml2pdf import pisa # to build PDF with HTML
 
 url = "https://www.nba.com/stats/players/traditional/?sort=PLAYER_NAME&dir=-1" # NBA tabledata URL
 
-webdrive_path = './webdrive/chromedriver'
+webdrive_path = './webdriver/chromedriver'
 
 driver = webdriver.Chrome() # call the webdriver to open the browser and get the URL
 #driver = webdriver.Chrome(webdrive_path) # call the webdriver - using bin/exe program file - to open the browser and get the URL
