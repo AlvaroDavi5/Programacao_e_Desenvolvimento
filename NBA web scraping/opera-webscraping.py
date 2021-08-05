@@ -1,8 +1,15 @@
 import time # timeset library
+from datetime import datetime # datetime consult library
 import requests # make requests of HTML file to server
 import pandas as pd # to databases and data manipulation functions
 from bs4 import BeautifulSoup # extract data from HTML file
 from selenium import webdriver # do autotests on browser
+# simulate clicks and typing
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.select import Select # verify if tag is a 'select'
+from selenium.webdriver.support.ui import WebDriverWait # makes webdrive wait page load
+from selenium.webdriver.support import expected_conditions as ec # verify if expected conditions is valid
 from selenium.webdriver.opera.options import Options # opera webdriver options
 from webdriver_manager.opera import OperaDriverManager # opera webdriver manager
 import json # manipulate JSON files
