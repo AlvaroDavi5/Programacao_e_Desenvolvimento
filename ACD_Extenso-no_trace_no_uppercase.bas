@@ -1,44 +1,44 @@
 Attribute VB_Name = "ExtensoACD"
 'Macro:         ACD_Extenso
-'Versão:        3.2 (Última atualização 03/02/2021)
-'Finalidade:    Converte um valor numérico em uma string
-'               com o extenso monetário correspondente.
+'Vers?o:        3.2 (?ltima atualiza??o 03/02/2021)
+'Finalidade:    Converte um valor num?rico em uma string
+'               com o extenso monet?rio correspondente.
 'Linguagem:     VBA
-'Autor:         Antonio Carlos Doná
+'Autor:         Antonio Carlos Don?
 '               acdona@hotmail.com
-'Distribuição:  Livre e sem garantias, use por sua conta e risco.
-'Observações:   1) Sempre deixar um espaço em branco no início
-'                  do número a ser convertido para extenso.
+'Distribui??o:  Livre e sem garantias, use por sua conta e risco.
+'Observa??es:   1) Sempre deixar um espa?o em branco no in?cio
+'                  do n?mero a ser convertido para extenso.
 '               2) Favor reportar eventuais bugs.
-'               3) Suporta valores até $922.337.203.685.477,5807 que é o limite
-'                  da variável Currency -922.337.203.685.477,5808 até 922.337.203.685.477,5807
-'               4) Não foi feito nenhum teste com valores negativos
+'               3) Suporta valores at? $922.337.203.685.477,5807 que ? o limite
+'                  da vari?vel Currency -922.337.203.685.477,5808 at? 922.337.203.685.477,5807
+'               4) N?o foi feito nenhum teste com valores negativos
 '
-'Gramática portuguesa:
-'Regra Geral: Não se intercala a conjunção 'e' e nem vírgula entre posições de milhar.
-'Exceção: Se a milhar posterior for menor que 100 ou for centena inteira (Ex: 100,200,300...)
-'Alguns gramáticos não aceitam essa exceção e outros já aceitam a vírgula.
-'Nota: Segundo diversos gramáticos nunca deverá ser usada a vírgula na escrita de numerais por extenso.
+'Gram?tica portuguesa:
+'Regra Geral: N?o se intercala a conjun??o 'e' e nem v?rgula entre posi??es de milhar.
+'Exce??o: Se a milhar posterior for menor que 100 ou for centena inteira (Ex: 100,200,300...)
+'Alguns gram?ticos n?o aceitam essa exce??o e outros j? aceitam a v?rgula.
+'Nota: Segundo diversos gram?ticos nunca dever? ser usada a v?rgula na escrita de numerais por extenso.
 '<-------------------------------------------------------------------------------------------------------
-'Início da rotina ACD_Extenso()
+'In?cio da rotina ACD_Extenso()
 Sub ACD_Extenso()
 'Verifica se houve erro e pulo para Fim:
 On Error GoTo Fim_Err
-'declara as variáveis
-  Dim strValor As String        'alfanumérico
-  Dim strRetorno As String      'alfanumérico
+'declara as vari?veis
+  Dim strValor As String        'alfanum?rico
+  Dim strRetorno As String      'alfanum?rico
   Dim blnNoInicio As Boolean    'Falso/Verdadeiro
-  Dim strTmp As String          'alfanumérico
+  Dim strTmp As String          'alfanum?rico
   Dim x As Integer              'inteiro
-  Dim InicioExtenso As String   'Alfanumárico
-  Dim FimExtenso As String      'Alfanumérico
+  Dim InicioExtenso As String   'Alfanum?rico
+  Dim FimExtenso As String      'Alfanum?rico
   '
-  'atribui os parenteses no início e final do extenso
-  'caso não queira nada antes ou depois do extenso alterar para ""
+  'atribui os parenteses no in?cio e final do extenso
+  'caso n?o queira nada antes ou depois do extenso alterar para ""
   InicioExtenso = " ("
   FimExtenso = ") "
   '
-  'Verifica se não existe algo selecionado
+  'Verifica se n?o existe algo selecionado
   'atribui Verdadeiro para blnInicio e sai da macro
   If Selection.Type = wdSelectionIP And Selection.Start = 0 Then blnNoInicio = True
   If blnNoInicio = True Then Exit Sub
@@ -46,53 +46,53 @@ On Error GoTo Fim_Err
   'Move para esquerda
   'unit = por caracter
   'count = um por vez
-  'Extend = move para o final do número extendido
+  'Extend = move para o final do n?mero extendido
   Selection.MoveLeft Unit:=wdCharacter, Count:=1, Extend:=wdExtend
-  'quando achar um espaço em branco no iníclio do número selecionado
+  'quando achar um espa?o em branco no in?clio do n?mero selecionado
   While Selection.Text = " "
-    'se chegou no início do documento e não achou espaço sai da macro
+    'se chegou no in?cio do documento e n?o achou espa?o sai da macro
     If WordBasic.AtStartOfDocument() Then Exit Sub
       'volta onde estava sem marcar nada
       Selection.ExtendMode = False
       'Move para esquerda
       'unit = por caracter
       'count = um por vez
-      'Extend = move para final do número e pula para esquerda
+      'Extend = move para final do n?mero e pula para esquerda
       Selection.MoveLeft Unit:=wdCharacter, Count:=1, Extend:=wdMove
   Wend
-  'volta para direita selecionando todo o número
+  'volta para direita selecionando todo o n?mero
   Selection.MoveRight Unit:=wdCharacter, Count:=1, Extend:=wdMove
   Selection.ExtendMode = True
-  'procura na seleção
+  'procura na sele??o
   With Selection.Find
-      'em direção ao início
+      'em dire??o ao in?cio
       .Forward = False
       'quando encontrar o fim, para.
       .Wrap = wdFindStop
-      'procura o espaço em branco
+      'procura o espa?o em branco
       .Execute FindText:=" "
   End With
   'exibe texto na janela imediata
   Debug.Print Selection.Text
-  'atribui texto selecionado à macro
-  'o CCur é para transformar de texto para monetário
+  'atribui texto selecionado ? macro
+  'o CCur ? para transformar de texto para monet?rio
   strValor = Extenso(CCur(Selection.Text))
-  'desmarca seleção
+  'desmarca sele??o
   Selection.ExtendMode = False
   'volta para direita um caracter
   Selection.MoveRight Unit:=wdCharacter, Count:=1, Extend:=wdMove
-  'caso queira tudo em minúscula, tire o UCASE abaixo 
+  'caso queira tudo em min?scula, tire o UCASE abaixo 
   strTmp = InicioExtenso & strValor & FimExtenso
-  'verifica se o valor atribuído tem mais de um caracter
-  'ou se é diferente de espaço
-  'Escreve o valor por extenso a direita do número digitado
+  'verifica se o valor atribu?do tem mais de um caracter
+  'ou se ? diferente de espa?o
+  'Escreve o valor por extenso a direita do n?mero digitado
   x = Len(strTmp)
   If x > 0 And strTmp <> " " Then
      Selection.TypeText Text:=strTmp
    End If
 'Rotina para sair da macro
 Fim_Err:
-'retira seleção e vai para o final do extenso
+'retira sele??o e vai para o final do extenso
 Selection.ExtendMode = False
 Selection.MoveRight Unit:=wdCharacter, Count:=1, Extend:=wdMove
    Exit Sub
@@ -100,7 +100,7 @@ End Sub
 'Final da torina ACD_Extenso()
 '------------------------------------------------------------------------------------------------------->
 '
-' Função extenso, responsável por converter o número em extenso
+' Fun??o extenso, respons?vel por converter o n?mero em extenso
 '
 Function Extenso( _
   Valor As Currency, _
@@ -181,7 +181,7 @@ End Function
 
 Private Function Unidade(N As Long) As String
     Dim varUnidade As Variant
-    varUnidade = Array("", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove")
+    varUnidade = Array("", "um", "dois", "tr?s", "quatro", "cinco", "seis", "sete", "oito", "nove")
     Unidade = varUnidade(N)
 End Function
 
@@ -198,7 +198,7 @@ Private Function Dezena(N As Long) As String
                        "sessenta", "setenta", "oitenta", "noventa")
                       
     d = N \ 10   '\ divide 2 numeros e retorna o resultado inteiro
-    u = N Mod 10 'mod retorna o resto da divisão
+    u = N Mod 10 'mod retorna o resto da divis?o
 
 If d = 0 Then
     Dezena = Unidade(N)
@@ -299,15 +299,15 @@ Private Function ConcatCentenas(N As Currency) As String
   Menores = Bilhao + Milhao + Milhar + Um
   If Trilhao > 0 Then
     If Trilhao = 1 Then
-      s = "um trilhão"
+      s = "um trilh?o"
     Else
-      s = Centena(Trilhao) & " trilhões"
+      s = Centena(Trilhao) & " trilh?es"
     End If
     If Menores > 0 Then
       If SingleAlg(m) Then
         s = s & " e "
       Else
-        's = s & ", " 'retirada das vírgulas
+        's = s & ", " 'retirada das v?rgulas
         s = s & " "
     End If
     Else
@@ -319,15 +319,15 @@ Private Function ConcatCentenas(N As Currency) As String
   Menores = Milhao + Milhar + Um
   If Bilhao > 0 Then
     If Bilhao = 1 Then
-      s = s & "um bilhão"
+      s = s & "um bilh?o"
     Else
-      s = s & Centena(Bilhao) & " bilhões"
+      s = s & Centena(Bilhao) & " bilh?es"
     End If
     If Menores > 0 Then
       If SingleAlg(m) Then
         s = s & " e "
       Else
-        's = s & ", " 'retirada da vírgula
+        's = s & ", " 'retirada da v?rgula
         s = s & " "
       End If
     Else
@@ -339,15 +339,15 @@ Private Function ConcatCentenas(N As Currency) As String
   Menores = Milhar + Um
   If Milhao > 0 Then
     If Milhao = 1 Then
-      s = s & "um milhão"
+      s = s & "um milh?o"
     Else
-        s = s & Centena(Milhao) & " milhões"
+        s = s & Centena(Milhao) & " milh?es"
     End If
     If Menores > 0 Then
       If SingleAlg(m) Then
         s = s & " e "
       Else
-        '       s = s & ", " 'retirada da vírgula do milhar
+        '       s = s & ", " 'retirada da v?rgula do milhar
        s = s & " "
       End If
     Else
@@ -369,11 +369,11 @@ Private Function ConcatCentenas(N As Currency) As String
       If SingleAlg(m) Then
         s = s & "e "
       Else
-       ' s = s & ", " '->Retirada da vígula no milhar
+       ' s = s & ", " '->Retirada da v?gula no milhar
       End If
     End If
   End If
   s = s & Centena(Um)
   ConcatCentenas = s
 End Function
-'fim da função ACD_Extenso
+'fim da fun??o ACD_Extenso

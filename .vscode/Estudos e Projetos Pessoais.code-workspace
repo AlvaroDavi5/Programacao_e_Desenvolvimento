@@ -1,16 +1,15 @@
 {
 	"folders": [
 		{
-			"name": "Programacao",
+			"name": "Programacao_e_Desenvolvimento",
 			"path": ".."
 		},
 		{
 			"name": "MyWorkspace",
-			"path": "../../../Área de Trabalho/MyWorkspace"
+			"path": "../../../../Área de Trabalho/MyWorkspace"
 		},
 		{
-			"name": "NextJS-first_webapp",
-			"path": "../NextJS/NextJS-first_webapp"
+			"path": "../../NextJS/NextJS-first_webapp"
 		}
 	],
 	"settings": {
