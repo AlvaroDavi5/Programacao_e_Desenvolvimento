@@ -29,7 +29,8 @@
 			"tuple": "c",
 			"type_traits": "c",
 			"utility": "c",
-			"cmath": "c"
+			"cmath": "c",
+			"sstream": "c"
 		}
 	}
 }
