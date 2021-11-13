@@ -8,6 +8,7 @@
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"vsintellicode.features.python.deepLearning": "enabled",
 	"liveServer.settings.donotShowInfoMsg": true,
 	"C_Cpp.updateChannel": "Insiders",
 	"C_Cpp.errorSquiggles": "Disabled",
