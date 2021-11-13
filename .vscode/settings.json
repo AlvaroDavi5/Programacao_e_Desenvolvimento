@@ -52,6 +52,7 @@
 	"git.enableSmartCommit": true,
 	"gitlens.defaultDateFormat": null,
 	"gitlens.views.remotes.branches.layout": "list",
+	"git-graph.repository.commits.fetchAvatars": true,
 	"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
 	"debug.onTaskErrors": "debugAnyway",
 	"powermode.enabled": true,
