@@ -76,25 +76,6 @@
 				"name": "Launch Current File",
 				"request": "launch",
 				"mainClass": "${file}"
-			},
-			{
-				"type": "java",
-				"name": "Launch App",
-				"request": "launch",
-				"mainClass": "App",
-				"projectName": "empresa_a6daba6a"
-			},
-			{
-				"type": "java",
-				"name": "Launch App(1)",
-				"request": "launch",
-				"mainClass": "App"
-			},
-			{
-				"type": "java",
-				"name": "Launch HelloWorld",
-				"request": "launch",
-				"mainClass": "HelloWorld"
 			}
 		]
 	}
