@@ -2,14 +2,14 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    15:58:26 10/12/2020 
+-- Create Date:    15:58:26 10/12/2020
 -- Design Name: 
--- Module Name:    prog_prior_encoder - Behavioral 
+-- Module Name:    prog_prior_encoder - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
 -- Description: 
---
+-- 
 -- Dependencies: 
 --
 -- Revision: 
