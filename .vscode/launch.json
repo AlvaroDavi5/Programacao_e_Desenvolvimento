@@ -1,11 +1,11 @@
 {
-	// Use o IntelliSense para saber mais sobre os atributos possíveis.
-	// Focalizar para exibir as descrições dos atributos existentes.
-	// Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+	// Use IntelliSense to learn about the possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, go to: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "gcc-9 - Criar e depurar o arquivo ativo",
+			"name": "C/C++: Create and Debug Current File",
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${fileDirname}/${fileBasenameNoExtension}",
@@ -26,11 +26,70 @@
 			"miDebuggerPath": "/usr/bin/gdb"
 		},
 		{
-			"name": "Python: Executar Arquivo Atual",
+			"name": "Arduino: Launch Debugger",
+			"type": "arduino",
+			"request": "launch",
+			"program": "${file}",
+			"cwd": "${workspaceFolder}",
+			"MIMode": "gdb",
+			"targetArchitecture": "arm",
+			"miDebuggerPath": "",
+			"debugServerPath": "",
+			"debugServerArgs": "",
+			"customLaunchSetupCommands": [
+				{
+					"text": "target remote localhost:3333"
+				},
+				{
+					"text": "file \"${file}\""
+				},
+				{
+					"text": "load"
+				},
+				{
+					"text": "monitor reset halt"
+				},
+				{
+					"text": "monitor reset init"
+				}
+			],
+			"stopAtEntry": true,
+			"serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+			"launchCompleteCommand": "exec-continue",
+			"filterStderr": true,
+			"args": []
+		},
+		{
+			"name": "Python: Run Current File",
 			"type": "python",
 			"request": "launch",
 			"program": "${file}",
 			"console": "integratedTerminal"
+		},
+		{
+			"name": "Node.js: Launch Current File",
+			"type": "pwa-node",
+			"request": "launch",
+			"program": "${fileDirname}/${file}",
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		},
+		{
+			"name": "Node.js: Attach by Process ID",
+			"type": "pwa-node",
+			"request": "attach",
+			"processId": "${command:PickProcess}",
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		},
+		{
+			"name": "Chrome: Launch against localhost",
+			"type": "pwa-chrome",
+			"request": "launch",
+			"webRoot": "${workspaceFolder}",
+			"url": "http://localhost:8080/"
 		}
 	]
 }
