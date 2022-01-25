@@ -32,13 +32,16 @@
 	"sync.autoUpload": true,
 	"sync.autoDownload": true,
 	"workbench.sideBar.location": "left",
+	"workbench.tree.indent": 15,
 	"workbench.colorTheme": "Dracula",
 	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editor.restoreViewState": true,
 	"workbench.editorAssociations": {
 		"*.ipynb": "jupyter.notebook.ipynb"
 	},
 	"jupyter.alwaysTrustNotebooks": true,
 	"jupyter.askForKernelRestart": false,
+	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
 	"python.terminal.launchArgs": [],
 	"python.showStartPage": false,
 	"debug.allowBreakpointsEverywhere": true,
@@ -68,7 +71,9 @@
 		"plaintext": true,
 		"markdown": true
 	},
-	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
+	"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
+	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
+	"r.lsp.debug": true,
 	"files.associations": {
 		"complex": "c",
 		"array": "c",
@@ -127,8 +132,5 @@
 		"cstdbool": "cpp",
 		"typeinfo": "cpp",
 		"*.rmd": "markdown"
-	},
-	"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
-	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
-	"r.lsp.debug": true
+	}
 }
