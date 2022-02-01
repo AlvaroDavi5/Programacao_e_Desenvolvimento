@@ -26,6 +26,13 @@
 			"miDebuggerPath": "/usr/bin/gdb"
 		},
 		{
+			"name": "Java: Launch with Arguments Prompt",
+			"type": "java",
+			"request": "launch",
+			"mainClass": "",
+			"args": "${command:SpecifyProgramArgs}"
+		},
+		{
 			"name": "Arduino: Launch Debugger",
 			"type": "arduino",
 			"request": "launch",
