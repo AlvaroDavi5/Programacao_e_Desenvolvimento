@@ -7,6 +7,8 @@
 	"editor.fontWeight": "400",
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": "active",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
 	"liveServer.settings.donotShowInfoMsg": true,
