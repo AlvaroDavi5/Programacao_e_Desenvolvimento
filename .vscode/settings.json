@@ -9,6 +9,7 @@
 	"editor.insertSpaces": false,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.guides.bracketPairs": "active",
+	"bracket-pair-colorizer-2.depreciation-notice": false,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
 	"liveServer.settings.donotShowInfoMsg": true,
@@ -43,9 +44,6 @@
 	},
 	"jupyter.alwaysTrustNotebooks": true,
 	"jupyter.askForKernelRestart": false,
-	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
-	"python.terminal.launchArgs": [],
-	"python.showStartPage": false,
 	"debug.allowBreakpointsEverywhere": true,
 	"debug.console.closeOnEnd": true,
 	"explorer.confirmDragAndDrop": false,
@@ -69,13 +67,23 @@
 	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
 		"*": true,
-		"yaml": false,
-		"plaintext": true,
-		"markdown": true
+		"yaml": true,
+		"plaintext": false,
+		"markdown": true,
+		"java": true
 	},
+	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
+	"python.terminal.launchArgs": [],
+	"python.showStartPage": false,
 	"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
 	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
 	"r.lsp.debug": true,
+	"files.exclude": {
+		"**/.classpath": true,
+		"**/.project": true,
+		"**/.settings": true,
+		"**/.factorypath": true
+	},
 	"files.associations": {
 		"complex": "c",
 		"array": "c",
@@ -133,6 +141,8 @@
 		"streambuf": "cpp",
 		"cstdbool": "cpp",
 		"typeinfo": "cpp",
-		"*.rmd": "markdown"
+		"*.rmd": "markdown",
+		"*.apib": "apiblueprint",
+		"*.dbml": "dbml"
 	}
 }
