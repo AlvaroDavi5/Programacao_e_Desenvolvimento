@@ -1,0 +1,40 @@
+<!--
+  Hello World in HyperText Markup Laguage (HTML) with CSS and JS
+
+run on the browser
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>HomePage</title>
+
+		<style>
+			/* CSS here */
+			body {
+				background-color: blue;
+				color: white;
+				font: normal 19pt Arial;
+			}
+			h1 { color: red; }
+			h2 { color: black; }
+		</style>
+	</head>
+
+	<body>
+		<h1 id="title"></h1>
+
+		<script>
+			// JS here, again...
+			function hello_world() {
+				document.getElementById("title").innerHTML = 'Hello World';
+			}
+			hello_world();
+		</script>
+		
+	</body>
+
+</html>
