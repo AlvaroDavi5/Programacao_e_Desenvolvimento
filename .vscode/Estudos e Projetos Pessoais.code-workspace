@@ -20,7 +20,12 @@
 			"vectors-double.h": "c",
 			"vector": "c",
 			"complex-int.h": "c",
+			"ratio": "c",
 			"random": "c",
+			"hash_map": "c",
+			"hash_set": "c",
+			"bitset": "c",
+			"chrono": "c",
 			"algorithm": "c",
 			"optional": "c",
 			"istream": "c",
@@ -65,7 +70,11 @@
 			"stdexcept": "cpp",
 			"streambuf": "cpp",
 			"cstdbool": "cpp",
-			"typeinfo": "cpp"
+			"typeinfo": "cpp",
+			"*.rmd": "markdown",
+			"*.apib": "apiblueprint",
+			"*.dbml": "dbml",
+			"list": "cpp"
 		},
 		"liveServer.settings.multiRootWorkspaceName": "MyWorkspace"
 	},
