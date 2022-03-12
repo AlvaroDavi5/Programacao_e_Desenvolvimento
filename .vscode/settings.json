@@ -61,6 +61,8 @@
 	"debug.onTaskErrors": "debugAnyway",
 	"powermode.enabled": true,
 	"powermode.presets": "flames",
+	"powermode.combo.location": "editor",
+	"powermode.shake.enabled": false,
 	"security.workspace.trust.untrustedFiles": "open",
 	"problems.showCurrentInStatus": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
@@ -143,6 +145,7 @@
 		"typeinfo": "cpp",
 		"*.rmd": "markdown",
 		"*.apib": "apiblueprint",
-		"*.dbml": "dbml"
+		"*.dbml": "dbml",
+		"list": "cpp"
 	}
 }
