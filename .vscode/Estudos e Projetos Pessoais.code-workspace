@@ -74,7 +74,8 @@
 			"*.rmd": "markdown",
 			"*.apib": "apiblueprint",
 			"*.dbml": "dbml",
-			"list": "cpp"
+			"list": "cpp",
+			"ctime": "cpp"
 		},
 		"liveServer.settings.multiRootWorkspaceName": "MyWorkspace"
 	},
