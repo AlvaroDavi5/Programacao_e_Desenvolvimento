@@ -1,16 +1,12 @@
 {
 	"folders": [
 		{
-			"name": "Programacao_e_Desenvolvimento",
-			"path": ".."
+			"name": "entities",
+			"path": "../../../../Desktop/4all - Quiq/repos/backend/entities"
 		},
 		{
-			"name": "MyWorkspace",
-			"path": "../../../../Desktop/MyWorkspace"
-		},
-		{
-			"name": "AlvaroDavi5.github.io",
-			"path": "../../AlvaroDavi5.github.io"
+			"name": "orders",
+			"path": "../../../../Desktop/4all - Quiq/repos/backend/orders"
 		}
 	],
 	"settings": {
