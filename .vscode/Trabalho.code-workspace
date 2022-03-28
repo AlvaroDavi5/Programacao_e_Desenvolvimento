@@ -7,6 +7,10 @@
 		{
 			"name": "orders",
 			"path": "../../../../Desktop/4all - Quiq/repos/backend/orders"
+		},
+		{
+			"name": "quiq-cockpit",
+			"path": "../../../../Desktop/4all - Quiq/repos/frontend/quiq-cockpit"
 		}
 	],
 	"settings": {
