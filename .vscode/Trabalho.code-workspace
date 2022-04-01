@@ -1,15 +1,23 @@
 {
 	"folders": [
 		{
-			"name": "entities",
+			"name": "backend-entities",
 			"path": "../../../../Desktop/4all - Quiq/repos/backend/entities"
 		},
 		{
-			"name": "orders",
+			"name": "backend-orders",
 			"path": "../../../../Desktop/4all - Quiq/repos/backend/orders"
 		},
 		{
-			"name": "quiq-cockpit",
+			"name": "integrations-origins",
+			"path": "../../../../Desktop/4all - Quiq/repos/integrations/origins"
+		},
+		{
+			"name": "integrations-connector_uber_eats",
+			"path": "../../../../Desktop/4all - Quiq/repos/integrations/connector-uber-eats"
+		},
+		{
+			"name": "frontend-quiq_cockpit",
 			"path": "../../../../Desktop/4all - Quiq/repos/frontend/quiq-cockpit"
 		}
 	],
