@@ -13,12 +13,12 @@
 			"path": "/home/alvaro/Desktop/4all - Quiq/repos/BACKEND"
 		},
 		{
-			"name": "FRONTEND",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/FRONTEND"
-		},
-		{
 			"name": "INTEGRATIONS",
 			"path": "/home/alvaro/Desktop/4all - Quiq/repos/INTEGRATIONS"
+		},
+		{
+			"name": "FRONTEND",
+			"path": "/home/alvaro/Desktop/4all - Quiq/repos/FRONTEND"
 		},
 		{
 			"name": "INFRASTRUCTURE",
