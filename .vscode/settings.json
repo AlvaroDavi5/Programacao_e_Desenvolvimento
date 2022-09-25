@@ -1,5 +1,5 @@
 {
-	"explorer.autoReveal": true,
+	"editor.inlineSuggest.enabled": true,
 	"editor.suggestSelection": "first",
 	"editor.fontFamily": "Fira Code",
 	"editor.fontLigatures": true,
@@ -9,10 +9,29 @@
 	"editor.insertSpaces": false,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.guides.bracketPairs": "active",
+	"explorer.autoReveal": true,
+	"explorer.confirmDragAndDrop": false,
+	"scm.defaultViewMode": "tree",
+	"workbench.productIconTheme": "material-product-icons",
+	"workbench.sideBar.location": "left",
+	"workbench.tree.indent": 15,
+	"workbench.colorTheme": "Dracula",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editor.restoreViewState": true,
+	"workbench.editorAssociations": {
+		"*.ipynb": "jupyter.notebook.ipynb"
+	},
+	"security.workspace.trust.untrustedFiles": "open",
+	"extensions.closeExtensionDetailsOnViewChange": false,
+	"sync.gist": "31d051020e1fe66435b53f28a0ed30ee",
+	"sync.forceUpload": true,
+	"sync.quietSync": true,
+	"sync.forceDownload": true,
+	"sync.autoUpload": true,
+	"sync.autoDownload": true,
 	"bracket-pair-colorizer-2.depreciation-notice": false,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
-	"liveServer.settings.donotShowInfoMsg": true,
 	"C_Cpp.updateChannel": "Insiders",
 	"C_Cpp.errorSquiggles": "Disabled",
 	"C_Cpp.dimInactiveRegions": true,
@@ -28,26 +47,10 @@
 		"swift",
 		"xml"
 	],
-	"sync.gist": "31d051020e1fe66435b53f28a0ed30ee",
-	"sync.forceUpload": true,
-	"sync.quietSync": true,
-	"sync.forceDownload": true,
-	"sync.autoUpload": true,
-	"sync.autoDownload": true,
-	"workbench.productIconTheme": "material-product-icons",
-	"workbench.sideBar.location": "left",
-	"workbench.tree.indent": 15,
-	"workbench.colorTheme": "Dracula",
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.editor.restoreViewState": true,
-	"workbench.editorAssociations": {
-		"*.ipynb": "jupyter.notebook.ipynb"
-	},
 	"jupyter.alwaysTrustNotebooks": true,
 	"jupyter.askForKernelRestart": false,
 	"debug.allowBreakpointsEverywhere": true,
 	"debug.console.closeOnEnd": true,
-	"explorer.confirmDragAndDrop": false,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"tabnine.experimentalAutoImports": true,
 	"[json]": {
@@ -69,10 +72,8 @@
 	"powermode.presets": "flames",
 	"powermode.combo.location": "editor",
 	"powermode.shake.enabled": false,
-	"security.workspace.trust.untrustedFiles": "open",
 	"problems.showCurrentInStatus": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
-	"editor.inlineSuggest.enabled": true,
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
@@ -152,6 +153,11 @@
 		"*.rmd": "markdown",
 		"*.apib": "apiblueprint",
 		"*.dbml": "dbml",
-		"list": "cpp"
+		"list": "cpp",
+		"ctime": "cpp",
+		"ranges": "cpp",
+		"compare": "cpp",
+		"concepts": "cpp",
+		"cstring": "cpp"
 	}
 }
