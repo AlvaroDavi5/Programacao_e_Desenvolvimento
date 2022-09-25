@@ -24,5 +24,35 @@
 			"name": "INFRASTRUCTURE",
 			"path": "/home/alvaro/Desktop/4all - Quiq/repos/INFRASTRUCTURE"
 		},
-	]
+	],
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Node.js: Launch Current File",
+				"type": "node",
+				"request": "launch",
+				"program": "${fileDirname}/${file}",
+				"skipFiles": [
+					"<node_internals>/**"
+				]
+			},
+			{
+				"name": "Node.js: Attach by Process ID",
+				"type": "node",
+				"request": "attach",
+				"processId": "${command:PickProcess}",
+				"skipFiles": [
+					"<node_internals>/**"
+				]
+			},
+			{
+				"name": "Chrome: Launch against localhost",
+				"type": "chrome",
+				"request": "launch",
+				"webRoot": "${workspaceFolder}",
+				"url": "http://localhost:8080/"
+			}
+		]
+	}
 }

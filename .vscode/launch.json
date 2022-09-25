@@ -75,7 +75,7 @@
 		},
 		{
 			"name": "Node.js: Launch Current File",
-			"type": "pwa-node",
+			"type": "node",
 			"request": "launch",
 			"program": "${fileDirname}/${file}",
 			"skipFiles": [
@@ -84,7 +84,7 @@
 		},
 		{
 			"name": "Node.js: Attach by Process ID",
-			"type": "pwa-node",
+			"type": "node",
 			"request": "attach",
 			"processId": "${command:PickProcess}",
 			"skipFiles": [
@@ -93,7 +93,7 @@
 		},
 		{
 			"name": "Chrome: Launch against localhost",
-			"type": "pwa-chrome",
+			"type": "chrome",
 			"request": "launch",
 			"webRoot": "${workspaceFolder}",
 			"url": "http://localhost:8080/"
