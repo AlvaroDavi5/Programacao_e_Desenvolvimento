@@ -33,7 +33,7 @@
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
 	"C_Cpp.updateChannel": "Insiders",
-	"C_Cpp.errorSquiggles": "Disabled",
+	"C_Cpp.errorSquiggles": "disabled",
 	"C_Cpp.dimInactiveRegions": true,
 	"C_Cpp.inactiveRegionOpacity": 0.55,
 	"cSpell.language": "pt,pt-BR,en",
