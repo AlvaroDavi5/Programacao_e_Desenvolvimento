@@ -58,6 +58,7 @@
 	},
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
+	"gitlens.plusFeatures.enabled": false,
 	"gitlens.defaultDateFormat": null,
 	"gitlens.views.remotes.branches.layout": "list",
 	"gitlens.views.tags.branches.layout": "list",
@@ -74,6 +75,7 @@
 	"powermode.shake.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
