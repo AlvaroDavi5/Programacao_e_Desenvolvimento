@@ -58,12 +58,66 @@
 	},
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
-	"gitlens.plusFeatures.enabled": false,
 	"gitlens.defaultDateFormat": null,
 	"gitlens.views.remotes.branches.layout": "list",
 	"gitlens.views.tags.branches.layout": "list",
 	"gitlens.views.branches.branches.layout": "list",
 	"git-graph.repository.commits.fetchAvatars": true,
+	"gitlens.plusFeatures.enabled": true,
+	"gitlens.menus": {
+		"editor": {
+			"blame": false,
+			"clipboard": true,
+			"compare": false,
+			"history": false,
+			"remote": false
+		},
+		"editorGroup": {
+			"blame": true,
+			"compare": true
+		},
+		"editorTab": {
+			"clipboard": true,
+			"compare": false,
+			"history": false,
+			"remote": false
+		},
+		"explorer": {
+			"clipboard": true,
+			"compare": true,
+			"history": false,
+			"remote": true
+		},
+		"scm": {
+			"graph": false,
+			"authors": true
+		},
+		"scmRepositoryInline": {
+			"graph": false
+		},
+		"scmRepository": {
+			"authors": true,
+			"graph": false
+		},
+		"scmGroupInline": {
+			"stash": true
+		},
+		"scmGroup": {
+			"compare": true,
+			"openClose": true,
+			"stash": true
+		},
+		"scmItemInline": {
+			"stash": false
+		},
+		"scmItem": {
+			"clipboard": true,
+			"compare": true,
+			"history": true,
+			"remote": false,
+			"stash": true
+		}
+	},
 	"docker.images.sortBy": "Label",
 	"docker.containers.sortBy": "Label",
 	"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
