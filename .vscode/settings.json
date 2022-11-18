@@ -152,6 +152,8 @@
 	"color-highlight.languages": [
 		"*"
 	],
+	"better-comments.multilineComments": true,
+	"better-comments.highlightPlainText": false,
 	"better-comments.tags": [
 		{
 			"tag": "!",
@@ -199,15 +201,16 @@
 			"italic": false
 		}
 	],
+	"commentAnchors.tags.matchCase": true,
 	"commentAnchors.tags.anchors": {
 		"ANCHOR": {
-			"iconColor": "#8c40ff",
-			"highlightColor": "#8c40ff",
+			"iconColor": "#ffdbfe",
+			"highlightColor": "#ffdbfe",
 			"scope": "file"
 		},
 		"TODO": {
-			"iconColor": "blue",
-			"highlightColor": "#3ea8ff",
+			"iconColor": "orange",
+			"highlightColor": "#ffb300",
 			"scope": "workspace"
 		},
 		"FIXME": {
@@ -221,8 +224,8 @@
 			"scope": "file"
 		},
 		"NOTE": {
-			"iconColor": "orange",
-			"highlightColor": "#ffb300",
+			"iconColor": "blue",
+			"highlightColor": "#47acff",
 			"scope": "file"
 		},
 		"REVIEW": {
@@ -232,7 +235,7 @@
 		},
 		"SECTION": {
 			"iconColor": "blurple",
-			"highlightColor": "#896afc",
+			"highlightColor": "#3811ff",
 			"scope": "workspace",
 			"behavior": "region"
 		},
