@@ -149,6 +149,100 @@
 		"**/.settings": true,
 		"**/.factorypath": true
 	},
+	"color-highlight.languages": [
+		"*"
+	],
+	"better-comments.tags": [
+		{
+			"tag": "!",
+			"color": "#ff3117",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "?",
+			"color": "#2da1f1",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "//",
+			"color": "#5b5a5a",
+			"strikethrough": true,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "todo",
+			"color": "#f1d113",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		},
+		{
+			"tag": "*",
+			"color": "#8fbd6e",
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": false,
+			"italic": false
+		}
+	],
+	"commentAnchors.tags.anchors": {
+		"ANCHOR": {
+			"iconColor": "#8c40ff",
+			"highlightColor": "#8c40ff",
+			"scope": "file"
+		},
+		"TODO": {
+			"iconColor": "blue",
+			"highlightColor": "#3ea8ff",
+			"scope": "workspace"
+		},
+		"FIXME": {
+			"iconColor": "red",
+			"highlightColor": "#f44336",
+			"scope": "workspace"
+		},
+		"STUB": {
+			"iconColor": "purple",
+			"highlightColor": "#ba68c8",
+			"scope": "file"
+		},
+		"NOTE": {
+			"iconColor": "orange",
+			"highlightColor": "#ffb300",
+			"scope": "file"
+		},
+		"REVIEW": {
+			"iconColor": "green",
+			"highlightColor": "#64dd17",
+			"scope": "workspace"
+		},
+		"SECTION": {
+			"iconColor": "blurple",
+			"highlightColor": "#896afc",
+			"scope": "workspace",
+			"behavior": "region"
+		},
+		"LINK": {
+			"iconColor": "#2ecc71",
+			"highlightColor": "#2ecc71",
+			"scope": "workspace",
+			"behavior": "link"
+		}
+	},
 	"files.associations": {
 		"complex": "c",
 		"array": "c",
