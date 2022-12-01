@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 entity free_run_bin_counter is
-   generic(N : integer := 3);
+   generic(N : integer := 8); -- 8 bits
    port(
       clk      : in  std_logic;
       reset    : in  std_logic;
