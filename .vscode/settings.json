@@ -18,7 +18,7 @@
 	"workbench.colorTheme": "Dracula",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.editor.restoreViewState": true,
-	"terminal.integrated.defaultProfile.linux": "bash",
+	"terminal.integrated.defaultProfile.linux": "zsh",
 	"security.workspace.trust.untrustedFiles": "open",
 	"extensions.closeExtensionDetailsOnViewChange": false,
 	"sync.gist": "31d051020e1fe66435b53f28a0ed30ee",
@@ -115,7 +115,9 @@
 			"stash": true
 		}
 	},
+	"docker.images.groupBy": "RepositoryName",
 	"docker.images.sortBy": "Label",
+	"docker.containers.groupBy": "Compose Project Name",
 	"docker.containers.sortBy": "Label",
 	"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
 	"debug.onTaskErrors": "debugAnyway",
