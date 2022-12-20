@@ -20,7 +20,7 @@ begin
 	begin
 		if (reset = '1') then
 			state_reg <= s0;
-		elsif (clk'EVENT and clk = '1') then -- clock rising edge
+		elsif (clk'event and clk = '1') then -- clock rising edge
 			if (enable = '1') then
 				state_reg <= state_next; -- state change
 			end if;
@@ -143,3 +143,4 @@ begin
 				end case;
 			end process;
 end mult_seg_arch;
+

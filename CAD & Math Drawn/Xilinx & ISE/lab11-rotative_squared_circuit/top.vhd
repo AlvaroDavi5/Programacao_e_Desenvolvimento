@@ -1,5 +1,5 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
 
 entity top is
 	port (
@@ -11,11 +11,11 @@ entity top is
 end top;
 
 architecture arch of top is
-	constant N : integer := 99999999;
+	constant N : integer := 99999998;
 	signal enable : std_logic;
 	signal divide_clk : integer range 0 to N;
 begin
-	mux : entity work.fsm_display
+	fsm : entity work.fsm_display
 		port map(
 			cw => sw(1), 
 			en => sw(0), 
@@ -26,11 +26,10 @@ begin
 			sseg => sseg
 		);
 
-			enable <= '1' when divide_clk = N else '0';
+		enable <= '1' when divide_clk = N else '0';
 
-			process (clk)
-	begin
-		if (clk'EVENT and clk = '1') then
+	process (clk) begin
+		if (clk'event and clk = '1') then
 			divide_clk <= divide_clk + 1;
 			if divide_clk = N then
 				divide_clk <= 0;
@@ -39,3 +38,4 @@ begin
 	end process;
 
 end arch;
+
