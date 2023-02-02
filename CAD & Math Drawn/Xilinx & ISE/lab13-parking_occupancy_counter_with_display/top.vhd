@@ -1,12 +1,14 @@
-library IEEE;
-use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD.all;
+-- TODO: testar display
+library ieee;
+use ieee.std_logic_1164.all;
+
 
 entity top is
 	port (
-		sw : in std_logic_vector(1 downto 0);
-		clk : in std_logic;
-		an : out std_logic_vector(7 downto 0);
+		clk  : in std_logic;
+		btn  : in std_logic_vector(2 downto 0);
+		led  : out std_logic_vector(0 downto 0);
+		an   : out std_logic_vector(3 downto 0);
 		sseg : out std_logic_vector(7 downto 0)
 	);
 end top;
@@ -14,56 +16,76 @@ end top;
 architecture arch of top is
 	constant N : integer := 99999999;
 	signal enable : std_logic;
-	signal inc, dec : std_logic;
-	signal res : std_logic_vector(3 downto 0);
-	signal amount : unsigned(3 downto 0);
 	signal divide_clk : integer range 0 to N;
+	signal inc, dec, max_tick : std_logic;
+	signal btn0, btn1, reset_btn : std_logic;
+	signal result : std_logic_vector(3 downto 0);
 begin
-    amount <= "0000";
+	-- clock division
+	process (clk) begin
+		if (clk'event and clk = '1') then
+			divide_clk <= divide_clk + 1;
+			if divide_clk = N then
+				divide_clk <= 0;
+			end if;
+		end if;
+	end process;
+	enable <= '1' when divide_clk = N else '0';
 
-	fsm : entity work.fsm
-		port map(
-			a => sw(1), 
-			b => sw(0), 
-			car_enter => inc, 
-			car_exit => dec, 
-			clk => clk, 
-			reset => '0', 
-			enable => enable
-		);
+	reset_btn = btn(0);
 
-    counter: entity work.free_run_bin_counter
-        port map (
-            clk => clk,
-            reset => '0',
-            inc => inc,
-            dec => dec,
-            enable => enable,
-            q => res
-        );
+	-- debouncing
+	db0: entity work.debounce
+	port map(
+		btn => btn(1),
+		db => btn0,
+		clk => clk,
+		reset => reset_btn
+	);
+	db1: entity work.debounce
+	port map(
+		btn => btn(2),
+		db => btn1,
+		clk => clk,
+		reset => reset_btn
+	);
 
-    display : entity work.disp_hex_mux
-        port map(
-            clk => clk, 
-            reset => '0', 
-            hex0 => res, 
-            hex1 => "1111", 
-            hex2 => "1111", 
-            hex3 => "1111", 
-            dp_in => "1111", 
-            an => an, 
-            sseg => sseg
-        );
+	-- finite state machine
+	fsm: entity work.fsm
+	port map(
+		a => btn0,
+		b => btn1,
+		car_enter => inc,
+		car_exit => dec,
+		clk => clk,
+		reset => reset_btn,
+		enable => enable
+	);
 
-        enable <= '1' when divide_clk = N else '0';
+	-- parking register
+	register: entity work.register
+	port map(
+		clk => clk,
+		reset => reset_btn,   
+		enable => enable,   
+		inc => inc,
+		dec => dec,
+		q => result,
+		max_tick => max_tick
+	);
 
-        process (clk) begin
-            if (clk'EVENT and clk = '1') then
-                divide_clk <= divide_clk + 1;
-                if divide_clk = N then
-                    divide_clk <= 0;
-                end if;
-            end if;
-        end process;
+	-- display
+	display_mux: entity work.disp_hex_mux
+	port map(
+		clk => clk,
+		reset => reset_btn,   
+		hex0 => result,
+		hex1 => result,
+		hex2 => result,
+		hex3 => result,
+		an => an,
+		sseg => sseg
+	);
 
+	led(0) <= max_tick;
 end arch;
