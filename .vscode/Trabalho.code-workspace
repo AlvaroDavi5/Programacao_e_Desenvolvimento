@@ -2,19 +2,19 @@
 	"folders": [
 		{
 			"name": "entities",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/BACKEND/entities"
+			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE/entities"
 		},
 		{
 			"name": "orders",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/BACKEND/orders"
+			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE/orders"
 		},
 		{
 			"name": "subscriptions",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/BACKEND/subscriptions"
+			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE/subscriptions"
 		},
 		{
-			"name": "BACKEND",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/BACKEND"
+			"name": "CORE",
+			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE"
 		},
 		{
 			"name": "INTEGRATIONS",
