@@ -2,31 +2,31 @@
 	"folders": [
 		{
 			"name": "entities",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE/entities"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/CORE/entities"
 		},
 		{
 			"name": "orders",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE/orders"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/CORE/orders"
 		},
 		{
 			"name": "subscriptions",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE/subscriptions"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/CORE/subscriptions"
 		},
 		{
 			"name": "CORE",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/CORE"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/CORE"
 		},
 		{
 			"name": "INTEGRATIONS",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/INTEGRATIONS"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/INTEGRATIONS"
 		},
 		{
 			"name": "FRONTEND",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/FRONTEND"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/FRONTEND"
 		},
 		{
 			"name": "INFRASTRUCTURE",
-			"path": "/home/alvaro/Desktop/4all - Quiq/repos/INFRASTRUCTURE"
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/INFRASTRUCTURE"
 		},
 	],
 	"launch": {
