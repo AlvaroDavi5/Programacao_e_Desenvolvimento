@@ -138,6 +138,9 @@
 		"markdown": true,
 		"java": true
 	},
+	"[python]": {
+		"editor.formatOnType": true
+	},
 	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
 	"python.terminal.launchArgs": [],
 	"python.showStartPage": false,
@@ -322,5 +325,9 @@
 			"url": "https://json.schemastore.org/package",
 			"schema": true
 		}
-	]
+	],
+	"http.proxy": "",
+	"http.proxySupport": "off",
+	"http.proxyAuthorization": null,
+	"http.proxyStrictSSL": false
 }
