@@ -147,6 +147,7 @@
 	"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
 	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
 	"r.lsp.debug": true,
+	"java.configuration.updateBuildConfiguration": "automatic",
 	"files.exclude": {
 		"**/.classpath": true,
 		"**/.project": true,
