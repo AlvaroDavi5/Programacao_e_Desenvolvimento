@@ -148,6 +148,7 @@
 	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
 	"r.lsp.debug": true,
 	"java.configuration.updateBuildConfiguration": "automatic",
+	"java.compile.nullAnalysis.mode": "automatic",
 	"files.exclude": {
 		"**/.classpath": true,
 		"**/.project": true,
