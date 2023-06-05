@@ -28,6 +28,7 @@
 	"sync.autoUpload": true,
 	"sync.autoDownload": true,
 	"bracket-pair-colorizer-2.depreciation-notice": false,
+	"material-icon-theme.activeIconPack": "nest",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
 	"C_Cpp.errorSquiggles": "disabled",
