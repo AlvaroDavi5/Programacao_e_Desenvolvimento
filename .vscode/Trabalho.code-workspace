@@ -13,8 +13,16 @@
 			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/CORE/subscriptions"
 		},
 		{
+			"name": "reports",
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/DATA/data-reports"
+		},
+		{
 			"name": "CORE",
 			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/CORE"
+		},
+		{
+			"name": "DATA",
+			"path": "/media/veracrypt1/Álvaro Davi/4all - Quiq/repos/DATA"
 		},
 		{
 			"name": "INTEGRATIONS",
