@@ -9,6 +9,8 @@
 	"editor.insertSpaces": false,
 	"editor.bracketPairColorization.enabled": true,
 	"editor.guides.bracketPairs": "active",
+	"editor.pasteAs.enabled": false,
+	"editor.pasteAs.showPasteSelector": "never",
 	"explorer.autoReveal": true,
 	"explorer.confirmDragAndDrop": false,
 	"scm.defaultViewMode": "tree",
