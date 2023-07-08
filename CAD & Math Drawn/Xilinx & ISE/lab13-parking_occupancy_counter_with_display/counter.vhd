@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-entity register is
+entity counter is
 	generic(N : integer := 4); -- 4 bits
 	port(
 		clk      : in std_logic;
@@ -14,14 +14,14 @@ entity register is
 		q        : out std_logic_vector(N-1 downto 0);
 		max_tick : out std_logic
 	);
-end register;
+end counter;
 
-architecture arch of register is
+architecture arch of counter is
 	signal r_reg  : unsigned(N-1 downto 0);
 	signal r_next : unsigned(N-1 downto 0);
 begin
 	-- register
-	process(clk,reset)
+	process(clk, enable, reset)
 	begin
 		if (reset = '1') then
 			r_reg <= (others => '0');
