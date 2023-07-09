@@ -51,7 +51,6 @@
 	],
 	"jupyter.alwaysTrustNotebooks": true,
 	"jupyter.askForKernelRestart": false,
-	"typescript.tsserver.maxTsServerMemory": 2072,
 	"debug.allowBreakpointsEverywhere": true,
 	"debug.console.closeOnEnd": true,
 	"diffEditor.ignoreTrimWhitespace": false,
@@ -131,6 +130,8 @@
 	"problems.showCurrentInStatus": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.tsserver.maxTsServerMemory": 1536,
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
