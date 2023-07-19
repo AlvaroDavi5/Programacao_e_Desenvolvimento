@@ -3,7 +3,7 @@ beautifulsoup4==4.9.3
 #json==3.0.2
 simplejson==3.16.0
 pandas==1.2.1
-requests==2.25.1
+requests==2.31.0
 selenium==3.141.0
 xhtml2pdf==0.2.5
 #time>=0.1.0
