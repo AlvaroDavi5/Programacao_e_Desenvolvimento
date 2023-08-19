@@ -17,6 +17,10 @@
 			"path": "/media/veracrypt1/Programação/NodeJS/MyWorkspace"
 		},
 		{
+			"name": "C-CPP",
+			"path": "/media/veracrypt1/Programação/C-CPP"
+		},
+		{
 			"name": "Programacao_e_Desenvolvimento",
 			"path": ".."
 		}
@@ -131,6 +135,8 @@
 		"editor.insertSpaces": false,
 		"editor.bracketPairColorization.enabled": true,
 		"editor.guides.bracketPairs": "active",
+		"editor.pasteAs.enabled": false,
+		"editor.pasteAs.showPasteSelector": "never",
 		"explorer.autoReveal": true,
 		"explorer.confirmDragAndDrop": false,
 		"scm.defaultViewMode": "tree",
@@ -150,8 +156,11 @@
 		"sync.autoUpload": true,
 		"sync.autoDownload": true,
 		"bracket-pair-colorizer-2.depreciation-notice": false,
+		"material-icon-theme.activeIconPack": "nest",
 		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 		"vsintellicode.features.python.deepLearning": "enabled",
+		"editorconfig.generateAuto": true,
+		"editorconfig.template": "default",
 		"C_Cpp.errorSquiggles": "disabled",
 		"C_Cpp.dimInactiveRegions": true,
 		"C_Cpp.inactiveRegionOpacity": 0.55,
@@ -168,7 +177,6 @@
 		],
 		"jupyter.alwaysTrustNotebooks": true,
 		"jupyter.askForKernelRestart": false,
-		"typescript.tsserver.maxTsServerMemory": 2072,
 		"debug.allowBreakpointsEverywhere": true,
 		"debug.console.closeOnEnd": true,
 		"diffEditor.ignoreTrimWhitespace": false,
@@ -253,6 +261,8 @@
 		"problems.showCurrentInStatus": true,
 		"javascript.updateImportsOnFileMove.enabled": "always",
 		"typescript.updateImportsOnFileMove.enabled": "always",
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"typescript.tsserver.maxTsServerMemory": 1536,
 		"github.copilot.enable": {
 			"*": true,
 			"yaml": true,
@@ -439,7 +449,11 @@
 			"ranges": "cpp",
 			"compare": "cpp",
 			"concepts": "cpp",
-			"cstring": "cpp"
+			"cstring": "cpp",
+			"stdio.h": "c",
+			"stdlib.h": "c",
+			"stdbool.h": "c",
+			"string.h": "c"
 		},
 		"json.schemas": [
 			{
