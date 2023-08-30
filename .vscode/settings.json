@@ -127,11 +127,6 @@
 	"docker.containers.sortBy": "Label",
 	"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
 	"debug.onTaskErrors": "debugAnyway",
-	"bookmarks.saveBookmarksInProject": false,
-	"powermode.enabled": true,
-	"powermode.presets": "flames",
-	"powermode.combo.location": "editor",
-	"powermode.shake.enabled": false,
 	"problems.showCurrentInStatus": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
@@ -164,6 +159,11 @@
 	"color-highlight.languages": [
 		"*"
 	],
+	"powermode.enabled": true,
+	"powermode.presets": "flames",
+	"powermode.combo.location": "editor",
+	"powermode.shake.enabled": false,
+	"bookmarks.saveBookmarksInProject": true,
 	"better-comments.multilineComments": true,
 	"better-comments.highlightPlainText": false,
 	"better-comments.tags": [
@@ -259,6 +259,10 @@
 		}
 	},
 	"files.associations": {
+		"stdio.h": "c",
+		"stdlib.h": "c",
+		"stdbool.h": "c",
+		"string.h": "c",
 		"complex": "c",
 		"array": "c",
 		"vectors-double.h": "c",
@@ -323,11 +327,7 @@
 		"ranges": "cpp",
 		"compare": "cpp",
 		"concepts": "cpp",
-		"cstring": "cpp",
-		"stdio.h": "c",
-		"stdlib.h": "c",
-		"stdbool.h": "c",
-		"string.h": "c"
+		"cstring": "cpp"
 	},
 	"json.schemas": [
 		{
