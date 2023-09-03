@@ -144,6 +144,7 @@
 	},
 	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
 	"python.terminal.launchArgs": [],
+	"python.analysis.typeCheckingMode": "basic",
 	"python.showStartPage": false,
 	"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
 	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
