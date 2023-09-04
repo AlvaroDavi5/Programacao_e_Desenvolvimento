@@ -23,6 +23,7 @@
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"security.workspace.trust.untrustedFiles": "open",
 	"extensions.closeExtensionDetailsOnViewChange": false,
+	"extensions.ignoreRecommendations": true,
 	"sync.gist": "31d051020e1fe66435b53f28a0ed30ee",
 	"sync.forceUpload": true,
 	"sync.quietSync": true,
@@ -342,5 +343,5 @@
 	"http.proxy": "",
 	"http.proxySupport": "off",
 	"http.proxyAuthorization": null,
-	"http.proxyStrictSSL": false
+	"http.proxyStrictSSL": false,
 }
