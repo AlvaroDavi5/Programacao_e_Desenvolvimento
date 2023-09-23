@@ -17,10 +17,6 @@
 			"path": "/media/veracrypt1/Programação/NodeJS/MyWorkspace"
 		},
 		{
-			"name": "C-CPP-ASM",
-			"path": "/media/veracrypt1/Programação/C-CPP-ASM"
-		},
-		{
 			"name": "Programacao_e_Desenvolvimento",
 			"path": ".."
 		}
@@ -385,6 +381,12 @@
 			}
 		},
 		"files.associations": {
+			"stdio.h": "c",
+			"stdlib.h": "c",
+			"stdbool.h": "c",
+			"string.h": "c",
+			"time.h": "c",
+			"math.h": "c",
 			"complex": "c",
 			"array": "c",
 			"vectors-double.h": "c",
@@ -441,19 +443,15 @@
 			"streambuf": "cpp",
 			"cstdbool": "cpp",
 			"typeinfo": "cpp",
-			"*.rmd": "markdown",
-			"*.apib": "apiblueprint",
-			"*.dbml": "dbml",
 			"list": "cpp",
 			"ctime": "cpp",
 			"ranges": "cpp",
 			"compare": "cpp",
 			"concepts": "cpp",
 			"cstring": "cpp",
-			"stdio.h": "c",
-			"stdlib.h": "c",
-			"stdbool.h": "c",
-			"string.h": "c"
+			"*.apib": "apiblueprint",
+			"*.dbml": "dbml",
+			"*.rmd": "markdown"
 		},
 		"json.schemas": [
 			{

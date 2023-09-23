@@ -321,15 +321,15 @@
 		"streambuf": "cpp",
 		"cstdbool": "cpp",
 		"typeinfo": "cpp",
-		"*.rmd": "markdown",
-		"*.apib": "apiblueprint",
-		"*.dbml": "dbml",
 		"list": "cpp",
 		"ctime": "cpp",
 		"ranges": "cpp",
 		"compare": "cpp",
 		"concepts": "cpp",
-		"cstring": "cpp"
+		"cstring": "cpp",
+		"*.dbml": "dbml",
+		"*.apib": "apiblueprint",
+		"*.rmd": "markdown"
 	},
 	"json.schemas": [
 		{
