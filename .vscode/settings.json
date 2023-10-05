@@ -31,6 +31,11 @@
 	"sync.autoUpload": true,
 	"sync.autoDownload": true,
 	"bracket-pair-colorizer-2.depreciation-notice": false,
+	"bookmarks.saveBookmarksInProject": false,
+	"powermode.enabled": true,
+	"powermode.presets": "flames",
+	"powermode.combo.location": "editor",
+	"powermode.shake.enabled": false,
 	"material-icon-theme.activeIconPack": "nest",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
@@ -161,11 +166,6 @@
 	"color-highlight.languages": [
 		"*"
 	],
-	"powermode.enabled": true,
-	"powermode.presets": "flames",
-	"powermode.combo.location": "editor",
-	"powermode.shake.enabled": false,
-	"bookmarks.saveBookmarksInProject": true,
 	"better-comments.multilineComments": true,
 	"better-comments.highlightPlainText": false,
 	"better-comments.tags": [
@@ -265,6 +265,8 @@
 		"stdlib.h": "c",
 		"stdbool.h": "c",
 		"string.h": "c",
+		"time.h": "c",
+		"math.h": "c",
 		"complex": "c",
 		"array": "c",
 		"vectors-double.h": "c",
@@ -327,8 +329,8 @@
 		"compare": "cpp",
 		"concepts": "cpp",
 		"cstring": "cpp",
-		"*.dbml": "dbml",
 		"*.apib": "apiblueprint",
+		"*.dbml": "dbml",
 		"*.rmd": "markdown"
 	},
 	"json.schemas": [
@@ -343,5 +345,5 @@
 	"http.proxy": "",
 	"http.proxySupport": "off",
 	"http.proxyAuthorization": null,
-	"http.proxyStrictSSL": false,
+	"http.proxyStrictSSL": false
 }
