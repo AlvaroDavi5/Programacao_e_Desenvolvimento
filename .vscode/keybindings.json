@@ -1,0 +1,15 @@
+// Empty
+[
+	{
+		"key": "f8",
+		"command": "-extension.CompileRunInExternalTerminal"
+	},
+	{
+		"key": "ctrl+shift+alt+t",
+		"command": "workbench.action.reopenClosedEditor"
+	},
+	{
+		"key": "ctrl+shift+t",
+		"command": "-workbench.action.reopenClosedEditor"
+	}
+]

@@ -21,6 +21,7 @@
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.editor.restoreViewState": true,
 	"terminal.integrated.defaultProfile.linux": "zsh",
+	"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
 	"security.workspace.trust.untrustedFiles": "open",
 	"extensions.closeExtensionDetailsOnViewChange": false,
 	"extensions.ignoreRecommendations": true,
@@ -67,11 +68,11 @@
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
 	"git.openRepositoryInParentFolders": "always",
+	"git-graph.repository.commits.fetchAvatars": true,
 	"gitlens.defaultDateFormat": null,
 	"gitlens.views.remotes.branches.layout": "list",
 	"gitlens.views.tags.branches.layout": "list",
 	"gitlens.views.branches.branches.layout": "list",
-	"git-graph.repository.commits.fetchAvatars": true,
 	"gitlens.plusFeatures.enabled": true,
 	"gitlens.menus": {
 		"editor": {
@@ -138,6 +139,7 @@
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.tsserver.maxTsServerMemory": 1536,
+	"typescript.tsserver.watchOptions": {},
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
