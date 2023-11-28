@@ -5,6 +5,14 @@
 			"path": "/media/veracrypt1/Programação/NodeJS/Node_BackEnd_Boilerplate-TypeScript"
 		},
 		{
+			"name": "Dijkstra_on_Network",
+			"path": "/media/veracrypt1/Programação/C-CPP-ASM/UFES - TBO/Dijkstra_on_Network"
+		},
+		{
+			"name": "C-CPP-ASM",
+			"path": "/media/veracrypt1/Programação/C-CPP-ASM/"
+		},
+		{
 			"name": "Portfolio",
 			"path": "/media/veracrypt1/Programação/NodeJS/Portfolio"
 		},
@@ -137,10 +145,16 @@
 		"editor.fontWeight": "400",
 		"editor.tabSize": 2,
 		"editor.insertSpaces": false,
+		"editor.formatOnSave": true,
 		"editor.bracketPairColorization.enabled": true,
 		"editor.guides.bracketPairs": "active",
 		"editor.pasteAs.enabled": false,
 		"editor.pasteAs.showPasteSelector": "never",
+		"editor.autoClosingBrackets": "always",
+		// "editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true,
+		},
 		"explorer.autoReveal": true,
 		"explorer.confirmDragAndDrop": false,
 		"scm.defaultViewMode": "tree",
@@ -161,6 +175,8 @@
 		"sync.forceDownload": true,
 		"sync.autoUpload": true,
 		"sync.autoDownload": true,
+		"editorconfig.generateAuto": true,
+		"editorconfig.template": "default",
 		"bracket-pair-colorizer-2.depreciation-notice": false,
 		"bookmarks.saveBookmarksInProject": false,
 		"powermode.enabled": true,
@@ -170,8 +186,13 @@
 		"material-icon-theme.activeIconPack": "nest",
 		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 		"vsintellicode.features.python.deepLearning": "enabled",
-		"editorconfig.generateAuto": true,
-		"editorconfig.template": "default",
+		"eslint.format.enable": true,
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact"
+		],
 		"C_Cpp.errorSquiggles": "disabled",
 		"C_Cpp.dimInactiveRegions": true,
 		"C_Cpp.inactiveRegionOpacity": 0.55,
@@ -267,6 +288,10 @@
 		"problems.showCurrentInStatus": true,
 		"javascript.updateImportsOnFileMove.enabled": "always",
 		"typescript.updateImportsOnFileMove.enabled": "always",
+		"javascript.suggest.autoImports": true,
+		"javascript.suggestionActions.enabled": true,
+		"typescript.suggest.autoImports": true,
+		"typescript.suggestionActions.enabled": true,
 		"typescript.enablePromptUseWorkspaceTsdk": true,
 		"typescript.tsserver.maxTsServerMemory": 1536,
 		"typescript.tsserver.watchOptions": {},
