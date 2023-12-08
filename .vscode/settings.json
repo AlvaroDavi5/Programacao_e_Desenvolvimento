@@ -16,7 +16,7 @@
 	"editor.autoClosingBrackets": "always",
 	// "editor.defaultFormatter": "vscode.typescript-language-features",
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
+		"source.fixAll.eslint": false
 	},
 	"explorer.autoReveal": true,
 	"explorer.confirmDragAndDrop": false,

@@ -146,6 +146,7 @@
 		"editor.tabSize": 2,
 		"editor.insertSpaces": false,
 		"editor.formatOnSave": true,
+		"editor.wordWrap": "off",
 		"editor.bracketPairColorization.enabled": true,
 		"editor.guides.bracketPairs": "active",
 		"editor.pasteAs.enabled": false,
@@ -153,7 +154,7 @@
 		"editor.autoClosingBrackets": "always",
 		// "editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.codeActionsOnSave": {
-			"source.fixAll.eslint": true,
+			"source.fixAll.eslint": false
 		},
 		"explorer.autoReveal": true,
 		"explorer.confirmDragAndDrop": false,
@@ -175,8 +176,6 @@
 		"sync.forceDownload": true,
 		"sync.autoUpload": true,
 		"sync.autoDownload": true,
-		"editorconfig.generateAuto": true,
-		"editorconfig.template": "default",
 		"bracket-pair-colorizer-2.depreciation-notice": false,
 		"bookmarks.saveBookmarksInProject": false,
 		"powermode.enabled": true,
@@ -186,6 +185,8 @@
 		"material-icon-theme.activeIconPack": "nest",
 		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 		"vsintellicode.features.python.deepLearning": "enabled",
+		"editorconfig.generateAuto": true,
+		"editorconfig.template": "default",
 		"eslint.format.enable": true,
 		"eslint.validate": [
 			"javascript",
