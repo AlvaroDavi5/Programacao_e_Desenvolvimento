@@ -33,6 +33,10 @@
 			"path": "/media/veracrypt1/TODOS/repos/ctn-global-hub-identificadores"
 		},
 		{
+			"name": "Hub Infra",
+			"path": "/media/veracrypt1/TODOS/repos/ctn-global-infra"
+		},
+		{
 			"name": "Boilerplate",
 			"path": "/media/veracrypt1/TODOS/repos/boilerplate-serverless-lambda"
 		}
@@ -40,83 +44,6 @@
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
-			{
-				"name": "C/C++: Create and Debug Current File",
-				"type": "cppdbg",
-				"request": "launch",
-				"program": "${fileDirname}/${fileBasenameNoExtension}",
-				"args": [
-					"-g",
-					"${file}",
-					"-o",
-					"${fileDirname}/${fileBasenameNoExtension}",
-					"-lm",
-					"-W",
-					"-Wall"
-				],
-				"stopAtEntry": false,
-				"cwd": "${workspaceFolder}",
-				"environment": [],
-				"externalConsole": false,
-				"MIMode": "gdb",
-				"setupCommands": [
-					{
-						"description": "Habilitar a reformatação automática para gdb",
-						"text": "-enable-pretty-printing",
-						"ignoreFailures": true
-					}
-				],
-				"preLaunchTask": "C/C++: gcc-9 build active file",
-				"miDebuggerPath": "/usr/bin/gdb"
-			},
-			{
-				"name": "Java: Launch with Arguments Prompt",
-				"type": "java",
-				"request": "launch",
-				"mainClass": "",
-				"args": "${command:SpecifyProgramArgs}"
-			},
-			{
-				"name": "Arduino: Launch Debugger",
-				"type": "arduino",
-				"request": "launch",
-				"program": "${file}",
-				"cwd": "${workspaceFolder}",
-				"MIMode": "gdb",
-				"targetArchitecture": "arm",
-				"miDebuggerPath": "",
-				"debugServerPath": "",
-				"debugServerArgs": "",
-				"customLaunchSetupCommands": [
-					{
-						"text": "target remote localhost:3333"
-					},
-					{
-						"text": "file \"${file}\""
-					},
-					{
-						"text": "load"
-					},
-					{
-						"text": "monitor reset halt"
-					},
-					{
-						"text": "monitor reset init"
-					}
-				],
-				"stopAtEntry": true,
-				"serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
-				"launchCompleteCommand": "exec-continue",
-				"filterStderr": true,
-				"args": []
-			},
-			{
-				"name": "Python: Run Current File",
-				"type": "python",
-				"request": "launch",
-				"program": "${file}",
-				"console": "integratedTerminal"
-			},
 			{
 				"name": "Node.js: Launch Current File",
 				"type": "node",
@@ -202,9 +129,6 @@
 			"typescript",
 			"typescriptreact"
 		],
-		"C_Cpp.errorSquiggles": "disabled",
-		"C_Cpp.dimInactiveRegions": true,
-		"C_Cpp.inactiveRegionOpacity": 0.55,
 		"cSpell.language": "pt,pt-BR,en",
 		"cSpell.enableFiletypes": [
 			"!jade",
@@ -216,8 +140,6 @@
 			"swift",
 			"xml"
 		],
-		"jupyter.alwaysTrustNotebooks": true,
-		"jupyter.askForKernelRestart": false,
 		"debug.allowBreakpointsEverywhere": true,
 		"debug.console.closeOnEnd": true,
 		"diffEditor.ignoreTrimWhitespace": false,
@@ -292,7 +214,6 @@
 		"docker.images.sortBy": "Label",
 		"docker.containers.groupBy": "Compose Project Name",
 		"docker.containers.sortBy": "Label",
-		"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
 		"debug.onTaskErrors": "debugAnyway",
 		"problems.showCurrentInStatus": true,
 		"javascript.updateImportsOnFileMove.enabled": "always",
@@ -306,23 +227,10 @@
 		"typescript.tsserver.watchOptions": {},
 		"github.copilot.enable": {
 			"*": true,
-			"yaml": true,
+			"yaml": false,
 			"plaintext": false,
-			"markdown": true,
-			"java": true
+			"markdown": false
 		},
-		"[python]": {
-			"editor.formatOnType": true
-		},
-		"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3.10",
-		"python.terminal.launchArgs": [],
-		"python.analysis.typeCheckingMode": "basic",
-		"python.showStartPage": false,
-		"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
-		"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
-		"r.lsp.debug": true,
-		"java.configuration.updateBuildConfiguration": "automatic",
-		"java.compile.nullAnalysis.mode": "automatic",
 		"files.exclude": {
 			"**/.classpath": true,
 			"**/.project": true,
@@ -427,74 +335,6 @@
 			}
 		},
 		"files.associations": {
-			"stdio.h": "c",
-			"stdlib.h": "c",
-			"stdbool.h": "c",
-			"string.h": "c",
-			"time.h": "c",
-			"math.h": "c",
-			"complex": "c",
-			"array": "c",
-			"vectors-double.h": "c",
-			"vector": "c",
-			"complex-int.h": "c",
-			"ratio": "c",
-			"random": "c",
-			"hash_map": "c",
-			"hash_set": "c",
-			"bitset": "c",
-			"chrono": "c",
-			"algorithm": "c",
-			"optional": "c",
-			"istream": "c",
-			"ostream": "c",
-			"system_error": "c",
-			"functional": "c",
-			"tuple": "c",
-			"type_traits": "c",
-			"utility": "c",
-			"cmath": "c",
-			"sstream": "c",
-			"atomic": "cpp",
-			"bit": "cpp",
-			"*.tcc": "cpp",
-			"cctype": "cpp",
-			"cerrno": "cpp",
-			"clocale": "cpp",
-			"cstdarg": "cpp",
-			"cstddef": "cpp",
-			"cstdint": "cpp",
-			"cstdio": "cpp",
-			"cstdlib": "cpp",
-			"cwchar": "cpp",
-			"cwctype": "cpp",
-			"deque": "cpp",
-			"exception": "cpp",
-			"iterator": "cpp",
-			"memory": "cpp",
-			"memory_resource": "cpp",
-			"numeric": "cpp",
-			"string": "cpp",
-			"string_view": "cpp",
-			"unordered_map": "cpp",
-			"fstream": "cpp",
-			"initializer_list": "cpp",
-			"ios": "cpp",
-			"iosfwd": "cpp",
-			"iostream": "cpp",
-			"limits": "cpp",
-			"new": "cpp",
-			"queue": "cpp",
-			"stdexcept": "cpp",
-			"streambuf": "cpp",
-			"cstdbool": "cpp",
-			"typeinfo": "cpp",
-			"list": "cpp",
-			"ctime": "cpp",
-			"ranges": "cpp",
-			"compare": "cpp",
-			"concepts": "cpp",
-			"cstring": "cpp",
 			"*.apib": "apiblueprint",
 			"*.dbml": "dbml",
 			"*.rmd": "markdown"

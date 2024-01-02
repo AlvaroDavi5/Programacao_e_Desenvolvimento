@@ -5,20 +5,20 @@
 			"path": "/media/veracrypt1/Programação/NodeJS/Node_BackEnd_Boilerplate-TypeScript"
 		},
 		{
+			"name": "Spring_BackEnd_Boilerplate-Java",
+			"path": "/media/veracrypt1/Programação/Java/Spring_BackEnd_Boilerplate-Java"
+		},
+		{
+			"name": "Rails_BackEnd_Boilerplate-Ruby",
+			"path": "/media/veracrypt1/Programação/Ruby/Rails_BackEnd_Boilerplate-Ruby"
+		},
+		{
 			"name": "Dijkstra_on_Network",
 			"path": "/media/veracrypt1/Programação/C-CPP-ASM/UFES - TBO/Dijkstra_on_Network"
 		},
 		{
 			"name": "C-CPP-ASM",
 			"path": "/media/veracrypt1/Programação/C-CPP-ASM/"
-		},
-		{
-			"name": "Portfolio",
-			"path": "/media/veracrypt1/Programação/NodeJS/Portfolio"
-		},
-		{
-			"name": "Markdown",
-			"path": "/media/veracrypt1/Programação/Markdown"
 		},
 		{
 			"name": "MyWorkspace",
@@ -298,10 +298,9 @@
 		"typescript.tsserver.watchOptions": {},
 		"github.copilot.enable": {
 			"*": true,
-			"yaml": true,
+			"yaml": false,
 			"plaintext": false,
-			"markdown": true,
-			"java": true
+			"markdown": false
 		},
 		"[python]": {
 			"editor.formatOnType": true
