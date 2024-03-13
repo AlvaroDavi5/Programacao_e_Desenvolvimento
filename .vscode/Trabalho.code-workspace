@@ -1,33 +1,25 @@
 {
 	"folders": [
 		{
-			"name": "App - Back",
-			"path": "/media/veracrypt1/RAIO/repos/app-bff"
+			"name": "Portal - BFF",
+			"path": "/media/veracrypt1/Raio/repos/portal-raio-bff"
 		},
 		{
-			"name": "Portal - Back",
-			"path": "/media/veracrypt1/RAIO/repos/portal-raio-bff"
+			"name": "App - BFF",
+			"path": "/media/veracrypt1/Raio/repos/app-bff"
 		},
 		{
-			"name": "V2 - API",
-			"path": "/media/veracrypt1/RAIO/repos/api-v2"
+			"name": "Prepaid - Service",
+			"path": "/media/veracrypt1/Raio/repos/prepaid-service"
 		},
 		{
-			"name": "Beneficiary - API",
-			"path": "/media/veracrypt1/RAIO/repos/api-beneficiary"
+			"name": "Beneficiary - Service",
+			"path": "/media/veracrypt1/Raio/repos/beneficiary-service"
 		},
 		{
-			"name": "User Identity - API",
-			"path": "/media/veracrypt1/RAIO/repos/api-user-identity"
+			"name": "Identity - Service",
+			"path": "/media/veracrypt1/Raio/repos/identity-service"
 		},
-		{
-			"name": "Prepaid Service",
-			"path": "/media/veracrypt1/RAIO/repos/prepaid-service"
-		},
-		{
-			"name": "Legacy - API",
-			"path": "/media/veracrypt1/RAIO/repos/legacy-api"
-		}
 	],
 	"launch": {
 		"version": "0.2.0",
