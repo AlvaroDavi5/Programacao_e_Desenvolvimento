@@ -1,8 +1,12 @@
 {
 	"folders": [
 		{
-			"name": "Portal - BFF",
+			"name": "[REFACTOR] Portal - BFF",
 			"path": "/media/veracrypt1/Raio/repos/portal-raio-bff"
+		},
+		{
+			"name": "Portal - BFF",
+			"path": "/media/veracrypt1/Raio/repos/portal-bff"
 		},
 		{
 			"name": "App - BFF",
@@ -76,7 +80,7 @@
 		"editor.fontWeight": "400",
 		"editor.tabSize": 2,
 		"editor.insertSpaces": false,
-		"editor.formatOnSave": true,
+		"editor.formatOnSave": false,
 		"editor.wordWrap": "off",
 		"editor.bracketPairColorization.enabled": true,
 		"editor.guides.bracketPairs": "active",
