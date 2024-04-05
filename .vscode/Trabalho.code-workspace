@@ -2,27 +2,31 @@
 	"folders": [
 		{
 			"name": "[REFACTOR] Portal - BFF",
-			"path": "/media/veracrypt1/Raio/repos/portal-raio-bff"
+			"path": "/home/alvaro/Documents/Raio/repos/portal-raio-bff"
 		},
 		{
 			"name": "Portal - BFF",
-			"path": "/media/veracrypt1/Raio/repos/portal-bff"
+			"path": "/home/alvaro/Documents/Raio/repos/portal-bff"
 		},
 		{
 			"name": "App - BFF",
-			"path": "/media/veracrypt1/Raio/repos/app-bff"
+			"path": "/home/alvaro/Documents/Raio/repos/app-bff"
 		},
 		{
 			"name": "Prepaid - Service",
-			"path": "/media/veracrypt1/Raio/repos/prepaid-service"
+			"path": "/home/alvaro/Documents/Raio/repos/prepaid-service"
 		},
 		{
 			"name": "Beneficiary - Service",
-			"path": "/media/veracrypt1/Raio/repos/beneficiary-service"
+			"path": "/home/alvaro/Documents/Raio/repos/beneficiary-service"
 		},
 		{
 			"name": "Identity - Service",
-			"path": "/media/veracrypt1/Raio/repos/identity-service"
+			"path": "/home/alvaro/Documents/Raio/repos/identity-service"
+		},
+		{
+			"name": "Communication - Service",
+			"path": "/home/alvaro/Documents/Raio/repos/communication-service"
 		},
 	],
 	"launch": {

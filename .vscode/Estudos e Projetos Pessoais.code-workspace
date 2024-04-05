@@ -2,23 +2,23 @@
 	"folders": [
 		{
 			"name": "Node_BackEnd_Boilerplate-TypeScript",
-			"path": "/media/veracrypt1/Programação/NodeJS/Node_BackEnd_Boilerplate-TypeScript"
+			"path": "/home/alvaro/Documents/Programação/NodeJS/Node_BackEnd_Boilerplate-TypeScript"
 		},
 		{
 			"name": "Spring_BackEnd_Boilerplate-Java",
-			"path": "/media/veracrypt1/Programação/Java/Spring_BackEnd_Boilerplate-Java"
+			"path": "/home/alvaro/Documents/Programação/Java/Spring_BackEnd_Boilerplate-Java"
 		},
 		{
 			"name": "C",
-			"path": "/media/veracrypt1/Programação/C/"
+			"path": "/home/alvaro/Documents/Programação/C/"
 		},
 		{
 			"name": "Ruby",
-			"path": "/media/veracrypt1/Programação/Ruby/"
+			"path": "/home/alvaro/Documents/Programação/Ruby/"
 		},
 		{
 			"name": "MyWorkspace",
-			"path": "/media/veracrypt1/Programação/NodeJS/MyWorkspace"
+			"path": "/home/alvaro/Documents/Programação/NodeJS/MyWorkspace"
 		},
 		{
 			"name": "Programacao_e_Desenvolvimento",
@@ -171,7 +171,7 @@
 		"editor.pasteAs.showPasteSelector": "never",
 		"editor.stickyScroll.enabled": false,
 		"editor.autoClosingBrackets": "always",
-		// "editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": "never"
 		},
