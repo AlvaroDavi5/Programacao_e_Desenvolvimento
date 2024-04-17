@@ -28,7 +28,6 @@
 	"workbench.colorTheme": "Dracula",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.editor.restoreViewState": true,
-	"window.customTitleBarVisibility": "auto",
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
 	"security.workspace.trust.untrustedFiles": "open",
