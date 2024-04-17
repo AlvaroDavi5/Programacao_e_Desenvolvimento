@@ -372,7 +372,8 @@
 			"http.proxy": "",
 			"http.proxySupport": "off",
 			"http.proxyAuthorization": null,
-			"http.proxyStrictSSL": false
+			"http.proxyStrictSSL": false,
+			"window.customTitleBarVisibility": "auto"
 		}
 	},
 	"keybindings": {
@@ -446,13 +447,6 @@
 				"uuid": "5cf10212-681f-48c7-b66f-bcce5dc44a64"
 			},
 			"displayName": "Comment Anchors"
-		},
-		{
-			"identifier": {
-				"id": "franneck94.c-cpp-runner",
-				"uuid": "0f4eac03-b4ec-4a55-bce1-deb41fde32ab"
-			},
-			"displayName": "C/C++ Runner"
 		},
 		{
 			"identifier": {
@@ -533,8 +527,7 @@
 				"uuid": "6c2f1801-1e7f-45b2-9b5c-7782f1e076e8"
 			},
 			"displayName": "Jupyter",
-			"disabled": true,
-			"preRelease": true
+			"disabled": true
 		},
 		{
 			"identifier": {
@@ -615,25 +608,19 @@
 		},
 		{
 			"identifier": {
+				"id": "puorc.awesome-vhdl",
+				"uuid": "8857ac4e-a4e2-494c-afa8-55c11114b667"
+			},
+			"displayName": "VHDL",
+			"disabled": true
+		},
+		{
+			"identifier": {
 				"id": "redhat.java",
 				"uuid": "198a707e-28af-4e84-8610-6e2f628dd12d"
 			},
 			"displayName": "Language Support for Java(TM) by Red Hat",
 			"disabled": true
-		},
-		{
-			"identifier": {
-				"id": "redhat.vscode-yaml",
-				"uuid": "2061917f-f76a-458a-8da9-f162de22b97e"
-			},
-			"displayName": "YAML"
-		},
-		{
-			"identifier": {
-				"id": "vadimcn.vscode-lldb",
-				"uuid": "bee31e34-a44b-4a76-9ec2-e9fd1439a0f6"
-			},
-			"displayName": "CodeLLDB"
 		},
 		{
 			"identifier": {
@@ -678,9 +665,7 @@
 				"id": "vscjava.vscode-java-pack",
 				"uuid": "96f11e1f-1a46-4592-b084-f025b2c2a81f"
 			},
-			"displayName": "Extension Pack for Java",
-			"disabled": true,
-			"preRelease": true
+			"displayName": "Extension Pack for Java"
 		},
 		{
 			"identifier": {
@@ -915,13 +900,11 @@
 				},
 				{
 					"id": "workbench.scm.repositories",
-					"isHidden": true,
-					"order": 0
+					"isHidden": true
 				},
 				{
 					"id": "workbench.scm",
-					"isHidden": false,
-					"order": 1
+					"isHidden": false
 				},
 				{
 					"id": "gitlens.views.contributors",
@@ -987,12 +970,6 @@
 					"order": 0
 				},
 				{
-					"id": "workbench.view.extension.gitlensInspect",
-					"pinned": true,
-					"visible": false,
-					"order": 10
-				},
-				{
 					"id": "workbench.view.extension.gitlensPatch",
 					"pinned": true,
 					"order": 11
@@ -1045,10 +1022,20 @@
 					"order": 3
 				},
 				{
+					"id": "workbench.view.extension.dockerView",
+					"pinned": true,
+					"visible": true,
+					"order": 13
+				},
+				{
 					"id": "workbench.view.search",
 					"pinned": true,
 					"visible": true,
 					"order": 1
+				},
+				{
+					"id": "workbench.views.service.sidebar.3ef02a32-8b46-4c6d-bb2e-3d4d42b5606f",
+					"pinned": false
 				},
 				{
 					"id": "workbench.view.extension.gitlens",
@@ -1057,8 +1044,10 @@
 					"order": 9
 				},
 				{
-					"id": "workbench.views.service.sidebar.3ef02a32-8b46-4c6d-bb2e-3d4d42b5606f",
-					"pinned": false
+					"id": "workbench.view.extension.gitlensInspect",
+					"pinned": false,
+					"visible": false,
+					"order": 10
 				},
 				{
 					"id": "workbench.view.extension.test",
@@ -1079,12 +1068,6 @@
 					"order": 2
 				},
 				{
-					"id": "workbench.view.extension.dockerView",
-					"pinned": true,
-					"visible": true,
-					"order": 13
-				},
-				{
 					"id": "workbench.view.extension.liveshare",
 					"pinned": true,
 					"visible": true,
@@ -1103,7 +1086,7 @@
 				},
 				{
 					"id": "userDataProfiles",
-					"pinned": true,
+					"pinned": false,
 					"visible": false
 				},
 				{
@@ -1195,7 +1178,6 @@
 				{
 					"id": "~remote.forwardedPortsContainer",
 					"pinned": true,
-					"visible": true,
 					"order": 5
 				},
 				{
@@ -1203,12 +1185,6 @@
 					"pinned": true,
 					"visible": false,
 					"order": 6
-				},
-				{
-					"id": "workbench.panel.comments",
-					"pinned": true,
-					"visible": false,
-					"order": 10
 				},
 				{
 					"id": "refactorPreview",
@@ -1224,24 +1200,25 @@
 			"cpp.1.lastSessionDate": "Wed Mar 23 2022",
 			"cpp.1.sessionCount": "36",
 			"java.2.lastSessionDate": "Sat May 06 2023",
-			"java.2.sessionCount": "360",
+			"java.2.sessionCount": "359",
 			"javascript.1.lastSessionDate": "Sun Mar 27 2022",
 			"javascript.1.sessionCount": "40",
 			"typescript.1.lastSessionDate": "Sun Apr 03 2022",
 			"typescript.1.sessionCount": "47",
-			"csharp.1.lastSessionDate": "Tue Apr 25 2023",
-			"csharp.1.sessionCount": "294",
+			"csharp.1.lastSessionDate": "Wed Apr 17 2024",
+			"csharp.1.sessionCount": "311",
 			"workbench.welcomePage.walkthroughMetadata": [
 				[
-					"vscode.typescript-language-features#nodejsWelcome",
+					"alefragnani.Bookmarks#bookmarksWelcome",
 					{
-						"firstSeen": 1682435429038,
+						"firstSeen": 1713330914157,
 						"stepIDs": [
-							"walkthroughs.nodejsWelcome.downloadNode.forMacOrWindows",
-							"walkthroughs.nodejsWelcome.downloadNode.forLinux",
-							"walkthroughs.nodejsWelcome.makeJsFile",
-							"walkthroughs.nodejsWelcome.debugJsFile",
-							"walkthroughs.nodejsWelcome.learnMoreAboutJs"
+							"toggle",
+							"navigateToBookmarks",
+							"defineLabelsForYourBookmarks",
+							"exclusiveSideBar",
+							"workingWithRemotes",
+							"customizingAppearance"
 						],
 						"manaullyOpened": false
 					}
@@ -1249,39 +1226,21 @@
 				[
 					"eamodio.gitlens#gitlens.welcome",
 					{
-						"firstSeen": 1682435904848,
+						"firstSeen": 1713330914157,
 						"stepIDs": [
 							"gitlens.welcome.tutorial",
-							"gitlens.welcome.experience",
-							"gitlens.welcome.settings",
+							"gitlens.welcome.sidebars",
 							"gitlens.welcome.currentLineBlame",
-							"gitlens.welcome.gitCodeLens",
-							"gitlens.welcome.revisionHistory",
 							"gitlens.welcome.fileAnnotations",
-							"gitlens.welcome.gitSideBarViews",
+							"gitlens.welcome.revisionHistory",
+							"gitlens.welcome.commitGraph",
+							"gitlens.welcome.workspaces",
 							"gitlens.welcome.hostingServiceIntegrations",
-							"gitlens.welcome.gitCommandPalette",
-							"gitlens.welcome.interactiveRebaseEditor",
-							"gitlens.welcome.terminal",
-							"gitlens.welcome.plus"
-						],
-						"manaullyOpened": false
-					}
-				],
-				[
-					"eamodio.gitlens#gitlens.plus",
-					{
-						"firstSeen": 1682435904858,
-						"stepIDs": [
-							"gitlens.plus.intro",
-							"gitlens.plus.commitGraph",
-							"gitlens.plus.visualFileHistory",
-							"gitlens.plus.worktrees",
-							"gitlens.plus.richIntegrations",
-							"gitlens.plus.tryNow",
-							"gitlens.plus.trial",
-							"gitlens.plus.trial.extend",
-							"gitlens.plus.trial.upgrade"
+							"gitlens.welcome.labs",
+							"gitlens.welcome.preview",
+							"gitlens.welcome.trial",
+							"gitlens.welcome.services",
+							"gitlens.welcome.additional"
 						],
 						"manaullyOpened": false
 					}
@@ -1289,7 +1248,7 @@
 				[
 					"ms-azuretools.vscode-docker#dockerStart",
 					{
-						"firstSeen": 1682435955994,
+						"firstSeen": 1713330914157,
 						"stepIDs": [
 							"openFolder",
 							"openFolderMac",
@@ -1305,19 +1264,84 @@
 					}
 				],
 				[
+					"ms-python.python#pythonWelcome",
+					{
+						"firstSeen": 1713330914157,
+						"stepIDs": [
+							"python.createPythonFile",
+							"python.installPythonWin8",
+							"python.installPythonMac",
+							"python.installPythonLinux",
+							"python.selectInterpreter",
+							"python.createEnvironment",
+							"python.runAndDebug",
+							"python.learnMoreWithDS"
+						],
+						"manaullyOpened": false
+					}
+				],
+				[
+					"ms-python.python#pythonWelcome2",
+					{
+						"firstSeen": 1713330914158,
+						"stepIDs": [
+							"python.createPythonFile",
+							"python.installPythonWin8",
+							"python.installPythonMac",
+							"python.installPythonLinux",
+							"python.createEnvironment2",
+							"python.runAndDebug2",
+							"python.learnMoreWithDS2"
+						],
+						"manaullyOpened": false
+					}
+				],
+				[
+					"ms-python.python#pythonDataScienceWelcome",
+					{
+						"firstSeen": 1713330914158,
+						"stepIDs": [
+							"python.installJupyterExt",
+							"python.createNewNotebook",
+							"python.openInteractiveWindow",
+							"python.dataScienceLearnMore"
+						],
+						"manaullyOpened": false
+					}
+				],
+				[
+					"ms-toolsai.jupyter#jupyterWelcome",
+					{
+						"firstSeen": 1713330914158,
+						"stepIDs": [
+							"ipynb.newUntitledIpynb",
+							"jupyter.selectKernel",
+							"jupyter.exploreAndDebug",
+							"jupyter.dataScienceLearnMore"
+						],
+						"manaullyOpened": false
+					}
+				],
+				[
 					"ms-vscode.cpptools#cppWelcome",
 					{
-						"firstSeen": 1682439093488,
+						"firstSeen": 1713330914158,
 						"stepIDs": [
 							"awaiting.activation.mac",
 							"awaiting.activation.linux",
 							"awaiting.activation.windows",
+							"awaiting.activation.windows10",
+							"awaiting.activation.windows11",
 							"no.compilers.found.mac",
 							"no.compilers.found.linux",
 							"no.compilers.found.windows",
+							"no.compilers.found.windows10",
+							"no.compilers.found.windows11",
 							"verify.compiler.mac",
 							"verify.compiler.linux",
 							"verify.compiler.windows",
+							"verify.compiler.windows10",
+							"verify.compiler.windows11",
 							"create.cpp.file",
 							"relaunch.developer.command.prompt.windows",
 							"run.project.mac",
@@ -1333,7 +1357,7 @@
 				[
 					"vscjava.vscode-java-pack#javaWelcome",
 					{
-						"firstSeen": 1682439149005,
+						"firstSeen": 1713330914158,
 						"stepIDs": [
 							"java.runtime",
 							"java.showProjectExplorer",
@@ -1342,76 +1366,6 @@
 							"java.extensions",
 							"java.more",
 							"java.moreForMac"
-						],
-						"manaullyOpened": false
-					}
-				],
-				[
-					"ms-python.python#pythonWelcome",
-					{
-						"firstSeen": 1682439173798,
-						"stepIDs": [
-							"python.createPythonFile",
-							"python.installPythonWin8",
-							"python.installPythonMac",
-							"python.installPythonLinux",
-							"python.selectInterpreter",
-							"python.createEnvironment",
-							"python.runAndDebug",
-							"python.learnMoreWithDS"
-						],
-						"manaullyOpened": false
-					}
-				],
-				[
-					"ms-python.python#pythonDataScienceWelcome",
-					{
-						"firstSeen": 1682439173838,
-						"stepIDs": [
-							"python.installJupyterExt",
-							"python.createNewNotebook",
-							"python.openInteractiveWindow",
-							"python.dataScienceLearnMore"
-						],
-						"manaullyOpened": false
-					}
-				],
-				[
-					"vscode.typescript-language-features#tempNodejsWelcome",
-					{
-						"firstSeen": 1683740387275,
-						"stepIDs": [],
-						"manaullyOpened": false
-					}
-				],
-				[
-					"alefragnani.Bookmarks#bookmarksWelcome",
-					{
-						"firstSeen": 1689796087476,
-						"stepIDs": [
-							"toggle",
-							"navigateToBookmarks",
-							"defineLabelsForYourBookmarks",
-							"exclusiveSideBar",
-							"workingWithRemotes",
-							"customizingAppearance"
-						],
-						"manaullyOpened": false
-					}
-				],
-				[
-					"ms-python.python#pythonWelcome2",
-					{
-						"firstSeen": 1689796087476,
-						"stepIDs": [
-							"python.createPythonFolder",
-							"python.createPythonFile",
-							"python.installPythonWin8",
-							"python.installPythonMac",
-							"python.installPythonLinux",
-							"python.createEnvironment2",
-							"python.runAndDebug",
-							"python.learnMoreWithDS2"
 						],
 						"manaullyOpened": false
 					}
@@ -1458,14 +1412,6 @@
 				},
 				{
 					"id": "CppSshTargetsView",
-					"isHidden": false
-				},
-				{
-					"id": "lldb.loadedModules",
-					"isHidden": false
-				},
-				{
-					"id": "lldb.excludedCallers",
 					"isHidden": false
 				}
 			],
@@ -2543,49 +2489,10 @@
 				"installGit": {
 					"done": true
 				},
-				"pickColorTheme": {
-					"done": true
-				},
-				"pickColorThemeWeb": {
-					"done": true
-				},
 				"commandPaletteTask": {
 					"done": true
 				},
 				"commandPaletteTaskWeb": {
-					"done": true
-				},
-				"settingsSync": {
-					"done": true
-				},
-				"settingsSyncWeb": {
-					"done": true
-				},
-				"eamodio.gitlens#gitlens.welcome#gitlens.welcome.tutorial": {
-					"done": true
-				},
-				"quickOpen": {
-					"done": true
-				},
-				"quickOpenWeb": {
-					"done": true
-				},
-				"vscjava.vscode-java-pack#javaWelcome#java.showProjectExplorer.inactive": {
-					"done": true
-				},
-				"ms-vscode.cpptools#cppWelcome#create.cpp.file": {
-					"done": true
-				},
-				"ms-python.python#pythonWelcome#python.createPythonFile": {
-					"done": true
-				},
-				"ms-python.python#pythonWelcome2#python.createPythonFile": {
-					"done": true
-				},
-				"eamodio.gitlens#gitlens.welcome#gitlens.welcome.additional": {
-					"done": true
-				},
-				"ms-azuretools.vscode-docker#dockerStart#dockerExplorer": {
 					"done": true
 				},
 				"ms-vscode.cpptools#cppWelcome#verify.compiler.mac": {
@@ -2601,6 +2508,21 @@
 					"done": true
 				},
 				"ms-vscode.cpptools#cppWelcome#verify.compiler.windows11": {
+					"done": true
+				},
+				"quickOpen": {
+					"done": true
+				},
+				"quickOpenWeb": {
+					"done": true
+				},
+				"eamodio.gitlens#gitlens.welcome#gitlens.welcome.additional": {
+					"done": true
+				},
+				"vscjava.vscode-java-pack#javaWelcome#java.showProjectExplorer.inactive": {
+					"done": true
+				},
+				"ms-azuretools.vscode-docker#dockerStart#dockerExplorer": {
 					"done": true
 				}
 			},
@@ -2709,7 +2631,7 @@
 				},
 				{
 					"id": "workbench.views.extensions.installed",
-					"isHidden": false
+					"isHidden": true
 				},
 				{
 					"id": "workbench.views.extensions.otherRecommendations",
@@ -2841,6 +2763,10 @@
 						"value": 110
 					},
 					{
+						"key": "editor.action.formatDocument",
+						"value": 148
+					},
+					{
 						"key": "editor.action.formatDocument.multiple",
 						"value": 149
 					},
@@ -2921,169 +2847,79 @@
 						"value": 446
 					},
 					{
+						"key": "git-graph.fetch",
+						"value": 453
+					},
+					{
+						"key": "gitlens.fetchRepositories",
+						"value": 454
+					},
+					{
+						"key": "typescript.restartTsServer",
+						"value": 477
+					},
+					{
+						"key": "editor.action.transformToLowercase",
+						"value": 482
+					},
+					{
+						"key": "gitlens.showGraphPage",
+						"value": 513
+					},
+					{
 						"key": "workbench.action.openGlobalSettings",
 						"value": 523
+					},
+					{
+						"key": "java.clean.workspace",
+						"value": 529
+					},
+					{
+						"key": "editor.action.transformToUppercase",
+						"value": 534
 					},
 					{
 						"key": "workbench.userDataSync.actions.configure",
 						"value": 541
 					},
 					{
-						"key": "java.projectConfiguration.update",
-						"value": 559
-					},
-					{
-						"key": "java.clean.workspace",
-						"value": 564
-					},
-					{
-						"key": "workbench.action.clearCommandHistory",
-						"value": 581
-					},
-					{
-						"key": "typescript.selectTypeScriptVersion",
-						"value": 596
-					},
-					{
 						"key": "workbench.action.clearRecentFiles",
-						"value": 605
-					},
-					{
-						"key": "workbench.userDataSync.actions.showSyncedData",
-						"value": 606
-					},
-					{
-						"key": "gitlens.connectRemoteProvider",
-						"value": 628
+						"value": 551
 					},
 					{
 						"key": "git-graph.clearAvatarCache",
-						"value": 644
-					},
-					{
-						"key": "gitlens.showGraphPage",
-						"value": 647
+						"value": 557
 					},
 					{
 						"key": "gitlens.resetAvatarCache",
-						"value": 648
+						"value": 558
 					},
 					{
-						"key": "git-graph.fetch",
-						"value": 649
-					},
-					{
-						"key": "gitlens.fetchRepositories",
-						"value": 650
-					},
-					{
-						"key": "editor.action.transformToUppercase",
-						"value": 651
-					},
-					{
-						"key": "editor.action.transformToLowercase",
-						"value": 652
-					},
-					{
-						"key": "editor.action.formatDocument",
-						"value": 653
-					},
-					{
-						"key": "json.clearCache",
-						"value": 658
+						"key": "workbench.userDataSync.actions.showSyncedData",
+						"value": 562
 					},
 					{
 						"key": "workbench.userDataSync.actions.syncNow",
-						"value": 661
-					},
-					{
-						"key": "typescript.restartTsServer",
-						"value": 665
+						"value": 564
 					}
 				]
 			},
-			"commandPalette.mru.counter": "666",
+			"commandPalette.mru.counter": "565",
 			"nps/sessionCount": "9",
 			"nps/lastSessionDate": "Sun Feb 13 2022",
 			"workbench.statusbar.hidden": [
 				"status.debug",
-				"status.workspaceTrust.4caae796427dfe6de2c5503395b6ed15",
 				"eamodio.gitlens",
-				"status.workspaceTrust.29d773c2eda225c0aa5154eaff222264",
-				"status.workspaceTrust.1628793438040",
-				"status.workspaceTrust.7c40272e22646321088e5784a393d5ba",
-				"status.workspaceTrust.1eb45d8a37b35c65785cf36aa415d322",
-				"status.workspaceTrust.897df0b5df2b08866f5e491bf47483e9",
-				"status.workspaceTrust.1629256333200",
-				"status.workspaceTrust.1629257701788",
-				"status.workspaceTrust.c3c67395a8d9ada17a3f250977c015ff",
-				"status.workspaceTrust.1629920582252",
-				"status.workspaceTrust.1630090159494",
-				"status.workspaceTrust.658c44f67d51a8632a5ecb1712d3a2ee",
+				"status.feedback",
 				"statusbar.currentProblem",
 				"hoovercj.vscode-power-mode",
-				"status.workspaceTrust.1636841170456",
-				"status.workspaceTrust.1636842463408",
-				"status.workspaceTrust.bbdb2ae782224a5142891b28a358a0c6",
-				"status.workspaceTrust.80d5ef838bbad52f136bd66e0edb356d",
-				"status.workspaceTrust.1637162407869",
-				"status.workspaceTrust.f76930da78cd472965c691aaaf95c755",
-				"status.workspaceTrust.1637459072321",
-				"status.workspaceTrust.1637549449938",
-				"status.workspaceTrust.a928012ad853441d3ba2601583c194b8",
-				"status.workspaceTrust.1640542684015",
-				"status.workspaceTrust.1640542776570",
-				"status.workspaceTrust.0bf45b56b751856ec84836132c2b5947",
-				"status.workspaceTrust.1640555490815",
-				"status.workspaceTrust.1b78a820625eaa76f4c93019597b8bc2",
 				"eamodio.gitlens.gitlens.subscription",
-				"status.workspaceTrust.1647040942345",
-				"status.workspaceTrust.1a30f555dd37c4f4e9fd3a2f9f9195b0",
 				"mhutchie.git-graph",
-				"status.workspaceTrust.1652840384538",
-				"status.workspaceTrust.32a9f06b8679fd9d847fb22b1c767984",
-				"status.workspaceTrust.1654534738074",
-				"status.workspaceTrust.e722e4c11e0fec9f9d372c566d3df833",
-				"status.workspaceTrust.1658553542636",
 				"eamodio.gitlens.gitlens.plus.subscription",
-				"status.workspaceTrust.1660676894825",
-				"status.workspaceTrust.1660751447693",
 				"status.progress",
-				"status.workspaceTrust.380cb01e967999e87960ee073f392774",
-				"status.workspaceTrust.d86bd2e0dba78fe6bf7368d63ab68c73",
-				"status.workspaceTrust.1670249421151",
-				"status.workspaceTrust.1672669697825",
-				"status.workspaceTrust.1673015137801",
-				"status.workspaceTrust.1673441240929",
-				"status.workspaceTrust.1674220739170",
-				"status.workspaceTrust.1675002134077",
-				"status.workspaceTrust.1675200039297",
-				"status.workspaceTrust.1676303333353",
 				"danielpinto8zz6.c-cpp-compile-run",
-				"status.workspaceTrust.1677366337257",
-				"status.workspaceTrust.1680708873400",
-				"status.workspaceTrust.1682385267240",
-				"status.workspaceTrust.1682435424531",
-				"status.workspaceTrust.1682457959109",
-				"status.workspaceTrust.f1e581b9bcafaabab91a1746f4c85cee",
-				"status.workspaceTrust.1684358474890",
-				"status.workspaceTrust.1684782401411",
-				"status.feedback",
-				"eamodio.gitlens.gitlens.blame",
-				"status.host",
-				"status.workspaceTrust.1687054974067",
-				"status.workspaceTrust.1687294076669",
 				"eamodio.gitlens.gitlens.graph",
-				"franneck94.c-cpp-runner",
-				"status.workspaceTrust.1693920479786",
-				"status.workspaceTrust.11d59a150f598a49de58ffa2917662f8",
-				"status.workspaceTrust.1694650914206",
-				"status.workspaceTrust.1695432604058",
-				"status.workspaceTrust.1695861191130",
-				"status.workspaceTrust.1695998635948",
-				"status.workspaceTrust.6c9e1d4a4834a5204ecb5d97059a1ed6",
-				"status.workspaceTrust.1303d8735f062bf694ace2b2465a459d",
-				"status.workspaceTrust.54680b42ddaf9d7ec42bb6a4e8212043"
+				"eamodio.gitlens.gitlens.blame"
 			],
 			"editor.contrib.largeFileOptimizationsWarner": "true",
 			"workbench.view.sync.state.hidden": [
@@ -3142,12 +2978,9 @@
 					"ctrl+",
 					"term",
 					"termin",
-					"novo terminal",
-					"@command:gitlens.resetAvatarCache",
-					"terminaç",
 					"terminal",
-					"new terminal",
-					"open terminal"
+					"novo terminal",
+					"@command:gitlens.resetAvatarCache"
 				]
 			},
 			"expandSuggestionDocs": "true",
@@ -3160,9 +2993,6 @@
 				],
 				"cpp": [
 					"ms-vscode.cpptools-extension-pack"
-				],
-				"makefile": [
-					"ms-vscode.makefile-tools"
 				]
 			},
 			"workbench.view.extension.gitlens.state.hidden": [
@@ -3179,6 +3009,10 @@
 					"isHidden": false
 				},
 				{
+					"id": "gitlens.views.drafts",
+					"isHidden": false
+				},
+				{
 					"id": "gitlens.views.workspaces",
 					"isHidden": false
 				},
@@ -3187,15 +3021,7 @@
 					"isHidden": false
 				},
 				{
-					"id": "gitlens.views.searchAndCompare",
-					"isHidden": false
-				},
-				{
 					"id": "gitlens.views.timeline",
-					"isHidden": false
-				},
-				{
-					"id": "gitlens.views.drafts",
 					"isHidden": false
 				}
 			],
@@ -3227,7 +3053,7 @@
 					"isHidden": false
 				}
 			],
-			"tabs-list-width-horizontal": "116",
+			"tabs-list-width-horizontal": "127",
 			"workbench.view.extension.vscode-spotify.state.hidden": [
 				{
 					"id": "vscode-spotify-playlists",
@@ -3389,10 +3215,6 @@
 					1661448549303
 				],
 				[
-					"snippets/javascript.code-snippets/For Loop",
-					1661456318992
-				],
-				[
 					"snippets/javascript.code-snippets/Log error to console",
 					1672953430351
 				],
@@ -3411,10 +3233,6 @@
 				[
 					"snippets/javascript.code-snippets/Import Statement",
 					1679454653810
-				],
-				[
-					"snippets/javascript.code-snippets/For-Each Loop",
-					1683642673382
 				],
 				[
 					"snippets/java.json/newObject",
@@ -3523,11 +3341,20 @@
 				[
 					"snippets/typescript.code-snippets/For Loop",
 					1709841208352
+				],
+				[
+					"snippets/javascript.code-snippets/For Loop",
+					1713327495718
+				],
+				[
+					"snippets/javascript.code-snippets/For-Each Loop",
+					1713327506577
 				]
 			],
 			"views.customizations": {
 				"viewContainerLocations": {
 					"workbench.views.service.panel.5395e9c8-f710-4289-8e93-249fef477e40": 1,
+					"workbench.views.service.sidebar.3ef02a32-8b46-4c6d-bb2e-3d4d42b5606f": 0,
 					"workbench.views.service.sidebar.aa2ddf98-1e07-4d9d-8309-61749e4dbbc6": 0
 				},
 				"viewLocations": {
@@ -3545,10 +3372,9 @@
 					"gitlens.views.repositories": "workbench.view.search",
 					"gitlens.views.contributors": "workbench.view.search",
 					"gitlens.views.commitDetails": "workbench.view.search",
+					"gitlens.views.searchAndCompare": "workbench.views.service.sidebar.3ef02a32-8b46-4c6d-bb2e-3d4d42b5606f",
 					"workbench.view.search": "workbench.views.service.sidebar.aa2ddf98-1e07-4d9d-8309-61749e4dbbc6",
-					"workbench.scm": "workbench.view.search",
-					"gitlens.views.searchAndCompare": "workbench.view.extension.gitlens",
-					"gitlens.views.timeline": "workbench.view.extension.gitlens"
+					"workbench.scm": "workbench.view.search"
 				},
 				"viewContainerBadgeEnablementStates": {}
 			},
@@ -3563,6 +3389,12 @@
 				},
 				{
 					"id": "epicAnchors",
+					"isHidden": false
+				}
+			],
+			"workbench.views.service.sidebar.3ef02a32-8b46-4c6d-bb2e-3d4d42b5606f.state.hidden": [
+				{
+					"id": "gitlens.views.searchAndCompare",
 					"isHidden": false
 				}
 			],
@@ -3595,41 +3427,51 @@
 				}
 			],
 			"file.particpants.additionalEdits": "false",
-			"java.2.isCandidate": "true",
+			"java.2.isCandidate": "false",
 			"ces/remindLaterDate": "Tue, 25 Apr 2023 12:46:19 GMT",
 			"userDataProfiles.state.hidden": [
 				{
 					"id": "workbench.views.profiles.export.preview",
 					"isHidden": false
-				}
-			],
-			"menu.hiddenCommands": {
-				"EditorTitle": [
-					"git.openChange"
-				]
-			},
-			"workbench.view.extension.gitlensInspect.state.hidden": [
+				},
 				{
-					"id": "gitlens.views.timeline",
+					"id": "workbench.views.profiles.import.preview",
 					"isHidden": false
 				}
 			],
-			"workbench.view.extension.makefile__viewContainer.state.hidden": [
+			"github-AlvaroDavi5": [
 				{
-					"id": "makefile.outline",
-					"isHidden": false
+					"id": "eamodio.gitlens",
+					"name": "GitLens — Git supercharged",
+					"allowed": true
+				},
+				{
+					"id": "ms-vsliveshare.vsliveshare",
+					"name": "Live Share",
+					"allowed": true
+				},
+				{
+					"id": "vscode.configuration-editing",
+					"name": "Configuration Editing",
+					"allowed": true
 				}
 			],
-			"extensionsAssistant/importantRecommendationsIgnore": [
-				"ms-vscode.makefile-tools"
-			],
+			"themeUpdatedNotificationShown": "true",
+			"java.2.skipVersion": "1.78.0",
+			"workbench.activityBar.location": "default",
 			"~remote.forwardedPortsContainer.hidden": [
 				{
 					"id": "~remote.forwardedPorts",
 					"isHidden": false
 				}
 			],
-			"workbench.activityBar.location": "side"
+			"encryption.migratedToGnomeLibsecret": "true",
+			"workbench.view.extension.gitlensInspect.state.hidden": [
+				{
+					"id": "gitlens.views.timeline",
+					"isHidden": false
+				}
+			]
 		}
 	}
 }
