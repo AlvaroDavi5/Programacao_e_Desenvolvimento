@@ -233,9 +233,6 @@
 		"debug.console.closeOnEnd": true,
 		"diffEditor.ignoreTrimWhitespace": false,
 		"tabnine.experimentalAutoImports": true,
-		"[json]": {
-			"editor.defaultFormatter": "vscode.json-language-features"
-		},
 		"git.autofetch": true,
 		"git.enableSmartCommit": true,
 		"git.openRepositoryInParentFolders": "always",
@@ -321,6 +318,12 @@
 			"plaintext": false,
 			"markdown": true,
 			"java": true
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[json]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
 		},
 		"[python]": {
 			"editor.formatOnType": true

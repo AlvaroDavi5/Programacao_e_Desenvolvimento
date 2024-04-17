@@ -13,8 +13,9 @@
 	"editor.guides.bracketPairs": "active",
 	"editor.pasteAs.enabled": false,
 	"editor.pasteAs.showPasteSelector": "never",
+	"editor.stickyScroll.enabled": false,
 	"editor.autoClosingBrackets": "always",
-	// "editor.defaultFormatter": "vscode.typescript-language-features",
+	"editor.defaultFormatter": "vscode.typescript-language-features",
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "never"
 	},
@@ -76,9 +77,6 @@
 	"debug.console.closeOnEnd": true,
 	"diffEditor.ignoreTrimWhitespace": false,
 	"tabnine.experimentalAutoImports": true,
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
 	"git.autofetch": true,
 	"git.enableSmartCommit": true,
 	"git.openRepositoryInParentFolders": "always",
@@ -164,6 +162,12 @@
 		"plaintext": false,
 		"markdown": true,
 		"java": true
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[python]": {
 		"editor.formatOnType": true
