@@ -1,12 +1,8 @@
 {
 	"folders": [
 		{
-			"name": "[REFACTOR] Portal - BFF",
-			"path": "/home/alvaro/Documents/Raio/repos/portal-raio-bff"
-		},
-		{
 			"name": "Portal - BFF",
-			"path": "/home/alvaro/Documents/Raio/repos/portal-bff"
+			"path": "/home/alvaro/Documents/Raio/repos/portal-raio-bff"
 		},
 		{
 			"name": "App - BFF",
