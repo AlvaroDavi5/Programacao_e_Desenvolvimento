@@ -169,6 +169,12 @@
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
+	"[java]": {
+		"editor.defaultFormatter": "redhat.java"
+	},
+	"[dockercompose]": {
+		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+	},
 	"[python]": {
 		"editor.formatOnType": true
 	},

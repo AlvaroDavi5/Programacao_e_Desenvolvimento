@@ -88,7 +88,7 @@
 		"editor.pasteAs.showPasteSelector": "never",
 		"editor.stickyScroll.enabled": false,
 		"editor.autoClosingBrackets": "always",
-		// "editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": "never"
 		},
@@ -130,26 +130,10 @@
 			"typescript",
 			"typescriptreact"
 		],
-		"cSpell.language": "pt,pt-BR,en",
-		"cSpell.enableFiletypes": [
-			"!jade",
-			"!yml",
-			"log",
-			"ruby",
-			"shellscript",
-			"sql",
-			"swift",
-			"xml"
-		],
-		"jupyter.alwaysTrustNotebooks": true,
-		"jupyter.askForKernelRestart": false,
 		"debug.allowBreakpointsEverywhere": true,
 		"debug.console.closeOnEnd": true,
 		"diffEditor.ignoreTrimWhitespace": false,
 		"tabnine.experimentalAutoImports": true,
-		"[json]": {
-			"editor.defaultFormatter": "vscode.json-language-features"
-		},
 		"git.autofetch": true,
 		"git.enableSmartCommit": true,
 		"git.openRepositoryInParentFolders": "always",
@@ -234,6 +218,15 @@
 			"plaintext": false,
 			"markdown": true,
 			"java": true
+		},
+		"[jsonc]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[json]": {
+			"editor.defaultFormatter": "vscode.json-language-features"
+		},
+		"[dockercompose]": {
+			"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 		},
 		"files.exclude": {
 			"**/.classpath": true,
