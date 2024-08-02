@@ -175,9 +175,12 @@
 		"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": "never"
 		},
+		"editor.unicodeHighlight.invisibleCharacters": false,
+		"editor.unicodeHighlight.ambiguousCharacters": false,
 		"explorer.autoReveal": true,
 		"explorer.confirmDragAndDrop": false,
 		"scm.defaultViewMode": "tree",
+		"scm.showHistoryGraph": false,
 		"workbench.productIconTheme": "material-product-icons",
 		"workbench.sideBar.location": "left",
 		"workbench.tree.indent": 15,
@@ -350,6 +353,9 @@
 			"**/.factorypath": true
 		},
 		"color-highlight.languages": [
+			"*"
+		],
+		"color-highlight.hslWithNoFunctionLanguages": [
 			"*"
 		],
 		"better-comments.multilineComments": true,
