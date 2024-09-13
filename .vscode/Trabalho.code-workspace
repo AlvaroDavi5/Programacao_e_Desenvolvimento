@@ -29,22 +29,10 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"name": "Node.js: Launch Current File",
-				"type": "node",
+				"name": "Node.js: Debug with YARN",
+				"command": "yarn start:debug",
 				"request": "launch",
-				"program": "${fileDirname}/${file}",
-				"skipFiles": [
-					"<node_internals>/**"
-				]
-			},
-			{
-				"name": "Node.js: Attach by Process ID",
-				"type": "node",
-				"request": "attach",
-				"processId": "${command:PickProcess}",
-				"skipFiles": [
-					"<node_internals>/**"
-				]
+				"type": "node-terminal"
 			},
 			{
 				"name": "Node.js: Launch Current TypeScript File",
@@ -61,13 +49,6 @@
 				"internalConsoleOptions": "openOnSessionStart",
 				"sourceMaps": true,
 				"smartStep": true
-			},
-			{
-				"name": "Chrome: Launch against localhost",
-				"type": "chrome",
-				"request": "launch",
-				"webRoot": "${workspaceFolder}",
-				"url": "http://localhost:8080/"
 			}
 		]
 	},
@@ -123,6 +104,9 @@
 		"powermode.shake.enabled": false,
 		"material-icon-theme.activeIconPack": "nest",
 		"vsicons.presets.nestjs": true,
+		"vsicons.presets.angular": true,
+		"vsicons.presets.tsOfficial": true,
+		"vsicons.presets.jsOfficial": true,
 		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 		"vsintellicode.features.python.deepLearning": "enabled",
 		"editorconfig.generateAuto": true,
@@ -301,32 +285,32 @@
 				"scope": "file"
 			},
 			"TODO": {
-				"iconColor": "orange",
+				"iconColor": "#ffb300",
 				"highlightColor": "#ffb300",
 				"scope": "workspace"
 			},
 			"FIXME": {
-				"iconColor": "red",
+				"iconColor": "#f44336",
 				"highlightColor": "#f44336",
 				"scope": "workspace"
 			},
 			"STUB": {
-				"iconColor": "purple",
+				"iconColor": "#ba68c8",
 				"highlightColor": "#ba68c8",
 				"scope": "file"
 			},
 			"NOTE": {
-				"iconColor": "blue",
+				"iconColor": "#47acff",
 				"highlightColor": "#47acff",
 				"scope": "file"
 			},
 			"REVIEW": {
-				"iconColor": "green",
+				"iconColor": "#64dd17",
 				"highlightColor": "#64dd17",
 				"scope": "workspace"
 			},
 			"SECTION": {
-				"iconColor": "blurple",
+				"iconColor": "#3811ff",
 				"highlightColor": "#3811ff",
 				"scope": "workspace",
 				"behavior": "region"
@@ -341,6 +325,7 @@
 		"files.associations": {
 			"*.apib": "apiblueprint",
 			"*.dbml": "dbml",
+			"**/CODEOWNERS": "markdown",
 			"*.rmd": "markdown"
 		},
 		"json.schemas": [
