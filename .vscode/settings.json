@@ -49,6 +49,10 @@
 	"powermode.combo.location": "editor",
 	"powermode.shake.enabled": false,
 	"material-icon-theme.activeIconPack": "nest",
+	"vsicons.presets.nestjs": true,
+	"vsicons.presets.angular": true,
+	"vsicons.presets.tsOfficial": true,
+	"vsicons.presets.jsOfficial": true,
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
 	"editorconfig.generateAuto": true,
@@ -259,32 +263,32 @@
 			"scope": "file"
 		},
 		"TODO": {
-			"iconColor": "orange",
+			"iconColor": "#ffb300",
 			"highlightColor": "#ffb300",
 			"scope": "workspace"
 		},
 		"FIXME": {
-			"iconColor": "red",
+			"iconColor": "#f44336",
 			"highlightColor": "#f44336",
 			"scope": "workspace"
 		},
 		"STUB": {
-			"iconColor": "purple",
+			"iconColor": "#ba68c8",
 			"highlightColor": "#ba68c8",
 			"scope": "file"
 		},
 		"NOTE": {
-			"iconColor": "blue",
+			"iconColor": "#47acff",
 			"highlightColor": "#47acff",
 			"scope": "file"
 		},
 		"REVIEW": {
-			"iconColor": "green",
+			"iconColor": "#64dd17",
 			"highlightColor": "#64dd17",
 			"scope": "workspace"
 		},
 		"SECTION": {
-			"iconColor": "blurple",
+			"iconColor": "#3811ff",
 			"highlightColor": "#3811ff",
 			"scope": "workspace",
 			"behavior": "region"
@@ -367,6 +371,7 @@
 		"cstring": "cpp",
 		"*.apib": "apiblueprint",
 		"*.dbml": "dbml",
+		"**/CODEOWNERS": "markdown",
 		"*.rmd": "markdown"
 	},
 	"json.schemas": [
