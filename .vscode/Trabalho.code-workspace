@@ -13,6 +13,10 @@
 			"path": "/home/alvaro/Documents/Raio/repos/prepaid-service"
 		},
 		{
+			"name": "Financial - Service",
+			"path": "/home/alvaro/Documents/Raio/repos/financial-service"
+		},
+		{
 			"name": "Beneficiary - Service",
 			"path": "/home/alvaro/Documents/Raio/repos/beneficiary-service"
 		},
@@ -97,7 +101,7 @@
 		"sync.autoUpload": true,
 		"sync.autoDownload": true,
 		"bracket-pair-colorizer-2.depreciation-notice": false,
-		"bookmarks.saveBookmarksInProject": false,
+		"bookmarks.saveBookmarksInProject": true,
 		"powermode.enabled": true,
 		"powermode.presets": "flames",
 		"powermode.combo.location": "editor",
