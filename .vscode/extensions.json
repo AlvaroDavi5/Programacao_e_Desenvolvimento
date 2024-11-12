@@ -38,6 +38,7 @@
 		// Coding Assistance
 		"ms-vsliveshare.vsliveshare",
 		"lkytal.pomodoro",
+		"wix.vscode-import-cost",
 		"hoovercj.vscode-power-mode",
 		// Style
 		"vscode-icons-team.vscode-icons",
@@ -49,6 +50,7 @@
 		"franneck94.c-cpp-runner",
 		"vscjava.vscode-java-pack",
 		"ms-python.python",
+		"ms-python.debugpy",
 		"ms-python.vscode-pylance",
 		"ms-toolsai.jupyter",
 		"ms-vscode.vscode-serial-monitor",
