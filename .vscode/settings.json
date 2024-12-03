@@ -330,6 +330,10 @@
 		}
 	},
 	"files.associations": {
+		"*.apib": "apiblueprint",
+		"*.dbml": "dbml",
+		"**/CODEOWNERS": "markdown",
+		"*.rmd": "markdown",
 		"stdio.h": "c",
 		"stdlib.h": "c",
 		"stdbool.h": "c",
@@ -397,10 +401,6 @@
 		"ranges": "cpp",
 		"compare": "cpp",
 		"concepts": "cpp",
-		"cstring": "cpp",
-		"*.apib": "apiblueprint",
-		"*.dbml": "dbml",
-		"**/CODEOWNERS": "markdown",
-		"*.rmd": "markdown"
+		"cstring": "cpp"
 	}
 }
