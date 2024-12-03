@@ -18,6 +18,8 @@
 		// Editor Configs
 		"editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"redhat.java",
 		"visualstudioexptteam.vscodeintellicode",
 		"visualstudioexptteam.intellicode-api-usage-examples",
 		// Code Documentation and Bookmarks

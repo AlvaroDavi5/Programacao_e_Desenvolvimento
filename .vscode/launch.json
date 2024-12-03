@@ -79,31 +79,55 @@
 			"console": "integratedTerminal"
 		},
 		{
-			"name": "Node.js: Debug with YARN",
+			"name": "Node-YARN: Debug",
 			"command": "yarn start:debug",
 			"request": "launch",
 			"type": "node-terminal"
 		},
 		{
-			"name": "Node.js: Test Unit Debug with YARN",
+			"name": "Node-YARN: Test Unit Debug",
 			"command": "yarn test:unit:watch",
 			"request": "launch",
 			"type": "node-terminal"
 		},
 		{
-			"name": "Node.js: Test Integ Debug with YARN",
+			"name": "Node-YARN: Test Integ Debug",
 			"command": "yarn test:integration:watch",
 			"request": "launch",
 			"type": "node-terminal"
 		},
 		{
-			"name": "Node.js: Test E2E Debug with YARN",
+			"name": "Node-YARN: Test E2E Debug",
 			"command": "yarn test:e2e:watch",
 			"request": "launch",
 			"type": "node-terminal"
 		},
 		{
-			"name": "Node.js: Launch Current File",
+			"name": "Node-NEXT: debug server-side",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "yarn run start:dev"
+		},
+		{
+			"name": "Node-NEXT: debug client-side",
+			"type": "chrome",
+			"request": "launch",
+			"webRoot": "${workspaceFolder}",
+			"url": "http://localhost:3001"
+		},
+		{
+			"name": "Node-NEXT: debug full stack",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "yarn run start:dev",
+			"serverReadyAction": {
+				"pattern": "- Local:.+(https?://.+)",
+				"uriFormat": "%s",
+				"action": "debugWithChrome"
+			}
+		},
+		{
+			"name": "Node: Launch Current File",
 			"type": "node",
 			"request": "launch",
 			"program": "${fileDirname}/${file}",
@@ -112,7 +136,7 @@
 			]
 		},
 		{
-			"name": "Node.js: Launch Current TypeScript File",
+			"name": "Node: Launch Current TypeScript File",
 			"type": "node",
 			"request": "launch",
 			"skipFiles": [
@@ -128,7 +152,7 @@
 			"smartStep": true
 		},
 		{
-			"name": "Node.js: Attach by Process ID",
+			"name": "Node: Attach by Process ID",
 			"type": "node",
 			"request": "attach",
 			"processId": "${command:PickProcess}",
