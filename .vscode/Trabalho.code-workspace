@@ -28,6 +28,10 @@
 			"name": "Communication - Service",
 			"path": "/home/alvaro/Documents/Raio/repos/communication-service"
 		},
+		{
+			"name": "Scripts",
+			"path": "/home/alvaro/Documents/Raio/repos/scripts"
+		}
 	],
 	"launch": {
 		"version": "0.2.0",

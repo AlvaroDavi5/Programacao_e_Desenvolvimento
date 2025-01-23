@@ -2,6 +2,7 @@
 	// Workflow
 	"security.workspace.trust.untrustedFiles": "open",
 	"problems.showCurrentInStatus": true,
+	"update.showReleaseNotes": false,
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
 	"http.proxy": "",
@@ -168,6 +169,9 @@
 	"docker.containers.groupBy": "Compose Project Name",
 	"docker.containers.sortBy": "Label",
 	"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
+	"latex-workshop.bibtex.maxFileSize": 10,
+	"latex-workshop.bibtex-format.tab": "tab",
+	"latex-workshop.formatting.latex": "latexindent",
 	"javascript.suggest.autoImports": true,
 	"javascript.suggestionActions.enabled": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
