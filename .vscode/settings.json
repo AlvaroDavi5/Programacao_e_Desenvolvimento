@@ -211,6 +211,9 @@
 	"[dockercompose]": {
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
+	"[latex]": {
+		"editor.defaultFormatter": "mathematic.vscode-latex"
+	},
 	"[python]": {
 		"editor.formatOnType": true
 	},

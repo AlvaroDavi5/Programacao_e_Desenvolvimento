@@ -38,6 +38,7 @@
 		"mhutchie.git-graph",
 		"eamodio.gitlens",
 		"ms-azuretools.vscode-docker",
+		"mathematic.vscode-latex",
 		// Coding Assistance
 		"ms-vsliveshare.vsliveshare",
 		"lkytal.pomodoro",
