@@ -33,12 +33,11 @@
 		"mikestead.dotenv",
 		"kdarkhan.mips",
 		"puorc.awesome-vhdl",
-		"mathematic.vscode-latex",
 		// Git and Docker Tools
 		"mhutchie.git-graph",
 		"eamodio.gitlens",
 		"ms-azuretools.vscode-docker",
-		"mathematic.vscode-latex",
+		"James-Yu.latex-workshop",
 		// Coding Assistance
 		"ms-vsliveshare.vsliveshare",
 		"lkytal.pomodoro",

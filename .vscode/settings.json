@@ -212,7 +212,7 @@
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
 	"[latex]": {
-		"editor.defaultFormatter": "mathematic.vscode-latex"
+		"editor.defaultFormatter": "James-Yu.latex-workshop"
 	},
 	"[python]": {
 		"editor.formatOnType": true
