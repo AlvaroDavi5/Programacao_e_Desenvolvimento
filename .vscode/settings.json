@@ -169,9 +169,17 @@
 	"docker.containers.groupBy": "Compose Project Name",
 	"docker.containers.sortBy": "Label",
 	"c-cpp-compile-run.cpp-flags": "-Wall -Wextra -lm",
+	"latex-workshop.formatting.latex": "latexindent",
+	"latex-workshop.formatting.latexindent.path": "/home/alvaro/latexindent",
+	"latex-workshop.formatting.latexindent.args": [
+		"-c",
+		"%DIR%/",
+		"%TMPFILE%",
+		"-y=defaultIndent: '%INDENT%'"
+	],
 	"latex-workshop.bibtex.maxFileSize": 10,
 	"latex-workshop.bibtex-format.tab": "tab",
-	"latex-workshop.formatting.latex": "latexindent",
+	"latex-workshop.bibtex-format.case": "lowercase",
 	"javascript.suggest.autoImports": true,
 	"javascript.suggestionActions.enabled": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
