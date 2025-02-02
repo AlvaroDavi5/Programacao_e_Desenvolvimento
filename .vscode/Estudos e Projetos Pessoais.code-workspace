@@ -1,8 +1,16 @@
 {
 	"folders": [
 		{
-			"name": "Node_BackEnd_Boilerplate-TypeScript",
-			"path": "/home/alvaro/Documents/Programação/Node/Node_BackEnd_Boilerplate-TypeScript"
+			"name": "Roteiros",
+			"path": "/home/alvaro/Documents/Programação/Roteiros"
+		},
+		{
+			"name": "Github_Pages",
+			"path": "/home/alvaro/Documents/Programação/AlvaroDavi5.github.io/"
+		},
+		{
+			"name": "Angular_FrontEnd_Boilerplate-TypeScript",
+			"path": "/home/alvaro/Documents/Programação/Node/Angular_FrontEnd_Boilerplate-TypeScript"
 		},
 		{
 			"name": "Spring_BackEnd_Boilerplate-Java",
@@ -13,12 +21,8 @@
 			"path": "/home/alvaro/Documents/Programação/Node/React_FrontEnd_Boilerplate-TypeScript"
 		},
 		{
-			"name": "Angular_FrontEnd_Boilerplate-TypeScript",
-			"path": "/home/alvaro/Documents/Programação/Node/Angular_FrontEnd_Boilerplate-TypeScript"
-		},
-		{
-			"name": "Roteiros",
-			"path": "/home/alvaro/Documents/Programação/Roteiros"
+			"name": "Node_BackEnd_Boilerplate-TypeScript",
+			"path": "/home/alvaro/Documents/Programação/Node/Node_BackEnd_Boilerplate-TypeScript"
 		},
 		{
 			"name": "Programacao_e_Desenvolvimento",
