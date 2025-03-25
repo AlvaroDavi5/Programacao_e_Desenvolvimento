@@ -31,6 +31,10 @@
 		{
 			"name": "Scripts",
 			"path": "/home/alvaro/Documents/Raio/repos/scripts"
+		},
+		{
+			"name": "Serverless",
+			"path": "/home/alvaro/Documents/Raio/repos/serverless-tools"
 		}
 	],
 	"launch": {
@@ -119,6 +123,7 @@
 		"git.autofetch": true,
 		"git.enableSmartCommit": true,
 		"git.openRepositoryInParentFolders": "always",
+		"git.discardUntrackedChangesToTrash": false,
 		// Debug
 		"debug.allowBreakpointsEverywhere": true,
 		"debug.console.closeOnEnd": true,
