@@ -43,7 +43,7 @@
 	"editor.unicodeHighlight.invisibleCharacters": false,
 	"editor.unicodeHighlight.ambiguousCharacters": false,
 	// Workbench
-	"workbench.colorTheme": "Dracula Theme",
+	"workbench.colorTheme": "Cursor Dark Midnight",
 	"workbench.iconTheme": "material-icon-theme",
 	"workbench.productIconTheme": "material-product-icons",
 	"workbench.tree.indent": 15,
@@ -191,12 +191,17 @@
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.tsserver.maxTsServerMemory": 1536,
 	"typescript.tsserver.watchOptions": {},
+	"cursor.cpp.disabledLanguages": [
+		"plaintext",
+		"scminput"
+	],
 	"github.copilot.enable": {
-		"*": true,
-		"yaml": true,
+		"*": false,
+		"plaintext": false,
 		"markdown": true,
-		"java": true,
-		"plaintext": false
+		"scminput": false,
+		"yaml": true,
+		"java": true
 	},
 	"json.schemas": [
 		{
