@@ -19,7 +19,6 @@
 		"editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",
 		"esbenp.prettier-vscode",
-		"redhat.java",
 		"visualstudioexptteam.vscodeintellicode",
 		"visualstudioexptteam.intellicode-api-usage-examples",
 		// Code Documentation and Bookmarks
@@ -31,6 +30,7 @@
 		"matt-meyers.vscode-dbml",
 		"develiteio.api-blueprint-viewer",
 		"mikestead.dotenv",
+		"docker.docker",
 		"kdarkhan.mips",
 		"puorc.awesome-vhdl",
 		// Git and Docker Tools
@@ -43,6 +43,8 @@
 		"lkytal.pomodoro",
 		"wix.vscode-import-cost",
 		"hoovercj.vscode-power-mode",
+		"GitHub.copilot",
+		"GitHub.copilot-chat",
 		// Style
 		"vscode-icons-team.vscode-icons",
 		"dracula-theme.theme-dracula",
