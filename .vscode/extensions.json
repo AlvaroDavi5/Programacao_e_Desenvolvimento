@@ -40,8 +40,9 @@
 		"James-Yu.latex-workshop",
 		// Coding Assistance
 		"ms-vsliveshare.vsliveshare",
-		"lkytal.pomodoro",
 		"wix.vscode-import-cost",
+		"YoavBls.pretty-ts-errors",
+		"lkytal.pomodoro",
 		"hoovercj.vscode-power-mode",
 		"GitHub.copilot",
 		"GitHub.copilot-chat",
