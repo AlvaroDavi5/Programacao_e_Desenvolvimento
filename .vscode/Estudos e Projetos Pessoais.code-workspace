@@ -410,17 +410,12 @@
 		"typescript.enablePromptUseWorkspaceTsdk": true,
 		"typescript.tsserver.maxTsServerMemory": 1536,
 		"typescript.tsserver.watchOptions": {},
-		"cursor.cpp.disabledLanguages": [
-			"plaintext",
-			"scminput"
-		],
 		"github.copilot.enable": {
-			"*": false,
-			"plaintext": false,
-			"markdown": true,
-			"scminput": false,
+			"*": true,
 			"yaml": true,
-			"java": true
+			"markdown": true,
+			"java": true,
+			"plaintext": false
 		},
 		"json.schemas": [
 			{
@@ -447,7 +442,7 @@
 			"editor.defaultFormatter": "vscjava.vscode-java-pack"
 		},
 		"[dockercompose]": {
-			"editor.defaultFormatter": "ms-azuretools.vscode-docker"
+			"editor.defaultFormatter": "docker.docker" // ms-azuretools.vscode-docker
 		},
 		"[latex]": {
 			"editor.defaultFormatter": "James-Yu.latex-workshop"
