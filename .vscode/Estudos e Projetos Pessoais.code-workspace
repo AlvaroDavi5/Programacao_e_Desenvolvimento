@@ -256,6 +256,7 @@
 		"workbench.sideBar.location": "left",
 		"workbench.activityBar.orientation": "vertical",
 		"window.customTitleBarVisibility": "auto",
+		"window.commandCenter": true,
 		// Editor Tabs
 		"editor.minimap.enabled": true,
 		"explorer.autoReveal": true,
@@ -278,6 +279,12 @@
 		"containers.containers.sortBy": "Label",
 		"containers.images.groupBy": "RepositoryName",
 		"containers.images.sortBy": "Label",
+		"docker.commands.composeUpSubset": [
+			{
+				"label": "Compose Up",
+				"template": "${composeCommand} ${profileList} ${configurationFile} up ${detached} ${build} ${serviceList}"
+			}
+		],
 		"material-icon-theme.activeIconPack": "nest",
 		"vsicons.presets.nestjs": true,
 		"vsicons.presets.angular": true,
@@ -403,12 +410,17 @@
 		"typescript.enablePromptUseWorkspaceTsdk": true,
 		"typescript.tsserver.maxTsServerMemory": 1536,
 		"typescript.tsserver.watchOptions": {},
+		"cursor.cpp.disabledLanguages": [
+			"plaintext",
+			"scminput"
+		],
 		"github.copilot.enable": {
-			"*": true,
-			"yaml": true,
+			"*": false,
+			"plaintext": false,
 			"markdown": true,
-			"java": true,
-			"plaintext": false
+			"scminput": false,
+			"yaml": true,
+			"java": true
 		},
 		"json.schemas": [
 			{
