@@ -72,6 +72,10 @@
 	// Extensions
 	"extensions.closeExtensionDetailsOnViewChange": false,
 	"extensions.ignoreRecommendations": true,
+	"containers.containers.groupBy": "Compose Project Name",
+	"containers.containers.sortBy": "Label",
+	"containers.images.groupBy": "RepositoryName",
+	"containers.images.sortBy": "Label",
 	"material-icon-theme.activeIconPack": "nest",
 	"vsicons.presets.nestjs": true,
 	"vsicons.presets.angular": true,
