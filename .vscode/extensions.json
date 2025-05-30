@@ -37,6 +37,7 @@
 		"mhutchie.git-graph",
 		"eamodio.gitlens",
 		"ms-azuretools.vscode-docker",
+		"ms-azuretools.vscode-containers",
 		"James-Yu.latex-workshop",
 		// Coding Assistance
 		"ms-vsliveshare.vsliveshare",

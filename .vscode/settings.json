@@ -240,7 +240,7 @@
 		"editor.defaultFormatter": "vscjava.vscode-java-pack"
 	},
 	"[dockercompose]": {
-		"editor.defaultFormatter": "docker.docker" // ms-azuretools.vscode-docker
+		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
 	"[latex]": {
 		"editor.defaultFormatter": "James-Yu.latex-workshop"
