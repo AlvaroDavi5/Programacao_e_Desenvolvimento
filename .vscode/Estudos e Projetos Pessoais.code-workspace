@@ -9,6 +9,10 @@
 			"path": "/home/alvaro/Documents/Programação/AlvaroDavi5.github.io/"
 		},
 		{
+			"name": "system_prompts_and_models_of_AI_tools",
+			"path": "/home/alvaro/Documents/Programação/system_prompts_and_models_of_AI_tools/"
+		},
+		{
 			"name": "Angular_FrontEnd_Boilerplate-TypeScript",
 			"path": "/home/alvaro/Documents/Programação/Node/Angular_FrontEnd_Boilerplate-TypeScript"
 		},
@@ -207,7 +211,7 @@
 		"update.showReleaseNotes": false,
 		"terminal.integrated.defaultProfile.linux": "zsh",
 		"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
-		"chat.commandCenter.enabled": false,
+		"chat.commandCenter.enabled": true,
 		"http.proxy": "",
 		"http.proxySupport": "off",
 		"http.proxyAuthorization": null,
