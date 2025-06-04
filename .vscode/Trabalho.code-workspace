@@ -5,20 +5,24 @@
 			"path": "/home/alvaro/Documents/Raio/repos/portal-raio-bff"
 		},
 		{
-			"name": "App - BFF",
-			"path": "/home/alvaro/Documents/Raio/repos/app-bff"
-		},
-		{
 			"name": "Prepaid - Service",
 			"path": "/home/alvaro/Documents/Raio/repos/prepaid-service"
 		},
 		{
-			"name": "Financial - Service",
-			"path": "/home/alvaro/Documents/Raio/repos/financial-service"
-		},
-		{
 			"name": "Beneficiary - Service",
 			"path": "/home/alvaro/Documents/Raio/repos/beneficiary-service"
+		},
+		{
+			"name": "Reports - Service",
+			"path": "/home/alvaro/Documents/Raio/repos/reports-service"
+		},
+		{
+			"name": "App - BFF",
+			"path": "/home/alvaro/Documents/Raio/repos/app-bff"
+		},
+		{
+			"name": "Financial - Service",
+			"path": "/home/alvaro/Documents/Raio/repos/financial-service"
 		},
 		{
 			"name": "Identity - Service",
