@@ -91,7 +91,7 @@
 		"editor.tabSize": 2,
 		"editor.formatOnSave": true,
 		"editor.wordWrap": "off",
-		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.codeActionsOnSave": {
 			"source.fixAll": "explicit",
 			"source.organizeImports": "never",
