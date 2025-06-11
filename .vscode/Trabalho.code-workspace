@@ -253,9 +253,11 @@
 			"*": true,
 			"yaml": true,
 			"markdown": true,
+			"scminput": false,
 			"java": false,
 			"plaintext": false
 		},
+		"github.copilot.nextEditSuggestions.enabled": false,
 		"json.schemas": [
 			{
 				"fileMatch": [
