@@ -114,26 +114,8 @@
 				"console": "integratedTerminal"
 			},
 			{
-				"name": "Node-YARN: Debug",
-				"command": "yarn start:debug",
-				"request": "launch",
-				"type": "node-terminal"
-			},
-			{
-				"name": "Node-YARN: Test Unit Debug",
-				"command": "yarn test:unit:watch",
-				"request": "launch",
-				"type": "node-terminal"
-			},
-			{
-				"name": "Node-YARN: Test Integ Debug",
-				"command": "yarn test:integration:watch",
-				"request": "launch",
-				"type": "node-terminal"
-			},
-			{
-				"name": "Node-YARN: Test E2E Debug",
-				"command": "yarn test:e2e:watch",
+				"name": "Node-NPM: Debug",
+				"command": "npm run start:debug",
 				"request": "launch",
 				"type": "node-terminal"
 			},
@@ -141,7 +123,7 @@
 				"name": "Node-NEXT: debug server-side",
 				"type": "node-terminal",
 				"request": "launch",
-				"command": "yarn run start:dev"
+				"command": "npm run start:dev"
 			},
 			{
 				"name": "Node-NEXT: debug client-side",
@@ -154,7 +136,7 @@
 				"name": "Node-NEXT: debug full stack",
 				"type": "node-terminal",
 				"request": "launch",
-				"command": "yarn run start:dev",
+				"command": "npm run start:dev",
 				"serverReadyAction": {
 					"pattern": "- Local:.+(https?://.+)",
 					"uriFormat": "%s",
@@ -222,6 +204,8 @@
 		"sync.forceDownload": true,
 		"sync.autoUpload": true,
 		"sync.autoDownload": true,
+		"window.customTitleBarVisibility": "auto",
+		"window.commandCenter": true,
 		// Editor
 		"editor.insertSpaces": false,
 		"editor.tabSize": 2,
@@ -259,8 +243,10 @@
 		"workbench.tree.indent": 15,
 		"workbench.sideBar.location": "left",
 		"workbench.activityBar.orientation": "vertical",
-		"window.customTitleBarVisibility": "auto",
-		"window.commandCenter": true,
+		"workbench.editorAssociations": {
+			"*.copilotmd": "vscode.markdown.preview.editor",
+			"*.pdf": "latex-workshop-pdf-hook"
+		},
 		// Editor Tabs
 		"editor.minimap.enabled": true,
 		"explorer.autoReveal": true,
@@ -335,6 +321,8 @@
 		"gitlens.views.tags.branches.layout": "list",
 		"gitlens.views.branches.branches.layout": "list",
 		"gitlens.plusFeatures.enabled": true,
+		"gitlens.ai.model": "gitkraken",
+		"gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
 		"gitlens.menus": {
 			"editor": {
 				"blame": false,
@@ -419,10 +407,8 @@
 			"yaml": true,
 			"markdown": true,
 			"java": true,
-			"scminput": false,
 			"plaintext": false
 		},
-		"github.copilot.nextEditSuggestions.enabled": false,
 		"json.schemas": [
 			{
 				"fileMatch": [

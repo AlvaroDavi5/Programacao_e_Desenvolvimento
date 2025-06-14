@@ -79,26 +79,8 @@
 			"console": "integratedTerminal"
 		},
 		{
-			"name": "Node-YARN: Debug",
-			"command": "yarn start:debug",
-			"request": "launch",
-			"type": "node-terminal"
-		},
-		{
-			"name": "Node-YARN: Test Unit Debug",
-			"command": "yarn test:unit:watch",
-			"request": "launch",
-			"type": "node-terminal"
-		},
-		{
-			"name": "Node-YARN: Test Integ Debug",
-			"command": "yarn test:integration:watch",
-			"request": "launch",
-			"type": "node-terminal"
-		},
-		{
-			"name": "Node-YARN: Test E2E Debug",
-			"command": "yarn test:e2e:watch",
+			"name": "Node-NPM: Debug",
+			"command": "npm run start:debug",
 			"request": "launch",
 			"type": "node-terminal"
 		},
@@ -106,7 +88,7 @@
 			"name": "Node-NEXT: debug server-side",
 			"type": "node-terminal",
 			"request": "launch",
-			"command": "yarn run start:dev"
+			"command": "npm run start:dev"
 		},
 		{
 			"name": "Node-NEXT: debug client-side",
@@ -119,7 +101,7 @@
 			"name": "Node-NEXT: debug full stack",
 			"type": "node-terminal",
 			"request": "launch",
-			"command": "yarn run start:dev",
+			"command": "npm run start:dev",
 			"serverReadyAction": {
 				"pattern": "- Local:.+(https?://.+)",
 				"uriFormat": "%s",
