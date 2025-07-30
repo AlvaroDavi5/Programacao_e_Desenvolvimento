@@ -1,45 +1,48 @@
 import System.IO
-import Data.List (sortBy, sort)
-import Data.Set (Set)
 import qualified Data.Set as Set
-import Data.Map (Map)
 import qualified Data.Map as Map
 
-type Point = [Double]
 type PointId = Int
 type Distance = Double
+type Point = [Distance]
 type Link = (PointId, PointId, Distance)
-type Points = Map PointId Point
+type Points = Map.Map PointId Point
 type Groups = [[PointId]]
 
-splitOn :: Char -> String -> [String]
-splitOn delim s = case dropWhile (== delim) s of
-    "" -> []
-    s' -> w : splitOn delim s''
-      where (w, s'') = break (== delim) s'
+sort :: Ord a => [a] -> [a]
+sort [] = []
+sort (x:xs) = sort smaller ++ [x] ++ sort larger
+  where
+    smaller = [y | y <- xs, y <= x]
+    larger = [y | y <- xs, y > x]
+
+sortBy :: (a -> a -> Ordering) -> [a] -> [a]
+sortBy _ [] = []
+sortBy cmp (x:xs) = sortBy cmp smaller ++ [x] ++ sortBy cmp larger
+  where
+    smaller = [y | y <- xs, cmp y x /= GT]
+    larger = [y | y <- xs, cmp y x == GT]
 
 trim :: String -> String
 trim = reverse . dropWhile (== ' ') . reverse . dropWhile (== ' ')
+
+splitByChar :: Char -> String -> [String]
+splitByChar delim s = case dropWhile (== delim) s of
+    "" -> []
+    spl -> fp : splitByChar delim sp
+      where (fp, sp) = break (== delim) spl
 
 readCsvFile :: String -> IO [[String]]
 readCsvFile path = do
     content <- readFile path
     let csvLines = lines content
-    let csvRows = map (map trim . splitOn ',') csvLines
+    let csvRows = map (map trim . splitByChar ',') csvLines
     return csvRows
-
-writeListFile :: String -> Groups -> IO ()
-writeListFile path groups = do
-    let content = unlines [intercalate ", " (map show (sort group)) | group <- groups]
-    writeFile path content
-  where
-    intercalate sep [] = ""
-    intercalate sep [x] = x
-    intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
 
 readPoints :: String -> IO Points
 readPoints path = do
     csvData <- readCsvFile path
+    -- comeca o ID 1
     let pointsList = zip [1..] csvData
     let pointsMap = Map.fromList [(pid, map read row) | (pid, row) <- pointsList]
     return pointsMap
@@ -47,12 +50,12 @@ readPoints path = do
 euclideanDistance :: Point -> Point -> Distance
 euclideanDistance p1 p2
     | length p1 /= length p2 = error "Os pontos devem ter o mesmo número de dimensões."
-    | otherwise = sqrt $ sum [(x - y) ^ 2 | (x, y) <- zip p1 p2]
+    | otherwise = sqrt $ sum [(x - y) ^ (2 :: Int) | (x, y) <- zip p1 p2]
 
-findClosestPoint :: PointId -> Points -> Set PointId -> (PointId, Distance)
-findClosestPoint current pts used =
+findClosestPoint :: PointId -> Points -> Set.Set PointId -> (PointId, Distance)
+findClosestPoint current pts visited =
     let candidates = [(pid, euclideanDistance (pts Map.! current) coords) 
-                     | (pid, coords) <- Map.toList pts, not (Set.member pid used)]
+                     | (pid, coords) <- Map.toList pts, not (Set.member pid visited)]
         sortedCandidates = sortBy compareDistance candidates
     in head sortedCandidates
   where
@@ -64,17 +67,18 @@ findClosestPoint current pts used =
         | otherwise = EQ
 
 buildLinks :: Points -> [Link]
+-- comeca com o ponto 1 e um conjunto de visitados contendo apenas o ponto 1
 buildLinks pts = buildLinksHelper 1 (Set.singleton 1) []
   where
-    buildLinksHelper current used acc
-        | Set.size used >= Map.size pts = acc
+    buildLinksHelper current visited acc
+        | Set.size visited >= Map.size pts = acc
         | otherwise =
-            let (next, dist) = findClosestPoint current pts used
-                newUsed = Set.insert next used
+            let (next, dist) = findClosestPoint current pts visited
+                newVisited = Set.insert next visited
                 newLink = (current, next, dist)
-            in buildLinksHelper next newUsed (newLink : acc)
+            in buildLinksHelper next newVisited (newLink : acc)
 
-dfs :: Set PointId -> Map PointId [PointId] -> PointId -> [PointId] -> (Set PointId, [PointId])
+dfs :: Set.Set PointId -> Map.Map PointId [PointId] -> PointId -> [PointId] -> (Set.Set PointId, [PointId])
 dfs visited adj node currentGroup =
     let newVisited = Set.insert node visited
         newGroup = node : currentGroup
@@ -96,8 +100,7 @@ splitGroups links k
         in groups
   where
     allPoints = Set.fromList [p | (p1, p2, _) <- links, p <- [p1, p2]]
-    
-    buildAdjacency :: [Link] -> Map PointId [PointId]
+    buildAdjacency :: [Link] -> Map.Map PointId [PointId]
     buildAdjacency linkList =
         let emptyAdj = Map.fromList [(p, []) | p <- Set.toList allPoints]
         in foldl addLink emptyAdj linkList
@@ -105,8 +108,7 @@ splitGroups links k
         addLink adj (p1, p2, _) =
             let adj1 = Map.adjust (p2:) p1 adj
             in Map.adjust (p1:) p2 adj1
-    
-    findGroups :: Map PointId [PointId] -> Set PointId -> Groups
+    findGroups :: Map.Map PointId [PointId] -> Set.Set PointId -> Groups
     findGroups adj remaining
         | Set.null remaining = []
         | otherwise =
@@ -115,18 +117,27 @@ splitGroups links k
                 newRemaining = Set.difference remaining newVisited
             in sort group : findGroups adj newRemaining
 
+writeListFile :: String -> Groups -> IO ()
+writeListFile path groups = do
+    let content = unlines [intercalate ", " (map show (sort group)) | group <- groups]
+    writeFile path content
+  where
+    intercalate _ [] = ""
+    intercalate _ [x] = x
+    intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
+
 mainFunc :: String -> String -> Int -> IO ()
 mainFunc inputFile outputFile k = do
-    pts <- readPoints inputFile
-    let links = buildLinks pts
+    points <- readPoints inputFile
+    let links = buildLinks points
     let groups = splitGroups links k
-    
+
     putStrLn "Agrupamentos:"
     mapM_ (\group -> putStrLn $ intercalate ", " (map show (sort group))) groups
     writeListFile outputFile groups
   where
-    intercalate sep [] = ""
-    intercalate sep [x] = x
+    intercalate _ [] = ""
+    intercalate _ [x] = x
     intercalate sep (x:xs) = x ++ sep ++ intercalate sep xs
 
 main :: IO ()
