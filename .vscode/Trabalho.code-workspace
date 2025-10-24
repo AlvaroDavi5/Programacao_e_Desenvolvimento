@@ -39,11 +39,11 @@
 		{
 			"name": "Serverless",
 			"path": "/home/alvaro/Documents/Raio/repos/serverless-tools"
-		},
-		{
-			"name": "Scripts",
-			"path": "/home/alvaro/Documents/Raio/repos/scripts"
 		}
+		// {
+		// 	"name": "Scripts",
+		// 	"path": "/home/alvaro/Documents/Raio/repos/scripts"
+		// }
 	],
 	"launch": {
 		"version": "0.2.0",
