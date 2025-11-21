@@ -194,6 +194,7 @@
 		"terminal.integrated.defaultProfile.linux": "zsh",
 		"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
 		"chat.commandCenter.enabled": true,
+		"chat.agentSessionsViewLocation": "disabled",
 		"http.proxy": "",
 		"http.proxySupport": "off",
 		"http.proxyAuthorization": null,
