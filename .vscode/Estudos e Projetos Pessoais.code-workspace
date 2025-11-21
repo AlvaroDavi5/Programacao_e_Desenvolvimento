@@ -233,6 +233,8 @@
 		"editor.minimap.enabled": true,
 		"editor.unicodeHighlight.invisibleCharacters": false,
 		"editor.unicodeHighlight.ambiguousCharacters": false,
+		"explorer.autoReveal": true,
+		"explorer.confirmDragAndDrop": false,
 		// Workbench
 		"workbench.editor.restoreViewState": true,
 		"workbench.colorTheme": "Dracula Theme",
@@ -248,9 +250,6 @@
 			"*.copilotmd": "vscode.markdown.preview.editor",
 			"*.pdf": "latex-workshop-pdf-hook"
 		},
-		// Explorer
-		"explorer.autoReveal": true,
-		"explorer.confirmDragAndDrop": false,
 		// Git
 		"scm.defaultViewMode": "tree",
 		"scm.showHistoryGraph": false,
@@ -409,6 +408,14 @@
 			"java": true,
 			"plaintext": false
 		},
+		"github.copilot.selectedCompletionModel": "openai",
+		"github.copilot.nextEditSuggestions.enabled": true,
+		"github.copilot.advanced": {},
+		"github.copilot.chat.azureModels": {},
+		"github.copilot.chat.customOAIModels": {},
+		"github.copilot.chat.gpt5AlternatePrompt": "default",
+		"github.copilot.chat.claudeSonnet45AlternatePrompt": "default",
+		"github.copilot.chat.grokCodeAlternatePrompt": "default",
 		"json.schemas": [
 			{
 				"fileMatch": [
@@ -437,7 +444,7 @@
 			"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 		},
 		"[latex]": {
-			"editor.defaultFormatter": "mathematic.vscode-latex"
+			"editor.defaultFormatter": "James-Yu.latex-workshop"
 		},
 		"[python]": {
 			"editor.formatOnType": true
