@@ -15,11 +15,11 @@
 		{
 			"name": "Reports - Service",
 			"path": "/home/alvaro/Documents/Raio/repos/reports-service"
-		},
-		{
-			"name": "Backoffice",
-			"path": "/home/alvaro/Documents/Raio/repos/backoffice"
-		},
+		}
+		// {
+		// 	"name": "Backoffice",
+		// 	"path": "/home/alvaro/Documents/Raio/repos/backoffice"
+		// },
 		// {
 		// 	"name": "App - BFF",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/app-bff"
@@ -36,10 +36,10 @@
 		// 	"name": "Communication - Service",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/communication-service"
 		// },
-		{
-			"name": "Serverless",
-			"path": "/home/alvaro/Documents/Raio/repos/serverless-tools"
-		}
+		// {
+		// 	"name": "Serverless",
+		// 	"path": "/home/alvaro/Documents/Raio/repos/serverless-tools"
+		// },
 		// {
 		// 	"name": "Scripts",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/scripts"
