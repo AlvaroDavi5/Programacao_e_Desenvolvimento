@@ -5,7 +5,9 @@
 	"update.showReleaseNotes": false,
 	"terminal.integrated.defaultProfile.linux": "zsh",
 	"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+	"terminal.integrated.suggest.enabled": false,
 	"chat.commandCenter.enabled": true,
+	"chat.agentSessionsViewLocation": "disabled",
 	"http.proxy": "",
 	"http.proxySupport": "off",
 	"http.proxyAuthorization": null,
@@ -221,6 +223,14 @@
 		"java": true,
 		"plaintext": false
 	},
+	"github.copilot.selectedCompletionModel": "openai",
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"github.copilot.advanced": {},
+	"github.copilot.chat.azureModels": {},
+	"github.copilot.chat.customOAIModels": {},
+	"github.copilot.chat.gpt5AlternatePrompt": "default",
+	"github.copilot.chat.claudeSonnet45AlternatePrompt": "default",
+	"github.copilot.chat.grokCodeAlternatePrompt": "default",
 	"json.schemas": [
 		{
 			"fileMatch": [
