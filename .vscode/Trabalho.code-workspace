@@ -15,7 +15,7 @@
 		{
 			"name": "Reports - Service",
 			"path": "/home/alvaro/Documents/Raio/repos/reports-service"
-		}
+		},
 		// {
 		// 	"name": "Backoffice",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/backoffice"
@@ -44,6 +44,10 @@
 		// 	"name": "Scripts",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/scripts"
 		// }
+		{
+			"name": "Lambdas",
+			"path": "/home/alvaro/Documents/Raio/repos/cloud-tools-benefits"
+		}
 	],
 	"launch": {
 		"version": "0.2.0",
