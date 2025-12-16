@@ -83,6 +83,7 @@
 		"update.showReleaseNotes": false,
 		"terminal.integrated.defaultProfile.linux": "zsh",
 		"terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
+		"terminal.integrated.suggest.enabled": false,
 		"chat.commandCenter.enabled": true,
 		"http.proxy": "",
 		"http.proxySupport": "off",
