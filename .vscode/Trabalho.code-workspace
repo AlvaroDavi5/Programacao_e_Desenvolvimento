@@ -1,19 +1,19 @@
 {
 	"folders": [
 		{
-			"name": "Portal - BFF",
+			"name": "BFF - Portal",
 			"path": "/home/alvaro/Documents/Raio/repos/portal-raio-bff"
 		},
 		{
-			"name": "Prepaid - Service",
+			"name": "Prepaid",
 			"path": "/home/alvaro/Documents/Raio/repos/prepaid-service"
 		},
 		{
-			"name": "Beneficiary - Service",
+			"name": "Beneficiary",
 			"path": "/home/alvaro/Documents/Raio/repos/beneficiary-service"
 		},
 		{
-			"name": "Reports - Service",
+			"name": "Reports",
 			"path": "/home/alvaro/Documents/Raio/repos/reports-service"
 		},
 		// {
@@ -21,19 +21,19 @@
 		// 	"path": "/home/alvaro/Documents/Raio/repos/backoffice"
 		// },
 		// {
-		// 	"name": "App - BFF",
+		// 	"name": "BFF - App",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/app-bff"
 		// },
 		// {
-		// 	"name": "Financial - Service",
+		// 	"name": "Financial",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/financial-service"
 		// },
 		// {
-		// 	"name": "Identity - Service",
+		// 	"name": "Identity",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/identity-service"
 		// },
 		// {
-		// 	"name": "Communication - Service",
+		// 	"name": "Communication",
 		// 	"path": "/home/alvaro/Documents/Raio/repos/communication-service"
 		// },
 		// {
