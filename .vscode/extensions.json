@@ -56,6 +56,7 @@
 		"ms-vscode.cpptools",
 		"franneck94.c-cpp-runner",
 		"vscjava.vscode-java-pack",
+		"REditorSupport.r",
 		"ms-python.python",
 		"ms-python.debugpy",
 		"ms-python.vscode-pylance",
