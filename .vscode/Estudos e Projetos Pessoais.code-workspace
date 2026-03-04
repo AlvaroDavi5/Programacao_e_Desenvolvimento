@@ -5,6 +5,14 @@
 			"path": "/home/alvaro/Documents/Programação/Roteiros"
 		},
 		{
+			"name": "Go",
+			"path": "/home/alvaro/Documents/Programação/GoLang"
+		},
+		{
+			"name": "Rust",
+			"path": "/home/alvaro/Documents/Programação/Rust"
+		},
+		{
 			"name": "Angular_FrontEnd_Boilerplate-TypeScript",
 			"path": "/home/alvaro/Documents/Programação/Node/Angular_FrontEnd_Boilerplate-TypeScript"
 		},
