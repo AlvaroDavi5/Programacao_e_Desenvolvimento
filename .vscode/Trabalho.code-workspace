@@ -98,12 +98,12 @@
 		// Editor
 		"editor.insertSpaces": false,
 		"editor.tabSize": 2,
-		"editor.formatOnSave": false,
+		"editor.formatOnSave": true,
 		"editor.wordWrap": "off",
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.codeActionsOnSave": {
-			"source.fixAll": "never",
-			"source.fixAll.eslint": "never",
+			"source.fixAll": "explicit",
+			"source.fixAll.eslint": "explicit",
 			"source.organizeImports": "never",
 			"source.removeUnusedImports": "explicit",
 			"source.removeUnused.ts": "explicit"
