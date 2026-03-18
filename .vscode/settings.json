@@ -27,7 +27,7 @@
 	"editor.tabSize": 2,
 	"editor.formatOnSave": true,
 	"editor.wordWrap": "off",
-	"editor.defaultFormatter": "vscode.typescript-language-features",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit",
 		"source.organizeImports": "never",
@@ -210,15 +210,12 @@
 	"latex-workshop.bibtex.maxFileSize": 10,
 	"latex-workshop.bibtex-format.tab": "tab",
 	"latex-workshop.bibtex-format.case": "lowercase",
-	"javascript.suggest.autoImports": true,
-	"javascript.suggestionActions.enabled": true,
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"typescript.suggest.autoImports": true,
-	"typescript.suggestionActions.enabled": true,
-	"typescript.updateImportsOnFileMove.enabled": "always",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"typescript.tsserver.maxTsServerMemory": 1536,
-	"typescript.tsserver.watchOptions": {},
+	"js/ts.suggest.autoImports": true,
+	"js/ts.suggestionActions.enabled": true,
+	"js/ts.updateImportsOnFileMove.enabled": "always",
+	"js/ts.tsserver.watchOptions": {},
+	"js/ts.tsserver.maxMemory": 1536,
+	"js/ts.tsdk.promptToUseWorkspaceVersion": true,
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
@@ -234,6 +231,86 @@
 	"github.copilot.chat.gpt5AlternatePrompt": "default",
 	"github.copilot.chat.claudeSonnet45AlternatePrompt": "default",
 	"github.copilot.chat.grokCodeAlternatePrompt": "default",
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{
+			"file": "copilot-commit-message.instructions.md"
+		}
+	],
+	"[ignore]": {
+		"editor.defaultFormatter": "EditorConfig.EditorConfig"
+	},
+	"[latex]": {
+		"editor.defaultFormatter": "James-Yu.latex-workshop"
+	},
+	"[dbml]": {
+		"editor.defaultFormatter": "matt-meyers.vscode-dbml"
+	},
+	"[apiblueprint]": {
+		"editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+	},
+	"[prompt]": {
+		"editor.defaultFormatter": "vscode.markdown-language-features"
+	},
+	"[skill]": {
+		"editor.defaultFormatter": "vscode.markdown-language-features"
+	},
+	"[instructions]": {
+		"editor.defaultFormatter": "vscode.markdown-language-features"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "vscode.markdown-language-features"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+	"[java]": {
+		"editor.defaultFormatter": "vscjava.vscode-java-pack"
+	},
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"[rust]": {
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python"
+	},
+	"[r]": {
+		"editor.defaultFormatter": "REditorSupport.r"
+	},
+	"[go]": {
+		"editor.defaultFormatter": "golang.go"
+	},
+	"[go.mod]": {
+		"editor.defaultFormatter": "golang.go"
+	},
+	"[dockerfile]": {
+		"editor.defaultFormatter": "ms-azuretools.vscode-containers"
+	},
+	"[dockercompose]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
 	"json.schemas": [
 		{
 			"fileMatch": [
@@ -243,30 +320,9 @@
 			"schema": true
 		}
 	],
-	"[html]": {
-		"editor.defaultFormatter": "vscode.html-language-features"
-	},
-	"[css]": {
-		"editor.defaultFormatter": "vscode.css-language-features"
-	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "vscode.json-language-features"
-	},
-	"[java]": {
-		"editor.defaultFormatter": "vscjava.vscode-java-pack"
-	},
-	"[dockercompose]": {
-		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
-	},
-	"[latex]": {
-		"editor.defaultFormatter": "James-Yu.latex-workshop"
-	},
-	"[python]": {
-		"editor.formatOnType": true
-	},
+	"java.configuration.updateBuildConfiguration": "automatic",
+	"java.compile.nullAnalysis.mode": "automatic",
+	"java.project.referencedLibraries": [],
 	"python.defaultInterpreterPath": "/home/alvaro/.asdf/shims/python3",
 	"python.terminal.launchArgs": [],
 	"python.analysis.typeCheckingMode": "basic",
@@ -274,9 +330,6 @@
 	"r.interpreterPath": "/home/alvaro/.asdf/shims/R",
 	"r.rpath.linux": "/home/alvaro/.asdf/shims/R",
 	"r.lsp.debug": true,
-	"java.configuration.updateBuildConfiguration": "automatic",
-	"java.compile.nullAnalysis.mode": "automatic",
-	"java.project.referencedLibraries": [],
 	"files.exclude": {
 		"**/.classpath": true,
 		"**/.project": true,

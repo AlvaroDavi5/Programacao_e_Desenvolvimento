@@ -419,6 +419,11 @@
 		"github.copilot.chat.gpt5AlternatePrompt": "default",
 		"github.copilot.chat.claudeSonnet45AlternatePrompt": "default",
 		"github.copilot.chat.grokCodeAlternatePrompt": "default",
+		"github.copilot.chat.commitMessageGeneration.instructions": [
+			{
+				"file": "copilot-commit-message.instructions.md"
+			}
+		],
 		"[ignore]": {
 			"editor.defaultFormatter": "EditorConfig.EditorConfig"
 		},
@@ -430,6 +435,15 @@
 		},
 		"[apiblueprint]": {
 			"editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+		},
+		"[prompt]": {
+			"editor.defaultFormatter": "vscode.markdown-language-features"
+		},
+		"[skill]": {
+			"editor.defaultFormatter": "vscode.markdown-language-features"
+		},
+		"[instructions]": {
+			"editor.defaultFormatter": "vscode.markdown-language-features"
 		},
 		"[markdown]": {
 			"editor.defaultFormatter": "vscode.markdown-language-features"
