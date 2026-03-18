@@ -421,7 +421,10 @@
 		"github.copilot.chat.grokCodeAlternatePrompt": "default",
 		"github.copilot.chat.commitMessageGeneration.instructions": [
 			{
-				"file": "copilot-commit-message.instructions.md"
+				"file": "**/copilot-commit-message.instructions.md"
+			},
+			{
+				"text": "Use conventional commit message format."
 			}
 		],
 		"[ignore]": {
