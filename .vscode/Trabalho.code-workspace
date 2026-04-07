@@ -126,7 +126,7 @@
 		"workbench.editor.restoreViewState": true,
 		"workbench.colorTheme": "Dracula Theme",
 		"workbench.preferredHighContrastColorTheme": "Monokai",
-		"workbench.preferredHighContrastLightColorTheme": "Default Light Modern",
+		"workbench.preferredHighContrastLightColorTheme": "Light Modern",
 		"workbench.preferredLightColorTheme": "Solarized Light",
 		"workbench.productIconTheme": "material-product-icons",
 		"workbench.iconTheme": "material-icon-theme",
