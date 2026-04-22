@@ -8,6 +8,8 @@
 	"terminal.integrated.suggest.enabled": false,
 	"chat.commandCenter.enabled": true,
 	"chat.agentSessionsViewLocation": "disabled",
+	"chat.mcp.access": "all",
+	"chat.mcp.gallery.enabled": true,
 	"chat.viewSessions.orientation": "stacked",
 	"chat.viewSessions.enabled": false,
 	"http.proxy": "",
@@ -53,7 +55,7 @@
 	"workbench.editor.restoreViewState": true,
 	"workbench.colorTheme": "Dracula Theme",
 	"workbench.preferredHighContrastColorTheme": "Monokai",
-	"workbench.preferredHighContrastLightColorTheme": "Default Light Modern",
+	"workbench.preferredHighContrastLightColorTheme": "Light Modern",
 	"workbench.preferredLightColorTheme": "Solarized Light",
 	"workbench.productIconTheme": "material-product-icons",
 	"workbench.iconTheme": "material-icon-theme",
@@ -216,6 +218,7 @@
 	"js/ts.tsserver.watchOptions": {},
 	"js/ts.tsserver.maxMemory": 1536,
 	"js/ts.tsdk.promptToUseWorkspaceVersion": true,
+	// "js/ts.tsdk.path": "Node Boilerplate/node_modules/typescript/lib",
 	"github.copilot.enable": {
 		"*": true,
 		"yaml": true,
@@ -231,6 +234,7 @@
 	"github.copilot.chat.gpt5AlternatePrompt": "default",
 	"github.copilot.chat.claudeSonnet45AlternatePrompt": "default",
 	"github.copilot.chat.grokCodeAlternatePrompt": "default",
+	"github.copilot.chat.githubMcpServer.enabled": true,
 	"github.copilot.chat.commitMessageGeneration.instructions": [
 		{
 			"file": "**/copilot-commit-message.instructions.md"
