@@ -70,7 +70,7 @@
 	// Explorer
 	"explorer.autoReveal": true,
 	"explorer.confirmDragAndDrop": false,
-	// Git
+	// Versioning
 	"scm.defaultViewMode": "tree",
 	"scm.showHistoryGraph": false,
 	"git.autofetch": true,
