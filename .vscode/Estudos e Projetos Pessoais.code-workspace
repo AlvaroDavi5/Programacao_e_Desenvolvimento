@@ -406,7 +406,7 @@
 		"js/ts.tsserver.watchOptions": {},
 		"js/ts.tsserver.maxMemory": 1536,
 		"js/ts.tsdk.promptToUseWorkspaceVersion": true,
-		// "js/ts.tsdk.path": "Node Boilerplate/node_modules/typescript/lib",
+		"js/ts.tsdk.path": "${workspaceFolder}/node_modules/typescript/lib",
 		"github.copilot.enable": {
 			"*": true,
 			"yaml": true,
