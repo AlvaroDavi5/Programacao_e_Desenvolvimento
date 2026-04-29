@@ -1,4 +1,5 @@
 {
+	// Workflow
 	"proxy": "",
 	"base_keymap": "VSCode",
 	"minimap": {
@@ -11,101 +12,79 @@
 	},
 	"restore_on_file_reopen": true,
 	"show_edit_predictions": true,
+	// Editor
 	"hard_tabs": true,
 	"tab_size": 2,
-	"file_types": {
-		"c": [
-			"stdio.h",
-			"stdlib.h",
-			"stdbool.h",
-			"string.h",
-			"time.h",
-			"math.h",
-			"complex",
-			"array",
-			"vectors-double.h",
-			"vector",
-			"complex-int.h",
-			"ratio",
-			"random",
-			"hash_map",
-			"hash_set",
-			"bitset",
-			"chrono",
-			"algorithm",
-			"optional",
-			"istream",
-			"ostream",
-			"system_error",
-			"functional",
-			"tuple",
-			"type_traits",
-			"utility",
-			"cmath",
-			"sstream"
-		],
-		"dbml": [
-			"*.dbml"
-		],
-		"cpp": [
-			"atomic",
-			"bit",
-			"*.tcc",
-			"cctype",
-			"cerrno",
-			"clocale",
-			"cstdarg",
-			"cstddef",
-			"cstdint",
-			"cstdio",
-			"cstdlib",
-			"cwchar",
-			"cwctype",
-			"deque",
-			"exception",
-			"iterator",
-			"memory",
-			"memory_resource",
-			"numeric",
-			"string",
-			"string_view",
-			"unordered_map",
-			"fstream",
-			"initializer_list",
-			"ios",
-			"iosfwd",
-			"iostream",
-			"limits",
-			"new",
-			"queue",
-			"stdexcept",
-			"streambuf",
-			"cstdbool",
-			"typeinfo",
-			"list",
-			"ctime",
-			"ranges",
-			"compare",
-			"concepts",
-			"cstring"
-		],
-		"JSONC": [
-			"**/.zed/**/*.json",
-			"**/zed/**/*.json",
-			"**/Zed/**/*.json",
-			"**/.vscode/**/*.json",
-			"tsconfig*.json"
-		],
-		"Shell Script": [
-			".env.*"
-		],
-		"apiblueprint": [
-			"*.apib"
-		],
-		"markdown": [
-			"**/CODEOWNERS",
-			"*.rmd"
-		]
+	"message_editor": {
+		"auto_replace_emoji_shortcode": true
+	},
+	"remove_trailing_whitespace_on_save": true,
+	"extend_comment_on_newline": true,
+	"ensure_final_newline_on_save": true,
+	"format_on_save": "on",
+	"formatter": "auto",
+	"preferred_line_length": 80,
+	// Workbench
+	"cursor_shape": "bar",
+	"icon_theme": "Material Icon Theme",
+	"ui_font_features": {
+		"calt": 0
+	},
+	"tab_bar": {
+		"show": true,
+		"show_nav_history_buttons": false,
+		"show_tab_bar_buttons": true
+	},
+	"buffer_font_family": "Fira Code",
+	"telemetry": {
+		"metrics": false,
+		"diagnostics": false
+	},
+	"ui_font_size": 16,
+	"buffer_font_size": 15.0,
+	"soft_wrap": "none",
+	"theme": {
+		"mode": "system",
+		"light": "Dracula Light (Alucard",
+		"dark": "Dracula Solid"
+	},
+	"show_call_status_icon": true,
+	"enable_language_server": true,
+	"linked_edits": true,
+	"language_servers": [
+		"..."
+	],
+	"autosave": "off",
+	"max_tabs": null,
+	"tabs": {
+		"git_status": false,
+		"close_position": "right",
+		"file_icons": false,
+		"show_close_button": "hover",
+		"activate_on_close": "history",
+		"show_diagnostics": "all"
+	},
+	"preview_tabs": {
+		"enabled": true,
+		"enable_preview_from_file_finder": false,
+		"enable_preview_from_code_navigation": false
+	},
+	"file_finder": {
+		"file_icons": true,
+		"modal_max_width": "small",
+		"skip_focus_for_active_in_search": true,
+		"git_status": true,
+		"include_ignored": null
+	},
+	"collaboration_panel": {
+		"button": true,
+		"dock": "left",
+		"default_width": 240
+	},
+	"notification_panel": {
+		"button": true,
+		"dock": "right",
+		"default_width": 380
 	},
 	"git_panel": {
 		"dock": "left",
@@ -117,6 +96,7 @@
 		"collapse_untracked_diff": false,
 		"scrollbar": {}
 	},
+	// AI
 	"agent": {
 		"default_profile": "write",
 		"play_sound_when_agent_done": true,
@@ -188,29 +168,7 @@
 		"use_modifier_to_send": false,
 		"message_editor_min_lines": 4
 	},
-	"cursor_shape": "bar",
-	"icon_theme": "Material Icon Theme",
-	"ui_font_features": {
-		"calt": 0
-	},
-	"tab_bar": {
-		"show": true,
-		"show_nav_history_buttons": false,
-		"show_tab_bar_buttons": true
-	},
-	"buffer_font_family": "Fira Code",
-	"telemetry": {
-		"metrics": false,
-		"diagnostics": false
-	},
-	"ui_font_size": 16,
-	"buffer_font_size": 15.0,
-	"soft_wrap": "none",
-	"theme": {
-		"mode": "system",
-		"light": "Dracula Light (Alucard",
-		"dark": "Dracula Solid"
-	},
+	// Git
 	"git": {
 		"git_gutter": "tracked_files",
 		"inline_blame": {
@@ -228,6 +186,7 @@
 		},
 		"hunk_style": "staged_hollow"
 	},
+	// Explorer
 	"project_panel": {
 		"auto_reveal_entries": true,
 		"dock": "left",
@@ -261,8 +220,12 @@
 	},
 	"terminal": {
 		"font_family": "MesloLGS NF",
-		"font_size": 14
+		"font_size": 14,
+		"shell": {
+			"program": "/bin/zsh"
+		}
 	},
+	// Terminal
 	"features": {
 		"edit_prediction_provider": "zed"
 	},
@@ -453,53 +416,7 @@
 		},
 		"expand_outlines_with_depth": 100
 	},
-	"collaboration_panel": {
-		"button": true,
-		"dock": "left",
-		"default_width": 240
-	},
-	"message_editor": {
-		"auto_replace_emoji_shortcode": true
-	},
-	"notification_panel": {
-		"button": true,
-		"dock": "right",
-		"default_width": 380
-	},
-	"show_call_status_icon": true,
-	"enable_language_server": true,
-	"linked_edits": true,
-	"language_servers": [
-		"..."
-	],
-	"autosave": "off",
-	"max_tabs": null,
-	"tabs": {
-		"git_status": false,
-		"close_position": "right",
-		"file_icons": false,
-		"show_close_button": "hover",
-		"activate_on_close": "history",
-		"show_diagnostics": "all"
-	},
-	"preview_tabs": {
-		"enabled": true,
-		"enable_preview_from_file_finder": false,
-		"enable_preview_from_code_navigation": false
-	},
-	"file_finder": {
-		"file_icons": true,
-		"modal_max_width": "small",
-		"skip_focus_for_active_in_search": true,
-		"git_status": true,
-		"include_ignored": null
-	},
-	"remove_trailing_whitespace_on_save": true,
-	"extend_comment_on_newline": true,
-	"ensure_final_newline_on_save": true,
-	"format_on_save": "on",
-	"formatter": "auto",
-	"preferred_line_length": 80,
+	// Debug
 	"debuggers": [],
 	"disable_ai": false,
 	"auto_update": true,
@@ -565,7 +482,9 @@
 		"active_language_button": true,
 		"cursor_position_button": true
 	},
-	"code_actions_on_format": {},
+	"code_actions_on_format": {
+		"source.removeUnusedImports": true
+	},
 	"tasks": {
 		"variables": {},
 		"enabled": true,
@@ -586,6 +505,7 @@
 		"lsp_fetch_timeout_ms": 0,
 		"lsp_insert_mode": "replace_suffix"
 	},
+	// Language Settings
 	"languages": {
 		"C": {
 			"format_on_save": "off",
@@ -708,6 +628,21 @@
 			"prettier": {
 				"allowed": true
 			}
+		},
+		"Dockerfile": {
+			"format_on_save": "off"
+		},
+		"Go": {
+			"formatter": "language_server"
+		},
+		"R": {
+			"formatter": "language_server"
+		},
+		"Rust": {
+			"formatter": "language_server"
+		},
+		"Shell Script": {
+			"format_on_save": "off"
 		}
 	},
 	"language_models": {
@@ -773,7 +708,22 @@
 	"jsx_tag_auto_close": {
 		"enabled": true
 	},
-	"lsp": {},
+	"lsp": {
+		"pyright": {
+			"settings": {
+				"python": {
+					"pythonPath": "/home/alvaro/.asdf/shims/python3"
+				}
+			}
+		},
+		"r-languageserver": {
+			"initialization_options": {
+				"r": {
+					"path": "/home/alvaro/.asdf/shims/R"
+				}
+			}
+		}
+	},
 	"dap": {},
 	"global_lsp_settings": {
 		"button": true
@@ -791,6 +741,7 @@
 	"command_aliases": {},
 	"ssh_connections": [],
 	"read_ssh_config": true,
+	// Extensions / MCP
 	"context_servers": {
 		"some-mcp-server": {
 			"enabled": true,
@@ -816,5 +767,100 @@
 		"button": true
 	},
 	"profiles": {},
-	"log": {}
+	"log": {},
+	// File Type Associations
+	"file_types": {
+		"c": [
+			"stdio.h",
+			"stdlib.h",
+			"stdbool.h",
+			"string.h",
+			"time.h",
+			"math.h",
+			"complex",
+			"array",
+			"vectors-double.h",
+			"vector",
+			"complex-int.h",
+			"ratio",
+			"random",
+			"hash_map",
+			"hash_set",
+			"bitset",
+			"chrono",
+			"algorithm",
+			"optional",
+			"istream",
+			"ostream",
+			"system_error",
+			"functional",
+			"tuple",
+			"type_traits",
+			"utility",
+			"cmath",
+			"sstream"
+		],
+		"dbml": [
+			"*.dbml"
+		],
+		"cpp": [
+			"atomic",
+			"bit",
+			"*.tcc",
+			"cctype",
+			"cerrno",
+			"clocale",
+			"cstdarg",
+			"cstddef",
+			"cstdint",
+			"cstdio",
+			"cstdlib",
+			"cwchar",
+			"cwctype",
+			"deque",
+			"exception",
+			"iterator",
+			"memory",
+			"memory_resource",
+			"numeric",
+			"string",
+			"string_view",
+			"unordered_map",
+			"fstream",
+			"initializer_list",
+			"ios",
+			"iosfwd",
+			"iostream",
+			"limits",
+			"new",
+			"queue",
+			"stdexcept",
+			"streambuf",
+			"cstdbool",
+			"typeinfo",
+			"list",
+			"ctime",
+			"ranges",
+			"compare",
+			"concepts",
+			"cstring"
+		],
+		"JSONC": [
+			"**/.zed/**/*.json",
+			"**/zed/**/*.json",
+			"**/Zed/**/*.json",
+			"**/.vscode/**/*.json",
+			"tsconfig*.json"
+		],
+		"Shell Script": [
+			".env.*"
+		],
+		"apiblueprint": [
+			"*.apib"
+		],
+		"markdown": [
+			"**/CODEOWNERS",
+			"*.rmd"
+		]
+	}
 }
