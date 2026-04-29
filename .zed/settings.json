@@ -1,68 +1,74 @@
 {
 	// Workflow
-	"proxy": "",
+	"telemetry": {
+		"metrics": false,
+		"diagnostics": false
+	},
 	"base_keymap": "VSCode",
 	"minimap": {
 		"show": "auto",
 		"display_in": "active_editor",
 		"thumb": "always",
 		"thumb_border": "left_open",
-		"current_line_highlight": null,
+		"current_line_highlight": "all",
 		"max_width_columns": 80
 	},
-	"restore_on_file_reopen": true,
-	"show_edit_predictions": true,
+	"multi_cursor_modifier": "cmd_or_ctrl",
+	"vim_mode": false,
+	"helix_mode": false,
+	"diff_view_style": "split",
+	"session": {
+		"trust_all_worktrees": false,
+		"restore_unsaved_buffers": true
+	},
+	"proxy": "",
 	// Editor
 	"hard_tabs": true,
 	"tab_size": 2,
+	"preferred_line_length": 80,
 	"message_editor": {
 		"auto_replace_emoji_shortcode": true
 	},
+	"show_edit_predictions": true,
+	"restore_on_file_reopen": true,
 	"remove_trailing_whitespace_on_save": true,
 	"extend_comment_on_newline": true,
 	"ensure_final_newline_on_save": true,
+	"autosave": "off",
 	"format_on_save": "on",
 	"formatter": "auto",
-	"preferred_line_length": 80,
+	"enable_language_server": true,
+	"language_servers": [
+		"..."
+	],
 	// Workbench
-	"cursor_shape": "bar",
-	"icon_theme": "Material Icon Theme",
-	"ui_font_features": {
-		"calt": 0
-	},
-	"tab_bar": {
-		"show": true,
-		"show_nav_history_buttons": false,
-		"show_tab_bar_buttons": true
-	},
-	"buffer_font_family": "Fira Code",
-	"telemetry": {
-		"metrics": false,
-		"diagnostics": false
-	},
-	"ui_font_size": 16,
-	"buffer_font_size": 15.0,
-	"soft_wrap": "none",
 	"theme": {
 		"mode": "system",
 		"light": "Dracula Light (Alucard)",
 		"dark": "Dracula Solid"
 	},
-	"show_call_status_icon": true,
-	"enable_language_server": true,
-	"linked_edits": true,
-	"language_servers": [
-		"..."
-	],
-	"autosave": "off",
-	"max_tabs": null,
+	"icon_theme": "Material Icon Theme",
+	"cursor_shape": "bar",
+	"buffer_font_family": "Fira Code",
+	"ui_font_size": 16,
+	"buffer_font_size": 15.0,
+	"ui_font_features": {
+		"calt": 0
+	},
 	"tabs": {
-		"git_status": false,
-		"close_position": "right",
-		"file_icons": false,
+		"file_icons": true,
+		"git_status": true,
+		"show_diagnostics": "all",
 		"show_close_button": "hover",
 		"activate_on_close": "history",
-		"show_diagnostics": "all"
+		"close_position": "right"
+	},
+	"max_tabs": 20,
+	"tab_bar": {
+		"show": true,
+		"show_tab_bar_buttons": true,
+		"show_nav_history_buttons": false,
+		"show_pinned_tabs_in_separate_row": false
 	},
 	"preview_tabs": {
 		"enabled": true,
@@ -71,52 +77,78 @@
 	},
 	"file_finder": {
 		"file_icons": true,
-		"modal_max_width": "small",
+		"modal_max_width": "xlarge",
 		"skip_focus_for_active_in_search": true,
-		"include_ignored": null
+		"include_ignored": "smart"
 	},
+	"soft_wrap": "preferred_line_length",
+	"linked_edits": true,
 	"collaboration_panel": {
 		"button": true,
 		"dock": "left",
 		"default_width": 240
 	},
+	"show_call_status_icon": true,
+	// Versioning
 	"git_panel": {
-		"dock": "left",
 		"button": true,
-		"default_width": 360,
-		"status_style": "icon",
+		"dock": "left",
+		"default_width": 240,
+		"file_icons": true,
+		"folder_icons": true,
+		"status_style": "label_color",
+		"diff_stats": true,
+		"tree_view": true,
+		"show_count_badge": true,
+		"sort_by_path": true,
 		"fallback_branch_name": "main",
-		"sort_by_path": false,
 		"collapse_untracked_diff": false,
 		"scrollbar": {}
 	},
+	"git": {
+		"git_gutter": "tracked_files",
+		"inline_blame": {
+			"enabled": true,
+			"show_commit_summary": true,
+			"delay_ms": 500,
+			"padding": 7,
+			"min_column": 0
+		},
+		"blame": {
+			"show_avatar": true
+		},
+		"branch_picker": {
+			"show_author_name": true
+		},
+		"enable_status": true,
+		"enable_diff": true,
+		"path_style": "file_path_first",
+		"hunk_style": "staged_hollow"
+	},
 	// AI
 	"agent": {
-		"default_profile": "write",
-		"play_sound_when_agent_done": "when_hidden",
+		"enabled": true,
+		"button": true,
+		"dock": "right",
+		"sidebar_side": "right",
+		"inline_assistant_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4",
+			"enable_thinking": false,
+			"speed": "fast"
+		},
+		"thread_summary_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-5",
+			"enable_thinking": false,
+			"speed": "fast"
+		},
 		"default_model": {
 			"provider": "copilot_chat",
 			"model": "claude-sonnet-4",
 			"enable_thinking": true,
 			"speed": "standard"
 		},
-		"thread_summary_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-4",
-			"enable_thinking": false,
-			"speed": "fast"
-		},
-		"enabled": true,
-		"button": true,
-		"dock": "right",
-		"default_width": 640,
-		"default_height": 320,
-		"model_parameters": [],
-		"tool_permissions": {
-			"tools": {}
-		},
-		"single_file_review": true,
-		"enable_feedback": true,
 		"profiles": {
 			"write": {
 				"name": "Write",
@@ -153,61 +185,75 @@
 					"now": true,
 					"find_path": true,
 					"read_file": true,
+					"edit_file": false,
+					"create_directory": false,
 					"open": true,
 					"grep": true,
 					"thinking": true,
 					"web_search": true
 				}
 			},
-			"minimal": {
-				"name": "Minimal",
+			"search": {
+				"name": "Search",
 				"enable_all_context_servers": false,
-				"tools": {}
+				"tools": {
+					"web_search": true
+				}
 			}
 		},
+		"model_parameters": [],
+		"tool_permissions": {
+			"tools": {}
+		},
+		"default_profile": "write",
 		"notify_when_agent_waiting": "primary_screen",
+		"play_sound_when_agent_done": "when_hidden",
+		"thinking_display": "preview",
+		"max_content_width": 400,
+		"default_width": 400,
+		"default_height": 250,
+		"single_file_review": true,
 		"expand_edit_card": true,
 		"expand_terminal_card": true,
+		"message_editor_min_lines": 4,
 		"use_modifier_to_send": false,
-		"message_editor_min_lines": 4
+		"enable_feedback": true
 	},
-	// Git
-	"git": {
-		"git_gutter": "tracked_files",
-		"inline_blame": {
-			"delay_ms": 3000,
+	"context_servers": {
+		"some-mcp-server": {
 			"enabled": true,
-			"padding": 7,
-			"show_commit_summary": true,
-			"min_column": 0
-		},
-		"blame": {
-			"show_avatar": true
-		},
-		"branch_picker": {
-			"show_author_name": true
-		},
-		"hunk_style": "staged_hollow"
+			"remote": false,
+			"command": "",
+			"args": [],
+			"env": {}
+		}
+	},
+	"agent_servers": {
+		"your_agent": {
+			"type": "custom",
+			"command": "path_to_executable"
+		}
 	},
 	// Explorer
 	"project_panel": {
-		"auto_reveal_entries": true,
-		"dock": "left",
-		"indent_guides": {
-			"show": "always"
-		},
-		"indent_size": 15,
-		"entry_spacing": "standard",
 		"button": true,
-		"hide_gitignore": false,
+		"dock": "left",
 		"default_width": 240,
 		"file_icons": true,
 		"folder_icons": true,
+		"entry_spacing": "standard",
+		"indent_size": 15,
+		"indent_guides": {
+			"show": "always"
+		},
+		"auto_reveal_entries": true,
+		"hide_gitignore": false,
 		"git_status": true,
 		"starts_open": true,
 		"auto_fold_dirs": true,
 		"scrollbar": {
-			"show": null
+			"horizontal_scroll": true,
+			"show": "auto"
 		},
 		"show_diagnostics": "all",
 		"sticky_scroll": true,
@@ -215,10 +261,10 @@
 		"hide_root": false
 	},
 	"indent_guides": {
-		"enabled": false,
+		"enabled": true,
 		"line_width": 1,
-		"active_line_width": 1,
-		"coloring": "fixed",
+		"active_line_width": 2,
+		"coloring": "indent_aware",
 		"background_coloring": "disabled"
 	},
 	"terminal": {
@@ -250,14 +296,11 @@
 	"image_viewer": {
 		"unit": "binary"
 	},
-	"multi_cursor_modifier": "alt",
-	"vim_mode": false,
-	"helix_mode": false,
 	"hover_popover_enabled": true,
 	"hover_popover_delay": 300,
-	"confirm_quit": false,
-	"restore_on_startup": "last_session",
 	"close_on_file_delete": false,
+	"restore_on_startup": "last_session",
+	"confirm_quit": false,
 	"drop_target_size": 0.2,
 	"when_closing_with_no_tabs": "platform_default",
 	"on_last_window_closed": "platform_default",
@@ -688,9 +731,6 @@
 		},
 		"zed.dev": {}
 	},
-	"session": {
-		"restore_unsaved_buffers": true
-	},
 	"prettier": {
 		"allowed": false
 	},
@@ -730,22 +770,7 @@
 	"command_aliases": {},
 	"ssh_connections": [],
 	"read_ssh_config": true,
-	// Extensions / MCP
-	"context_servers": {
-		"some-mcp-server": {
-			"enabled": true,
-			"remote": false,
-			"command": "",
-			"args": [],
-			"env": {}
-		}
-	},
-	"agent_servers": {
-		"your_agent": {
-			"type": "custom",
-			"command": "path_to_executable"
-		}
-	},
+	// Extensions
 	"debugger": {
 		"stepping_granularity": "line",
 		"save_breakpoints": true,
@@ -759,6 +784,24 @@
 	"log": {},
 	// File Type Associations
 	"file_types": {
+		"markdown": [
+			"**/CODEOWNERS",
+			"*.rmd"
+		],
+		"dbml": [
+			"*.dbml"
+		],
+		"apiblueprint": [
+			"*.apib"
+		],
+		"Shell Script": [
+			".env.*"
+		],
+		"JSONC": [
+			"**/.zed/**/*.json",
+			"**/.vscode/**/*.json",
+			"tsconfig*.json"
+		],
 		"c": [
 			"stdio.h",
 			"stdlib.h",
@@ -788,9 +831,6 @@
 			"utility",
 			"cmath",
 			"sstream"
-		],
-		"dbml": [
-			"*.dbml"
 		],
 		"cpp": [
 			"atomic",
@@ -833,23 +873,6 @@
 			"compare",
 			"concepts",
 			"cstring"
-		],
-		"JSONC": [
-			"**/.zed/**/*.json",
-			"**/zed/**/*.json",
-			"**/Zed/**/*.json",
-			"**/.vscode/**/*.json",
-			"tsconfig*.json"
-		],
-		"Shell Script": [
-			".env.*"
-		],
-		"apiblueprint": [
-			"*.apib"
-		],
-		"markdown": [
-			"**/CODEOWNERS",
-			"*.rmd"
 		]
 	}
 }
