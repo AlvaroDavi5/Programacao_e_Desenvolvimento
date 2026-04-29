@@ -45,7 +45,7 @@
 	"soft_wrap": "none",
 	"theme": {
 		"mode": "system",
-		"light": "Dracula Light (Alucard",
+		"light": "Dracula Light (Alucard)",
 		"dark": "Dracula Solid"
 	},
 	"show_call_status_icon": true,
@@ -66,25 +66,19 @@
 	},
 	"preview_tabs": {
 		"enabled": true,
-		"enable_preview_from_file_finder": false,
-		"enable_preview_from_code_navigation": false
+		"enable_preview_from_file_finder": true,
+		"enable_preview_file_from_code_navigation": true
 	},
 	"file_finder": {
 		"file_icons": true,
 		"modal_max_width": "small",
 		"skip_focus_for_active_in_search": true,
-		"git_status": true,
 		"include_ignored": null
 	},
 	"collaboration_panel": {
 		"button": true,
 		"dock": "left",
 		"default_width": 240
-	},
-	"notification_panel": {
-		"button": true,
-		"dock": "right",
-		"default_width": 380
 	},
 	"git_panel": {
 		"dock": "left",
@@ -99,21 +93,28 @@
 	// AI
 	"agent": {
 		"default_profile": "write",
-		"play_sound_when_agent_done": true,
+		"play_sound_when_agent_done": "when_hidden",
 		"default_model": {
 			"provider": "copilot_chat",
-			"model": "claude-sonnet-4"
+			"model": "claude-sonnet-4",
+			"enable_thinking": true,
+			"speed": "standard"
+		},
+		"thread_summary_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4",
+			"enable_thinking": false,
+			"speed": "fast"
 		},
 		"enabled": true,
-		"preferred_completion_mode": "normal",
 		"button": true,
 		"dock": "right",
 		"default_width": 640,
 		"default_height": 320,
-		"default_view": "thread",
 		"model_parameters": [],
-		"always_allow_tool_actions": false,
-		"stream_edits": false,
+		"tool_permissions": {
+			"tools": {}
+		},
 		"single_file_review": true,
 		"enable_feedback": true,
 		"profiles": {
@@ -141,6 +142,8 @@
 			},
 			"ask": {
 				"name": "Ask",
+				"enable_all_context_servers": false,
+				"context_servers": {},
 				"tools": {
 					"contents": true,
 					"diagnostics": true,
@@ -225,10 +228,6 @@
 			"program": "/bin/zsh"
 		}
 	},
-	// Terminal
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
 	"buffer_font_fallbacks": null,
 	"buffer_font_features": {},
 	"buffer_font_weight": 400,
@@ -236,7 +235,6 @@
 	"ui_font_family": "Ubuntu",
 	"ui_font_fallbacks": null,
 	"ui_font_weight": 400,
-	"agent_font_size": null,
 	"unnecessary_code_fade": 0.3,
 	"active_pane_modifiers": {
 		"border_size": 0.0,
@@ -301,7 +299,7 @@
 	"use_on_type_format": true,
 	"use_autoclose": true,
 	"use_auto_surround": true,
-	"auto_indent": true,
+	"auto_indent": "syntax_aware",
 	"auto_indent_on_paste": true,
 	"always_treat_brackets_as_autoclosed": false,
 	"allow_rewrap": "in_comments",
@@ -324,20 +322,16 @@
 	},
 	"use_system_window_tabs": false,
 	"title_bar": {
-		"show_branch_icon": false,
+		"show_branch_status_icon": true,
 		"show_branch_name": true,
 		"show_project_items": true,
 		"show_onboarding_banner": true,
 		"show_user_picture": true,
 		"show_sign_in": true,
-		"show_menus": false
+		"show_menus": true
 	},
 	"audio": {
-		"experimental.rodio_audio": false,
-		"experimental.auto_microphone_volume": false,
-		"experimental.auto_speaker_volume": true,
-		"experimental.denoise": true,
-		"experimental.legacy_audio_compatible": true
+		"experimental.auto_microphone_volume": false
 	},
 	"scrollbar": {
 		"show": "auto",
@@ -367,7 +361,7 @@
 	"horizontal_scroll_margin": 5,
 	"scroll_sensitivity": 1.0,
 	"fast_scroll_sensitivity": 4.0,
-	"relative_line_numbers": false,
+	"relative_line_numbers": "disabled",
 	"search_wrap": true,
 	"search": {
 		"button": true,
@@ -467,7 +461,6 @@
 			"/**/zed/keymap.json"
 		],
 		"mode": "eager",
-		"enabled_in_text_threads": true,
 		"copilot": {
 			"enterprise_uri": null,
 			"proxy": null,
@@ -560,14 +553,10 @@
 			}
 		},
 		"JSON": {
-			"prettier": {
-				"allowed": true
-			}
+			"formatter": "language_server"
 		},
 		"JSONC": {
-			"prettier": {
-				"allowed": true
-			}
+			"formatter": "language_server"
 		},
 		"LaTeX": {
 			"formatter": "language_server",
