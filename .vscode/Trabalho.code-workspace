@@ -416,6 +416,6 @@
       "**/CODEOWNERS": "markdown",
       "*.rmd": "markdown",
     },
-  },
-  "js/ts.tsdk.path": "${workspaceFolder}/node_modules/typescript/lib",
+    "js/ts.tsdk.path": "${workspaceFolder}/node_modules/typescript/lib",
+  }
 }
