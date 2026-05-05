@@ -62,14 +62,10 @@
         "name": "Node.js: Launch Current TypeScript File",
         "type": "node",
         "request": "launch",
-        "skipFiles": [
-          "<node_internals>/**"
-        ],
+        "skipFiles": ["<node_internals>/**"],
         "program": "${file}",
         "preLaunchTask": "tsc: build - tsconfig.json",
-        "outFiles": [
-          "${workspaceFolder}/dist/**/*.js"
-        ],
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"],
         "internalConsoleOptions": "openOnSessionStart",
         "sourceMaps": true,
         "smartStep": true,
@@ -270,9 +266,7 @@
     "github.copilot.nextEditSuggestions.enabled": false,
     "json.schemas": [
       {
-        "fileMatch": [
-          "/package.json"
-        ],
+        "fileMatch": ["/package.json"],
         "url": "https://json.schemastore.org/package",
         "schema": true,
       },
@@ -310,12 +304,8 @@
       "**/.settings": true,
       "**/.factorypath": true,
     },
-    "color-highlight.languages": [
-      "*"
-    ],
-    "color-highlight.hslWithNoFunctionLanguages": [
-      "*"
-    ],
+    "color-highlight.languages": ["*"],
+    "color-highlight.hslWithNoFunctionLanguages": ["*"],
     "better-comments.multilineComments": true,
     "better-comments.highlightPlainText": false,
     "better-comments.tags": [
@@ -416,6 +406,6 @@
       "**/CODEOWNERS": "markdown",
       "*.rmd": "markdown",
     },
-    "js/ts.tsdk.path": "${workspaceFolder}/node_modules/typescript/lib",
-  }
+    "js/ts.tsdk.path": "Prepaid/node_modules/typescript/lib",
+  },
 }
