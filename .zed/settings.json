@@ -85,7 +85,7 @@
 	"icon_theme": "Material Icon Theme",
 	"cursor_shape": "bar",
 	"cursor_blink": true,
-	"hide_mouse": "on_typing_and_movement",
+	"hide_mouse": "on_typing_and_action",
 	"buffer_font_family": "Fira Code",
 	"ui_font_size": 15,
 	"buffer_font_size": 15.0,
