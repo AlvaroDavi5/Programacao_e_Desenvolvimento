@@ -45,39 +45,18 @@
 	"formatter": "language_server",
 	"enable_language_server": true,
 	"language_servers": [
-		// NOTE - Already active servers
-		// "clangd",
-		// "gopls",
-		// "rust-analyzer",
-		// "vscode-html-language-server",
-		// "vscode-css-language-server",
-		// "yaml-language-server",
-		// "json-language-server",
-		// "taplo",
-		// "marksman",
-		// "pyright",
-		// NOTE - Replaced by language-specific servers
-		"!typescript-language-server",
 		// NOTE - Disabled servers (globally)
-		"!ruby",
-		"!ruby-lsp",
-		"!java",
-		"!r",
-		"!haskell",
+		"!typescript-language-server",
 		"!assembly",
-		"!vhdl",
-		"!dockerfile",
-		"!markdown",
-		"!markdownlint",
-		"!markdown-oxide",
-		"!marksman",
 		"!latex",
-		"!make",
-		"!angular",
-		"!react",
-		"!sql",
-		"!sql-language-server",
-		"..."
+		"!r",
+		"!ruby",
+		"!haskell",
+		"!vhdl",
+		// NOTE - Enabled servers (globally)
+		"dockerfile",
+		"make",
+		"..." // others...
 	],
 	"image_viewer": {
 		"unit": "binary"
@@ -770,7 +749,6 @@
 		},
 		"JavaScript": {
 			"language_servers": [
-				"!typescript-language-server",
 				"vtsls",
 				"..."
 			],
@@ -808,7 +786,10 @@
 		},
 		"Markdown": {
 			"language_servers": [
+				"markdown",
 				"marksman",
+				"markdown-oxide",
+				"markdownlint",
 				"..."
 			],
 			"format_on_save": "off",
@@ -840,8 +821,8 @@
 		},
 		"TSX": {
 			"language_servers": [
-				"!typescript-language-server",
 				"vtsls",
+				"react",
 				"..."
 			],
 			"formatter": "language_server",
@@ -851,7 +832,7 @@
 		},
 		"TypeScript": {
 			"language_servers": [
-				"!typescript-language-server",
+				"angular",
 				"vtsls",
 				"..."
 			],
@@ -883,6 +864,7 @@
 		"SQL": {
 			"language_servers": [
 				"sql-language-server",
+				"sql",
 				"..."
 			],
 			"formatter": "language_server"
