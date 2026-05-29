@@ -1,5 +1,5 @@
 {
-	// Workflow
+	// ANCHOR - Workflow
 	"telemetry": {
 		"metrics": false,
 		"diagnostics": false
@@ -24,7 +24,7 @@
 		"restore_unsaved_buffers": true
 	},
 	"proxy": "",
-	// Editor
+	// ANCHOR - Editor
 	"hard_tabs": true,
 	"tab_size": 2,
 	"preferred_line_length": 80,
@@ -45,23 +45,27 @@
 	"formatter": "language_server",
 	"enable_language_server": true,
 	"language_servers": [
+		// NOTE - Already active servers
+		// "clangd",
+		// "gopls",
+		// "rust-analyzer",
+		// "vscode-html-language-server",
+		// "vscode-css-language-server",
+		// "yaml-language-server",
+		// "json-language-server",
+		// "taplo",
+		// "marksman",
+		// "pyright",
+		// NOTE - Replaced by language-specific servers
 		"!typescript-language-server",
-		// "!gopls",
-		// "!rust-analyzer",
+		// NOTE - Disabled servers (globally)
 		"!ruby",
 		"!ruby-lsp",
-		"!pyright",
 		"!java",
-		// "!cpp",
-		// "!c",
-		// "!clangd",
-		// "!html",
-		// "!vscode-html-language-server",
 		"!r",
 		"!haskell",
 		"!assembly",
 		"!vhdl",
-		"!yaml-language-server",
 		"!dockerfile",
 		"!markdown",
 		"!markdownlint",
@@ -78,7 +82,7 @@
 	"image_viewer": {
 		"unit": "binary"
 	},
-	// Workbench
+	// ANCHOR - Workbench
 	"theme": {
 		"mode": "system",
 		"light": "Dracula Light (Alucard)",
@@ -137,7 +141,7 @@
 		"default_width": 240
 	},
 	"show_call_status_icon": true,
-	// Versioning
+	// ANCHOR - Versioning
 	"git_panel": {
 		"button": true,
 		"dock": "left",
@@ -173,7 +177,7 @@
 		"path_style": "file_path_first",
 		"hunk_style": "staged_hollow"
 	},
-	// AI
+	// ANCHOR - AI
 	"agent": {
 		"enabled": true,
 		"button": true,
@@ -395,7 +399,7 @@
 		"bedrock": {},
 		"zed.dev": {}
 	},
-	// Explorer
+	// ANCHOR - Explorer
 	"project_panel": {
 		"button": true,
 		"dock": "left",
@@ -597,7 +601,7 @@
 		},
 		"expand_outlines_with_depth": 100
 	},
-	// Debug
+	// ANCHOR - Debug
 	"debuggers": [],
 	"disable_ai": false,
 	"auto_update": true,
@@ -687,23 +691,38 @@
 		"lsp_fetch_timeout_ms": 0,
 		"lsp_insert_mode": "replace_suffix"
 	},
-	// Language Settings
+	// ANCHOR - Language Settings
 	"languages": {
 		"C": {
-			"format_on_save": "off",
+			"language_servers": [
+				"clangd",
+				"..."
+			],
+			"formatter": "language_server",
+			"format_on_save": "on",
 			"use_on_type_format": false,
 			"prettier": {
 				"allowed": false
 			}
 		},
 		"C++": {
-			"format_on_save": "off",
+			"language_servers": [
+				"clangd",
+				"..."
+			],
+			"formatter": "language_server",
+			"format_on_save": "on",
 			"use_on_type_format": false,
 			"prettier": {
 				"allowed": false
 			}
 		},
 		"CSS": {
+			"language_servers": [
+				"vscode-css-language-server",
+				"..."
+			],
+			"formatter": "prettier",
 			"prettier": {
 				"allowed": true
 			}
@@ -719,6 +738,11 @@
 			"preferred_line_length": 70
 		},
 		"HTML": {
+			"language_servers": [
+				"vscode-html-language-server",
+				"..."
+			],
+			"formatter": "prettier",
 			"prettier": {
 				"allowed": true
 			}
@@ -742,17 +766,25 @@
 			}
 		},
 		"JSON": {
+			"language_servers": [
+				"json-language-server",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"JSONC": {
+			"language_servers": [
+				"json-language-server",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"LaTeX": {
-			"formatter": "language_server",
 			"language_servers": [
 				"texlab",
 				"..."
 			],
+			"formatter": "language_server",
 			"prettier": {
 				"allowed": true,
 				"plugins": [
@@ -761,6 +793,10 @@
 			}
 		},
 		"Markdown": {
+			"language_servers": [
+				"marksman",
+				"..."
+			],
 			"format_on_save": "off",
 			"use_on_type_format": false,
 			"allow_rewrap": "anywhere",
@@ -774,6 +810,11 @@
 			"allow_rewrap": "anywhere"
 		},
 		"Python": {
+			"language_servers": [
+				"pyright",
+				"ruff",
+				"..."
+			],
 			"formatter": {
 				"language_server": {
 					"name": "ruff"
@@ -804,59 +845,116 @@
 			}
 		},
 		"YAML": {
+			"language_servers": [
+				"yaml-language-server",
+				"..."
+			],
+			"formatter": "prettier",
 			"prettier": {
 				"allowed": true
 			}
 		},
 		"Dockerfile": {
+			"language_servers": [
+				"docker-langserver",
+				"..."
+			],
 			"format_on_save": "off"
 		},
 		"DBML": {
 			"formatter": "language_server"
 		},
 		"SQL": {
+			"language_servers": [
+				"sql-language-server",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Properties": {
 			"formatter": "language_server"
 		},
 		"Go": {
+			"language_servers": [
+				"gopls",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Go Mod": {
+			"language_servers": [
+				"gopls",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Go Work": {
+			"language_servers": [
+				"gopls",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"R": {
+			"language_servers": [
+				"r_language_server",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Rust": {
+			"language_servers": [
+				"rust-analyzer",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"TOML": {
+			"language_servers": [
+				"taplo",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Shell Script": {
 			"format_on_save": "off"
 		},
 		"Assembly": {
+			"language_servers": [
+				"asm-lsp",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Make": {
-			"formatter": "language_server"
+			"format_on_save": "off"
 		},
 		"Ruby": {
+			"language_servers": [
+				"ruby-lsp",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Haskell": {
+			"language_servers": [
+				"haskell-language-server",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"VHDL": {
+			"language_servers": [
+				"vhdl_ls",
+				"..."
+			],
 			"formatter": "language_server"
 		},
 		"Angular": {
+			"language_servers": [
+				"angular",
+				"..."
+			],
 			"formatter": "language_server"
 		}
 	},
@@ -910,7 +1008,7 @@
 	"command_aliases": {},
 	"ssh_connections": [],
 	"read_ssh_config": true,
-	// Extensions
+	// ANCHOR - Extensions
 	"debugger": {
 		"stepping_granularity": "line",
 		"save_breakpoints": true,
@@ -922,7 +1020,7 @@
 	},
 	"profiles": {},
 	"log": {},
-	// File Type Associations
+	// ANCHOR - File Type Associations
 	"file_types": {
 		"Markdown": [
 			"**/CODEOWNERS",
