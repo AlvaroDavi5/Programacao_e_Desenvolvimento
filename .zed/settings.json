@@ -919,7 +919,7 @@
 		"Assembly": {
 			"language_servers": [
 				"asm-lsp",
-				"!assembly",
+				"assembly",
 				"..."
 			],
 			"formatter": "language_server"
