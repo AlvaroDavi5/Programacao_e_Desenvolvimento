@@ -88,6 +88,14 @@
 		"light": "Dracula Light (Alucard)",
 		"dark": "Dracula Solid"
 	},
+	"theme_overrides": {
+		"Dracula Solid": {
+			"editor.invisible": "#6272a4dd"
+		},
+		"Dracula Light (Alucard)": {
+			"editor.invisible": "#8490b3dd"
+		}
+	},
 	"icon_theme": "Material Icon Theme",
 	"cursor_shape": "bar",
 	"cursor_blink": true,
@@ -722,7 +730,7 @@
 				"vscode-css-language-server",
 				"..."
 			],
-			"formatter": "prettier",
+			"formatter": "language_server",
 			"prettier": {
 				"allowed": true
 			}
@@ -742,12 +750,17 @@
 				"vscode-html-language-server",
 				"..."
 			],
-			"formatter": "prettier",
+			"formatter": "language_server",
 			"prettier": {
 				"allowed": true
 			}
 		},
 		"Java": {
+			"language_servers": [
+				"java",
+				"..."
+			],
+			"formatter": "prettier",
 			"prettier": {
 				"allowed": true,
 				"plugins": [
@@ -761,6 +774,7 @@
 				"vtsls",
 				"..."
 			],
+			"formatter": "language_server",
 			"prettier": {
 				"allowed": true
 			}
@@ -830,6 +844,7 @@
 				"vtsls",
 				"..."
 			],
+			"formatter": "language_server",
 			"prettier": {
 				"allowed": true
 			}
@@ -840,6 +855,7 @@
 				"vtsls",
 				"..."
 			],
+			"formatter": "language_server",
 			"prettier": {
 				"allowed": true
 			}
