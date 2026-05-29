@@ -46,13 +46,7 @@
 	"enable_language_server": true,
 	"language_servers": [
 		// NOTE - Disabled servers (globally)
-		"!typescript-language-server",
-		"!assembly",
-		"!latex",
-		"!r",
 		"!ruby",
-		"!haskell",
-		"!vhdl",
 		// NOTE - Enabled servers (globally)
 		"dockerfile",
 		"make",
@@ -749,6 +743,7 @@
 		},
 		"JavaScript": {
 			"language_servers": [
+				"!typescript-language-server",
 				"vtsls",
 				"..."
 			],
@@ -774,6 +769,7 @@
 		"LaTeX": {
 			"language_servers": [
 				"texlab",
+				"!latex",
 				"..."
 			],
 			"formatter": "language_server",
@@ -821,6 +817,7 @@
 		},
 		"TSX": {
 			"language_servers": [
+				"!typescript-language-server",
 				"vtsls",
 				"react",
 				"..."
@@ -832,6 +829,7 @@
 		},
 		"TypeScript": {
 			"language_servers": [
+				"!typescript-language-server",
 				"angular",
 				"vtsls",
 				"..."
@@ -896,6 +894,7 @@
 		"R": {
 			"language_servers": [
 				"r_language_server",
+				"!r",
 				"..."
 			],
 			"formatter": "language_server"
@@ -920,6 +919,7 @@
 		"Assembly": {
 			"language_servers": [
 				"asm-lsp",
+				"!assembly",
 				"..."
 			],
 			"formatter": "language_server"
@@ -930,6 +930,7 @@
 		"Ruby": {
 			"language_servers": [
 				"ruby-lsp",
+				"ruby",
 				"..."
 			],
 			"formatter": "language_server"
@@ -937,6 +938,7 @@
 		"Haskell": {
 			"language_servers": [
 				"haskell-language-server",
+				"!haskell",
 				"..."
 			],
 			"formatter": "language_server"
@@ -944,6 +946,7 @@
 		"VHDL": {
 			"language_servers": [
 				"vhdl_ls",
+				"!vhdl",
 				"..."
 			],
 			"formatter": "language_server"
