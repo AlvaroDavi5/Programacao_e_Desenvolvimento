@@ -46,17 +46,17 @@
 	"enable_language_server": true,
 	"language_servers": [
 		"!typescript-language-server",
-		"!gopls",
-		"!rust-analyzer",
+		// "!gopls",
+		// "!rust-analyzer",
 		"!ruby",
 		"!ruby-lsp",
 		"!pyright",
 		"!java",
-		"!cpp",
-		"!c",
-		"!clangd",
-		"!html",
-		"!vscode-html-language-server",
+		// "!cpp",
+		// "!c",
+		// "!clangd",
+		// "!html",
+		// "!vscode-html-language-server",
 		"!r",
 		"!haskell",
 		"!assembly",
@@ -64,6 +64,8 @@
 		"!yaml-language-server",
 		"!dockerfile",
 		"!markdown",
+		"!markdownlint",
+		"!markdown-oxide",
 		"!marksman",
 		"!latex",
 		"!make",
@@ -866,6 +868,17 @@
 	},
 	"dap": {},
 	"lsp": {
+		"vscode-html-language-server": {
+			"settings": {
+				"html": {
+					"format": {
+						"indentInnerHtml": true,
+						"contentUnformatted": "svg,script",
+						"extraLiners": "div,p"
+					}
+				}
+			}
+		},
 		"pyright": {
 			"settings": {
 				"python": {
@@ -958,6 +971,7 @@
 			"sstream"
 		],
 		"C++": [
+			"**/*.ino",
 			"atomic",
 			"bit",
 			"*.tcc",
