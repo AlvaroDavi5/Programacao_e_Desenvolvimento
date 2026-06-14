@@ -287,9 +287,6 @@
 			"default_mode": "write",
 			"command": "path_to_executable"
 		},
-		"github-copilot-cli": {
-			"type": "registry"
-		},
 		"claude-acp": {
 			"type": "registry"
 		},
@@ -297,6 +294,12 @@
 			"type": "registry"
 		},
 		"codex-acp": {
+			"type": "registry"
+		},
+		"github-copilot-cli": {
+			"type": "registry"
+		},
+		"cursor": {
 			"type": "registry"
 		}
 	},
