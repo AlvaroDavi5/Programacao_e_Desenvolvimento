@@ -283,7 +283,9 @@
 	"agent_servers": {
 		"AgentDeveloper": {
 			"type": "custom",
-			"default_model": "claude-opus-4.6",
+			"default_config_options": {
+				"default_model": "claude-opus-4.6"
+			},
 			"default_mode": "write",
 			"command": "path_to_executable"
 		},
@@ -373,13 +375,10 @@
 		"mistral": {
 			"api_url": "https://api.mistral.ai/v1"
 		},
-		"vercel": {
-			"api_url": "https://api.v0.dev/v1"
-		},
-		"vercel_ai_gateway": {},
 		"x_ai": {
 			"api_url": "https://api.x.ai/v1"
 		},
+		"vercel_ai_gateway": {},
 		"bedrock": {},
 		"zed.dev": {}
 	},
