@@ -62,10 +62,14 @@
         "name": "Node.js: Launch Current TypeScript File",
         "type": "node",
         "request": "launch",
-        "skipFiles": ["<node_internals>/**"],
+        "skipFiles": [
+          "<node_internals>/**"
+        ],
         "program": "${file}",
         "preLaunchTask": "tsc: build - tsconfig.json",
-        "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+        "outFiles": [
+          "${workspaceFolder}/dist/**/*.js"
+        ],
         "internalConsoleOptions": "openOnSessionStart",
         "sourceMaps": true,
         "smartStep": true,
@@ -81,6 +85,16 @@
     "terminal.integrated.defaultProfile.windows": "Ubuntu-20.04 (WSL)",
     "terminal.integrated.suggest.enabled": false,
     "chat.commandCenter.enabled": true,
+    "chat.agentSessionsViewLocation": "disabled",
+    "chat.mcp.access": "all",
+    "chat.mcp.gallery.enabled": true,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.viewSessions.enabled": false,
+    "chat.tools.urls.autoApprove": {
+      "https://code.visualstudio.com": true,
+      "https://github.com/microsoft/vscode/wiki/*": true,
+      "https://zed.dev": true
+    },
     "http.proxy": "",
     "http.proxySupport": "off",
     "http.proxyAuthorization": null,
@@ -91,6 +105,8 @@
     "sync.forceDownload": true,
     "sync.autoUpload": true,
     "sync.autoDownload": true,
+    "window.customTitleBarVisibility": "auto",
+    "window.commandCenter": true,
     // Editor
     "editor.insertSpaces": false,
     "editor.tabSize": 2,
@@ -99,7 +115,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
-      "source.fixAll.eslint": "never",
       "source.organizeImports": "never",
       "source.removeUnusedImports": "explicit",
       "source.removeUnused.ts": "explicit",
@@ -116,6 +131,7 @@
     "editor.pasteAs.showPasteSelector": "never",
     "editor.stickyScroll.enabled": false,
     "editor.autoClosingBrackets": "always",
+    "editor.minimap.enabled": true,
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     // Workbench
@@ -129,15 +145,17 @@
     "workbench.tree.indent": 15,
     "workbench.sideBar.location": "left",
     "workbench.activityBar.orientation": "vertical",
-    "window.customTitleBarVisibility": "auto",
-    "window.commandCenter": true,
-    // Editor Tabs
-    "editor.minimap.enabled": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.editorAssociations": {
+      "*.copilotmd": "vscode.markdown.preview.editor",
+      "*.pdf": "latex-workshop-pdf-hook"
+    },
+    // Explorer
     "explorer.autoReveal": true,
     "explorer.confirmDragAndDrop": false,
+    // Versioning
     "scm.defaultViewMode": "tree",
     "scm.showHistoryGraph": false,
-    // Versioning
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "git.openRepositoryInParentFolders": "always",
@@ -156,8 +174,8 @@
     "docker.commands.composeUpSubset": [
       {
         "label": "Compose Up",
-        "template": "${composeCommand} ${profileList} ${configurationFile} up ${detached} ${build} ${serviceList}",
-      },
+        "template": "${composeCommand} ${profileList} ${configurationFile} up ${detached} ${build} ${serviceList}"
+      }
     ],
     "material-icon-theme.activeIconPack": "nest",
     "vsicons.presets.nestjs": true,
@@ -177,7 +195,7 @@
       "javascript",
       "javascriptreact",
       "typescript",
-      "typescriptreact",
+      "typescriptreact"
     ],
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "tabnine.experimentalAutoImports": true,
@@ -188,124 +206,169 @@
     "gitlens.views.tags.branches.layout": "list",
     "gitlens.views.branches.branches.layout": "list",
     "gitlens.plusFeatures.enabled": true,
+    "gitlens.ai.model": "gitkraken",
+    "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
     "gitlens.menus": {
       "editor": {
         "blame": false,
         "clipboard": true,
         "compare": false,
         "history": false,
-        "remote": false,
+        "remote": false
       },
       "editorGroup": {
         "blame": true,
-        "compare": true,
+        "compare": true
       },
       "editorTab": {
         "clipboard": true,
         "compare": false,
         "history": false,
-        "remote": false,
+        "remote": false
       },
       "explorer": {
         "clipboard": true,
         "compare": true,
         "history": false,
-        "remote": true,
+        "remote": true
       },
       "scm": {
         "graph": false,
-        "authors": true,
+        "authors": true
       },
       "scmRepositoryInline": {
-        "graph": false,
+        "graph": false
       },
       "scmRepository": {
         "authors": true,
-        "graph": false,
+        "graph": false
       },
       "scmGroupInline": {
-        "stash": true,
+        "stash": true
       },
       "scmGroup": {
         "compare": true,
         "openClose": true,
-        "stash": true,
+        "stash": true
       },
       "scmItemInline": {
-        "stash": false,
+        "stash": false
       },
       "scmItem": {
         "clipboard": true,
         "compare": true,
         "history": true,
         "remote": false,
-        "stash": true,
-      },
+        "stash": true
+      }
     },
     "docker.images.groupBy": "RepositoryName",
     "docker.images.sortBy": "Label",
     "docker.containers.groupBy": "Compose Project Name",
     "docker.containers.sortBy": "Label",
-    "javascript.suggest.autoImports": true,
-    "javascript.suggestionActions.enabled": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.suggest.autoImports": true,
-    "typescript.suggestionActions.enabled": true,
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.enablePromptUseWorkspaceTsdk": true,
-    "typescript.tsserver.maxTsServerMemory": 1536,
-    "typescript.tsserver.watchOptions": {},
+    "js/ts.suggest.autoImports": true,
+    "js/ts.suggestionActions.enabled": true,
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    "js/ts.tsserver.watchOptions": {},
+    "js/ts.tsserver.maxMemory": 1536,
+    "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+    "js/ts.tsdk.path": "Prepaid/node_modules/typescript/lib",
     "github.copilot.enable": {
       "*": true,
       "yaml": true,
       "markdown": true,
-      "scminput": false,
-      "java": false,
-      "plaintext": false,
+      "java": true,
+      "plaintext": false
     },
-    "github.copilot.nextEditSuggestions.enabled": false,
-    "json.schemas": [
+    "github.copilot.selectedCompletionModel": "openai",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.advanced": {},
+    "github.copilot.chat.azureModels": {},
+    "github.copilot.chat.customOAIModels": {},
+    "github.copilot.chat.gpt5AlternatePrompt": "default",
+    "github.copilot.chat.claudeSonnet45AlternatePrompt": "default",
+    "github.copilot.chat.grokCodeAlternatePrompt": "default",
+    "github.copilot.chat.githubMcpServer.enabled": true,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
       {
-        "fileMatch": ["/package.json"],
-        "url": "https://json.schemastore.org/package",
-        "schema": true,
+        "file": "**/copilot-commit-message.instructions.md"
       },
+      {
+        "text": "Use conventional commit message format."
+      }
     ],
-    "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features",
+    "[ignore]": {
+      "editor.defaultFormatter": "EditorConfig.EditorConfig"
     },
-    "[css]": {
-      "editor.defaultFormatter": "vscode.css-language-features",
+    "[dbml]": {
+      "editor.defaultFormatter": "matt-meyers.vscode-dbml"
+    },
+    "[apiblueprint]": {
+      "editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+    },
+    "[chatagent]": {
+      "editor.defaultFormatter": "vscode.markdown-language-features"
+    },
+    "[prompt]": {
+      "editor.defaultFormatter": "vscode.markdown-language-features"
+    },
+    "[instructions]": {
+      "editor.defaultFormatter": "vscode.markdown-language-features"
+    },
+    "[skill]": {
+      "editor.defaultFormatter": "vscode.markdown-language-features"
     },
     "[markdown]": {
-      "editor.defaultFormatter": "vscode.markdown-language-features",
+      "editor.defaultFormatter": "vscode.markdown-language-features"
     },
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[css]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[dockerfile]": {
-      "editor.defaultFormatter": "ms-azuretools.vscode-containers",
+      "editor.defaultFormatter": "ms-azuretools.vscode-containers"
     },
     "[dockercompose]": {
-      "editor.defaultFormatter": "redhat.vscode-yaml",
+      "editor.defaultFormatter": "redhat.vscode-yaml"
     },
     "[yaml]": {
-      "editor.defaultFormatter": "redhat.vscode-yaml",
+      "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "[ignore]": {
-      "editor.defaultFormatter": "EditorConfig.EditorConfig",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "json.schemas": [
+      {
+        "fileMatch": [
+          "/package.json"
+        ],
+        "url": "https://json.schemastore.org/package",
+        "schema": true
+      }
+    ],
     "files.exclude": {
       "**/.classpath": true,
       "**/.project": true,
       "**/.settings": true,
-      "**/.factorypath": true,
+      "**/.factorypath": true
     },
-    "color-highlight.languages": ["*"],
-    "color-highlight.hslWithNoFunctionLanguages": ["*"],
+    "color-highlight.languages": [
+      "*"
+    ],
+    "color-highlight.hslWithNoFunctionLanguages": [
+      "*"
+    ],
     "better-comments.multilineComments": true,
     "better-comments.highlightPlainText": false,
     "better-comments.tags": [
@@ -316,7 +379,7 @@
         "underline": false,
         "backgroundColor": "transparent",
         "bold": false,
-        "italic": false,
+        "italic": false
       },
       {
         "tag": "?",
@@ -325,7 +388,7 @@
         "underline": false,
         "backgroundColor": "transparent",
         "bold": false,
-        "italic": false,
+        "italic": false
       },
       {
         "tag": "//",
@@ -334,7 +397,7 @@
         "underline": false,
         "backgroundColor": "transparent",
         "bold": false,
-        "italic": false,
+        "italic": false
       },
       {
         "tag": "todo",
@@ -343,7 +406,7 @@
         "underline": false,
         "backgroundColor": "transparent",
         "bold": false,
-        "italic": false,
+        "italic": false
       },
       {
         "tag": "*",
@@ -352,60 +415,59 @@
         "underline": false,
         "backgroundColor": "transparent",
         "bold": false,
-        "italic": false,
-      },
+        "italic": false
+      }
     ],
     "commentAnchors.tags.matchCase": true,
     "commentAnchors.tags.anchors": {
       "ANCHOR": {
         "iconColor": "#ffdbfe",
         "highlightColor": "#ffdbfe",
-        "scope": "file",
+        "scope": "file"
       },
       "TODO": {
         "iconColor": "#ffb300",
         "highlightColor": "#ffb300",
-        "scope": "workspace",
+        "scope": "workspace"
       },
       "FIXME": {
         "iconColor": "#f44336",
         "highlightColor": "#f44336",
-        "scope": "workspace",
+        "scope": "workspace"
       },
       "STUB": {
         "iconColor": "#ba68c8",
         "highlightColor": "#ba68c8",
-        "scope": "file",
+        "scope": "file"
       },
       "NOTE": {
         "iconColor": "#47acff",
         "highlightColor": "#47acff",
-        "scope": "file",
+        "scope": "file"
       },
       "REVIEW": {
         "iconColor": "#64dd17",
         "highlightColor": "#64dd17",
-        "scope": "workspace",
+        "scope": "workspace"
       },
       "SECTION": {
         "iconColor": "#3811ff",
         "highlightColor": "#3811ff",
         "scope": "workspace",
-        "behavior": "region",
+        "behavior": "region"
       },
       "LINK": {
         "iconColor": "#2ecc71",
         "highlightColor": "#2ecc71",
         "scope": "workspace",
-        "behavior": "link",
-      },
+        "behavior": "link"
+      }
     },
     "files.associations": {
       "*.apib": "apiblueprint",
       "*.dbml": "dbml",
       "**/CODEOWNERS": "markdown",
-      "*.rmd": "markdown",
-    },
-    "js/ts.tsdk.path": "Prepaid/node_modules/typescript/lib",
-  },
+      "*.rmd": "markdown"
+    }
+  }
 }
