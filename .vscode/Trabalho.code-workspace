@@ -115,6 +115,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
+      "source.fixAll.eslint": "never",
       "source.organizeImports": "never",
       "source.removeUnusedImports": "explicit",
       "source.removeUnused.ts": "explicit",
@@ -328,10 +329,10 @@
       "editor.defaultFormatter": "vscode.css-language-features"
     },
     "[typescript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
-      "editor.defaultFormatter": "vscode.typescript-language-features"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[dockerfile]": {
       "editor.defaultFormatter": "ms-azuretools.vscode-containers"
