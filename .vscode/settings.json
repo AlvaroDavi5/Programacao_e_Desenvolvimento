@@ -12,6 +12,11 @@
 	"chat.mcp.gallery.enabled": true,
 	"chat.viewSessions.orientation": "stacked",
 	"chat.viewSessions.enabled": false,
+	"chat.tools.urls.autoApprove": {
+		"https://code.visualstudio.com": true,
+		"https://github.com/microsoft/vscode/wiki/*": true,
+		"https://zed.dev": true
+	},
 	"http.proxy": "",
 	"http.proxySupport": "off",
 	"http.proxyAuthorization": null,
