@@ -251,10 +251,16 @@
 				"terminal": {
 					"always_allow": [
 						{
-							"pattern": "pwd"
+							"pattern": "^pwd$"
 						},
 						{
-							"pattern": "ls -A"
+							"pattern": "^ls(\\s.*)?$"
+						},
+						{
+							"pattern": "^cd\\s+\\.\\.(/\\S*)?$"
+						},
+						{
+							"pattern": "^cd\\s+\\S+$"
 						}
 					],
 					"always_deny": [
@@ -287,7 +293,11 @@
 				"default_model": "claude-opus-4.6"
 			},
 			"default_mode": "write",
-			"command": "path_to_executable"
+			"command": "cursor-agent",
+			"args": [
+				"acp"
+			],
+			"env": {}
 		},
 		"claude-acp": {
 			"type": "registry"
