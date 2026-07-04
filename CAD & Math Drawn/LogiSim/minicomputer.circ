@@ -285,30 +285,18 @@
     <comp lib="0" loc="(510,1100)" name="Tunnel">
       <a name="label" val="weReg"/>
     </comp>
-    <comp lib="0" loc="(560,180)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="writeMem"/>
-    </comp>
-    <comp lib="0" loc="(560,210)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="readMem"/>
-    </comp>
-    <comp lib="0" loc="(580,180)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="writeMemory"/>
-      <a name="type" val="output"/>
-    </comp>
-    <comp lib="0" loc="(580,210)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="readMemory"/>
-      <a name="type" val="output"/>
-    </comp>
     <comp lib="0" loc="(650,70)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="memory_address_out"/>
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(660,170)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="writeMem"/>
+    </comp>
+    <comp lib="0" loc="(660,200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="readMem"/>
     </comp>
     <comp lib="0" loc="(690,120)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -325,6 +313,18 @@
       <a name="radix" val="16"/>
       <a name="type" val="output"/>
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(700,170)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="writeMemory"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(700,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="readMemory"/>
+      <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(870,1260)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -465,8 +465,6 @@
     <wire from="(490,1080)" to="(500,1080)"/>
     <wire from="(500,1080)" to="(500,1100)"/>
     <wire from="(500,1100)" to="(510,1100)"/>
-    <wire from="(560,180)" to="(580,180)"/>
-    <wire from="(560,210)" to="(580,210)"/>
     <wire from="(630,1070)" to="(630,1280)"/>
     <wire from="(630,1280)" to="(1020,1280)"/>
     <wire from="(630,500)" to="(630,1040)"/>
@@ -476,6 +474,8 @@
     <wire from="(640,760)" to="(640,1050)"/>
     <wire from="(640,760)" to="(960,760)"/>
     <wire from="(650,70)" to="(690,70)"/>
+    <wire from="(660,170)" to="(700,170)"/>
+    <wire from="(660,200)" to="(700,200)"/>
     <wire from="(840,780)" to="(840,960)"/>
     <wire from="(840,780)" to="(960,780)"/>
     <wire from="(870,1260)" to="(1020,1260)"/>
