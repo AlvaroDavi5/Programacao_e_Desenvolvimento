@@ -58,7 +58,7 @@
 	// ANCHOR - Workbench
 	"theme": {
 		"mode": "system",
-		"light": "Dracula Light (Alucard)",
+		"light": "Dracula Light (Alucard",
 		"dark": "Dracula Solid"
 	},
 	"theme_overrides": {
@@ -133,7 +133,7 @@
 		"diff_stats": true,
 		"tree_view": true,
 		"show_count_badge": true,
-		"sort_by_path": true,
+		"sort_by": "path",
 		"fallback_branch_name": "main",
 		"collapse_untracked_diff": false,
 		"scrollbar": {}
@@ -514,9 +514,7 @@
 		"show_user_menu": true,
 		"show_sign_in": true
 	},
-	"audio": {
-		"experimental.auto_microphone_volume": false
-	},
+	"audio": {},
 	"scrollbar": {
 		"show": "auto",
 		"cursors": true,
