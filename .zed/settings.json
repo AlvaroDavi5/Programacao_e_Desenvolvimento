@@ -162,22 +162,22 @@
 		"dock": "right",
 		"sidebar_side": "right",
 		"thread_summary_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5-mini",
+			"provider": "anthropic",
+			"model": "claude-haiku-4-5-20251001",
 			"effort": "low",
 			"enable_thinking": false,
-			"speed": "standard"
+			"speed": "fast"
 		},
 		"commit_message_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5.3-codex",
+			"provider": "anthropic",
+			"model": "claude-haiku-4-5-20251001",
 			"effort": "low",
 			"enable_thinking": false,
-			"speed": "standard"
+			"speed": "fast"
 		},
 		"inline_assistant_model": {
 			"provider": "anthropic",
-			"model": "claude-sonnet-4",
+			"model": "claude-sonnet-4-6",
 			"effort": "medium",
 			"enable_thinking": false,
 			"speed": "fast"
