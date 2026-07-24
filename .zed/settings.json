@@ -28,9 +28,6 @@
 	"hard_tabs": true,
 	"tab_size": 2,
 	"preferred_line_length": 80,
-	"message_editor": {
-		"auto_replace_emoji_shortcode": true
-	},
 	"drag_and_drop_selection": {
 		"enabled": true,
 		"delay": 0
@@ -58,7 +55,7 @@
 	// ANCHOR - Workbench
 	"theme": {
 		"mode": "system",
-		"light": "Dracula Light (Alucard",
+		"light": "One Light",
 		"dark": "Dracula Solid"
 	},
 	"theme_overrides": {
@@ -179,15 +176,15 @@
 			"speed": "standard"
 		},
 		"inline_assistant_model": {
-			"provider": "copilot_chat",
+			"provider": "anthropic",
 			"model": "claude-sonnet-4",
 			"effort": "medium",
 			"enable_thinking": false,
 			"speed": "fast"
 		},
 		"default_model": {
-			"provider": "copilot_chat",
-			"model": "claude-sonnet-4.6",
+			"provider": "anthropic",
+			"model": "claude-sonnet-5",
 			"effort": "high",
 			"enable_thinking": true,
 			"speed": "fast"
@@ -293,11 +290,14 @@
 				"default_model": "claude-opus-4.6"
 			},
 			"default_mode": "write",
-			"command": "cursor-agent",
+			"command": "npx",
 			"args": [
-				"acp"
+				"@agentclientprotocol/claude-agent-acp@latest",
+				"--acp"
 			],
-			"env": {}
+			"env": {
+				"ANTHROPIC_API_KEY": "ANTHROPIC_API_KEY"
+			}
 		},
 		"claude-acp": {
 			"type": "registry"
@@ -329,13 +329,6 @@
 			"settings": {
 				"context7_api_key": "CONTEXT_SEVEN_API_KEY"
 			}
-		},
-		"some-mcp-server": {
-			"enabled": true,
-			"remote": false,
-			"command": "",
-			"args": [],
-			"env": {}
 		}
 	},
 	"language_models": {
@@ -609,7 +602,7 @@
 			"update_debounce_ms": 150,
 			"padding": 4,
 			"min_column": 0,
-			"max_severity": "off"
+			"max_severity": "all"
 		}
 	},
 	"file_scan_exclusions": [
@@ -660,7 +653,11 @@
 		"cursor_position_button": true
 	},
 	"code_actions_on_format": {
-		"source.removeUnusedImports": true
+		"source.fixAll": true,
+		"source.fixAll.eslint": false,
+		"source.organizeImports": false,
+		"source.removeUnusedImports": true,
+		"source.removeUnused.ts": false
 	},
 	"tasks": {
 		"variables": {},
@@ -755,6 +752,7 @@
 			"language_servers": [
 				"!typescript-language-server",
 				"vtsls",
+				"eslint",
 				"..."
 			],
 			"formatter": "language_server",
@@ -830,6 +828,7 @@
 				"!typescript-language-server",
 				"vtsls",
 				"react",
+				"eslint",
 				"..."
 			],
 			"formatter": "language_server",
@@ -842,6 +841,7 @@
 				"!typescript-language-server",
 				"angular",
 				"vtsls",
+				"eslint",
 				"..."
 			],
 			"formatter": "language_server",
@@ -852,6 +852,7 @@
 		"YAML": {
 			"language_servers": [
 				"yaml-language-server",
+				"docker-compose",
 				"..."
 			],
 			"formatter": "prettier",
