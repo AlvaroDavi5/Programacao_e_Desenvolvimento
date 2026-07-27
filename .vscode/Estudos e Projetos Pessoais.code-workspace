@@ -5,10 +5,6 @@
 			"path": "/home/alvaro/Documents/Programacao/Roteiros"
 		},
 		{
-			"name": "Go",
-			"path": "/home/alvaro/Documents/Programacao/GoLang"
-		},
-		{
 			"name": "Rust",
 			"path": "/home/alvaro/Documents/Programacao/Rust"
 		},
@@ -27,6 +23,10 @@
 		{
 			"name": "Node Boilerplate",
 			"path": "/home/alvaro/Documents/Programacao/Node/Node_BackEnd_Boilerplate-TypeScript"
+		},
+		{
+			"name": "Backstage",
+			"path": "/home/alvaro/Documents/Programacao/backstage-ad_tech"
 		},
 		{
 			"name": "Programacao",
