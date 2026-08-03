@@ -85,6 +85,12 @@
 			"type": "node-terminal"
 		},
 		{
+			"name": "Node-Yarn: Debug",
+			"command": "yarn run start:debug",
+			"request": "launch",
+			"type": "node-terminal"
+		},
+		{
 			"name": "Node-NEXT: debug server-side",
 			"type": "node-terminal",
 			"request": "launch",
