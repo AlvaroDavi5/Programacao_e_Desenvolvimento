@@ -113,6 +113,8 @@
 	"bracket-pair-colorizer-2.depreciation-notice": false,
 	"editorconfig.generateAuto": true,
 	"editorconfig.template": "default",
+	"oxc.enable.oxlint": true,
+	"oxc.enable.oxfmt": true,
 	"eslint.format.enable": true,
 	"eslint.validate": [
 		"javascript",
@@ -252,14 +254,8 @@
 	"[ignore]": {
 		"editor.defaultFormatter": "EditorConfig.EditorConfig"
 	},
-	"[latex]": {
-		"editor.defaultFormatter": "James-Yu.latex-workshop"
-	},
-	"[dbml]": {
-		"editor.defaultFormatter": "matt-meyers.vscode-dbml"
-	},
-	"[apiblueprint]": {
-		"editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+	"[editorconfig]": {
+		"editor.defaultFormatter": "EditorConfig.EditorConfig"
 	},
 	"[chatagent]": {
 		"editor.defaultFormatter": "vscode.markdown-language-features"
@@ -276,16 +272,28 @@
 	"[markdown]": {
 		"editor.defaultFormatter": "vscode.markdown-language-features"
 	},
+	"[latex]": {
+		"editor.defaultFormatter": "James-Yu.latex-workshop"
+	},
+	"[dbml]": {
+		"editor.defaultFormatter": "matt-meyers.vscode-dbml"
+	},
+	"[apiblueprint]": {
+		"editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+	},
 	"[html]": {
 		"editor.defaultFormatter": "vscode.html-language-features"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "vscode.css-language-features"
 	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
-	"[javascript]": {
+	"[typescriptreact]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
 	"[java]": {

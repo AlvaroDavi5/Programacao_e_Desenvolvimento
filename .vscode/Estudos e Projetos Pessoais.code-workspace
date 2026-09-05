@@ -1,8 +1,12 @@
 {
 	"folders": [
 		{
-			"name": "Roteiros",
-			"path": "/home/alvaro/Documents/Programacao/Roteiros"
+			"name": "Ideias",
+			"path": "/home/alvaro/Documents/Obsidian/Ideias"
+		},
+		{
+			"name": "Fight Arena - OpenGL",
+			"path": "/home/alvaro/Documents/Programacao/CPP/UFES - CG/Fight_Arena_with_OpenGL"
 		},
 		{
 			"name": "Rust",
@@ -17,16 +21,12 @@
 			"path": "/home/alvaro/Documents/Programacao/Node/React_FrontEnd_Boilerplate-TypeScript"
 		},
 		{
-			"name": "Spring Boilerplate",
-			"path": "/home/alvaro/Documents/Programacao/Java/Spring_BackEnd_Boilerplate-Java"
-		},
-		{
 			"name": "Node Boilerplate",
 			"path": "/home/alvaro/Documents/Programacao/Node/Node_BackEnd_Boilerplate-TypeScript"
 		},
 		{
-			"name": "Backstage",
-			"path": "/home/alvaro/Documents/Programacao/backstage-ad_tech"
+			"name": "Spring Boilerplate",
+			"path": "/home/alvaro/Documents/Programacao/Java/Spring_BackEnd_Boilerplate-Java"
 		},
 		{
 			"name": "Programacao",
@@ -301,6 +301,8 @@
 		"bracket-pair-colorizer-2.depreciation-notice": false,
 		"editorconfig.generateAuto": true,
 		"editorconfig.template": "default",
+		"oxc.enable.oxlint": true,
+		"oxc.enable.oxfmt": true,
 		"eslint.format.enable": true,
 		"eslint.validate": [
 			"javascript",
@@ -440,14 +442,8 @@
 		"[ignore]": {
 			"editor.defaultFormatter": "EditorConfig.EditorConfig"
 		},
-		"[latex]": {
-			"editor.defaultFormatter": "James-Yu.latex-workshop"
-		},
-		"[dbml]": {
-			"editor.defaultFormatter": "matt-meyers.vscode-dbml"
-		},
-		"[apiblueprint]": {
-			"editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+		"[editorconfig]": {
+			"editor.defaultFormatter": "EditorConfig.EditorConfig"
 		},
 		"[chatagent]": {
 			"editor.defaultFormatter": "vscode.markdown-language-features"
@@ -464,16 +460,28 @@
 		"[markdown]": {
 			"editor.defaultFormatter": "vscode.markdown-language-features"
 		},
+		"[latex]": {
+			"editor.defaultFormatter": "James-Yu.latex-workshop"
+		},
+		"[dbml]": {
+			"editor.defaultFormatter": "matt-meyers.vscode-dbml"
+		},
+		"[apiblueprint]": {
+			"editor.defaultFormatter": "develiteio.api-blueprint-viewer"
+		},
 		"[html]": {
 			"editor.defaultFormatter": "vscode.html-language-features"
 		},
 		"[css]": {
 			"editor.defaultFormatter": "vscode.css-language-features"
 		},
+		"[javascript]": {
+			"editor.defaultFormatter": "vscode.typescript-language-features"
+		},
 		"[typescript]": {
 			"editor.defaultFormatter": "vscode.typescript-language-features"
 		},
-		"[javascript]": {
+		"[typescriptreact]": {
 			"editor.defaultFormatter": "vscode.typescript-language-features"
 		},
 		"[java]": {
