@@ -34,9 +34,10 @@
 	"editor.tabSize": 2,
 	"editor.formatOnSave": true,
 	"editor.wordWrap": "off",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.defaultFormatter": "oxc.oxc-vscode",
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit",
+		"source.fixAll.oxc": "explicit",
 		"source.fixAll.eslint": "never",
 		"source.organizeImports": "never",
 		"source.removeUnusedImports": "always",
@@ -123,6 +124,7 @@
 		"typescript",
 		"typescriptreact"
 	],
+	"claudeCode.preferredLocation": "panel",
 	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 	"vsintellicode.features.python.deepLearning": "enabled",
 	"tabnine.experimentalAutoImports": true,
