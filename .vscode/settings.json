@@ -115,6 +115,7 @@
 	"editorconfig.template": "default",
 	"oxc.enable.oxlint": true,
 	"oxc.enable.oxfmt": true,
+	"eslint.enable": true,
 	"eslint.format.enable": true,
 	"eslint.validate": [
 		"javascript",
